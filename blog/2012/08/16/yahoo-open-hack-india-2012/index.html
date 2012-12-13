@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Yahoo Open Hack India 2012 - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="So I got a chance to be at Bangalore for Open Hack India 2012 conducted by Yahoo. It was really a great time to learn and do some of the experiments &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2012/08/16/yahoo-open-hack-india-2012/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Yahoo Open Hack India 2012</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-16T11:38:00+05:30" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>So I got a chance to be at Bangalore for Open Hack India 2012 conducted by Yahoo.</p>
+
+
+<div style="margin:0px; text-align: center;">
+<p><a title="IMG_5052 by mrowan, on Flickr" href="http://www.flickr.com/photos/mrowan/7751044880/"><img height="375" width="500" alt="IMG_5052" src="http://farm9.staticflickr.com/8286/7751044880_e0cb1fea0b.jpg" /></a></p>
+<p><a title="IMG_5065 by mrowan, on Flickr" href="http://www.flickr.com/photos/mrowan/7751030446/"><img height="375" width="500" alt="IMG_5065" src="http://farm9.staticflickr.com/8296/7751030446_54abd3bc44.jpg" /></a></p>
+</div>
+
+
+<p>It was really a great time to learn and do some of the experiments on Yahoo developer network (ydn) tools.</p>
+
+
+<p>So we ended up trying to do some stuff with <a href="http://open.dapper.net/">dapper</a>. Dapper is a tool used for scrapping. It seems interesting from the workshop. But when I started using it, I was not successful. The dapper stopped responding / showing updating preview and stuffs.</p>
+
+
+<p>What I was trying todo?&lt; /p&gt;</p>
+
+
+<p>I used to buy books comparing prices from isbn.net.in . It helped me a lot in buying books very cheap in India. But isbn.net.in was not having a feature called search for book title, and isbn details and as it does currently. Yes there were various other services that do the same. But if you think so then you must think why gmail was developed for there were yahoo mail, aol, msn etc were there.</p>
+
+
+<p>So anyway learning was the idea, but as dapper fails to respond, it seems hard. I tried to contact the developers via the contact form. But I didn&#8217;t got a reply on Hack days to further proceed on it. So I tried various other methods via Yahoo pipes, yql etc.</p>
+
+
+<p>It was really nice to learn and make my hands dirty with yql. I tried different stuffs. Exploring it I found the url shortner from Yahoo.</p>
+
+
+<p>So once I reached home I made a url shortner which is currently in github ( http://harikt.github.com/openhackindia/ ) . Its simple with a few lines.</p>
+
+
+<p>{syntaxhighlighter class=&quot;html&quot;} <script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script> <script>
+// Create a YUI sandbox on your page.
+YUI().use('node', 'yql', function (Y) {
+    //onclick
+    Y.one('#shorten').on('click', function (e) {
+        e.preventDefault();
+        var url = Y.one('#url').get('value');
+        Y.YQL("insert into yahoo.y.ahoo.it (url, keysize) values ('"+url+"', 5)", function (r) {
+            Y.one('#shortened').append('<p>' + r.query.results.url + '</p>');
+        });
+    });
+});
+</script> {/syntaxhighlighter}</p>
+
+
+<p>YQL is powerful, try and play. Its awesome guys.</p>
+
+
+<p>I also came to know about Boomerang from Yahoo.</p>
+
+
+<p>I was planning to buy a Bean Bag, and yes I got as a present from Yahoo.</p>
+
+
+<p>Thank you guys for the awesome event. I am really sad for not able to submit a Hack :( . But I will explore more the ydn resoucres in future. Hope to see you next time if everything permits.</p>
+
+
+<p>References :</p>
+
+
+<p>YUI for jQuery Developers and vice versa : <a href="http://www.jsrosettastone.com/">http://www.jsrosettastone.com/</a></p>
+
+
+<p>Quick start to learn YUI : <a href="http://yuilibrary.com/yui/quick-start/">http://yuilibrary.com/yui/quick-start/</a></p>
+
+
+<p>Using YQL with YUI : <a href="http://yuilibrary.com/yui/docs/yql/">http://yuilibrary.com/yui/docs/yql/</a></p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-16T11:38:00+05:30" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2012/08/16/yahoo-open-hack-india-2012/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2012/08/16/yahoo-open-hack-india-2012/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/07/30/speaking-at-barcamp-bangalore-on-auraphp/" title="Previous Post: Speaking at Barcamp Bangalore August 25th 2012 on Aura PHP">&laquo; Speaking at Barcamp Bangalore August 25th 2012 on Aura PHP</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/08/27/how-to-install-aura-framework/" title="Next Post: How to install aura framework">How to install aura framework &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/23/workshop-on-aura-project-for-php/">Workshop on Aura Project for PHP at OSI Days</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/15/contributor-to-aura-project/">How I became a contributor to aura project</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/">Thoughts on installing Zend Framework via composer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/27/how-to-install-aura-framework/">How to install aura framework</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

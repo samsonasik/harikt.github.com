@@ -4,7 +4,7 @@
   <title><![CDATA[Random thoughts on PHP | Hari KT]]></title>
   <link href="http://harikt.github.com/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-13T23:39:09+05:30</updated>
+  <updated>2012-12-13T23:56:50+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -18,7 +18,68 @@
     <link href="http://harikt.github.com/blog/2012/12/06/node-227/"/>
     <updated>2012-12-06T19:27:00+05:30</updated>
     <id>http://harikt.github.com/blog/2012/12/06/node-227</id>
-    <content type="html"><![CDATA[<p>Aura.Sql can now make use of an existing PDO connection with the recent <a href="https://github.com/auraphp/Aura.Sql/commit/79284382ef6351d81719376063076c7e511c28fd">commit here</a> . This all came after a short discussion with Stan Lemon. A big Thanks to him for making a featured request like this.     > @<a href="https://twitter.com/harikt">harikt</a> can I inject an existing Pdo > object? > > — Stan Lemon (@stanlemon) > <a href="https://twitter.com/stanlemon/status/274708971217100800">December 1, 2012</a>     How to make use of an existing PDO?  You want to get a connection object and set the instance of pdo. Note : In this way you are eager loading the PDO. Else Aura.Sql knows when to do the connection. Example of how to make use of it is  {syntaxhighlighter class=&#8221;php&#8221;} use Aura\Sql\ConnectionFactory; $connection_factory = new ConnectionFactory; $connection = $connection_factory->newInstance( // connection name &#8216;mysql&#8217;, // DSN elements for PDO; this can also be // an array of key-value pairs // host=127.0.0.1;dbname=database-name &#8221;, // username for the connection &#8221;, // password for the connection &#8221; ); $connection->setPdo($pdo); {/syntaxhighlighter}  Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#8217;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below  {syntaxhighlighter class=&#8221;php&#8221;} $params = array( &#8216;driver&#8217; => &#8216;pdo_mysql&#8217;, &#8216;user&#8217; => &#8216;username&#8217;, &#8216;password&#8217; => &#8216;password&#8217;, &#8216;dbname&#8217; => &#8216;database-name&#8217; ); $dsn = &#8216;mysql:host=localhost;dbname=&#8217; . $params[&#8216;dbname&#8217;]; $pdo = new Pdo($dsn, $params[&#8216;user&#8217;], $params[&#8216;password&#8217;], $options = array( PDO::MYSQL_ATTR_INIT_COMMAND => &#8216;SET NAMES utf8&#8217;, ) ); {/syntaxhighlighter}</p>
+    <content type="html"><![CDATA[<p>Aura.Sql can now make use of an existing PDO connection with the recent <a href="https://github.com/auraphp/Aura.Sql/commit/79284382ef6351d81719376063076c7e511c28fd">commit here</a> . This all came after a short discussion with Stan Lemon. A big Thanks to him for making a featured request like this.     > @<a href="https://twitter.com/harikt">harikt</a> can I inject an existing Pdo > object? > > — Stan Lemon (@stanlemon) > <a href="https://twitter.com/stanlemon/status/274708971217100800">December 1, 2012</a>     How to make use of an existing PDO?  You want to get a connection object and set the instance of pdo. Note : In this way you are eager loading the PDO. Else Aura.Sql knows when to do the connection. Example of how to make use of it is</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">use Aura\Sql\ConnectionFactory; </span>
+</span><span class='line'><span class="x">$connection_factory = new ConnectionFactory; </span>
+</span><span class='line'><span class="x">$connection = $connection_factory-&gt;newInstance( </span>
+</span><span class='line'><span class="x">    // connection name </span>
+</span><span class='line'><span class="x">    &#39;mysql&#39;, </span>
+</span><span class='line'><span class="x">    // DSN elements for PDO; this can also be </span>
+</span><span class='line'><span class="x">    // an array of key-value pairs </span>
+</span><span class='line'><span class="x">    // host=127.0.0.1;dbname=database-name </span>
+</span><span class='line'><span class="x">    &#39;&#39;, </span>
+</span><span class='line'><span class="x">    // username for the connection </span>
+</span><span class='line'><span class="x">    &#39;&#39;, </span>
+</span><span class='line'><span class="x">    // password for the connection </span>
+</span><span class='line'><span class="x">    &#39;&#39; </span>
+</span><span class='line'><span class="x">); </span>
+</span><span class='line'><span class="x">$connection-&gt;setPdo($pdo); </span>
+</span><span class='line'><span class="x"> ```</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">  Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#39;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below  </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>php
+$params = array(</p>
+
+<pre><code>'driver' =&gt; 'pdo_mysql', 
+'user' =&gt; 'username', 
+'password' =&gt; 'password', 
+'dbname' =&gt; 'database-name' 
+</code></pre>
+
+<p>);
+$dsn = &#8216;mysql:host=localhost;dbname=&#8217; . $params[&#8216;dbname&#8217;];
+$pdo = new Pdo(</p>
+
+<pre><code>$dsn, 
+$params['user'], 
+$params['password'], 
+$options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', ) 
+</code></pre>
+
+<p>);
+&#8220;`</p>
 ]]></content>
   </entry>
   
@@ -54,7 +115,79 @@
     <link href="http://harikt.github.com/blog/2012/11/24/node-223/"/>
     <updated>2012-11-24T20:42:00+05:30</updated>
     <id>http://harikt.github.com/blog/2012/11/24/node-223</id>
-    <content type="html"><![CDATA[<p>Paul M Jones wrote earlier <a href="http://paul-m-jones.com/archives/2487">When Possible, Use File *Resources* Instead Of File *Names*</a> and in comments <a href="http://www.littlehart.net/atthekeyboard">Chris Hartjes</a> was mentioning about <a href="http://vfs.bovigo.org/">vfsStream</a>. So for <a href="https://github.com/auraphp">@auraphp</a> we thought of making to support vfsStream. What the hell it is? vfsStream is a PHP stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest. So without touching the file system and not bothering too much about the operating system, file permissions, disk quota, removing the files created by tests on tear down etc we can make use of vfsstream. Lets start Go and get it via composer. {syntaxhighlighter class=&#8221;php&#8221;} { &#8220;require&#8221;: { &#8220;mikey179/vfsStream&#8221;: &#8220;1.1.0&#8221; } } {/syntaxhighlighter} Run your composer.phar update. {syntaxhighlighter class=&#8221;php&#8221;} require &#8216;vendor/autoload.php&#8217;; use org\bovigo\vfs\vfsStream; use org\bovigo\vfs\visitor\vfsStreamStructureVisitor; use org\bovigo\vfs\visitor\vfsStreamPrintVisitor; $structure = array( &#8216;Core&#8217; => array( &#8216;AbstractFactory&#8217; => array( &#8216;test.php&#8217; => &#8216;some text content&#8217;, &#8216;other.php&#8217; => &#8216;Some more text content&#8217;, &#8216;Invalid.csv&#8217; => &#8216;Something else&#8217;, ), &#8216;AnEmptyFolder&#8217; => array(), &#8216;badlocation.php&#8217; => &#8216;some bad content&#8217;, ) ); $root = vfsStream::setup(&#8220;root&#8221;, &#8221;, $structure); {/syntaxhighlighter} So now we have created a complex structured file system. How can we check whether the structure is same? {syntaxhighlighter class=&#8221;php&#8221;} vfsStream::inspect(new vfsStreamPrintVisitor()); {/syntaxhighlighter} Now you have the structure how can you get the contents of the file you have created? {syntaxhighlighter class=&#8221;php&#8221;} file_get_contents(vfsStream::url(&#8216;root/Core/badlocation.php&#8217;)); {/syntaxhighlighter} Or you can do via {syntaxhighlighter class=&#8221;php&#8221;} $root->getChild(&#8216;Core/badlocation.php&#8217;)->getContent(); {/syntaxhighlighter} The question was raised by myself at https://github.com/mikey179/vfsStream/issues/48 . You can create directory and use vfsStreamPrintVisitor to see how the structure will be {syntaxhighlighter class=&#8221;php&#8221;} mkdir(vfsStream::url(&#8216;root/Core/AnEmptyFolder/hello&#8217;)); vfsStream::inspect(new vfsStreamPrintVisitor()); {/syntaxhighlighter} There is more documentation how you can use in phpunit or have a look into the recent commits on <a href="https://github.com/auraphp/Aura.View/commit/f39e3452116072a3fe7f529584acb862a76fe15e">Aura.View</a> For more documentation have a look into https://github.com/mikey179/vfsStream/wiki</p>
+    <content type="html"><![CDATA[<p>Paul M Jones wrote earlier <a href="http://paul-m-jones.com/archives/2487">When Possible, Use File *Resources* Instead Of File *Names*</a> and in comments <a href="http://www.littlehart.net/atthekeyboard">Chris Hartjes</a> was mentioning about <a href="http://vfs.bovigo.org/">vfsStream</a>. So for <a href="https://github.com/auraphp">@auraphp</a> we thought of making to support vfsStream. What the hell it is? vfsStream is a PHP stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest. So without touching the file system and not bothering too much about the operating system, file permissions, disk quota, removing the files created by tests on tear down etc we can make use of vfsstream. Lets start Go and get it via composer.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">{ </span>
+</span><span class='line'><span class="x">    &quot;require&quot;: { </span>
+</span><span class='line'><span class="x">        &quot;mikey179/vfsStream&quot;: &quot;1.1.0&quot; </span>
+</span><span class='line'><span class="x">        } </span>
+</span><span class='line'><span class="x">    } </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> Run your composer.phar update.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">require &#39;vendor/autoload.php&#39;; </span>
+</span><span class='line'><span class="x">use org\\bovigo\\vfs\\vfsStream; </span>
+</span><span class='line'><span class="x">use org\\bovigo\\vfs\\visitor\\vfsStreamStructureVisitor; </span>
+</span><span class='line'><span class="x">use org\\bovigo\\vfs\\visitor\\vfsStreamPrintVisitor; </span>
+</span><span class='line'><span class="x">$structure = array( &#39;Core&#39; =\&gt; array( &#39;AbstractFactory&#39; =\&gt; array( &#39;test.php&#39; =\&gt; &#39;some text content&#39;, &#39;other.php&#39; =\&gt; &#39;Some more text content&#39;, &#39;Invalid.csv&#39; =\&gt; &#39;Something else&#39;, ), &#39;AnEmptyFolder&#39; =\&gt; array(), &#39;badlocation.php&#39; =\&gt; &#39;some bad content&#39;, ) ); </span>
+</span><span class='line'><span class="x">$root = vfsStream::setup(&quot;root&quot;, &#39;&#39;, $structure); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> So now we have created a complex structured file system. How can we check whether the structure is same?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">vfsStream::inspect(new vfsStreamPrintVisitor()); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> Now you have the structure how can you get the contents of the file you have created?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">file\_get\_contents(vfsStream::url(&#39;root/Core/badlocation.php&#39;)); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> Or you can do via</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">$root-&gt;getChild(&#39;Core/badlocation.php&#39;)-\&gt;getContent(); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> The question was raised by myself at https://github.com/mikey179/vfsStream/issues/48 . You can create directory and use vfsStreamPrintVisitor to see how the structure will be</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">mkdir(vfsStream::url(&#39;root/Core/AnEmptyFolder/hello&#39;)); vfsStream::inspect(new vfsStreamPrintVisitor()); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> There is more documentation how you can use in phpunit or have a look into the recent commits on <a href="https://github.com/auraphp/Aura.View/commit/f39e3452116072a3fe7f529584acb862a76fe15e">Aura.View</a> For more documentation have a look into https://github.com/mikey179/vfsStream/wiki</p>
 ]]></content>
   </entry>
   

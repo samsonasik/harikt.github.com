@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Documentation with help of Sphinx and readthedocs - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="Sphinx is a tool that makes it easy to create intelligent and beautiful documentation, written by Georg Brandl and licensed under the BSD license. I &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2011/08/05/documentation-help-sphinx-and-readthedocs/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Documentation With Help of Sphinx and Readthedocs</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-05T23:23:00+05:30" pubdate data-updated="true">Aug 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://sphinx.pocoo.org/">Sphinx</a> is a tool that makes it easy to create intelligent and beautiful documentation, written by Georg Brandl and licensed under the BSD license.  I was trying to help the Aura Project with some documentation . When it comes to gh-pages branch I find difficult to push, merge upstreams. I just was browsing some of the repos in github. From the <a href="https://github.com/avalanche123/Imagine/">Imagine</a> I came to know about http://readthedocs.org/ which works with the help of sphinx project. We just want to create a doc folder and create the .rst files of the format http://sphinx.pocoo.org/rest.html and place in our repo and point it in http://readthedocs.org/. I feel its so easy to do, for people can just clone the docs repo and make the necessary changes in the .rst files and give a pull request than the gh-pages. Some times the gh-pages waste a huge amount of time with some unexpected errors :( .  So I thought of trying the readthedocs. From the <a href="http://readthedocs.org/docs/read-the-docs/en/latest/getting_started.html">getting started page of readthedocs</a> I went and installed sphinx . It was easy for me to run from synaptic package manager. Installed and run the command $ sphinx-quickstart . It asks a few questions I am keeping the gist over here  Running $ make html , we get the html in the _build/html folder. We can just browse through it , make the necessary changes in the .rst files run and run until we love. No commits , no push and pull and check the errors in gh-pages as we did. As the html is generated we can host either directly in gh-pages branch of github.com or we can just push the .rst files and utilize the http://readthedocs.org/  I have asked my friends at http://auraphp.github.com for their suggestion about this. We are having a search coming , code high lighting etc. Sphinx is not new for me, but I never tried to use it until now. I have been seeing the name over the www.doctrine-project.org and some other. I hope this is one of the best tool to utilize for documentation of any projects . I welcome your thoughts :-)</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-05T23:23:00+05:30" pubdate data-updated="true">Aug 5<span>th</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2011/08/05/documentation-help-sphinx-and-readthedocs/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2011/08/05/documentation-help-sphinx-and-readthedocs/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/07/17/get-set-go-yes-come-lets-start-playing-aura-packages/" title="Previous Post: Get set go ... Yes come, lets start playing with Aura Packages">&laquo; Get set go ... Yes come, lets start playing with Aura Packages</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/08/21/contributing-php/" title="Next Post: Contributing to PHP">Contributing to PHP &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

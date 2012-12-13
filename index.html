@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="I am really excited and at the same time a bit nervous, that I will be giving a workshop on aura project for PHP at osidays, which will be held at &hellip;">
+  <meta name="description" content="Aura.Sql can now make use of an existing PDO connection with the recent commit here . This all came after a short discussion with Stan Lemon. A big &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,7 +70,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/23/workshop-on-aura-project-for-php/">Workshop on Aura Project for PHP at OSI Days</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/12/06/node-227/">Aura.Sql Can Now Make Use of Existing PDO Connection</a></h1>
     
     
       <p class="meta">
@@ -86,16 +86,14 @@
   
 
 
-<time datetime="2012-09-23T14:37:00+05:30" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
+<time datetime="2012-12-06T19:27:00+05:30" pubdate data-updated="true">Dec 6<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I am really excited and at the same time a bit nervous, that I will be giving a workshop on <a href="https://github.com/auraphp">aura project for PHP</a> at <a href="http://www.osidays.com/">osidays</a>, which will be held at NIMHANS convention center Bangalore on 12-14 th of October 2012. I have received only the confirmation call, but not any mail as of now. If you have never heard of osidays, its one of the Asia&#8217;s largest open-source conference held.
-The workshop will be for around 3 Hours. I will be walking you through different components of aura and finally to show how you can use the individual libraries as a framework. If you have never heard about the aura project, its an independent library which can be dropped at any codebase. You can find the source code and more information of the project at <a href="https://github.com/auraphp">https://github.com/auraphp</a> . I know 3 Hours of continuous speech is a huge challenge. I will try my level best to make the workshop interesting. I will be also discussing with <a href="http://paul-m-jones.com">Paul M Jones</a> how I can make it more informative.
-In-order to attend the workshop I feel you need to grab the platinum pass. Looking forward meeting you guys at osidays :) .</p>
+  <div class="entry-content"><p>Aura.Sql can now make use of an existing PDO connection with the recent <a href="https://github.com/auraphp/Aura.Sql/commit/79284382ef6351d81719376063076c7e511c28fd">commit here</a> . This all came after a short discussion with Stan Lemon. A big Thanks to him for making a featured request like this.     > @<a href="https://twitter.com/harikt">harikt</a> can I inject an existing Pdo > object? > > — Stan Lemon (@stanlemon) > <a href="https://twitter.com/stanlemon/status/274708971217100800">December 1, 2012</a>     How to make use of an existing PDO?  You want to get a connection object and set the instance of pdo. Note : In this way you are eager loading the PDO. Else Aura.Sql knows when to do the connection. Example of how to make use of it is  {syntaxhighlighter class=&#8221;php&#8221;} use Aura\Sql\ConnectionFactory; $connection_factory = new ConnectionFactory; $connection = $connection_factory->newInstance( // connection name &#8216;mysql&#8217;, // DSN elements for PDO; this can also be // an array of key-value pairs // host=127.0.0.1;dbname=database-name &#8221;, // username for the connection &#8221;, // password for the connection &#8221; ); $connection->setPdo($pdo); {/syntaxhighlighter}  Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#8217;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below  {syntaxhighlighter class=&#8221;php&#8221;} $params = array( &#8216;driver&#8217; => &#8216;pdo_mysql&#8217;, &#8216;user&#8217; => &#8216;username&#8217;, &#8216;password&#8217; => &#8216;password&#8217;, &#8216;dbname&#8217; => &#8216;database-name&#8217; ); $dsn = &#8216;mysql:host=localhost;dbname=&#8217; . $params[&#8216;dbname&#8217;]; $pdo = new Pdo($dsn, $params[&#8216;user&#8217;], $params[&#8216;password&#8217;], $options = array( PDO::MYSQL_ATTR_INIT_COMMAND => &#8216;SET NAMES utf8&#8217;, ) ); {/syntaxhighlighter}</p>
 </div>
   
   
@@ -108,7 +106,7 @@ In-order to attend the workshop I feel you need to grab the platinum pass. Looki
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/15/contributor-to-aura-project/">How I Became a Contributor to Aura Project</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/12/04/node-226/">Paid to Speak</a></h1>
     
     
       <p class="meta">
@@ -124,32 +122,14 @@ In-order to attend the workshop I feel you need to grab the platinum pass. Looki
   
 
 
-<time datetime="2012-09-15T21:16:00+05:30" pubdate data-updated="true">Sep 15<span>th</span>, 2012</time>
+<time datetime="2012-12-04T06:03:00+05:30" pubdate data-updated="true">Dec 4<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>When I started my career with PHP I have been hearing about PEAR and Symfony a lot. <a href="http://joseantony.com/">Jose Antony</a> was the person who introduced the names <a href="http://symfony-project.org">Symfony</a>, <a href="http://doctrine-project.org">Doctrine</a>, <a href="http://propelorm.org">Propel</a> etc. But at work I never got a chance to touch on those. But my thirst to learn and explore moved me from Cochin to Bangalore and different websites. I played with  Symfony in my free time ( Jobeet ). symfony-project was having good articles and videos to move with.</p>
-
-<p>I was working for a client who was interested in <a href="http://framework.zend.com">Zend Framework</a> and asked me to go for a try. It was a hard time in 2009 for me that, the documentation was poor ( from a point of me ) and there wasn&#8217;t a proper structure for people doing Zend Framework before the introduction of ZF tool in 1.8 ( I guess ) . The way it works and I wasn&#8217;t either familiar with irc or how I can get some help. Yes it was mainly not the Zend Framework or the community issues. It was my problems to understand from where I can get help. There wasn&#8217;t a good source to ask how I can use irc or get more information other than search internet.</p>
-
-<p>I really struggled with Zend Framework. Google was the only help which can find blog posts on errors and implementation. Some will work, some will not. I still remember the autoload error thrown which mentioned about this will be deprecated in Zend Framework 2 ( IIRC ). lol I wasn&#8217;t either able to understand looking at those errors. I was having a thought that frameworks cannot be developed by people like me :) . Why I thought so was I was hearing about design patterns a lot and I never properly understood what the hell it was. I failed to find a good mentor.</p>
-
-<p>I wrote some blog posts on <a href="http://harikt.com/content/simple-blog-using-zend-framework-19">zend framework</a> to help people who start with it. I wasn&#8217;t either sure whether I was doing the right things. When I published the post, I did submitted a small intro to <a href="http://devzone.zend.com">devzone</a> with a note to verify whether I was doing it right. But the editor was busy that he mentioned its not possible to check. But some how it was published in <a href="http://phpdeveloper.org">phpdeveloper.org</a> . I looked for the person who submitted the article and found it was <a href="http://blog.phpdeveloper.org">Chris Cornutt</a>. I never know about him earlier, but later understood he was the person behind <a href="http://phpdeveloper.org">phpdeveloper.org</a> itself :) . In the mean time I did made some changes to the brief information at <a href="http://devzone.zend.com">devzone</a> and submitted it. The article brought lots of visitors and my 1 GB bandwidth got exceed for the 1st time in my life. My friend <a href="http://prajizworld.com">Prajith</a> who was in charge of the  server quickly increased the limit when he got my call.</p>
-
-<p>This article brought me some opportunity to work with <a href="http://packtpub.com">Packt publishers</a>. Around 2009 or 2010 I came to know about a project called <a href="http://lithify.me">lithium</a> via a podcast. I was interested to learn how the frameworks are build. It was using the awesome PHP 5.3 , so I thought of looking into it. At osidays <a href="https://twitter.com/davidcoallier">David Coallier</a> gave an awesome talk on PHP 5.3 . I was able to meet <a href="http://fabien.potencier.org">Fabien Potencier</a> and get an autograph signed. I did meet some awesome PHP gurus at osidays.</p>
-
-<p>I started to look more closely into lithium which was in development. I wasn&#8217;t able to help for I was not that much strong on the concepts. They were using their own git server hosted at <a href="http://dev.lithify.me">dev.lithify.me</a> . I was not comfortable with <a href="http://git-scm.org">git</a>, but when we search for git related help, it will be from <a href="https://github.com">github.com</a> docs. So I asked about switching the lithium to github for the leaders were having their own reasons to host it there. As I told I was starting with git, I pushed to master in my fork which I wasn&#8217;t either sure how I can send Pull Request . Again not the problem with the leaders. <a href="https://twitter.com/nateabele">Nate</a> , <a href="https://twitter.com/gwoo">Gwoo</a> etc helped me a lot when I got stuck with cloning the repo and errors. I learned some of the git commands, PHP 5.3 etc. I tried to help with testing the mysql stuffs which was done by <a href="https://github.com/Howard3">Howard</a>. Though I tried to contribute stuffs it didn&#8217;t happened for I failed to understand the process completely.</p>
-
-<p>I also looked closely <a href="http://symfony.com">Symfony2</a>, but was a bit hard for me. In the early 2011 I got introduced to <a href="https://github.com/auraphp">aura project for php</a> via the blog post of <a href="http://paul-m-jones.com">Paul M Jones</a>. I have earlier looked <a href="http://solarphp.com">SolarPHP</a> , so he was a familiar face. I started to play with it. I also understood the design principles were clearly <a href="http://groups.google.com/forum/#!forum/auraphp">mailed in the group</a>, so I found the real mentor whom I was searching. IIRC I forked the <a href="https://github.com/auraphp/auraphp.github.com">auraphp.github.com</a> and made some changes to the style from that of <a href="http://friendsofsymfony.github.com">friendsofsymfony.github.com</a> , and probably that was my first commit to an opensource project . I started to talk on irc and give some patches and bug reports and slowly I became a member of the organization <a href="https://github.com/auraphp">auraphp</a> .</p>
-
-<p>I know my earlier commits were not going on the right way( I mean the git workflow ), but Paul did merged than closing it or gave suggestions what to do and why you should not go that way etc. He do gave credits for the bugs or suggestions we share in group. Yes it was real joy for people when your commits to an open-source is merged and when you get credits for the work you do. I have noticed people who do just close the PR for there was some error the way the PR is given or if its not the way its expected. I encourage leaders to at-least correct the mistakes than closing the PR with another commit which is already waiting for merge. People who come to open-source are interested to share and learn, not just download the code and use what you are building. They loved to hear why you choose the particular design pattern than blindly using with it, at-least me love it.</p>
-
-<p>Note : There is no hatred to any of the projects or leaders. Every one has tried to help me learn various stuffs. It was my failures, to understand it. I fear sometimes the way we think to express may not be read between words. That is the main reason I have kept this note.</p>
-
-<p>I know I have not covered everyone and many of the stuffs have been missed. But its not intentionally . But I would like to Thank all for the various helps you have provided via irc, twitter, facebook, mails etc. I did had a great time learning new stuffs. Thanks once again, lets share and learn.</p>
+  <div class="entry-content"><p>Before going to speak at osidays, the first thing I did was read the book Paid to Speak. It gave me lots of insights how I can improve. The book was given to me by Jennifer Kumar. I have shared my thoughts on her blog. You can read more from <a href="http://www.authenticjourneys.info/2012/12/9-lessons-on-being-public-speaker.html">9 Lessons on Being a Public Speaker</a></p>
 </div>
   
   
@@ -162,7 +142,7 @@ In-order to attend the workshop I feel you need to grab the platinum pass. Looki
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/">Thoughts on Installing Zend Framework via Composer</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/11/29/node-225/">First Stable Release for Aura Components</a></h1>
     
     
       <p class="meta">
@@ -178,191 +158,14 @@ In-order to attend the workshop I feel you need to grab the platinum pass. Looki
   
 
 
-<time datetime="2012-09-10T11:04:00+05:30" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+<time datetime="2012-11-29T20:46:00+05:30" pubdate data-updated="true">Nov 29<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Note : First I thought of creating an issue, and it was not in github. These are not serious issues, but just my thoughts when installing ZF2 via composer. I am not sure whether its composer related or the way the zf2 is packaged to do it via composer.  Normally the composer.json will be something like</p>
-
-<p>{syntaxhighlighter class}
-hari@local:/var/www/composer/zf2$ cat composer.json
-{
-  &#8220;require&#8221;: {</p>
-
-<pre><code>"zendframework/zend-form": "2.0"
-</code></pre>
-
-<p>  }
-}
-hari@local:/var/www/composer/zf2$ php ../composer.phar install
-Loading composer repositories with package information
-Installing dependencies
-  - Installing zendframework/zendframework (2.0.0)</p>
-
-<pre><code>Downloading: 25%^C        
-</code></pre>
-
-<p>hari@local:/var/www/composer/zf2$ ^C
-{/syntaxhighlighter}</p>
-
-<p>But you can see the composer tries to install the whole zend-framework.  The problem is you need to add some more lines for its hosted in packages.framework.com and not in packagist.org . So your composer.json will be as below .</p>
-
-<p>{syntaxhighlighter class}
-hari@local:/var/www/composer/zf2$ cat composer.json
-{
-  &#8220;repositories&#8221;: [</p>
-
-<pre><code>{
-    "type": "composer",
-    "url": "http://packages.zendframework.com/"
-}
-</code></pre>
-
-<p>  ],
-  &#8220;require&#8221;: {</p>
-
-<pre><code>"zendframework/zend-form": "2.0"
-</code></pre>
-
-<p>  }
-}</p>
-
-<p>hari@local:/var/www/composer/zf2$ php ../composer.phar install
-Loading composer repositories with package information
-Installing dependencies
-  - Installing zendframework/zend-form (2.0.0)</p>
-
-<pre><code>Downloading: 100%         
-</code></pre>
-
-<p>zendframework/zend-form suggests installing
-zendframework/zendservice-recaptcha (ZendService\ReCaptcha component)
-Writing lock file
-Generating autoload files
-{/syntaxhighlighter}</p>
-
-<p>Great you installed the zf2 form component. Now you can see where the form is installed .</p>
-
-<p>{syntaxhighlighter class}
-hari@local:/var/www/composer/zf2$ ls vendor/
-autoload.php  composer  zendframework</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/
-zend-form</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/
-Zend</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/
-Form</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/
-Annotation                        FieldsetInterface.php
-composer.json                     Fieldset.php
-Element                           FieldsetPrepareAwareInterface.php
-ElementInterface.php              FormFactoryAwareInterface.php
-Element.php                       FormInterface.php
-ElementPrepareAwareInterface.php  Form.php
-Exception                         TODO.md
-Factory.php                       View</p>
-
-<p>{/syntaxhighlighter}</p>
-
-<p>Assume you have more zf2 packages which you have added. At a later point you think of installing the framework as a whole itself than adding more packages in the composer.json . So your composer.json will be some what like</p>
-
-<p>{syntaxhighlighter class}
-hari@local:/var/www/composer/zf2$ cat composer.json
-{
-  &#8220;repositories&#8221;: [</p>
-
-<pre><code>{
-    "type": "composer",
-    "url": "http://packages.zendframework.com/"
-}
-</code></pre>
-
-<p>  ],
-  &#8220;require&#8221;: {</p>
-
-<pre><code>"zendframework/zendframework": "2.0"
-</code></pre>
-
-<p>  }
-}</p>
-
-<p>hari@local:/var/www/composer/zf2$ php ../composer.phar update</p>
-
-<p>Loading composer repositories with package information
-Updating dependencies
-  - Removing zendframework/zend-form (2.0.0)
-  - Installing zendframework/zendframework (2.0.0)</p>
-
-<pre><code>Downloading: 100%         
-</code></pre>
-
-<p>Writing lock file
-Generating autoload files</p>
-
-<p>{/syntaxhighlighter}</p>
-
-<p>The form has been removed and framework is installed. Lets have a look where its installed .</p>
-
-<p>{syntaxhighlighter class}</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/
-autoload.php  composer  zendframework
-hari@local:/var/www/composer/zf2$ ls vendor/zendframework/
-zend-form
-hari@local:/var/www/composer/zf2$ cat composer.json
-{
-  &#8220;repositories&#8221;: [</p>
-
-<pre><code>{
-    "type": "composer",
-    "url": "http://packages.zendframework.com/"
-}
-</code></pre>
-
-<p>  ],
-  &#8220;require&#8221;: {</p>
-
-<pre><code>"zendframework/zendframework": "2.0"
-</code></pre>
-
-<p>  }
-}</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/
-Zend</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/
-Form</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/
-bin            INSTALL.md   README-DEV.md  resources
-composer.json  library      README-GIT.md  tests
-demos          LICENSE.txt  README.md      vendor</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/
-Zend</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/Zend/
-Authentication  Di            InputFilter    Mvc             Stdlib
-Barcode         Dom           Json           Navigation      Tag
-Cache           Escaper       Ldap           Paginator       Text
-Captcha         EventManager  Loader         Permissions     Uri
-Code            Feed          Log            ProgressBar     Validator
-Config          File          Mail           Serializer      Version
-Console         Filter        Math           Server          View
-Crypt           Form          Memory         ServiceManager  XmlRpc
-Db              Http          Mime           Session
-Debug           I18n          ModuleManager  Soap
-{/syntaxhighlighter}</p>
-
-<p>You can notice its going on the wrong place. vendor/zendframework/zend-form . I am not sure whether every one needs to remove all the installed packages to install the framework . It seems possible with naming zendframework/package . Thus it don&#8217;t remove the installed packages. May be there are some other issues related to it for the naming of zendframework/zend-form like that.</p>
+  <div class="entry-content"><p>So today @Paul M Jones officially declared the first stable release for Aura PHP components. Yes, I am really excited to see this release for it comes with a ton of great improvements for many components, bug fixes and sadly some BC breaks also. The list of packages which became stable are https://github.com/auraphp/Aura.Autoload https://github.com/auraphp/Aura.Cli https://github.com/auraphp/Aura.Di https://github.com/auraphp/Aura.Http https://github.com/auraphp/Aura.Marshal https://github.com/auraphp/Aura.Router : Yes I want to update the post at phpmaster.com for it has some breaks. I will be doing it in coming days. https://github.com/auraphp/Aura.Signal https://github.com/auraphp/Aura.Sql https://github.com/auraphp/Aura.View https://github.com/auraphp/Aura.Web https://github.com/auraphp/Aura.Uri : uri manipulation and there are some packages that are releasing the first Beta. Though these packages have been there for sometime, this is officially declared now only. Yes a bit delay from our part to declare it. https://github.com/auraphp/Aura.Filter Filter is an awesome component for Sanitizing and Validating. You guys should look into the core to learn how it works really. Its an awesome piece of work! . I will in the coming days write something about it. https://github.com/auraphp/Aura.Intl for Internationalization https://github.com/auraphp/Aura.Session : for session handling Thanks to all to make the release happen. You can read the official declaration at http://paul-m-jones.com/archives/2976 . Join our mailing list https://groups.google.com/forum/#!forum/auraphp or #auraphp at irc.freenode.net .</p>
 </div>
   
   
@@ -375,7 +178,7 @@ Debug           I18n          ModuleManager  Soap
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/08/27/how-to-install-aura-framework/">How to Install Aura Framework</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/11/24/node-224/">The Making of Hari.Extras</a></h1>
     
     
       <p class="meta">
@@ -391,21 +194,14 @@ Debug           I18n          ModuleManager  Soap
   
 
 
-<time datetime="2012-08-27T04:58:00+05:30" pubdate data-updated="true">Aug 27<span>th</span>, 2012</time>
+<time datetime="2012-11-24T21:22:00+05:30" pubdate data-updated="true">Nov 24<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><div style="margin:0px; text-align: center;"><iframe width="500" height="375" src="http://www.youtube.com/embed/ODkxDs8AE6U?rel=0" frameborder="0" allowfullscreen=""></iframe></div>
-
-
-<p>This video is my an attempt to help the people how to install the aura framework as a whole. Note, you can use aura libraries independently also. This is my first screencast on aura and first screencast I have ever done. So feedback is appreciated. I am using record my desktop for recording.</p>
-
-
-<p>I was having some trouble with vimeo, so have uploaded to youtube. Thanks for watching.</p>
-
+  <div class="entry-content"><p>If you have read my earlier posts, you know I started to love templating library like Twig, Mustache etc. So I was interested to in-corporate Twig or PhlyMustache or any sort of templating library to auraphp. <a href="https://github.com/auraphp/Aura.Web/tree/develop">Aura.Web</a> makes it easy to do without much hassle. What you want to do is create the class which extends the Aura\Web\Renderer\AbstractRenderer and have a exec() method. For more details checkout <a href="https://github.com/auraphp/Aura.Web/tree/develop#data-and-rendering">Data and Rendering</a> {syntaxhighlighter class=&#8221;php&#8221;} Twig in <a href="http://github.com/harikt/Hari.Extras">Hari.Extras</a> . I will be adding support for PhlyMustache in the coming days. Hari.Extras comes with unit tests. Running unit tests : To run tests you should first install the dependencies. You can run {syntaxhighlighter class=&#8221;php&#8221;}composer.phar install &#8211;dev{/syntaxhighlighter} This will install the dependencies like Aura.Web, Aura.Framework, Twig, vfsstream etc in vendor folder. Now you can run the phpunit from tests folder. A big Thanks to @Paul M Jones and Chris Hartjes and all who have supported one way or the other giving me tips and tricks, motivation to make this happen. The nice thing is with composer for I don&#8217;t need to keep everything in the tests folder. Thanks to <a href="https://github.com/Seldaek">Seldaek</a> By the way as <a href="https://github.com/auraphp">auraphp</a> is getting closer and closer for the next release I am planning to start a series of posts to get started with using the components. Stay tuned :) .</p>
 </div>
   
   
@@ -418,7 +214,7 @@ Debug           I18n          ModuleManager  Soap
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/11/24/node-223/">vfsStream and File System</a></h1>
     
     
       <p class="meta">
@@ -434,81 +230,14 @@ Debug           I18n          ModuleManager  Soap
   
 
 
-<time datetime="2012-08-16T11:38:00+05:30" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
+<time datetime="2012-11-24T20:42:00+05:30" pubdate data-updated="true">Nov 24<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>So I got a chance to be at Bangalore for Open Hack India 2012 conducted by Yahoo.</p>
-
-
-<div style="margin:0px; text-align: center;">
-<p><a title="IMG_5052 by mrowan, on Flickr" href="http://www.flickr.com/photos/mrowan/7751044880/"><img height="375" width="500" alt="IMG_5052" src="http://farm9.staticflickr.com/8286/7751044880_e0cb1fea0b.jpg" /></a></p>
-<p><a title="IMG_5065 by mrowan, on Flickr" href="http://www.flickr.com/photos/mrowan/7751030446/"><img height="375" width="500" alt="IMG_5065" src="http://farm9.staticflickr.com/8296/7751030446_54abd3bc44.jpg" /></a></p>
-</div>
-
-
-<p>It was really a great time to learn and do some of the experiments on Yahoo developer network (ydn) tools.</p>
-
-
-<p>So we ended up trying to do some stuff with <a href="http://open.dapper.net/">dapper</a>. Dapper is a tool used for scrapping. It seems interesting from the workshop. But when I started using it, I was not successful. The dapper stopped responding / showing updating preview and stuffs.</p>
-
-
-<p>What I was trying todo?&lt; /p&gt;</p>
-
-
-<p>I used to buy books comparing prices from isbn.net.in . It helped me a lot in buying books very cheap in India. But isbn.net.in was not having a feature called search for book title, and isbn details and as it does currently. Yes there were various other services that do the same. But if you think so then you must think why gmail was developed for there were yahoo mail, aol, msn etc were there.</p>
-
-
-<p>So anyway learning was the idea, but as dapper fails to respond, it seems hard. I tried to contact the developers via the contact form. But I didn&#8217;t got a reply on Hack days to further proceed on it. So I tried various other methods via Yahoo pipes, yql etc.</p>
-
-
-<p>It was really nice to learn and make my hands dirty with yql. I tried different stuffs. Exploring it I found the url shortner from Yahoo.</p>
-
-
-<p>So once I reached home I made a url shortner which is currently in github ( http://harikt.github.com/openhackindia/ ) . Its simple with a few lines.</p>
-
-
-<p>{syntaxhighlighter class=&quot;html&quot;} <script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script> <script>
-// Create a YUI sandbox on your page.
-YUI().use('node', 'yql', function (Y) {
-    //onclick
-    Y.one('#shorten').on('click', function (e) {
-        e.preventDefault();
-        var url = Y.one('#url').get('value');
-        Y.YQL("insert into yahoo.y.ahoo.it (url, keysize) values ('"+url+"', 5)", function (r) {
-            Y.one('#shortened').append('<p>' + r.query.results.url + '</p>');
-        });
-    });
-});
-</script> {/syntaxhighlighter}</p>
-
-
-<p>YQL is powerful, try and play. Its awesome guys.</p>
-
-
-<p>I also came to know about Boomerang from Yahoo.</p>
-
-
-<p>I was planning to buy a Bean Bag, and yes I got as a present from Yahoo.</p>
-
-
-<p>Thank you guys for the awesome event. I am really sad for not able to submit a Hack :( . But I will explore more the ydn resoucres in future. Hope to see you next time if everything permits.</p>
-
-
-<p>References :</p>
-
-
-<p>YUI for jQuery Developers and vice versa : <a href="http://www.jsrosettastone.com/">http://www.jsrosettastone.com/</a></p>
-
-
-<p>Quick start to learn YUI : <a href="http://yuilibrary.com/yui/quick-start/">http://yuilibrary.com/yui/quick-start/</a></p>
-
-
-<p>Using YQL with YUI : <a href="http://yuilibrary.com/yui/docs/yql/">http://yuilibrary.com/yui/docs/yql/</a></p>
-
+  <div class="entry-content"><p>Paul M Jones wrote earlier <a href="http://paul-m-jones.com/archives/2487">When Possible, Use File *Resources* Instead Of File *Names*</a> and in comments <a href="http://www.littlehart.net/atthekeyboard">Chris Hartjes</a> was mentioning about <a href="http://vfs.bovigo.org/">vfsStream</a>. So for <a href="https://github.com/auraphp">@auraphp</a> we thought of making to support vfsStream. What the hell it is? vfsStream is a PHP stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest. So without touching the file system and not bothering too much about the operating system, file permissions, disk quota, removing the files created by tests on tear down etc we can make use of vfsstream. Lets start Go and get it via composer. {syntaxhighlighter class=&#8221;php&#8221;} { &#8220;require&#8221;: { &#8220;mikey179/vfsStream&#8221;: &#8220;1.1.0&#8221; } } {/syntaxhighlighter} Run your composer.phar update. {syntaxhighlighter class=&#8221;php&#8221;} require &#8216;vendor/autoload.php&#8217;; use org\bovigo\vfs\vfsStream; use org\bovigo\vfs\visitor\vfsStreamStructureVisitor; use org\bovigo\vfs\visitor\vfsStreamPrintVisitor; $structure = array( &#8216;Core&#8217; => array( &#8216;AbstractFactory&#8217; => array( &#8216;test.php&#8217; => &#8216;some text content&#8217;, &#8216;other.php&#8217; => &#8216;Some more text content&#8217;, &#8216;Invalid.csv&#8217; => &#8216;Something else&#8217;, ), &#8216;AnEmptyFolder&#8217; => array(), &#8216;badlocation.php&#8217; => &#8216;some bad content&#8217;, ) ); $root = vfsStream::setup(&#8220;root&#8221;, &#8221;, $structure); {/syntaxhighlighter} So now we have created a complex structured file system. How can we check whether the structure is same? {syntaxhighlighter class=&#8221;php&#8221;} vfsStream::inspect(new vfsStreamPrintVisitor()); {/syntaxhighlighter} Now you have the structure how can you get the contents of the file you have created? {syntaxhighlighter class=&#8221;php&#8221;} file_get_contents(vfsStream::url(&#8216;root/Core/badlocation.php&#8217;)); {/syntaxhighlighter} Or you can do via {syntaxhighlighter class=&#8221;php&#8221;} $root->getChild(&#8216;Core/badlocation.php&#8217;)->getContent(); {/syntaxhighlighter} The question was raised by myself at https://github.com/mikey179/vfsStream/issues/48 . You can create directory and use vfsStreamPrintVisitor to see how the structure will be {syntaxhighlighter class=&#8221;php&#8221;} mkdir(vfsStream::url(&#8216;root/Core/AnEmptyFolder/hello&#8217;)); vfsStream::inspect(new vfsStreamPrintVisitor()); {/syntaxhighlighter} There is more documentation how you can use in phpunit or have a look into the recent commits on <a href="https://github.com/auraphp/Aura.View/commit/f39e3452116072a3fe7f529584acb862a76fe15e">Aura.View</a> For more documentation have a look into https://github.com/mikey179/vfsStream/wiki</p>
 </div>
   
   
@@ -521,7 +250,7 @@ YUI().use('node', 'yql', function (Y) {
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/30/speaking-at-barcamp-bangalore-on-auraphp/">Speaking at Barcamp Bangalore August 25th 2012 on Aura PHP</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/11/06/node-221/">Design Principles for a Better CMS</a></h1>
     
     
       <p class="meta">
@@ -537,22 +266,14 @@ YUI().use('node', 'yql', function (Y) {
   
 
 
-<time datetime="2012-07-30T23:24:00+05:30" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+<time datetime="2012-11-06T21:32:00+05:30" pubdate data-updated="true">Nov 6<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>If you have never heard or came to know about Aura Project for PHP or love to know something what I know, come join on a healthy conversation at Barcamp Bangalore which will be held on August 25th 2012.</p>
-
-<p>I will walk you through some of the components like Router, Web, Http componets which can be used in your next PHP project. If you want to use it as a full stack framework, we have the system. The good thing is its easy to learn and use, and as its not tied to any other components you can create your own next framework with Aura components :-).</p>
-
-<p>Find some documentation api and code at https://github.com/auraphp .</p>
-
-<p>See you at Barcamp Bangalore!</p>
-
-<p>Note : I expect you know about PHP and the new things which are already there in PHP 5.3 and 5.4 . I will not be teaching PHP for its time limited talk. If you want to learn more on PHP and new features, get in touch with me. I will give a talk on it at your place.</p>
+  <div class="entry-content"><p>May be the question is so simple for you. But many times I feel it much complicated. Everyone would have started their website with a custom cms and later moved to Wordpress, Drupal, Joomla or something similar. I used to look for a better book in any language which has design decisions made for the cms to make it such a way that it can be extended. Some of the books that seems interesting to me are 1 ) <a href="http://www.apress.com/9781430218791">Pro Zend Framework CMS</a> 2 ) <a href="http://www.packtpub.com/php-5-cms-framework-development-2nd-edition/book">PHP 5 CMS Framework Development</a> It will be great to see if you have came across such books or do you recommend any other books. I am not just looking for PHP, but I am interested to read any sort of books, which will help me to build the next blogger. Waiting to hear you suggestions on the same.</p>
 </div>
   
   
@@ -565,7 +286,7 @@ YUI().use('node', 'yql', function (Y) {
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/30/yahoo-open-hack-india2012/">Yahoo Open Hack India 2012, on August 11th, 12th at Bangalore</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/10/28/node-220/">Talking at Barcamp on Composer, Eath and Facebook Search</a></h1>
     
     
       <p class="meta">
@@ -581,16 +302,14 @@ YUI().use('node', 'yql', function (Y) {
   
 
 
-<time datetime="2012-07-30T23:20:00+05:30" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+<time datetime="2012-10-28T11:21:00+05:30" pubdate data-updated="true">Oct 28<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I have already tweeted about the Yahoo Open Hack India 2012 which will be held on August 11th and 12th at Yewanthpur Bangalore.</p>
-
-<p>You can know more details and register from http://openhackindia2012hackticket.eventbrite.com. See you guys there!.</p>
+  <div class="entry-content"><p>The 13th edition of Barcamp kerala is on November 4th. This time I am going to talk on Dependency Management with Composer. In the 12th Barcamp I talked about Aura , and it was a bit technical , so Kenny was making sure, not to go for intensive code. So the talk will not be limited to composer. I will be giving you an introduction to Eath , and also a small project which I have done for my personal use fbsearch. The tool is used to search your own status messages you have posted some months back. Its still on alpha for I didn&#8217;t get enough time to move on to make it much more better. It has some issues which I am already aware of. So if you are interested , be there :) . For more information : <a href="http://barcampkerala.org">barcampkerala.org</a> <a href="http://getcomposer.org">composer.org</a> <a href="https://github.com/crodas/Eath">Eath</a> <a href="http://harikt.com/fbsearch">fbsearch</a></p>
 </div>
   
   
@@ -603,7 +322,7 @@ YUI().use('node', 'yql', function (Y) {
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/30/day2-at-thefifthelephant/">Day 2 at the Fifth Elephant</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/10/20/node-219/">Why Apigen Matters ?</a></h1>
     
     
       <p class="meta">
@@ -619,169 +338,14 @@ YUI().use('node', 'yql', function (Y) {
   
 
 
-<time datetime="2012-07-30T23:17:00+05:30" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+<time datetime="2012-10-20T22:03:00+05:30" pubdate data-updated="true">Oct 20<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><div>I reached so early that <a href="http://www.acodersdream.com/2012/07/walking-through-nimhans.html">I walked through the NIMHANS compound.</a></div>
-
-
-<div>&nbsp;</div>
-
-
-<div>The first talk was</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>1 ) Your GNOME on the cloud: Big data challenges in Personalized Medicine by Ramesh Hariharan :</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>My interest to medical field is too less that I am here into the field of IT. So I didn&#8217;t concentrate that much to the talk. I understood they are facing more problems than in Big data itself.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin: 0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/QfiP2JdTeNY?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>2 ) Building Watson : A breif overview of DeepQA and the Jeopardy! Challenge by Karthik Visweswariah :</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>The talk was some of the challenges facing in the terms used in search like &quot;see&quot; and &quot;saw&quot; and much more than that. The talk was interesting to know about the problems faced. Some of the audience expressed the talk was too good that it dived into the problems they really face in search. They also mentioned some people who search for malayalam words in english is too hard to understand what they are really searching.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin: 0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/_dXNXCv5eo8?rel=0" frameborder="0" allowfullscreen></iframe></div>
-
-
-<div>We have some time for tea and networking. Discussed with friends whom I met in Hacknight in which room they are going etc.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>3 ) Exponential Growth Models and Impact on Sales Forecast, Data Volume, Query Latency, Capacity, Planning and Search Latency by Ashok Banerjee</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>He started with the slide Fungus on White Bread. The talk was so interesting that he mentioned lots of stuffs that can impact on business. As he was from flipkart he has some real world examples also. He mentioned how the growth of certain products like books can go up where as certain products like under wear or tissue which can be used to wipe, when your eyes are wet will not. He also mentioned how it can bring new customers from the friends circle. Lately I came to know more about Ashok Banerjee from Mohith that he previously &nbsp;worked with google and twitter. I feel this is the most interesting talk of the day.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin: 0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/_Zno9UUkysI?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>4 ) The Elephant that flew: Big data analytics @ Inmobi by Gaurav Agarwal :</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>Though I loved to sit for the Aadhaar - worlds largest biometric identity platform I went to hear the talk The Elephant that flew. It was mainly for I came to know that in the mobile world there are none other than them. Guarav went through the challenges, the tools they used and the current tools they are using to build it for their customers. He showed a demo on Yoda which can be released open-source, but still they are thinking on how they should open-source it. Its mainly like whether they want to release as small components or as a whole itself.&nbsp;</div>
-
-
-<div>What is Yoda ?</div>
-
-
-<div>Yoda is nothing but something similar to Hive or Pig. But Yoda according to them is more powerful and flexible. It takes less time to process.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>5 ) Messaging architecture at Facebook by Joydeep Sen Sharma :&nbsp;</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>The talk went something deep into the architecture at facebook. As he was having limited time he was running too fast. The stuffs were somewhat deep, the truth is I wasn&#8217;t able to understand some of them. According to my friends the talk was interesting as they were delaing / facing it.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin: 0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/5hUmdoMOrpo?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>6 ) Real time intelligent systems and Big data streams by Deepinder Dhingra :&nbsp;</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>I didn&#8217;t find the talk that much interesting, probably for I am not really into the field.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>7 ) Recommendation Play at flipkart by Gaurav Bhalotia, Pavan Srinivas, Renuka Khandewal :</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>The subject was so interesting. But they presented not in that interesting way. I felt they were not prepared well also. As the talk was for only 30 minutes when you have 3 speakers, there is hardly 10 minutes of time a speaker needs to talk. But even that they didn&#8217;t prepared is a bad thing. Probably they were nervous for may be their first talk? Anyway I feel they can improve, but these are just my thoughts on it.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>After tea I skipped the 2 talks and we were talking with wikipedia foundation, the internet archive guys and open data people. The internet archive has a new project called openlibrary.org which has a collection of books. They also have an API which I want/love to explore. We also discussed how they scan old books and how google used to scan books. They mentioned google was using distructive scanning which means they will cut the side where the books are tied and is then run by the system itself. It was nice to learn how these guys scan these much books. I came to know that for internet archive they can scan around 1000 pages per day. We also went to the cis ( centre for internet and society ) stall. I came to know more about the cis.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>So wrapping up, the fifth elephant by Hasgeek was good. The event organizers did a good job in making the sessions running on time. When I was at osidays in 2010, what I faced was some sessions will exceed the time given that will create issues with other sessions running in parallel. So the people who love to attend session &nbsp;in A1 and then loved to move to A2 or A3 will get into trouble. Either they want to skip the last minutes of the talk on one place to join the other or the other session may not have ended there. But this didn&#8217;t happened once in the fifth elephant.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>The organizers also did a good job for the food. We had tea/snacks in morning and evening and lunch in afternoon. I feel 2500 rupees was worth and affordable for a techie. The problem with osidays is they have many passes which costs much more price. And also the sessions sometimes overlaps. The rate of pass if something like 2500 is an affordable one for I want to spend more on lodging also. So the total cost of the event will again go up in my accomodation and travelling. But this time I have submitted my talk for osidays and foss.in. I am looking forward to see what will happen whether I get a chance as a speaker or not :-) .</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>I talked with the geeks at flipkart whom I met on Hacknight. Thanks to Vivek Mehta for offering me a flipkart T-shirt. But unfortunately &nbsp;the size they gave me was small, for they felt its same as that of Medium. But I cannot enter my head through that hole :P . Probably the wrong decision by me not asking again for the Medium. Anyway I will give it to someone as a present, though I wished I could keep it remembering my day on HackNight.</div>
-
+  <div class="entry-content"><p>I have been working with different open-source projects for a while. Most of them utilizes phpdocumentator2 . I liked it for a while. But I have been looking at apigen, swami etc. Recently I started to make use of apigen extensively. What made me comfortable with apigen than phpdocumentator ? Certain times we may want to look into the code also to see the implementation . I am not sure may be there is an option in phpdocumentator that it can show the code when we click on a function / method. The code highlighting and is shown once we click on it. I like this feature the most. If you haven&#8217;t yet checked how the apigen generated api looks have a look into the one for the <a href="https://github.com/auraphp">aura project</a> which is at <a href="http://harikt.github.com/api">http://harikt.github.com/api</a> More information on a href=&#8221;http://apigen.org>apigen.org</p>
 </div>
   
   
@@ -794,7 +358,7 @@ YUI().use('node', 'yql', function (Y) {
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/27/day-one-the-fifth-elephant/">Day 1 at the Fifth Elephant</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/10/17/node-218/">HTML5 and Upcoming Web Technologies</a></h1>
     
     
       <p class="meta">
@@ -810,233 +374,14 @@ YUI().use('node', 'yql', function (Y) {
   
 
 
-<time datetime="2012-07-27T21:17:00+05:30" pubdate data-updated="true">Jul 27<span>th</span>, 2012</time>
+<time datetime="2012-10-17T19:41:00+05:30" pubdate data-updated="true">Oct 17<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><div>9:30 - 10:15 : Crunching Big Data, Google Scale by Rahul Kulkarni</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>I was little bit late, but it was something interesting to know about bigquery.cloud.google.com . I am still trying to figure out how I can make use of these stuffs. Its really a cool thing to hackon.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin:0px; text-align: center;">
-
-</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>10:15 - 11:00 : In Data We Believe Harish Pillay of Red Hat</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>This talk was also an interesting one to learn and know about glusters. I met some of these guys of glusters at the Redhat stall. Gluster was an open-source tool which was developed by guys at Bangalore and later acquired by Redhat. It was something great to know about it.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin:0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/YbwdAdEdAwI?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>11:00 &ndash; 11:30 : Tea and chitchat. It was interesting to meet the Hacknight guys Sidharth, Siju, Raison etc.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>11:30 &ndash; 12:15 : An Introduction to Data Visualization and Processing by Uttam Grandhi</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>Uttam presented nicely. He was so cool and shared how the Japanese fountain shows the numbers and stuffs in fountain.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin:0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/gusJeslMbLc?rel=0" frameborder="0" allowfullscreen=""></iframe></div>
-
-
-<div>&nbsp;</div>
-
-
-<div>He also showed how we can working with Processing a java based tool and how we can visualize without data itself.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>12:15 &ndash; 1:00 : Visualizing Text by S Anand of Gramener.com</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>Yes S Anand is so popular among developers. Yes I know him via s-anand.net some years back. But I wan&#8217;t able to recognize him when he was infront of me at #Hacknight. But this time I didn&#8217;t missed to say &quot;Hi&quot; to him. He with his collegue presented the talk so awesome. I as a participant feel that was the awesome talk of the day. He presents stuffs in a different way. I liked it. There was a difference in the way he speaks. Yes that makes him different from others.</div>
-
-
-<div>He mentioned about wordle.net, sip.s-anand.net, trendsmap.com, openbible.info, sentimental analysis, circular vizualisation and many more.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin:0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/Xx4sN9bfb2A?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>1:00 &ndash; 2:00 we had an awesome Lunch</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>2:00 &ndash; 2:30 Looking Beyond the Usual Suspects for Near Real-time Analytics on Big Data by Navjot Sidhu of Paypal.</div>
-
-
-<div>When we hear about people who has more problems than what we face, we know ours is not a big problem at all. Navjot Sidhu mentioned paypal having 500 transactions per second, 25 TB data and stuffs like that. I wonder how paypal really scales. It was interesting to know that the core of paypal is C which is almost 75 % of the code. He also talked about the events firing for a single transaction. I remembered about the Aura.Signal for a while.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin:0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/Mowdk8jL8Zs?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>2:30 &ndash; 3:00 : Build Your Own Real-time Analytics and Visualization, Enable Complex Event Processing, Event Patterns and Aggregates by Ramesh Perumalsamy and Vishnu H. Rao of Flipkart.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin:0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/Mowdk8jL8Zs?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>It was nice to know about logstash, graylog2, elastic search, statsD, graphite etc. I want to explore some of them.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>3:00 &ndash; 3:30 &ldquo;I know what you are going to do next summer&rdquo; &ndash; Predicting Repeat Purchase Behavior by using Bayesian Hierarchical model and Regression Techniques Biswajit Pal, Subhasish Mishra and Manav Shroff</div>
-
-
-<div>I expected something, but as the talk goes on I didn&#8217;t see much importance sitting over there. So left the hall and had a chat with the guys over the stall.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>3:30 &ndash; 4:00 Oh Tea break :) .</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>4:00 &ndash; 4:30 : Building, Analyzing and Visualizing Large Graphs by Ashwin Rajeev</div>
-
-
-<div>There were lots of people for this talk than the room can accomodate. I was sitting on the floor. The session was interesting to learn more on graphs. He mentioned about rapheljs, d3.js as Uttam mentioned earlier in his talk.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>4:30 &ndash; 5:00 : Approaches to ML Techniques on Real World Data by Venkata Ramana</div>
-
-
-<div>I was able to understand what he was trying to explain for I was at #Hacknight. But I feel most of them didn&#8217;t find the talk interesting.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>5:00 &ndash; 5:30 : Build Your Own Search Engine by Siddhartha Reddy of flipkart.</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin:0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/F4MFw5ZTHMI?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>This was an interesting talk. I learned something interesting. Indexer, Searcher, Text Analysis, Tokenisation, Stop Word Removal, Normalization, Case folding, Synonyms, Others, Stemming, Lemmatization etc.&nbsp;</div>
-
-
-<div>He also showed Term document matrix, inverted index, ranking, inverse document frequency etc. He suggestested a text titled Introduction to Information Retrieval for further reading</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>http://nlp.stanford.edu/IR-book/</div>
-
-
-<div>&nbsp;</div>
-
-
-<div>And finally winding up day one with 5:30 &ndash; 6:15 Panel Discussion: Best Practices by Kalpana Krishnaswami, Prithvijit Roy, Joydeep Sen Sarma, Anand S, Rohit Chattar, Navjot Sidhu Moderated by Govind Kanshi</div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin:0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/zQ9IBmz67H4?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<div>I don&#8217;t know how I missed to hear the talk Anand Chitipothu and Noufal Ibrahim - How the Internet Archive Preserves Petabytes of Data </div>
-
-
-<div>&nbsp;</div>
-
-
-<div style="margin:0px; text-align: center;">
-<iframe width="500" height="281" src="http://www.youtube.com/embed/SpUGkxG5xcs?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
+  <div class="entry-content"><p>Probably you may have already heard about the full day workshop on HTML5 and Upcoming Web Technologies by <a href="https://twitter.com/shwetank">Shwetank Dixit</a> of Opera at <a href="http://interface-tech.in/">Interface</a> which will be held on 3rd November 2012 . Where ? The Woods Manor, Cochin . Why you should participate? HTML5 is the future of internet. Why not learn from the leader? Who should attend ? Are you a web developer? A person who works on android, iphone or any device ? If you said yes, then its for you. What is the cost? This time we are charging 500 INR. The money is used to give you tea/coffee and snacks plus an awesome lunch during the event and to cover the event expenses. I don&#8217;t think its a huge amount for I have been spending more than 500 INR to travel from Cochin to Bangalore to participate in such awesome workshops. You are only spending a 500 INR in a year which will be a worth in your career. There is also discounts available for group registration for companies, please contact Sofie Holmberg via sofie.holmberg at interface-tech dot in or 0484 4433638 . There is only limited seats available , so be there and don&#8217;t loose the best chance attending the workshop and interacting with <a href="https://twitter.com/shwetank">Shwetank Dixit</a>. Register and get your tickets from : http://interface-tech.in/register</p>
 </div>
   
   
@@ -1049,7 +394,7 @@ YUI().use('node', 'yql', function (Y) {
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/17/rest-api-design-rulebook-by-mark-masse/">REST API Design Rulebook by Mark Massé; O&#8217;Reilly Media</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/10/04/node-217/">Aura T-Shirts</a></h1>
     
     
       <p class="meta">
@@ -1065,43 +410,14 @@ YUI().use('node', 'yql', function (Y) {
   
 
 
-<time datetime="2012-07-17T23:35:00+05:30" pubdate data-updated="true">Jul 17<span>th</span>, 2012</time>
+<time datetime="2012-10-04T10:44:00+05:30" pubdate data-updated="true">Oct 4<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Everyone has been hearing the buzz REST. As web services and api for websites are becoming popular, all are busy developing REST api&#8217;s for their websites.
-What exactly is REST?
-REpresentational State Transfer (REST) is a style of software architecture for distributed systems such as the World Wide Web. REST has emerged over the past few years as a predominant Web service design model. This is what wiki mentions .
-The book REST API Design Rulebook by Mark Massé; O&#8217;Reilly Media  will teach you some rules which needs to be followed. This book has really helped me to understand some of the basic concepts of HTTP protocol. Yes really I was able to understand more on REST and how it should be represented etc.
-Probably you would have noticed websites with format .html , .json , .xml . If you have ever thought its REST, then its not :-) .
-Do you know
-a trailing forward slash (/) should not be included in URIs ?
-Underscores (_) should not be used in URIs ?
-There are more rules , but you can read and learn the rest from the book. The book has a total of 94 pages, but will serve you for a good reference. It also introduces WRML (http://www.wrml.org/) .</p>
-
-<p>Cons : Yes I feel there are some cons for the book. There are some examples when introducing WRML like the one below .</p>
-
-<p>{syntaxhighlighter class=&#8221;html&#8221;}
-application/wrml;
-format=&#8221;http://api.formats.wrml.org/application/json&#8221;;
-schema=&#8221;http://api.schemas.wrml.org/soccer/Player&#8221;
-{/syntaxhighlighter}</p>
-
-<p>But when you point your browser to http://api.formats.wrml.org/application/json you will get a 404.</p>
-
-<p>Example url :
-Its always a good way to mention example.com than mentioning http://api.schemas.wrml.org/soccer/Player . There are at many places its happening . You will not get completely on a first read when the chapters are moving, but sometimes you may want to read it many times.</p>
-
-<p>But I loved this book for I learned some basic stuffs really and also this is always a reference for future. In a rating of 5 , I will rate 4 .</p>
-
-<p>If you are interested in this book, you can buy this from</p>
-
-<p>REST API Design Rulebook by Mark Massé : http://shop.oreilly.com/product/0636920021575.do
-Pages: 116
-Print ISBN:978-1-4493-1050-9 | ISBN 10:1-4493-1050-8</p>
+  <div class="entry-content"><p>So today I got the custom designed T-Shirts with Aura Logo. Its time to brand :)  <img src="https://pbs.twimg.com/media/A4V654qCAAEudRT.jpg" title="Aura T-Shirt with github url" alt="Aura T-Shirt with github url" />  T-shirts with logo is here &#8230;.. Yey @<a href="https://twitter.com/auraphp">auraphp</a>:) .  <img src="https://pbs.twimg.com/media/A4V7Dv3CUAAIp8U.jpg" title="Aura T-Shirt with logo" alt="Aura T-Shirt with logo" />  A closer look into the logo, made with embroidery  <img src="https://pbs.twimg.com/media/A4V7SHhCYAAt6x-.jpg" title="Closer look at logo" alt="Closer look at logo" />  I have designed thes from ilogo.in .  Status : https://twitter.com/harikt/status/253744088891916288 , https://twitter.com/harikt/status/253744258329235456, https://twitter.com/harikt/status/253744505197584384</p>
 </div>
   
   
@@ -1124,23 +440,23 @@ Print ISBN:978-1-4493-1050-9 | ISBN 10:1-4493-1050-8</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/09/23/workshop-on-aura-project-for-php/">Workshop on Aura Project for PHP at OSI Days</a>
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/15/contributor-to-aura-project/">How I became a contributor to aura project</a>
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/">Thoughts on installing Zend Framework via composer</a>
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/27/how-to-install-aura-framework/">How to install aura framework</a>
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a>
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

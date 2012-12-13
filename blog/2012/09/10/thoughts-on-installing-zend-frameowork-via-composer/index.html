@@ -90,184 +90,7 @@
   </header>
 
 
-<div class="entry-content"><p>Note : First I thought of creating an issue, and it was not in github. These are not serious issues, but just my thoughts when installing ZF2 via composer. I am not sure whether its composer related or the way the zf2 is packaged to do it via composer.  Normally the composer.json will be something like</p>
-
-<p>{syntaxhighlighter class}
-hari@local:/var/www/composer/zf2$ cat composer.json
-{
-  &#8220;require&#8221;: {</p>
-
-<pre><code>"zendframework/zend-form": "2.0"
-</code></pre>
-
-<p>  }
-}
-hari@local:/var/www/composer/zf2$ php ../composer.phar install
-Loading composer repositories with package information
-Installing dependencies
-  - Installing zendframework/zendframework (2.0.0)</p>
-
-<pre><code>Downloading: 25%^C        
-</code></pre>
-
-<p>hari@local:/var/www/composer/zf2$ ^C
-{/syntaxhighlighter}</p>
-
-<p>But you can see the composer tries to install the whole zend-framework.  The problem is you need to add some more lines for its hosted in packages.framework.com and not in packagist.org . So your composer.json will be as below .</p>
-
-<p>{syntaxhighlighter class}
-hari@local:/var/www/composer/zf2$ cat composer.json
-{
-  &#8220;repositories&#8221;: [</p>
-
-<pre><code>{
-    "type": "composer",
-    "url": "http://packages.zendframework.com/"
-}
-</code></pre>
-
-<p>  ],
-  &#8220;require&#8221;: {</p>
-
-<pre><code>"zendframework/zend-form": "2.0"
-</code></pre>
-
-<p>  }
-}</p>
-
-<p>hari@local:/var/www/composer/zf2$ php ../composer.phar install
-Loading composer repositories with package information
-Installing dependencies
-  - Installing zendframework/zend-form (2.0.0)</p>
-
-<pre><code>Downloading: 100%         
-</code></pre>
-
-<p>zendframework/zend-form suggests installing
-zendframework/zendservice-recaptcha (ZendService\ReCaptcha component)
-Writing lock file
-Generating autoload files
-{/syntaxhighlighter}</p>
-
-<p>Great you installed the zf2 form component. Now you can see where the form is installed .</p>
-
-<p>{syntaxhighlighter class}
-hari@local:/var/www/composer/zf2$ ls vendor/
-autoload.php  composer  zendframework</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/
-zend-form</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/
-Zend</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/
-Form</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/
-Annotation                        FieldsetInterface.php
-composer.json                     Fieldset.php
-Element                           FieldsetPrepareAwareInterface.php
-ElementInterface.php              FormFactoryAwareInterface.php
-Element.php                       FormInterface.php
-ElementPrepareAwareInterface.php  Form.php
-Exception                         TODO.md
-Factory.php                       View</p>
-
-<p>{/syntaxhighlighter}</p>
-
-<p>Assume you have more zf2 packages which you have added. At a later point you think of installing the framework as a whole itself than adding more packages in the composer.json . So your composer.json will be some what like</p>
-
-<p>{syntaxhighlighter class}
-hari@local:/var/www/composer/zf2$ cat composer.json
-{
-  &#8220;repositories&#8221;: [</p>
-
-<pre><code>{
-    "type": "composer",
-    "url": "http://packages.zendframework.com/"
-}
-</code></pre>
-
-<p>  ],
-  &#8220;require&#8221;: {</p>
-
-<pre><code>"zendframework/zendframework": "2.0"
-</code></pre>
-
-<p>  }
-}</p>
-
-<p>hari@local:/var/www/composer/zf2$ php ../composer.phar update</p>
-
-<p>Loading composer repositories with package information
-Updating dependencies
-  - Removing zendframework/zend-form (2.0.0)
-  - Installing zendframework/zendframework (2.0.0)</p>
-
-<pre><code>Downloading: 100%         
-</code></pre>
-
-<p>Writing lock file
-Generating autoload files</p>
-
-<p>{/syntaxhighlighter}</p>
-
-<p>The form has been removed and framework is installed. Lets have a look where its installed .</p>
-
-<p>{syntaxhighlighter class}</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/
-autoload.php  composer  zendframework
-hari@local:/var/www/composer/zf2$ ls vendor/zendframework/
-zend-form
-hari@local:/var/www/composer/zf2$ cat composer.json
-{
-  &#8220;repositories&#8221;: [</p>
-
-<pre><code>{
-    "type": "composer",
-    "url": "http://packages.zendframework.com/"
-}
-</code></pre>
-
-<p>  ],
-  &#8220;require&#8221;: {</p>
-
-<pre><code>"zendframework/zendframework": "2.0"
-</code></pre>
-
-<p>  }
-}</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/
-Zend</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/
-Form</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/
-bin            INSTALL.md   README-DEV.md  resources
-composer.json  library      README-GIT.md  tests
-demos          LICENSE.txt  README.md      vendor</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/
-Zend</p>
-
-<p>hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/Zend/
-Authentication  Di            InputFilter    Mvc             Stdlib
-Barcode         Dom           Json           Navigation      Tag
-Cache           Escaper       Ldap           Paginator       Text
-Captcha         EventManager  Loader         Permissions     Uri
-Code            Feed          Log            ProgressBar     Validator
-Config          File          Mail           Serializer      Version
-Console         Filter        Math           Server          View
-Crypt           Form          Memory         ServiceManager  XmlRpc
-Db              Http          Mime           Session
-Debug           I18n          ModuleManager  Soap
-{/syntaxhighlighter}</p>
-
-<p>You can notice its going on the wrong place. vendor/zendframework/zend-form . I am not sure whether every one needs to remove all the installed packages to install the framework . It seems possible with naming zendframework/package . Thus it don&#8217;t remove the installed packages. May be there are some other issues related to it for the naming of zendframework/zend-form like that.</p>
+<div class="entry-content"><p>Note : First I thought of creating an issue, and it was not in github. These are not serious issues, but just my thoughts when installing ZF2 via composer. I am not sure whether its composer related or the way the zf2 is packaged to do it via composer. Normally the composer.json will be something like {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ cat composer.json { &#8220;require&#8221;: { &#8220;zendframework/zend-form&#8221;: &#8220;2.0&#8221; } } hari@local:/var/www/composer/zf2$ php ../composer.phar install Loading composer repositories with package information Installing dependencies - Installing zendframework/zendframework (2.0.0) Downloading: 25%\<sup>C</sup> hari@local:/var/www/composer/zf2$ \<sup>C</sup> {/syntaxhighlighter} But you can see the composer tries to install the whole zend-framework. The problem is you need to add some more lines for its hosted in packages.framework.com and not in packagist.org . So your composer.json will be as below . {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ cat composer.json { &#8220;repositories&#8221;: [ { &#8220;type&#8221;: &#8220;composer&#8221;, &#8220;url&#8221;: &#8220;http://packages.zendframework.com/&#8221; } ], &#8220;require&#8221;: { &#8220;zendframework/zend-form&#8221;: &#8220;2.0&#8221; } } hari@local:/var/www/composer/zf2$ php ../composer.phar install Loading composer repositories with package information Installing dependencies - Installing zendframework/zend-form (2.0.0) Downloading: 100% zendframework/zend-form suggests installing zendframework/zendservice-recaptcha (ZendService\ReCaptcha component) Writing lock file Generating autoload files {/syntaxhighlighter} Great you installed the zf2 form component. Now you can see where the form is installed . {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ ls vendor/ autoload.php composer zendframework hari@local:/var/www/composer/zf2$ ls vendor/zendframework/ zend-form hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/ Zend hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/ Form hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/ Annotation FieldsetInterface.php composer.json Fieldset.php Element FieldsetPrepareAwareInterface.php ElementInterface.php FormFactoryAwareInterface.php Element.php FormInterface.php ElementPrepareAwareInterface.php Form.php Exception TODO.md Factory.php View {/syntaxhighlighter} Assume you have more zf2 packages which you have added. At a later point you think of installing the framework as a whole itself than adding more packages in the composer.json . So your composer.json will be some what like {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ cat composer.json { &#8220;repositories&#8221;: [ { &#8220;type&#8221;: &#8220;composer&#8221;, &#8220;url&#8221;: &#8220;http://packages.zendframework.com/&#8221; } ], &#8220;require&#8221;: { &#8220;zendframework/zendframework&#8221;: &#8220;2.0&#8221; } } hari@local:/var/www/composer/zf2$ php ../composer.phar update Loading composer repositories with package information Updating dependencies - Removing zendframework/zend-form (2.0.0) - Installing zendframework/zendframework (2.0.0) Downloading: 100% Writing lock file Generating autoload files {/syntaxhighlighter} The form has been removed and framework is installed. Lets have a look where its installed . {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ ls vendor/ autoload.php composer zendframework hari@local:/var/www/composer/zf2$ ls vendor/zendframework/ zend-form hari@local:/var/www/composer/zf2$ cat composer.json { &#8220;repositories&#8221;: [ { &#8220;type&#8221;: &#8220;composer&#8221;, &#8220;url&#8221;: &#8220;http://packages.zendframework.com/&#8221; } ], &#8220;require&#8221;: { &#8220;zendframework/zendframework&#8221;: &#8220;2.0&#8221; } } hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/ Zend hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/ Form hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/ bin INSTALL.md README-DEV.md resources composer.json library README-GIT.md tests demos LICENSE.txt README.md vendor hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/ Zend hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/Zend/ Authentication Di InputFilter Mvc Stdlib Barcode Dom Json Navigation Tag Cache Escaper Ldap Paginator Text Captcha EventManager Loader Permissions Uri Code Feed Log ProgressBar Validator Config File Mail Serializer Version Console Filter Math Server View Crypt Form Memory ServiceManager XmlRpc Db Http Mime Session Debug I18n ModuleManager Soap {/syntaxhighlighter} You can notice its going on the wrong place. vendor/zendframework/zend-form . I am not sure whether every one needs to remove all the installed packages to install the framework . It seems possible with naming zendframework/package . Thus it don&#8217;t remove the installed packages. May be there are some other issues related to it for the naming of zendframework/zend-form like that.</p>
 </div>
 
 
@@ -327,23 +150,23 @@ Debug           I18n          ModuleManager  Soap
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/09/23/workshop-on-aura-project-for-php/">Workshop on Aura Project for PHP at OSI Days</a>
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/15/contributor-to-aura-project/">How I became a contributor to aura project</a>
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/">Thoughts on installing Zend Framework via composer</a>
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/27/how-to-install-aura-framework/">How to install aura framework</a>
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a>
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="There are various distribution of GNU/Linux available now. I think every disto have a Live CD . So people can try it out and if they love it , can &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/page/17/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/02/43-booting-gnewsense-gnulinux-from-usb/">Booting Gnewsense Gnu/linux From USB Flash Drive</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-02T09:07:00+05:30" pubdate data-updated="true">May 2<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There are various distribution of GNU/Linux available now. I think every disto have a Live CD . So people can try it out and if they love it , can install it . So what I am talking is, it may not be possible to create a Live CD to try each and every distro and their newer versions . If you are a person like me , then you may love to use an alternative to boot from CD, something like a USB flash drive ( popularly called pen drive , thumb )  for its reusable .  Some days before I found the new GNU/ Linux which is entirely free removing all the restricted packages which is supported by the FSF ( Free software foundation) . Gnewsense is an Ubuntu based free software distribution without non-free binary blobs in the kernel. You may think whether Ubuntu is a free one , then why gnewsense . If you have any such doubts you can have a look in the <a href="http://www.gnewsense.org/index.php?n=FAQ.FAQ" title="FAQ of the gnewsense">FAQ of the gnewsense .</a>  <a href="http://www.flickr.com/photos/harikt/3491574392/"><img src="http://farm4.static.flickr.com/3628/3491574392_a807a17c45.jpg?v=0" title="gnewsense desktop" alt="gnewsense desktop" /></a>    <a href="http://www.flickr.com/photos/harikt/3491575834/"><img src="http://farm4.static.flickr.com/3576/3491575834_a0206ca88e.jpg?v=0" title="gnewsense desktop with applications" alt="gnewsense desktop with applications" /></a>       Though I uses Ubuntu , I want to try it out, so thought of downloading the iso and use from USB pen drive . There was a documentation in the gnewsense about <a href="http://wiki.gnewsense.org/Documentation/BootingFromUSB">booting gnewsense gnu/linux from usb</a> . I worked as they have written . Though I am not powerful in those commands I thought of learning the new commands . Fallen to trouble partitioning USB and all . And finally recovered every thing and restarted after finishing all the steps.  When it started I changed to boot from USB flash drive . But got a black screen with just a message error . What to do now . Changed to other usb ports , the same ( error booting gnewsense ) . hm&#8230;&#8230;.. Anyway I want to try it, booted to Ubuntu connected net and searched , I don&#8217;t find an answer for it . Anyway got another software Free USB installer ( Either youu can try http://aligunduz.org/FUSBi/ or usb-creator . usb-creator is a good choice for the aligunduz . Download the usb-creator using synaptic and issue the command usb-creator in terminal . A graphical view will appear . <a href="https://help.ubuntu.com/community/Installation/FromUSBStick">Read more from ubuntu help</a> ) from iso package. Free USB installer can install iso image to usb flash drive . Yes downloaded it, and tried it. Restarted again , now it works . Now its pretty simple booting gnu/linux from usb flash drive . Yes , I would like to express my Thanks to Mr Ali for his wonderful work . Yes it may have saved many people. I guess if users are not powerful in command line too or don&#8217;t know the basics or some times to people who may have failed like me <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . Anyway failure is not the end, its the begining <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/shades_smile.gif" alt="image" /> .  <a href="http://www.flickr.com/photos/harikt/3491572538/"><img src="http://farm4.static.flickr.com/3582/3491572538_a6cc8b2d3c.jpg?v=0" title="gnewsense iso to usb with fusbi installer" alt="gnewsense iso to usb with fusb installer" /></a> I have taken a screen shot of the gnewsense and also the free usb installer. You can see how it looks . What I feel after working with it is, there is not much difference in menu and all, but a good color for the selection . Improved graphics . You too can try it from usb . Cheers guys , Have a great day .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/28/41-google-maps-yahoo-maps-and-open-street-maps/">Google Maps, Yahoo Maps and Open Street Maps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-28T09:08:00+05:30" pubdate data-updated="true">Apr 28<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Every one may have heard about the Google maps , Yahoo maps and have used atleast once or may have seen once . Now a days every web page too is using the maps to show their location and all . You will be getting a google maps api key in-order to show in your web page. I have used to show the IP location of the user&#8217;s in my previous site . Found another open source maps called the open street maps promoted by the GNU .     <img src="http://farm4.static.flickr.com/3664/3490762953_defeb72c4c.jpg?v=0" title="Screen shot of open street map " alt="Screen shot of open street map " />    The places are not marked completely , but in the future , it defnitely will be one of the best maps as its open source . You can have a look into the site http://www.openstreetmap.org/ and also you can edit the places , which you are familiar, so it will help others . I don&#8217;t know from which server it&#8217;s getting the data&#8217;s. But the Yahoo logo seems to be on the right side when editing .  I want to investigate into the matter , and will add more details . Thanks for reading .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/27/40-concern-over-open-source-softwares-and-big-giants-over-mysql/">Concern Over Open Source Softwares and Big Giants Over MySQL</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-27T09:08:00+05:30" pubdate data-updated="true">Apr 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I don&#8217;t know how many of you have heard about the news that the Sun Microsystem has been aquired by Oracle . Oracle is one of the worlds largest software company especially in the data base. Every open source lovers eye will be looking forward to see what will happen to MySQL which was part of Sun Microsystems now . The blog of the Michael Widenius Monty http://monty-says.blogspot.com/ , the creator of MySQL has quit the Sun Microsystem . He is hiring some of the MySQL developers who have supported him . He will continue to work for the open source database storage engine , the name is Maria . The web page of the new one is <a href="http://askmonty.org/wiki/index.php/Main_Page" title="Michael Monty Widenius the creator of MySQL">http://askmonty.org/wiki/index.php/Main_Page</a> .  As every one thinks I don&#8217;t know what will be the future of MySQL. Sometimes the big giant Oracle may not support MySQL . IBM was interested in MySQL. Some times Oracle may sell MySQL to IBM, or may kill MySQL slowly . We the PHP Developers were interested to work on LAMP , the Linux, Apache , MySQL and PHP . But now I think the MySQL may sometimes will be dropped and will be changing shortly to Maria , so the new LAMP consists of Linux, Apache , Maria the new database and PHP .  Anyway lets wait and see , what will happen to MySQL .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/26/39-replacement-for-skype-with-ekiga-or-twinkle-or-coccinella-or-sip-communicator/">Replacement for Skype With Ekiga or Twinkle or Coccinella or SIP Communicator for Gtalk</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-26T09:09:00+05:30" pubdate data-updated="true">Apr 26<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In my previous post I have expressed my concern over google and its products . Google always supporting the wonderful open source projects fails to develop its products in GNU/Linux operating systems. For example the latest Chrome is only available for windows, also gtalk .  I was hearing about skype for the first time when I joined ISPG on 27th of November 2007 . But I was able to recognise that skype is a proprietary software .So today I got some time to look into the open source softwares which can replace skype, which will increase security . As the source code of the propritery softwares are not open we are not sure how its working . Only the developer knows about the working . Our chat and files that are passed may or may not be secure . So we need open source softwares and want to promote such softwares .  These are some of the list that supports VoIP .  -   Ekiga ( Replacement for Skype ) -   Twinkle ( Replacement for Skype ) -   Coccinella -   QuteCom previously called WengoPhone -   SIP Communicator  are some of them .  <img src="http://farm4.static.flickr.com/3542/3490841365_a4a53c1a49.jpg?v=0" title="Ekiga on action" alt="Ekiga on action" />Ekiga will be installed in Ubuntu by default in 9.04 . I don&#8217;t remember for the older versions, its installed or not . Ekiga is a real replacement for skype . You need an ekiga account as like the skype itself . Then you can call from your desktop to desktop or to other land lines if you have credit . The call rates and all are in the https://www.diamondcard.us/exec/voip-rep-acc-type?secRel=/secondary/e/ekiga&amp;priRel=/templates&amp;secId=ekiga&amp;lc= . You can copy and paste it in your url if you love to know about it . The scrren shot of the ekiga is downloaded from the site . You can look into the site http://www.ekiga.org/index.php?rub=2 for the features list.  I was looking the gnu.org and reading about the high priority projects . The one among them was the replacement for skype . From there I got the list of wonderful projects . When I looked more about them , its amazing and it has even more than skype offers .  I was using empathy as there was no <strong>gtalk</strong> for linux . Gtalk is available for Windows XP . As I don&#8217;t need gtalk for Vista and all , I don&#8217;t even know whether there is any too <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-cool.gif" title="Cool" alt="Cool" /> . I downloaded the <strong>coccinella</strong> project and try it, which is something like the gtalk or <strong>empathy</strong> . We can send files , supports VoIP etc as in gtalk itself . The screenshot of it is taken when I am using from my lap . You can see a detailed list of features from http://thecoccinella.org/about . As I don&#8217;t want to make a copy from ther itself <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-cool.gif" title="Cool" alt="Cool" /> .     <img src="http://lh4.ggpht.com/_Z_YIrg5qE3M/SfQP8gMBE5I/AAAAAAAAAyI/Ojfuh3wkQpQ/s512/Coccinella.png" title="Coccinella working at Desktop of Hari K T" alt="Coccinella working at Desktop of Hari K T" /> Another one is<strong>sip communicator</strong>, which is a wonderful open source project developed in Java , which supports the most instant messaging and telephony protocols . They supports SIP, Jabber, AIM/ICQ, MSN, Yahoo! Messenger, Bonjour, IRC, RSS and more coming soon . It was pidgin which supports at earlier , but now many more open source projects are available under the GNU/GPL licence . The coccinella and sip communicator has its own features. The coccinella has a support to draw pictures and show the other user with out chatting . Its a great feature I think . So each and every software has its own roles .  I am running out of time, so I am mising a lot to write . So giving the links below . So you can have a look , if you love to use open source and these projects and decide to choose which one suits best for you .  Ekiga Features : http://www.ekiga.org/index.php?rub=2  Twinkle Features : http://www.xs4all.nl/\~mfnboer/twinkle/index.html  Coccinella Features : http://thecoccinella.org/about  QuteCom : http://www.qutecom.org/  SIP Communicator : http://www.sip-communicator.org</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/23/38-celebrating-my-24-th-bday-with-ubuntu-904-colleagues-at-ispg-friends-and-dear-o/">Celebrating My 24 Th B&#8217;day With Ubuntu 9.04, Colleagues at ISPG, Friends and Dear Ones</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-23T09:01:00+05:30" pubdate data-updated="true">Apr 23<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yes, today I am celebrating my 24th Birthday. I am very Happy especially this year for I am celebrating with the new release of Ubuntu version 9.04 named Jaunty.These are the images from new version of Ubuntu ( After some research in the tinymce to make this pictures available in my site ) . Have a look and if you loved it, go and get it my dear friend. Its all about free and open . http://www.ubuntu.com/products/whatisubuntu/904features/     <img src="http://www.ubuntu.com/products/whatisubuntu/904features/images/features/screens/photos/main.jpg" alt="Ubuntu 8.04 Desktop Edition screenshots" />    When I was a kid , I have not got an opportunity to give sweets to my classmates as its in the month of April. Its really sad especially when you are kids, not to wear a coloured dress to school. I think some of them have faced the same problem . But now its not a big deal as years passes.  Its really late( 04:19:16 AM ) , but thought of writing a single line on this great day.  Reached office around 6 PM . Jeena our HR wished me . I was really shocked how she knows about it, for she was new , and I thanked her . Left the room, some of them have a smiling faces, some where serious in their work. As if there has happened nothing just went near my seat. Bindu was <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-smile.gif" title="Smile" alt="Smile" /> , I know she knows about it , so just said silence to her. Prasanth sir came near me wished me. I thanked him too. Martin in a loud noice asked me , &#8220;Hari is it your Birthday&#8221;. He breaked my silence . After that Jinu sir, Ansar sir , Aneesh sir , Ajesh , Vijeesh and all came . Around 9:00 PM I got a card from Jinu sir, representing ISPG . This was my 2nd B&#8217;day at ISPG. I cut the cake and Ratheesh sir our great designer ( Polpularly known as Cake cutter of Panampally Nagar ) gave me the piece. It was really smelling some foul play . Yes the cream was on my face . Hm anyway I got an opporchunity too to give it to him . But failed to make a nice cream on his face <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-tongue-out.gif" title="Tongue out" alt="Tongue out" /> .  I got a lot of scraps from orkut and messages to my mobile . Some even called me and greeted. As I have changed my number some called my father and greeted him <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-smile.gif" title="Smile" alt="Smile" /> . My client too wishes me. It was a great day .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix/">Search Yahoo , Google , Youtube , Flicker , Facebook and More From Kosmix</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-22T09:02:00+05:30" pubdate data-updated="true">Apr 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Don&#8217;t know whether all have heard about the site kosmix . Anyway let me tell what are the things that attracted to me .  You can search for a particular keyword , kosmix will search in google , yahoo, flicker , facebook , youtube , twitter and many more . The result is very much useful . I am keeping a screen shot for the search hello world .  <img src="http://farm4.static.flickr.com/3563/3490845375_ec164726a4.jpg?v=0" title="search for hello world in kosmix" alt="search for hello world in kosmix " />    The people behind Kosmix are Venky Harinarayan and his business partner Anand Rajaraman founded in 2005. They are the people who have developed the ecommerce search engine and later sold to amazon for $250 millionin 1998 . The investors of kosmix are former CEO of Motorolla , CEO of Amazon . Have a look below .  * Lightspeed Ventures Partners * Accel Partners * Dag Ventures * Jeffrey P. Bezos, Bezos Expeditions Bezos Expeditions is Jeff Bezos&#8217; personal investment company. Mr. Bezos is founder and CEO of Amazon.com. * Bill Miller, Legg Mason Chairman and Chief Investment Officer * Ed Zander Former CEO of Motorola  You can visit the site http://www.kosmix.com/ and know more detailed . Found a good tool , so want to make people aware about this , and spread the world . Got information from the site itself.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/21/36-ubuntu-904-is-about-to-release/">Ubuntu 9.04 Is About to Release</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-21T09:10:00+05:30" pubdate data-updated="true">Apr 21<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.ubuntu.com" title="Get Ubuntu"><img src="http://www.ubuntu.com/files/countdown/static.png" title="Ubuntu: For Desktops, Servers, Netbooks and in the cloud" alt="Ubuntu: For Desktops, Servers, Netbooks and in the cloud" /></a>Canonical is releasing the new Ubuntu version 9.04 called Jaunty. Now you can download it for testing purpose. I still remember how I installed the Ubuntu 4.10 when I got from Akhil one of my friend who was studying at NIT. He was the person who introduces Ubuntu before me . I was using the Mandrake , rehat etc at the time . He told should be careful installing it. It was not having a good graphics at that time. But now the Ubuntu community has grown . You can see how it has made the great presence in Desktop , Laptop , Servers .  After every six months the Ubuntu will be introducing the newer versions . Do you know how the version numbering is done for ubuntu ? Its nothing but , just the year first and then the numeric digit of month . So this is 2009 April and it releases 9.04 . The earlier version was 8.10 which was released on 2008 October . So the last numbers will be always 04 and 09 . I hope there will be no change for this <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-cool.gif" title="Cool" alt="Cool" /> . The newer versions contains different security fixes and new software .  <img src="http://farm4.static.flickr.com/3322/3491661248_7d36df796e.jpg?v=0" title="Ubuntu Desktop in a glance" alt="Ubuntu Desktop in a glance" /> <img src="http://farm4.static.flickr.com/3627/3490846393_a39d5d1353.jpg?v=0" title="Ubuntu Help" alt="Ubuntu Help" /> <img src="http://farm4.static.flickr.com/3538/3491663748_08468e9dd3.jpg?v=0" title="Different Languages that Ubuntu supports" alt="Different Languages that Ubuntu supports" /> Ubuntu is a debain based GUN/Linux operating system . Its pretty simple to use . There is a wide range of choice for many softwares totally free . If your hard disk have failed , now its not a big deal. You can still use the system . No need of hard disk. Just login with your ubuntu live CD and just save in your thumb or email if you have internet connection . The internet has grown and you can explore it for your needs . Upload your favourite pictures to picasa or flicker, documents to google docs , slide share etc . It will not be this much simple with out the presence of Internet. The world wide web has played a great role in establishing these things .  What Ubuntu promises is  -   Ubuntu will always be free of charge, including enterprise     releases and security updates. -   Ubuntu comes with full commercial support from Canonical and     hundreds of companies around the world. -   Ubuntu includes the very best translations and accessibility     infrastructure that the free software community has to offer. -   Ubuntu CDs contain only free software applications; we     encourage you to use free and open source software, improve it and     pass it on.  You can get your free copy of Ubuntu from Canonical through shipping. The free disc of Ubuntu may be one of the reason for the greatest popularity of Ubuntu . I was having a dial up connection at that time. So it will be always difficult for every one to get a copy. The free disc have helped me a lot. I hope not only to me , but to many . There is a huge change for Ubuntu from the previous versions . It will detect almost all your hardwares . Its pretty simple to configure with synaptic package manager . There is inbuilt driver for the EVDO . I am using a BSNL EVDO connection. I have configured the EVDO to work in ubuntu . You can use the wvdial command for configuring it and dialling.  This is what you need to do .  Connect the device when the system boots , in the panel you can see the Broad Com driver ready . Activate it . You may need to download the wvdial using synaptic package manager . The below are the commands used to configure from terminal . ( Applications->Terminal )  $ sudo wvdialconf /etc/wvdial.conf  The above command will find the device and write the configuration to /etc/wvdial.conf . You can see from output whether it finds the device , if so you need to edit the wvdial.conf  $ sudo gedit /etc/wvdial.conf  I uses vim for editing . But you may not be familiar so you can use the text editor . Remove the # symbol and save your username , password etc given by BSNL authority . Something like the below  [Dialer Defaults] Init1 = ATZ Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0 Modem Type = Analog Modem Baud = 9600 New PPPD = yes Modem = /dev/ttyUSB0 ISDN = 0 Stupid Mode = 1 Phone = #777 Username = username Password = password Now you can dial using wvdial .It will hang up never close till you have finished browsing the web with your favourite browser .( Mozilla for many guys <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-smile.gif" title="Smile" alt="Smile" /> ). When successfully connected you can see IP address of the form 10.0.01.12 ( some thing like this &#8211;> local IP address 10.2.40.227 &#8211;> pppd: Ч� ��� &#8211;> remote IP address 192.168.52.12 &#8211;> pppd: Ч� ��� &#8211;> primary DNS address 218.248.240.180 &#8211;> pppd: Ч� ��� &#8211;> secondary DNS address 218.248.240.181 &#8211;> pppd: Ч� ���  $ sudo wvdial  After you finished browing can use Ctrl + c to terminate .  Note : Firefox often complains about the error like below  Offline Mode Firefox is currently in offline mode and can&#8217;t browse the Web. The browser is operating in its offline mode and cannot connect to the requested item. * Is the computer connected to an active network? * Place the browser in online mode and try again.  If there is trouble viewing look whether Work Offline is unticked File->Work Offline from Mozilla .  You will also have trouble connecting the empathy to chat with your friends .It will not connect even right password .Empathy will be always in offline mode even if you change to online . If empathy not changing to online mode just untick the enable networking .  You can rectify the problem by right clicking on the network and disable enable networking by unticking it .  I have recommended many friends to use Ubuntu and many from college itself had ordered and have tried it . If its releasing on 23 April , then I am really Happy bcoz I am celebrating my 24<sup>th^</sup> B&#8217;day <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-smile.gif" title="Smile" alt="Smile" />.  The canonical is the one which supports the ubuntu project and its community . There are lots of courses they are teaching . You can help canonical and support the ubuntu by various means . Have a look at ubuntu.com for more details .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/19/35-low-disk-space-store-images-and-files-in-database-or-/">Low Disk Space , Store Images and Files in Database Or</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-19T09:49:00+05:30" pubdate data-updated="true">Apr 19<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Every one may have fallen in this trouble , when your disk space exceeds . Yes , I was trying to create a folder and upload some images . I noticed a fact , there is no space remaining to upload one . Yes , every one , who have a web hosting space may have thought an alternative way to store images and files . Yes, don&#8217;t worry I just uploaded to my picasa web albums <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-smile.gif" title="Smile" alt="Smile" /> .  But there is also another alternative if you have a database . Yes , you can store images and files in MySQL . To store images and files use the BLOB format . It can store binary data . What you need to do is  Create a table Image , with pkid of type int(10) as unique id , data of type BLOB , format ( jpeg , png &#8230; ) and description.  Read the binary contents from the image . using file_get_contents() or fread() functions of php .  Insert to database . Now you can retrieve the image using the id . Pass the id to a page which outputs the header of image . Yes, its pretty simple to do this . The below code is a sample . You can try it out . I have not tested , just made for the post now .  &lt;?php /* Create a table something like this CREATE TABLE `Labs`.`Images` ( `pkid` INT( 10 ) NOT NULL , `Content` BLOB NOT NULL , `Description` VARCHAR( 300 ) NOT NULL , `Type` VARCHAR( 5 ) NOT NULL , PRIMARY KEY ( `pkid` ) ) ENGINE = MYISAM */ //insertImage.php $mysqli = new mysqli(&#8220;localhost&#8221;, &#8220;my_user&#8221;, &#8220;my_password&#8221;, &#8220;database&#8221;); /* check connection */ if (mysqli_connect_errno()) { printf(&#8220;Connect failed: %s\n&#8221;, mysqli_connect_error()); exit(); } //Read file contents $fp = fopen(&#8220;image.jpg&#8221;,&#8221;rb&#8221;); $contents = fread( $fp , filesize(&#8220;image.jpg&#8221;) ); fclose( $fp ); if ($result = $mysqli->query(&#8220;INSERT INTO Images(&#8216;pkid&#8217;,&#8217;Content&#8217;,&#8217;Description&#8217;) VALUES(&#8216;NULL&#8217;,&#8217;&#8221;.$contents.&#8221;&#8217;,&#8217;test me&#8217;)&#8221;)) { echo &#8220;Successful insert&#8221;; } $mysqli->close(); ?> &lt;?php //getImage.php $mysqli = new mysqli(&#8220;localhost&#8221;, &#8220;my_user&#8221;, &#8220;my_password&#8221;, &#8220;database&#8221;); /* check connection */ if (mysqli_connect_errno()) { printf(&#8220;Connect failed: %s\n&#8221;, mysqli_connect_error()); exit(); } //Read image contents if ($result = $mysqli->query(&#8220;SELECT Content FROM Images WHERE pkid = &#8216;&#8221;.$_GET[&#8216;pkid&#8217;].&#8221;&#8217;&#8221;)) { $row = $result->fetch_assoc(); } header(&#8216;Content-Type: image/jpeg&#8217;); echo $row[&#8216;Content&#8217;]; ?>  <img src="getImage.php?pkid=<?php echo $pkid ?\>&#8221; alt=&#8221;&lt;?php echo $description ?>&#8221; title=&#8221;&lt;?php echo $description ?>&#8221; />  This is just a sample. I hope you know some basics of PHP . You can modify the script as needed, and also do care about SQL injections <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-tongue-out.gif" title="Tongue out" alt="Tongue out" /> . You can encrypt the values that are passed for additional security measures . Have not tested this , just made this in a hurry . So may contains errors. Please do report if you find some . I will be happy to hear it from you .  You can use the sameway to store the word , pdf etc in the MySQL . Its simple to make it work . You can change the content type of header , so as to make it dynamic .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/19/34-bad-day-but-enjoyed-a-good-movie/">Bad Day , but Enjoyed a Good Movie</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-19T09:03:00+05:30" pubdate data-updated="true">Apr 19<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was sleeping when Faizal , called me and told about the Calicut University declared the fourth and sixth semester results . There was little hope for me , I know university you loves me, that&#8217;s why you don&#8217;t leave me . Yes, got only 1 paper Hardware Systems design ( Thanks at-least I got one <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-smile.gif" title="Smile" alt="Smile" /> ) . Still waiting for the revaluation results of the previous exam ( December 2008 ) . I may some times get a pass mark . Anyway lets wait and see. When I visit the results page I wondered , declared the results of June 2008 today ( April 19 2009 )and the last date of revaluation and application for supplementary was October 2008 <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-surprised.gif" title="Surprised" alt="Surprised" /> .  <img src="http://farm4.static.flickr.com/3594/3490849515_3f825a3df3.jpg?v=0" title="Varanam aairam movie still" alt="Varanam aairam" /> <img src="http://farm4.static.flickr.com/3303/3490848977_9c8716450b.jpg?v=0" title="Vaaranam aairam movie still" alt="Vaaranam aairam movie still" /> Started the day knowing the wonderful results, so the day was really a good one <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-cool.gif" title="Cool" alt="Cool" /> , so to forget the nice results just sat infront of my lap and started watching the movie Varanamairam ,starring Surya , Simaran , Sameera Reddy . A real touching story about Love . Love towards his father , mother and dear ones . Yes a real touching movie . Loved it , if you have not seen , just watch the wonderful movie .Every one has done their roles really well .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/15/33-opensolaris-installation-on-ubuntu-and-after-effects-of-grub/">Opensolaris Installation on Ubuntu and After Effects of Grub</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-15T09:11:00+05:30" pubdate data-updated="true">Apr 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Writing my post from Open solaris . This is a great experience , so thought to share with you , so may help some of you.  I have once installed the Sun Solaris , not the Open Solaris of sun . And it was really a tedious job . So I was aware of the consequences . But thought of trying the Open Solaris , as I love to use it after trying the Live CD. Though I have got the CD some days before , not able to try it.  Current OS and status  1 ) Installed Ubuntu 8.10 , having lots of additional softwares installed and lots of valuable data&#8217;s :-) .  2 ) Don&#8217;t want to miss any , like the previous case.  Started Installation around 12:30 noon . It takes some time to install the OS. I came after my Lunch and by the time it has finished the installation .  Restarted the system. The grub loads &#8230;&#8230;&#8230;&#8230; OOP&#8217;s really fucking , the Ubuntu is not there , it has gone . The boot loader has gone . Anyway thought of reinstalling the grub . I have installed from Fedora the boot loader , but not from Ubuntu , so thought of editing the grub file for the sun solaris. But I need to know the real path to the Ubuntu kernel . Booted from Ubuntu Live CD , searched google to find from where I will get the complete path ? Yes, found a solution for it , ( https://sourceforge.net/projects/bootinfoscript/ ). Downloaded and tried , got the result. Saved in gmail :-) . Restarted the system , logged to Open solairs .  Looked to edit grub . Searched a lot , got some information from blog of sun. He is a worker at Sun . ( http://blogs.sun.com/agraj/entry/editing_grub_bootloader ) . But I was not able to find the /etc/grub.conf nor the /boot/grub/menu.lst ( Skipping some of the steps I have tried to edit grub from command prompt ) . And finally I was forced to login to Live CD , and tried to do like the steps in http://ubuntuforums.org/archive/index.php/t-24113.html the post . But what I missed was Open Solaris loader and time and the updated kernel of Ubuntu . What it does was installed the Ubuntu OS again .So never go in these ways , I will shortly tell the other one. Why I told never go in this way is because it will remove some of the files of our updated kernel , though it can backup our files. And finally I edited the /boot/grub/menu.lst of the Ubuntu distro and added the code  title Open Solaris root (hd0,0) makeactive chainloader +1  <strong>The pretty simple way</strong> ( I was not able to try this , but found the menu.lst of Open Solaris ) :  1 ) Install Solaris  2 ) Boot with Live CD , install the boot info script and run it ( https://sourceforge.net/projects/bootinfoscript/ ) . Save the RESULTS.txt may be in you mail or thumb .  3 ) Restart to login to Open Solaris . Edit the menu.lst , ( its not located at /etc/grub.conf nor at /boot/grub/ ) . The menu.lst has moved to /rpool/boot/grub/ folder . So what you need to do is just edit the /rpool/boot/grub/menu.lst . You must be root to edit this file ( Use su or sudo ).  Copy and paste the lines you have got from the RESULTS.txt which is produced by the boot info script . Some thing starting like ## ## End Default Options ## and ending with ### END DEBIAN AUTOMAGIC KERNELS LIST . You can have a search if you are using gedit .  Now restart your system . It will works . Defnitely it will work . Have fun with solaris too . Spend my whole day for this experiment :-( . But learned a lot of new things , so I gained :-)  Thanks guys , let me have some sleep its 1:05 Am . Want to cast my vote and leave to work tomorrow morning . Bye have a great day .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/18/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/16/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

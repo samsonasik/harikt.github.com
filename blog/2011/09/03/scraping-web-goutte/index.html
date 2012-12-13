@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Scraping the web with Goutte - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="Some months back I read the article php|architect&#8217;s guide to Web Scraping with PHP - Don&#8217;t let the title fool you. It was a review for &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2011/09/03/scraping-web-goutte/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Scraping the Web With Goutte</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-03T13:38:00+05:30" pubdate data-updated="true">Sep 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Some months back I read the article <a href="http://devzone.zend.com/article/12584">php|architect&#8217;s guide to Web Scraping with PHP - Don&#8217;t let the title fool you</a>. It was a review for the <a href="http://www.phparch.com/books/phparchitects-guide-to-web-scraping-with-php/">book</a> of Mathew Turland ( <a href="http://twitter.com/elazar">@elazar</a> ) by Cal Evans . But I didnot read the book too . Days passes I saw <a href="https://github.com/fabpot/Goutte">Goutte</a> a simple web scrapper by @fabpot (  <a href="http://fabien.potencier.org">Fabien Potentier</a> ) .  But two days back I was looking how I can download my friends contact details from facebook. I didnot find a means to get the mobile numbers or email address. I looked the API , but it didnot provide some functionalities like that . Then what to do ?  If I have got the email and phone number I can sync with my gmail and via it to my android handset . But I didnot find anything , may be other softwares will be there . But I simply thought of learning scraping than going to do something .  Goutte is a simple library which can be downloaded as a phar file also. So you just want to add a require for the phar file . It utilises some of the symfony components and zend http component . You can login , select links , clicks on it , filter the content , fetch data etc.  I was able to make the script going through some of the articles below .  Read me of https://github.com/fabpot/Goutte  http://www.phparch.com/2010/04/four-new-php-5-3-components-and-goutte-a-simple-web-scraper/  http://fabien.potencier.org/article/42/parsing-xml-documents-with-css-selectors  Also the api :) . Its really a powerful php scraping tool. Yes its easy if you know how the css selectors work .  Download Goutte over https://github.com/fabpot/Goutte or using wget https://raw.github.com/fabpot/Goutte/master/goutte.phar . Start scraping :) .</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-03T13:38:00+05:30" pubdate data-updated="true">Sep 3<span>rd</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2011/09/03/scraping-web-goutte/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2011/09/03/scraping-web-goutte/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/08/21/contributing-php/" title="Previous Post: Contributing to PHP">&laquo; Contributing to PHP</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/09/03/reading-and-writing-csv-files-php/" title="Next Post: Reading and Writing CSV files in PHP">Reading and Writing CSV files in PHP &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

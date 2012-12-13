@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Booting gnewsense gnu/linux from USB flash drive - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="There are various distribution of GNU/Linux available now. I think every disto have a Live CD . So people can try it out and if they love it , can &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2009/05/02/43-booting-gnewsense-gnulinux-from-usb/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Booting Gnewsense Gnu/linux From USB Flash Drive</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-02T09:07:00+05:30" pubdate data-updated="true">May 2<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>There are various distribution of GNU/Linux available now. I think every disto have a Live CD . So people can try it out and if they love it , can install it . So what I am talking is, it may not be possible to create a Live CD to try each and every distro and their newer versions . If you are a person like me , then you may love to use an alternative to boot from CD, something like a USB flash drive ( popularly called pen drive , thumb )  for its reusable .  Some days before I found the new GNU/ Linux which is entirely free removing all the restricted packages which is supported by the FSF ( Free software foundation) . Gnewsense is an Ubuntu based free software distribution without non-free binary blobs in the kernel. You may think whether Ubuntu is a free one , then why gnewsense . If you have any such doubts you can have a look in the <a href="http://www.gnewsense.org/index.php?n=FAQ.FAQ" title="FAQ of the gnewsense">FAQ of the gnewsense .</a>  <a href="http://www.flickr.com/photos/harikt/3491574392/"><img src="http://farm4.static.flickr.com/3628/3491574392_a807a17c45.jpg?v=0" title="gnewsense desktop" alt="gnewsense desktop" /></a>    <a href="http://www.flickr.com/photos/harikt/3491575834/"><img src="http://farm4.static.flickr.com/3576/3491575834_a0206ca88e.jpg?v=0" title="gnewsense desktop with applications" alt="gnewsense desktop with applications" /></a>       Though I uses Ubuntu , I want to try it out, so thought of downloading the iso and use from USB pen drive . There was a documentation in the gnewsense about <a href="http://wiki.gnewsense.org/Documentation/BootingFromUSB">booting gnewsense gnu/linux from usb</a> . I worked as they have written . Though I am not powerful in those commands I thought of learning the new commands . Fallen to trouble partitioning USB and all . And finally recovered every thing and restarted after finishing all the steps.  When it started I changed to boot from USB flash drive . But got a black screen with just a message error . What to do now . Changed to other usb ports , the same ( error booting gnewsense ) . hm&#8230;&#8230;.. Anyway I want to try it, booted to Ubuntu connected net and searched , I don&#8217;t find an answer for it . Anyway got another software Free USB installer ( Either youu can try http://aligunduz.org/FUSBi/ or usb-creator . usb-creator is a good choice for the aligunduz . Download the usb-creator using synaptic and issue the command usb-creator in terminal . A graphical view will appear . <a href="https://help.ubuntu.com/community/Installation/FromUSBStick">Read more from ubuntu help</a> ) from iso package. Free USB installer can install iso image to usb flash drive . Yes downloaded it, and tried it. Restarted again , now it works . Now its pretty simple booting gnu/linux from usb flash drive . Yes , I would like to express my Thanks to Mr Ali for his wonderful work . Yes it may have saved many people. I guess if users are not powerful in command line too or don&#8217;t know the basics or some times to people who may have failed like me <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . Anyway failure is not the end, its the begining <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/shades_smile.gif" alt="image" /> .  <a href="http://www.flickr.com/photos/harikt/3491572538/"><img src="http://farm4.static.flickr.com/3582/3491572538_a6cc8b2d3c.jpg?v=0" title="gnewsense iso to usb with fusbi installer" alt="gnewsense iso to usb with fusb installer" /></a> I have taken a screen shot of the gnewsense and also the free usb installer. You can see how it looks . What I feel after working with it is, there is not much difference in menu and all, but a good color for the selection . Improved graphics . You too can try it from usb . Cheers guys , Have a great day .</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-02T09:07:00+05:30" pubdate data-updated="true">May 2<span>nd</span>, 2009</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2009/05/02/43-booting-gnewsense-gnulinux-from-usb/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2009/05/02/43-booting-gnewsense-gnulinux-from-usb/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/04/28/41-google-maps-yahoo-maps-and-open-street-maps/" title="Previous Post: Google maps, Yahoo maps and Open street maps">&laquo; Google maps, Yahoo maps and Open street maps</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/05/02/42-firebug-a-handy-tool-for-web-developers/" title="Next Post: Firebug a Handy tool for web developers">Firebug a Handy tool for web developers &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

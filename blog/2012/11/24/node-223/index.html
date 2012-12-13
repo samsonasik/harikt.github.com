@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>vfsStream and file system - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="Paul M Jones wrote earlier When Possible, Use File *Resources* Instead Of File *Names* and in comments Chris Hartjes was mentioning about vfsStream. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2012/11/24/node-223/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">vfsStream and File System</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-24T20:42:00+05:30" pubdate data-updated="true">Nov 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Paul M Jones wrote earlier <a href="http://paul-m-jones.com/archives/2487">When Possible, Use File *Resources* Instead Of File *Names*</a> and in comments <a href="http://www.littlehart.net/atthekeyboard">Chris Hartjes</a> was mentioning about <a href="http://vfs.bovigo.org/">vfsStream</a>. So for <a href="https://github.com/auraphp">@auraphp</a> we thought of making to support vfsStream. What the hell it is? vfsStream is a PHP stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest. So without touching the file system and not bothering too much about the operating system, file permissions, disk quota, removing the files created by tests on tear down etc we can make use of vfsstream. Lets start Go and get it via composer. {syntaxhighlighter class=&#8221;php&#8221;} { &#8220;require&#8221;: { &#8220;mikey179/vfsStream&#8221;: &#8220;1.1.0&#8221; } } {/syntaxhighlighter} Run your composer.phar update. {syntaxhighlighter class=&#8221;php&#8221;} require &#8216;vendor/autoload.php&#8217;; use org\bovigo\vfs\vfsStream; use org\bovigo\vfs\visitor\vfsStreamStructureVisitor; use org\bovigo\vfs\visitor\vfsStreamPrintVisitor; $structure = array( &#8216;Core&#8217; => array( &#8216;AbstractFactory&#8217; => array( &#8216;test.php&#8217; => &#8216;some text content&#8217;, &#8216;other.php&#8217; => &#8216;Some more text content&#8217;, &#8216;Invalid.csv&#8217; => &#8216;Something else&#8217;, ), &#8216;AnEmptyFolder&#8217; => array(), &#8216;badlocation.php&#8217; => &#8216;some bad content&#8217;, ) ); $root = vfsStream::setup(&#8220;root&#8221;, &#8221;, $structure); {/syntaxhighlighter} So now we have created a complex structured file system. How can we check whether the structure is same? {syntaxhighlighter class=&#8221;php&#8221;} vfsStream::inspect(new vfsStreamPrintVisitor()); {/syntaxhighlighter} Now you have the structure how can you get the contents of the file you have created? {syntaxhighlighter class=&#8221;php&#8221;} file_get_contents(vfsStream::url(&#8216;root/Core/badlocation.php&#8217;)); {/syntaxhighlighter} Or you can do via {syntaxhighlighter class=&#8221;php&#8221;} $root->getChild(&#8216;Core/badlocation.php&#8217;)->getContent(); {/syntaxhighlighter} The question was raised by myself at https://github.com/mikey179/vfsStream/issues/48 . You can create directory and use vfsStreamPrintVisitor to see how the structure will be {syntaxhighlighter class=&#8221;php&#8221;} mkdir(vfsStream::url(&#8216;root/Core/AnEmptyFolder/hello&#8217;)); vfsStream::inspect(new vfsStreamPrintVisitor()); {/syntaxhighlighter} There is more documentation how you can use in phpunit or have a look into the recent commits on <a href="https://github.com/auraphp/Aura.View/commit/f39e3452116072a3fe7f529584acb862a76fe15e">Aura.View</a> For more documentation have a look into https://github.com/mikey179/vfsStream/wiki</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-24T20:42:00+05:30" pubdate data-updated="true">Nov 24<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2012/11/24/node-223/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2012/11/24/node-223/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/11/06/node-221/" title="Previous Post: Design Principles for a Better CMS">&laquo; Design Principles for a Better CMS</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/11/24/node-224/" title="Next Post: The making of Hari.Extras">The making of Hari.Extras &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Configuring Zendframework 1.9 in GNU/Linux or any - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="I got some request from some people asking how to configure / install zendframework 1.9 . Though its easy to do, I thought of writing it as some one &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2009/10/13/configuring-zendframework-gnulinux-or-any/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Configuring Zendframework 1.9 in GNU/Linux or Any</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-13T23:28:00+05:30" pubdate data-updated="true">Oct 13<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I got some request from some people asking how to configure / install zendframework 1.9 . Though its easy to do, I thought of writing it as some one who is lookingmay get some help . If you are new configuring PHP consider installing LAMP , WAMP or XAMPP . XAMPP comes with zend framework . So no need to do much work . If you in GNU/Linux you can go and get php , apache , mysql , phpmyadmin through synaptic or mannually download and configure it .  1 ) I hope you have the server LAMP or WAMP or MAMP is ready and running .  2 ) If you are using GNU/Linux use the command locate php.ini file , windows guys search it , you don&#8217;t need commands right ?  Open it in your editor . GNU/Linux guys can do in vim or gedit . Search for the keyword include_path and add your zend framework location . I assume it as /var/ZendFramework/library . You can place anywhere and its not a big deal .  ; UNIX: &#8220;/path1:/path2&#8221; ;include_path = &#8220;.:/usr/share/php&#8221; include_path = &#8220;.:/var/ZendFramework/library&#8221; ; ; Windows: &#8220;\path1;\path2&#8221; ;include_path = &#8220;.;c:\php\includes&#8221;  As I am from GNU/Linux I uncommented the line and added the path where the zendframework library is located . Windows guys can add your folder path to zendframework library .  3 ) Now you have done . If you need the zf command , then you have to do some more .  Make a symbolic link and place in the /bin . That is # ln -s /var/ZendFramework/bin/zf.sh /bin/zf  If you are in windows you need to add environment variables ( Right click on My computer - > Properties -> Settings tab ( I think ) Don&#8217;t ask me more about it , you may need to google search. Search for adding environment variables in java , as the process is same ) . So will be easy to run command from any where as # zf &lt;command> . Else you may need to give the full path where zendframework is placed. Like  /var/ZendFramework/bin/zf.sh or c:\ZendFramework\bin\zf.bat if you are in windows . ( Hope you have zendframework in c drive ) .  Now its ready to use your zendframework 1.9 for your projects . You have successfully installed and configured your Zendframework 1.9 . Any trouble in GNU/Linux let me know . I will help you configuring it .  *Note : You must be root and must restart apache after you have done completely .</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-13T23:28:00+05:30" pubdate data-updated="true">Oct 13<span>th</span>, 2009</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2009/10/13/configuring-zendframework-gnulinux-or-any/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2009/10/13/configuring-zendframework-gnulinux-or-any/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/10/13/opensource-microblogging-client-gwibber-gnulinux/" title="Previous Post: Opensource Microblogging ( twitter ) Clients for GNU/Linux">&laquo; Opensource Microblogging ( twitter ) Clients for GNU/Linux</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/10/14/zend-framework-18-web-application-development/" title="Next Post: Zend Framework 1.8 Web Application Development">Zend Framework 1.8 Web Application Development &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

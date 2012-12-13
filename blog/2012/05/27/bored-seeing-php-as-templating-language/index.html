@@ -10,10 +10,7 @@
 
   
   <meta name="description" content="Are you also getting bored of seeing PHP as a templating language ? Why I started to love templating language like django . The index.html 1
-2
-3
-4
-5 &hellip;">
+{% &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,227 +96,18 @@
 <p>The index.html</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>{% extends &quot;layout.html&quot; %}
-</span><span class='line'>{% block body %}
-</span><span class='line'>  <span class="nt">&lt;ul&gt;</span>
-</span><span class='line'>  {% for user in userlist %}
-</span><span class='line'>     <span class="nt">&lt;li&gt;</span>{{ user.name }}<span class="nt">&lt;/li&gt;</span>
-</span><span class='line'>  {% elsefor %}
-</span><span class='line'>     <span class="nt">&lt;li&gt;&lt;strong&gt;</span>no user found<span class="nt">&lt;/strong&gt;&lt;/li&gt;</span>
-</span><span class='line'>  {% endfor %}
-</span><span class='line'>  <span class="nt">&lt;/ul&gt;</span>
-</span><span class='line'>{% endblock %}
-</span><span class='line'>{% block title %}Index{% endblock %}
+</pre></td><td class='code'><pre><code class='html'><span class='line'>{% extends &quot;layout.html&quot; %} {% block body %} {% for user in userlist %} {{ user.name }} {% elsefor %} **no user found** {% endfor %} {% endblock %} {% block title %}Index{% endblock %}
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>The layout.html</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span><span class='line'><span class="nt">&lt;html&gt;</span>
-</span><span class='line'><span class="nt">&lt;head&gt;</span>
-</span><span class='line'>{% block head %}
-</span><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;style.css&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'><span class="nt">&lt;title&gt;</span>{% block title %}{% endblock %} - My default title<span class="nt">&lt;/title&gt;</span>
-</span><span class='line'>{% endblock %}
-</span><span class='line'><span class="nt">&lt;/head&gt;</span>
-</span><span class='line'><span class="nt">&lt;body&gt;</span>
-</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>{% block content %}{% endblock %}<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;footer&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>{% block footer %}
-</span><span class='line'><span class="ni">&amp;copy;</span> Copyright 2012 by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>example.com<span class="nt">&lt;/a&gt;</span>.
-</span><span class='line'>{% endblock %}
-</span><span class='line'><span class="nt">&lt;/div&gt;</span>
-</span><span class='line'><span class="nt">&lt;/body&gt;</span>
-</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>{% block head %} {% block title %}{% endblock %} - My default title {% endblock %} {% block content %}{% endblock %} {% block footer %} © Copyright 2012 by [example.com](http://example.com/). {% endblock %}
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Template inheritance
-https://docs.djangoproject.com/en/dev/topics/templates/#id1
-http://stackoverflow.com/questions/946627/how-to-implement-template-inheritance-like-django-in-php5
-I am not just mentioning placing a require statement. What about placing blocks anyway anywhere ? . It will get rendered in the way its defined in layout.html . May be we will use ob_start() and ob_stop() with PHP ? .</p>
-
-<p>Named Block End-Tags</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>{% block sidebar %}
-</span><span class='line'>    {% block inner_sidebar %}
-</span><span class='line'>        ...
-</span><span class='line'>    {% endblock inner_sidebar %}
-</span><span class='line'>{% endblock sidebar %}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>http://jinja.pocoo.org/docs/templates/#named-block-end-tags</p>
-
-<p>May be everyone mentions we can comment the last statement. But this is not often done by every people :( . Hard to find the real closing tag convert to the new design.</p>
-
-<p>Loop Cylce</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>{% for row in rows %}
-</span><span class='line'>    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;{{ loop.cycle(&#39;odd&#39;, &#39;even&#39;) }}&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ row.link }}&quot;</span><span class="nt">&gt;</span>{{ row.name }}<span class="nt">&lt;/a&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/li&gt;</span>
-</span><span class='line'>{% endfor %}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>http://jinja.pocoo.org/docs/templates/#for</p>
-
-<p>Is this the way you do with PHP? Or better than this ?</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
-</span><span class='line'><span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'><span class="k">foreach</span> <span class="p">(</span><span class="nv">$rows</span> <span class="nx">in</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nv">$count</span><span class="o">++</span><span class="p">;</span>
-</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">    &lt;li class=&quot;</span><span class="cp">&lt;?php</span>
-</span><span class='line'>        <span class="c1">// May be you will create a partial here ?</span>
-</span><span class='line'>        <span class="k">if</span> <span class="p">(</span> <span class="nv">$count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>            <span class="k">echo</span> <span class="s1">&#39;odd&#39;</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>            <span class="k">echo</span> <span class="s1">&#39;even&#39;</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'><span class="cp">?&gt;</span><span class="x">&quot;&gt;&lt;a href=&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;link&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">    &lt;/li&gt;</span>
-</span><span class='line'><span class="cp">&lt;?php</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>May be we will create a partial for the cycle. But everyone will not go creating partials ( and we may want to create each time partials for different websites or copy and paste a common partials ), and when we want to change something in the template it makes stuffs hard to find the end tags.
-I agree when the editor supports highlighting then its ok. But what will happen when people started to use alternative syntax ?</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">foreach ($rows as $row) :</span>
-</span><span class='line'><span class="x">    .....</span>
-</span><span class='line'><span class="x">endforeach;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I have not seen the syntax highlighting when the tags changes to something like above for Netbeans ( May be another plugin is there, I have not checked ) . What about other editors? Have you noticed any sort of highlights ? May be we can say PHP itself is templating language.</p>
-
-<p>Consider we are making a product like blogger. How much easy is it when we have a sandbox where php tags will never get executed, and how easy than not using xml for end users ?.
-I have played with some
-Smarty : I don&#8217;t love smarty for its not a PSR standard code.
-Dwo : The further development of Dwoo has stopped.
-Mustache : Two Mustache implementations for PHP are there . One is https://github.com/bobthecow/mustache.php and other by Mathew Weierophinney https://github.com/weierophinney/phly_mustache in PHP 5.3 .
-Twig : A fork of Armin Ronacher , later heavily modified by Fabien Potencier http://twig.sensiolabs.org/ . Fabien already have a wonderful article <a href="http://fabien.potencier.org/article/34/templating-engines-in-php"> Template Engines in PHP</a>
-What I understood playing with Mustache is, for template inheritance you want to first render the subview and then later pass the content to the layout. But for twig , you can use the extends tag and render the current view.</p>
-
-<p>Latte : Have you heard about Nette project ? I was looking Nette &#8216;s templating engine and if that comes as a standalone component ( and following PSR ) for <a href="https://twitter.com/geekovo/status/203443806476042240">David Grudl has already mentioned it</a>. It seems some more beautiful ? :-) http://doc.nette.org/en/default-macros , http://doc.nette.org/en/templating#toc-latte .</p>
-
-<p>Code example of Latte and why I asked David the question is</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$items</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">    </span><span class="cp">&lt;?php</span> <span class="nv">$counter</span> <span class="o">=</span> <span class="mi">1</span> <span class="cp">?&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">    &lt;ul&gt;</span>
-</span><span class='line'><span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$items</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">        &lt;li id=&quot;item-</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$counter</span><span class="o">++</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span><span class="cp">&lt;?php</span>
-</span><span class='line'>        <span class="k">echo</span> <span class="nx">htmlSpecialChars</span><span class="p">(</span><span class="nb">mb_convert_case</span><span class="p">(</span><span class="nv">$item</span><span class="p">,</span> <span class="nx">MB_CASE_TITLE</span><span class="p">))</span> <span class="cp">?&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">        &lt;/li&gt;</span>
-</span><span class='line'><span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">endforeach</span> <span class="cp">?&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">    &lt;/ul&gt;</span>
-</span><span class='line'><span class="cp">&lt;?php</span> <span class="k">endif</span><span class="cp">?&gt;</span><span class="x"></span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Can be written as</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">&lt;ul n:if=&quot;$items&quot;&gt;</span>
-</span><span class='line'><span class="x">{foreach $items as $item}</span>
-</span><span class='line'><span class="x">    &lt;li id=&quot;item-{$iterator-&gt;counter}&quot;&gt;{$item|capitalize}&lt;/li&gt;</span>
-</span><span class='line'><span class="x">{/foreach}</span>
-</span><span class='line'><span class="x">&lt;/ul&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And it can be reduced to</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">&lt;ul n:if=&quot;$items&quot;&gt;</span>
-</span><span class='line'><span class="x">    &lt;li n:foreach=&quot;$items as $item&quot;&gt;{$item|capitalize}&lt;/li&gt;</span>
-</span><span class='line'><span class="x">&lt;/ul&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Awesome right ? Codes are taken from Nette project . For more have a look at http://doc.nette.org/en/templating#toc-latte .</p>
-
-<p>May be we can defend for PHP. But once you start using this sort of syntax you will love this. I am sure . Your thoughts ?</p>
+<p></p>
 </div>
 
 
@@ -379,23 +167,23 @@ What I understood playing with Mustache is, for template inheritance you want to
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/09/23/workshop-on-aura-project-for-php/">Workshop on Aura Project for PHP at OSI Days</a>
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/15/contributor-to-aura-project/">How I became a contributor to aura project</a>
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/">Thoughts on installing Zend Framework via composer</a>
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/27/how-to-install-aura-framework/">How to install aura framework</a>
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a>
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

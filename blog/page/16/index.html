@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="I am a fan of Swaroop C H, after knowing him . He was in Yahoo, resigned his job and now working for ion labs . He is the author of the book , a byte &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/page/16/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/20/59-track-every-coin-to-save-your-budget-a-product-from-ion-labs/">Track Every Coin to Save Your Budget, a Product From Ion Labs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-20T09:30:00+05:30" pubdate data-updated="true">May 20<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am a fan of Swaroop C H, after knowing him . He was in Yahoo, resigned his job and now working for ion labs . He is the author of the book , a byte of python which is released in pdf, online html and printed copy. The pdf and online mannual is free.  Talking about ion labs, Swaroop C H , the dreamer , Vikram Chadaga and Varun Prabhakar are the brain behind ion labs have founded the new hardware and software to keep track of your money or we can say finance calculator from ion labs . Yes , the new product is launching on july 2009 . Lots of offers are there for those who books the product now. I would like to promote it , so thought of writing this article. I don&#8217;t have enough money for now to help him . But if this article can help him in anyway I am greatful . <a href="http://www.trackeverycoin.com/" title="Track every coin to save your budget">Visit Track a coin for more details</a>.  The previous product was the ion usb charger . After the success of it , they have really thought of running a startup firm and is now with the new product . If you have not heard about ion before , its the smallest usb charger which can be used to charge your ipod or any usb storage devices. Its pretty small in size .  <img src="http://farm3.static.flickr.com/2423/3551926824_0f7ec0dbf3.jpg?v=0" title="ion usb charger" alt="ion usb charger" /> Here comes the picture of the charger taken from the ions site . The cost of it is just 599/- INR and is available free of shipping . I hope its an affordable cost . It satisfies many standards . The iON works anywhere in the world - no more voltage conversions. Its an all in one charger . Now you don&#8217;t want to carry your mobile charger , ipod charger and all. Just ion charger will do the job . Easy to carry and makes your life easy . If you are interested do get one from the site using direct payment , check or DD . Visit <a href="http://ion.co.in/" title="ion the usb charger">ion</a> for more details .  </p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/20/57-getting-value-of-objects-inside-a-multidimensional-array-in-php/">Getting Value of Objects Inside a Multidimensional Array in Php</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-20T09:23:00+05:30" pubdate data-updated="true">May 20<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is some what interesting post to many of you . I have tried some time to make this correct for one of my friend Jaisenan . I like debugging, so spend some time to make this working. We was looking to get the value in a multidimensional array . One of the value in the array was an object. And this was the big problem , and was looking to solve it . Here is the array  $x = Array ( [#theme] => content_multiple_values [#title] => Face to Face Time [#required] => 0 [#description] => [0] => Array ( [#type] => duration_combo [#default_value] => Duration Object ( [duration] => Array ( [years] => 0 [months] => 0 [days] => 0 [hours] => 0 [minutes] => 0 [seconds] => 0 )  [is_negative] => [is_valid] => 1 [conversion_factors] => Array ( [seconds/minutes] => 60 [minutes/hours] => 60 [hours/days] => 24 [days/weeks] => 7 [days/months] => 30 [weeks/years] => 52.142857142857 [months/years] => 12 )  )  [#largest_metric] => hours [#smallest_metric] => minutes [#element_validate] => Array ( [0] => duration_combo_validate )  [#title] => Face to Face Time [#description] => [#required] => [#weight] => 0 [#delta] => 0 [#columns] => Array ( [0] => iso8601 [1] => approx_seconds )  [#field_name] => field_pn_ff_time_1 [#type_name] => progress_note )  [#field_name] => field_pn_ff_time_1 [#tree] => 1 [#weight] => 4 [#access] => 1 [#count] => 5 )  Let the array name be x . Now let me walk through this associative array in PHP . $x[&#8216;#theme&#8217;] , $x[&#8216;#title&#8217;] etc . Now we where looking to get the value of hours , minutes etc of the array duration . The &#8216;#default_value&#8217; was a Duration object .  So here comes the solution for you .  <strong>$x[0][&#8216;#default_value&#8217;]->duration[&#8216;hours&#8217;]</strong> . You can assign values or get values of this array . I spend some hours to make this small code work. So thought of publishing this for some one who is in search for an example like this . This was a small debugging from Drupal .   $x[&#8216;#tree&#8217;] , $x[&#8216;0&#8217;][&#8216;#type&#8217;] are some other example to retrieve value from this multidimensional array . The example above is used to get the value from the object . Cheers guys and Have a great day .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/20/58-ides-for-php-development-or-php-development-softwares/">IDE&#8217;s for PHP Development or PHP Development Softwares</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-20T09:22:00+05:30" pubdate data-updated="true">May 20<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Integrated Development Environment or IDE in short . I am some what an active user in the php classes group . Recently an editor was the talk . He actually was looking for a debugger , and many people came with different solutions . I have tried Netbeans , Eclipse, Aptana and Zend Studio . Just installed and run some samples that&#8217;s all what I have an experince with IDE for PHP. These IDE&#8217;s are used by php developer , download and try. Many PHP IDE&#8217;s like Netbeans , Eclipse , Aptana etc are free php developer softwares. Some commercial php developer softwares are also available.  But thought of writing some of the editors that I was new.  <a href="http://www.netbeans.org/" title="Netbeans IDE for PHP">Netbeans</a> : A wonderful opensource IDE from Sun Microsystems . Used for developing Java applications mainly. Now supporting PHP development too . It was really useful when I was developing a Java application for the mini project . Jose Antony was the one who introduced Netbeans and Eclipse before us. It helped us a lot to develop the application some what quickly, even though we were new to it .  <a href="http://www.eclipse.org/" title="Eclipse IDE for PHP">Eclipse</a> : Another opensource IDE used for Java application development mainly . Now supporting PHP development with additional plugins . Eclipse may be some what popular than Netbeans . You can download PDT which is a stand alone .  <a href="http://www.aptana.com" title="Aptana IDE for PHP">Aptana</a> : This is really new to me . This is one that I have got from the discussions . I was not aware of Aptana , its an opensource IDE by community and also have a commercial one which is based on Eclipse IDE. You can download Aptana as a plugins for Eclipse. Really a wonderful tool for developers . Some of the features that I have not seen in Netbeans , Eclipse etc is the html view as shown in a browser itself. Thats really a cool feature. Aptana will not run in 64 bit edition for now . It can be used as a  plugin for Eclipse if you are using 64bit in GNU/Linux . Some more configurations are needed for running Aptana in Ubuntu .  <a href="http://zend.com">Zend Studio</a> : The IDE for PHP developed by Zend , the one who supports PHP . All can download Zend Studio, a 30 day trial for free from Zend. Its also an eclipse based IDE . Has many features when you are working on Zend framework an open-source framework for PHP, like symfony-project , cake , code ignitter , yii etc .  You can use simple editors too for PHP development, its your choice to select the one which suits you really.  Nusphere : PHPed or Nusphere is a commercial IDE for PHP development like zend studio. I have not tried but many are recommending this. I don&#8217;t know the importance of this when zend studio is there . Link : http://www.nusphere.com/  These IDE &#8216;s are platform independent as they are developed in Java , so will run on Windows , GNU / Linux or Unix operating system . I am using Ubuntu 9.04 and this runs without any problem. You cannot compare these IDE&#8217;s with dreamweaver. Dreamweaver is built for designers than for programmers . If you are looking for a Dreamweaver like one for GNU/Linux you can go for Quanta plus or Screem . If you are just a designer then you can go for Kompozer , which is similar to dreamweaver ( Don&#8217;t think its exactly as dreamweaver ).  The use of a PHP IDE is not just syntax highlighting . When you are using a MVC or just a class the methods and properties can be viewed by just ctrl+ space . This is a really helpful feature when you are coding in MVC architecture .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/16/56-2009-election-results-of-kerala-and-india/">2009 Election Results of Kerala and India</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-16T09:31:00+05:30" pubdate data-updated="true">May 16<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Let me tell you first of all , this is just what I think, so forgive me if you don&#8217;t like.  As all of you know it was a long wait for the one month long election process. My constitution was Calicut / Kozhikode . I have casted my vote on 16th of April . The main candidates were Muhammed Riyas and M K Ragavan of Congress. M K Ragavan has won the game with a lead of 838 votes. Let me congragulate him at this moment. Some of the reasons that Muhammed Riyas may have failed to win in the elections may be  1 ) Support for PDP  2 ) In the center Congress or BJP will only come . So why we need to give vote for LDF ? ( To support Congress ?) . We may get some good Ministers if we have good number of candidates.  3 ) CPIM has changed a lot from its previous stand .  4 ) I am not a person who is interested in religion / caste . I am a person who stands to support the poor and not on the basis of caste or religion . But the stand of the LDF have changed . You can see the candidates , which may be a game I think .  5 ) Not supporting Dr. A P J Abdul Kalam. This is a site each and every Indian must see and get inspiration <a href="http://www.abdulkalam.com/" title="Dr. A P J Abdul Kalam">http://www.abdulkalam.com/</a>. Somnath Chatterjee was a great person . CPI(M) expelled him.  6 ) Not making the right decision to change a leader if he is blamed as corrupted . Let the others come forward and if the corruption case is over it can be handed over . Why you need to be so much tensed ?  7 ) Failure of the LDF goverment in Kerala, in the educational sector like Professional Education . Even though they blame the court I don&#8217;t think its the court that plays the game . Failure to make it clear infront of court is the failure of the goverment . What was the case when the congress was ruling here . I still remember the talks of K K Rakesh who has failed at Kannur . Failure to support the goverment employees who has fought against corruption like Suresh Kumar . Supporting ADB for which the LDF has made a lot of remarks .  Anyway the congress will come in the center . According to the latest news of malayalamanorma the UPA : 258 NDA : 162 Third Front : 066 Others : 057 . The third front is just a dream for now . The CPI( M ) has losts their seats in West Bengal and Kerala . This may be the right time to recognize the people , and what they think for the PB. The LDF only manages to get 4 seats and lost 16 . Lost their sitting seats too . The things I have pointed may not be the reasons , but some of you may agree . In my locality its the worst road I have ever seen. The sitting MLA U C Raman has given 50 Lakhs for the betterment . The panchayath is being ruled by LDF . Failure to repare the roads may also have added support to congress there I think . Like the same in every constituency each and every problems may have made this election a wonderful one.  Let&#8217;s see the next 5 years of the congress lead government . Have a great day guys .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/13/54-things-that-you-must-take-care-before-selecting-a-hosting/">Things That You Must Take Care Before Selecting a Hosting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-13T09:48:00+05:30" pubdate data-updated="true">May 13<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yes, when you are new to webhosting, then I am sure you may fall in trouble . You may be looking for cheap hosting , which may not be reliable. If your site doesn&#8217;t get much traffic , then it may not be a big deal . But when your site is getting some what hits , then you may need to call each and every time your hosting service provider.  Some of the things must be taken in to consideration when you are moving for web hosting . Never go for the cheapest hosting. That doesn&#8217;t means when the cost is high they give good support <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-cool.gif" title="Cool" alt="Cool" /> . The cheapest hosting is provided to you by means of VPS .A VPS is really for small developers , but some times hosting companies make use of this . The load will be balanced to every VPS , even though one of the VPS guys ask for increase in memory or any .  Ask your friends who are some what familiar with web hosting or servers. My friend Prajith was very helpful to find me a good solution. Though there were some troubles occured , they resolved the problem quickly. The support is the one that you need. When they don&#8217;t turn up to answer you , it will be some what horrible .  <strong>Fake content :</strong> This is the one thing that you must consider , when you are looking for hosting or finding some business outside your country . I can write what ever things like, I was born on 1970 or I have started this site from 2000 onwards or something. But some of the things can be looked if you know . For eg : When some firms says we are here from 1995 onwards , then the best way to know is just a whois look up. I used to look for whois to get some information . Alexa is another solution that you can try . You can try and know the fake guys . So this is one of the important thing that you must take into consideration . I have seen some fake contents like this . But I know how to know , but sometimes you may fall in trouble if you don&#8217;t know.  You can look for the forum if , you don&#8217;t know a friend who is familiar.  I can also help you to find a good solution as my site is proudly hosted at <a href="http://rackloop.com/">http://rackloop.com/</a> . Although they are new , they have great knowledge working with servers. These guys are great and you will love their support . You can see how fast my site is loaded , even though its Joomla and some seo friendly htaccess tricks are used.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/11/53-working-with-joomla-and-drupal/">Working With Joomla and Drupal</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-11T09:05:00+05:30" pubdate data-updated="true">May 11<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yes, this may be a controversial post. As I told you before , I was interested in Joomla. But its some what hard to learn , configure some of the plugins, and its not an easy task to find a good plugin. I was trying to learn Drupal , after I came to read and discuss with some of the guys who uses Drupal. Yes, I am switching my site to Drupal . So in a few days you may see a new face for this site. I am trying to configure it in my local system first, so I can learn . After that I will switch this to Drupal.  The reasons behind the switching are its easy to make a blog and add comments feature in drupal . In Joomla its tough , you may need to add additional plugins or extensions .  Recently saw a post about news paper site , which makes me interested to look how to make in Joomla, but was very tough. I googled a lot to get a right solution how it works and all . I was reading a lot of blog posts about the news paper site and finally thought to switch to drupal <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> .  Also have seen creating multiple sites with Drupal is easy than that of Joomla. Configuring a module and all in Joomla is tough . Once you have started working with Joomla you will recognise , what I am telling. May be I don&#8217;t have learned every corners.  Some of the reasons I thought of working on local are  1 ) My pages are indexed in google , so don&#8217;t want to make a problem .  2 ) I am getting good amount of visitors now adays .  3 ) I will learn drupal from my local :-) . Why I need to do in the server itslef ? This may be a good decesion I think .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/06/49-is-gpl-misused-/">Is GPL Misused ?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-06T09:06:00+05:30" pubdate data-updated="true">May 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was looking the Joomla extensions , just for fun . I prefer the GPL version to use. If the licence is only GPL I will look into it. Else even its popular one , I just skip those. Now a days I have been seeing a lots of extensions and some in the terms of GPL. When we try to download it , to know how it works , it goes to the owners site and it will be asking for a payment. Yes, I agree we can pay and get GPL versioned softwares. But what about the period ? I wondered , I can&#8217;t use it on any other server . It fucks man . Really its fucking to see it. This is what GPL is telling <a href="http://www.gnu.org/licenses/quick-guide-gplv3.html">http://www.gnu.org/licenses/quick-guide-gplv3.html</a>. I don&#8217;t know whether they are wrong or I am wrong. I think if there is the four freedoms in GPL then they may be miss using the GPL term. I would like to point this to tell the person who manages the Joomla extensions.He can change the things. I hope so .  As I told you , I mailed to open source matters. Got reply from Elin Waring, President , Open Source Matters.  For the first post he thought I was telling not to sell the product when in GPL . But I know the GPL , its not about money the freedom is telling . Its for the source code . It supports the main 4 freedoms. ie where GPL stands. So I replied to him giving the link to the plans. Yes he too was confused with it. Anyway he replies me . Thanks Elin Waring, I am glad to see your reply . And I am posting it here.  They are confusing about this, but the domain licenses are actually just for support. Nothing stops you from installing on as many sites as you want.  Elin Waring President Open Source Matters Part of the Joomla! Project Providing a flexible platform for digital publishing and collaboration - Hide quoted text - On Fri, May 8, 2009 at 11:39 AM, Hari KT wrote: Yes, I know we can sell &#8230;&#8230;&#8230;. I don&#8217;t know whether you have looked the link http://www.corephp.com/subscription-plans.html#%27corePHP%27%20Wordpress%20Membership  Its telling Single ,6 Site Subscription etc . Does it satisfy GPL now ? I don&#8217;t think so. What ever the version of GPL &#8230; I think it fails to satisfy GPL , freedoms . Its not only the case of this plugin . There are lots , ie why I have this doubt .  Thanks for reply too &#8230;&#8230; On Fri, May 8, 2009 at 3:06 PM, Elin Waring wrote: Hi, As long as the subscription plans allow the four freedoms of the GPL they are fine. The GPL allows you to sell software as well as other services around the software.  <a href="http://www.fsf.org/licensing/licenses/gpl-faq.html#DoesTheGPLAllowDownloadFee">http://www.fsf.org/licensing/licenses/gpl-faq.html#DoesTheGPLAllowDownloadFee</a>  Please note that Joomla is GPLv@ or later, not GPLv3. Elin Waring President Open Source Matters Part of the Joomla! Project Providing a flexible platform for digital publishing and collaboration On Thu, May 7, 2009 at 1:20 AM, Hari K T wrote: > This is an enquiry e-mail via > <a href="http://opensourcematters.org/">http://opensourcematters.org/</a> > from: > Hari K T > > Hello Joomla makers, > You have done a wonderful CMS. I have a doubt and I would like to > clear my doubt. There are lots of extensions in the extensions > directory. Many are using GPL licence. But I am little confused > with some of their licence. The GPL licence gives you four freedoms > mainly > (<a href="http://www.gnu.org/licenses/quick-guide-gplv3.html">http://www.gnu.org/licenses/quick-guide-gplv3.html</a>). > For eg the component : > http://extensions.joomla.org/extensions/content-&amp;-news/blog/6659/details > Is in GPL. But I don&#8217;t understand about subscription plans they are > telling. Am I wrong or the licence is misused ? > I would love to hear a reply . > Thanks once again guys . > > Hari K T > <a href="http://harikt.com/">http://harikt.com</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/04/47-enjoyed-barcamp-5-from-park-center-technopark/">Enjoyed Barcamp 5 From Park Center, Technopark</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-04T09:32:00+05:30" pubdate data-updated="true">May 4<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yes, I was little late to write my post about the beautiful event held at Technopark on May 3rd. I reached Trivandrum around 5:30 in the morning after attending the reunion ( Chinmaya vidyalaya 2000-01 Batch of 10th std ) , I was not able to stay some more time with my old friends <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/cry_smile.gif" alt="image" /> . Around 7:30 AM , I slowly bored a bus to technopark , reached there around 9:00 AM. I was enjoying the beauty of technopark . It was an awesome place. Once you enter there , you may never love to leave. It was not only my opinion , but also some of the guys who were at Infopark too <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/shades_smile.gif" alt="image" /> ( NITIN KOSHY MAM.) .  The event was at Park center. I met some of the guys like kenny , Anand and all walking towards the park center. We introduced ourself, entered the hall. Yes Binny has reached early , than us. We shared some of the thoughts . It was my pleasure to meet such wonderful guys from Technopark . There were more than 200 attendees registered and 19 sessions. But some of them failed to come and sessions shortens to 13 ( Its tough to complete 13 sessions in a day ). The event started with an introduction about the TBI, by Kenny. Some of them shared their doubts about TBI.  Some of the nice speeches I enjoyed was  <strong>Young Kerala by Rajesh Venugopal :</strong> He was trying to encwourage the young minds of kerala, and was trying to motivate each and every young persons. You can see the his blog http://youngkerala.org/ for more details.  <strong>Quick and Dirty .NET compiler by Praseed Pai</strong>: Yes, he is a wonderful guy , strong in compillers. Compiller Design was an elective for 6th semester. I have taken Distributed Systems. So some of the things he introduced was really new to me. He refeshed the Systems Programming which I have learned in the fourth semester. It was also a wonderful one.  <strong>What they don&#8217;t teach you in college by Binny VA :</strong> The next talk was by Binny V A , the PHP freelancer from Cochin. It was a real fact , what Binny introduced. When I was learning my Engineering , I was not much aware of the sub-versions. I don&#8217;t know how many of the Engineering graduates , who are in the field of computer&#8217;s know about subversions. He gave a brief introduction . I think its time to introduce some real stuffs like this , to the Engineering degree .  <strong>Peep Into PI by Vishu Gopal</strong>: This was another wonderful session by Vishnu, who was working for Mob ME .You can see the stuff http://www.peepapp.com/ He demonstrated the app.  <strong>How to Build a Popular Website in 6 Months</strong>:It was Mani Karthik , an SEO , introduced the developing a site from scratch and some of the SEO tips . I hope it may have helped guys who don&#8217;t have a blog till then a lot.  <strong>What&#8217;s new in HTML5 By Shwetank Dixit</strong> : Yes, this was one of the most interesting one , that I have enjoyed . He was very cool talking about HTML5. Shwetank Dixit was an evangalist for Opera. He was wearing a T-Shirt &#8220;War of Browsers&#8221;. He was also having some nice T-Shirt for the reply to his questions. Some of them got . I hope every one have enjoyed that a lot. The picture of him is posted below. Photo credits to Barcamp blog . Don&#8217;t know who have taken this picture.  <img src="http://farm4.static.flickr.com/3645/3507202917_2ae16b9e39.jpg?v=0" title="Shwetank Dixit Evangelist of Opera, the real person who rocks" alt="Shwetank Dixit Evangelist of Opera, the real person who rocks" /> <strong>Adobe Flash By Juwal Bose</strong> : Though he was not an evangelist nor working at Adobe , he was using Flash to develop games, so introduced some of them to us.  <strong>iframe Issue introduced by Kerala farmer</strong> : Most popularly know as Kerala farmer , who introuced a problem with his blog. He was having a doubt regarding the iframe , and whether any one can make datas available from other site. His question made me think a lot. It was some thing that no one was able to answer . He was adviced to get some help from Lawayers. Anyway he made me think about the legal issues. Though we all are software engineers and may know about or may have heard about the digital rights . I have not read it , once . So I was really thinking about the matter . I am having a suggestion to introduce atleat some of the laws to the Software Engineers in BTech syllabus. Else it , may make a serious problem in the coming years. It&#8217;s damn sure. So the governement should make some changes to make sure, every one goes in the right path and is aware about the IT acts.  It was late for me to leave to Ernakulam , as I am having office on Monday , I left Park Center. At present I don&#8217;t have its pics with me. I have asked Anand to share some. I hope will get it soon .     <img src="http://farm4.static.flickr.com/3619/3508042272_df7047fe5b.jpg?v=0" title="Seriously hearing and working" alt="Seriously hearing and working" />   <img src="http://farm4.static.flickr.com/3553/3507278811_dd639c0b20.jpg?v=0" title="Enjoying Barcamp" alt="Enjoying Barcamp" />    <img src="http://farm4.static.flickr.com/3327/3508067434_ee07f1e195.jpg?v=0" title="T-BIC" alt="T-BIC" />    Thanks guys , if you are interested after reading this , we can see next time . The sixth 1 . Bye . There are a lot more pics uploaded at Barcamp Kerala blog. You can see from there .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/03/45-chinmaya-vidyalaya-2000-01-batch-reunion-on-may-2nd-rocked/">Chinmaya Vidyalaya 2000-01 Batch Reunion on May 2nd Rocked</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-03T09:32:00+05:30" pubdate data-updated="true">May 3<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Writing my post from Trivandrum Railway station. Was busy leaving to attend the Bar Camp Kerala event at Technopark , so was not able to write any. It was really a Happy moment when you see your old friends . We the CUIET once conducted the reunion of the 2003-2007 IT Batch of CUIET. There was only a few attended. I have never thought the reunion of the 10th standard will be such a colourful one.  Every one was having a smiling face, even in their bitter moments . The teachers were all happy to see the old students after 8 long years. Jayadevan may be one of the happiest man , as he was really thrilled to see all of us. He was at Calcutta and reached only for this get together. The event may not occur if Rajeesh Chandran have not initiated. He has done a wonderful work. So many guys came from Chennai , Bangalore , Ernakulam and also from different parts. Some of them were working and some are still studying.     <img src="http://farm4.static.flickr.com/3565/3495904062_8fc667ed42.jpg?v=0" title="Chinmaya Vidyalaya 2000-01 Batch reunion conducted on May 2nd" alt="Chinmaya Vidyalaya 2000-01 Batch reunion conducted on May 2nd" /> You can see the smile on the faces of all. It was really a rocking day. Does any one see, any thirst for food ? Yes , we have not taken our lunch too till 2:30 PM. But smiling faces all around . Have a great day guys. Lets rock on some other day once again .  </p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/02/42-firebug-a-handy-tool-for-web-developers/">Firebug a Handy Tool for Web Developers</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-02T09:44:00+05:30" pubdate data-updated="true">May 2<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I still remember my old pages, got html templates for free . Downloaded and added the contents and the design was broken usually. I was not much aware of why the design breaks . My experiences teaches me a lot why its happening. I have only 1 year 5 months experience, but I when looking back I may be having more than that because of my self learning <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-laughing.gif" title="Laughing" alt="Laughing" /> . I think in one of my post I have expressed my Thanks to Dileep often called Dilpu , a student from NIT . He is one of the person, who makes me think and learn HTML . I used my class hours at Library to learn HTML . I was not aware of HTML , CSS or W3C or any standards of Web . So when adding contents to pages , I often fails at those times . It was just static pages . But later I learned why its happening , what W3C is what XHTML and all.  <img src="http://farm4.static.flickr.com/3563/3490763401_8c2b1abfc2.jpg?v=0" title="Firebug mozilla firefox addon in action" alt="Firebug mozilla firefox addon in action" />  These were only to static HTML. When I started my profession I was eager to learn more and found Firebug a mozilla firefox add-on once . Installed it just to try , as its all free and open source projects . Firebug may be one of the easy tool that can be used to fix the design issues. When the designers convert to XHTML , some of them uses fixed width . But in dynamic pages , the height often changes and it may be a mess to fid out whats the problem .So here comes the role of firebug . You can view the properties for each of the tag . So you can recognise which all are inherited and all . So its easy to fix issues arising to font&#8217;s and all . I think Firebug was introduced when I was looking the carrers in Mozilla <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-cool.gif" title="Cool" alt="Cool" /> . They are looking people who are familiar in firebug, that forced me to install firebug . Now I know why they are looking for people who uses firebug . Great guys .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/17/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/15/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

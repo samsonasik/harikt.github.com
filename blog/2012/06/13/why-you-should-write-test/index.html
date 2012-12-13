@@ -9,8 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="Recently I was reading When to use array_merge and union operator (+) in PHP? .
-Lately working with examples I was also confused how the array_merge &hellip;">
+  <meta name="description" content="Recently I was reading When to use array_merge and union operator (+) in PHP? . Lately working with examples I was also confused how the array_merge &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,60 +90,7 @@ Lately working with examples I was also confused how the array_merge &hellip;">
   </header>
 
 
-<div class="entry-content"><p>Recently I was reading <a href="http://sandeep.shetty.in/2012/05/when-to-use-arraymerge-and-union.html">When to use array_merge and union operator (+) in PHP?</a> .
-Lately working with examples I was also confused how the array_merge and union works. Really, that brings a strong thought why you should write tests. Lets see some examples .</p>
-
-<p>{syntaxhighlighter class=&#8221;php&#8221;}
-&lt;?php
-$a = array(&#8216;foo&#8217; => &#8216;bar&#8217;, 3, 4, &#8216;123&#8217; => 3);
-echo &#8216;$a = &#8216;;
-var_export($a);
-$b = array(&#8216;foo&#8217; => &#8216;baz&#8217;, 3, 6, 7, 3);
-echo PHP_EOL . &#8216;$b = &#8216;;
-var_export($b);
-echo PHP_EOL . &#8216;array_merge( $a, $b) = &#8216;;
-var_export( array_merge($a, $b));
-echo PHP_EOL . &#8216;$a + $b = &#8216;;
-var_export( $a + $b );
-{/syntaxhighlighter}</p>
-
-<p>Do you have any thoughts on how the result for array_merge and + comes?</p>
-
-<p>{syntaxhighlighter class=&#8221;php&#8221;}
-$a = array (
-  &#8216;foo&#8217; => &#8216;bar&#8217;,
-  0 => 3,
-  1 => 4,
-  123 => 3,
-)
-$b = array (
-  &#8216;foo&#8217; => &#8216;baz&#8217;,
-  0 => 3,
-  1 => 6,
-  2 => 7,
-  3 => 3,
-)
-array_merge( $a, $b) = array (
-  &#8216;foo&#8217; => &#8216;baz&#8217;,
-  0 => 3,
-  1 => 4,
-  2 => 3,
-  3 => 3,
-  4 => 6,
-  5 => 7,
-  6 => 3,
-)
-$a + $b = array (
-  &#8216;foo&#8217; => &#8216;bar&#8217;,
-  0 => 3,
-  1 => 4,
-  123 => 3,
-  2 => 7,
-  3 => 3,
-)
-{/syntaxhighlighter}</p>
-
-<p>Hope this makes to convince you also , why you should write tests :-) . A detailed post on the working is at http://unix0.wordpress.com/2012/01/08/php-array_merge-vs-plus-union-operator/</p>
+<div class="entry-content"><p>Recently I was reading <a href="http://sandeep.shetty.in/2012/05/when-to-use-arraymerge-and-union.html">When to use array_merge and union operator (+) in PHP?</a> . Lately working with examples I was also confused how the array_merge and union works. Really, that brings a strong thought why you should write tests. Lets see some examples . {syntaxhighlighter class=&#8221;php&#8221;} &#8216;bar&#8217;, 3, 4, &#8216;123&#8217; => 3); echo &#8216;$a = &#8216;; var_export($a); $b = array(&#8216;foo&#8217; => &#8216;baz&#8217;, 3, 6, 7, 3); echo PHP_EOL . &#8216;$b = &#8216;; var_export($b); echo PHP_EOL . &#8216;array_merge( $a, $b) = &#8216;; var_export( array_merge($a, $b)); echo PHP_EOL . &#8216;$a + $b = &#8216;; var_export( $a + $b ); {/syntaxhighlighter} Do you have any thoughts on how the result for array_merge and + comes? {syntaxhighlighter class=&#8221;php&#8221;} $a = array ( &#8216;foo&#8217; => &#8216;bar&#8217;, 0 => 3, 1 => 4, 123 => 3, ) $b = array ( &#8216;foo&#8217; => &#8216;baz&#8217;, 0 => 3, 1 => 6, 2 => 7, 3 => 3, ) array_merge( $a, $b) = array ( &#8216;foo&#8217; => &#8216;baz&#8217;, 0 => 3, 1 => 4, 2 => 3, 3 => 3, 4 => 6, 5 => 7, 6 => 3, ) $a + $b = array ( &#8216;foo&#8217; => &#8216;bar&#8217;, 0 => 3, 1 => 4, 123 => 3, 2 => 7, 3 => 3, ) {/syntaxhighlighter} Hope this makes to convince you also , why you should write tests :-) . A detailed post on the working is at http://unix0.wordpress.com/2012/01/08/php-array_merge-vs-plus-union-operator/</p>
 </div>
 
 
@@ -204,23 +150,23 @@ $a + $b = array (
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/09/23/workshop-on-aura-project-for-php/">Workshop on Aura Project for PHP at OSI Days</a>
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/15/contributor-to-aura-project/">How I became a contributor to aura project</a>
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/">Thoughts on installing Zend Framework via composer</a>
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/27/how-to-install-aura-framework/">How to install aura framework</a>
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a>
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

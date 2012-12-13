@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Convert static html to a dynamic one with PHP - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="Here I hope you know some basic knowledge of HTML , PHP . Though if you dont know PHP its not a big deal .If you are using Linux install the php , &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2009/01/29/5-convert-static-html-to-a-dynamic-one-with-php/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Convert Static Html to a Dynamic One With PHP</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-29T08:26:00+05:30" pubdate data-updated="true">Jan 29<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Here I hope you know some basic knowledge of HTML , PHP .  Though if you dont know PHP its not a big deal .If you are using Linux install the php , apache files from apt-get or using synaptic package manager . If you are using Windows download the <a href="http://www.google.co.in/search?q=wamp">WAMP</a> or <a href="http://www.google.co.in/search?q=xampp">XAMPP</a>  You can refer from php.net for the functions that I have used here . <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-smile.gif" title="Smile" alt="Smile" />  I have downloaded this template from free css templates . You can download this template from <a href="http://www.freecsstemplates.org/preview/commission">http://www.freecsstemplates.org/preview/commission</a> .  Lets start .  Hope you know your document root . For Windows users it may be c:\wamp\www if its wamp . For linux users it will be /var/www/ and it depends upon the settings of php.ini file . So look for it for more deatils .  Create a folder include . This folder is used to store all the informations of the common files. Header and Footer of a page will be common . The sidebar also will be common . So copy and paste the below code in the <strong>include</strong>folder and name it as <strong>header.php</strong> . Dont save in txt format , hope you know all about it.  <html xmlns="http://www.w3.org/1999/xhtml"\> &lt;head> <meta http-equiv="content-type" content="text/html; charset=utf-8" /\> &lt;title>Commission by Free CSS Templates&lt;/title> <meta name="keywords" content="" /\> <meta name="description" content="" /\> <link href="style.css" rel="stylesheet" type="text/css" media="screen" /\> &lt;/head> &lt;body> <div id="header-wrapper"\> <div id="header"\> <div id="menu"\> &lt;ul> <li class="current\_page\_item"\><a href="index.php"\>Home&lt;/a>&lt;/li> &lt;li><a href="http://www.ijust4u.blogspot.com"\>Blog&lt;/a>&lt;/li> &lt;li><a href="http://www.harikt.com"\>Photos&lt;/a>&lt;/li> &lt;li><a href="about.php"\>About&lt;/a>&lt;/li> &lt;li><a href="http://www.harikt.com"\>Links&lt;/a>&lt;/li> &lt;li><a href="contact.php"\>Contact&lt;/a>&lt;/li> &lt;/ul> &lt;/div> <!-- end \#menu --\> <div id="search"\> <form method="get" action=""\> &lt;fieldset> <input type="text" name="s" id="search-text" size="15" /\> <input type="submit" id="search-submit" value="Search" /\> &lt;/fieldset> &lt;/form> &lt;/div> <!-- end \#search --\> &lt;/div> <!-- end \#header --\> &lt;/div> <!-- end \#header-wrapper --\> <div id="page"\> <div id="logo"\> &lt;h1><a href="\#"\>Commission&lt;/a>&lt;/h1> &lt;p>&lt;em>{ by <a href="http://www.freecsstemplates.org/"\>Free CSS Templates&lt;/a> }&lt;/em>&lt;/p> &lt;/div> <hr /\> <!-- end \#logo --\>  Save the below code in<strong>footer.php</strong>  <div id="sidebar"\> &lt;ul> &lt;li> &lt;h2>Aliquam tempus&lt;/h2> &lt;p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in consectetuer hendrerit, volutpat.&lt;/p> &lt;/li> <li id="calendar"\> &lt;h2>Calendar&lt;/h2> <div id="calendar\_wrap"\> <table summary="Calendar"\> &lt;caption> March 2008 &lt;/caption> &lt;thead> &lt;tr> <th abbr="Monday" scope="col" title="Monday"\>M&lt;/th> <th abbr="Tuesday" scope="col" title="Tuesday"\>T&lt;/th> <th abbr="Wednesday" scope="col" title="Wednesday"\>W&lt;/th> <th abbr="Thursday" scope="col" title="Thursday"\>T&lt;/th> <th abbr="Friday" scope="col" title="Friday"\>F&lt;/th> <th abbr="Saturday" scope="col" title="Saturday"\>S&lt;/th> <th abbr="Sunday" scope="col" title="Sunday"\>S&lt;/th> &lt;/tr> &lt;/thead> &lt;tfoot> &lt;tr> <td abbr="February" colspan="3" id="prev"\><a href="\#" title=""\>« Feb&lt;/a>&lt;/td> <td class="pad"\> &lt;/td> <td abbr="April" colspan="3" id="next"\><a href="\#" title=""\>Apr »&lt;/a>&lt;/td> &lt;/tr> &lt;/tfoot> &lt;tbody> &lt;tr> <td colspan="5" class="pad"\> &lt;/td> &lt;td>1&lt;/td> &lt;td>2&lt;/td> &lt;/tr> &lt;tr> &lt;td>3&lt;/td> &lt;td>4&lt;/td> &lt;td>5&lt;/td> &lt;td>6&lt;/td> &lt;td>7&lt;/td> &lt;td>8&lt;/td> &lt;td>9&lt;/td> &lt;/tr> &lt;tr> &lt;td>10&lt;/td> <td id="today"\>11&lt;/td> &lt;td>12&lt;/td> &lt;td>13&lt;/td> &lt;td>14&lt;/td> &lt;td>15&lt;/td> &lt;td>16&lt;/td> &lt;/tr> &lt;tr> &lt;td>17&lt;/td> &lt;td>18&lt;/td> &lt;td>19&lt;/td> &lt;td>20&lt;/td> &lt;td>21&lt;/td> &lt;td>22&lt;/td> &lt;td>23&lt;/td> &lt;/tr> &lt;tr> &lt;td>24&lt;/td> &lt;td>25&lt;/td> &lt;td>26&lt;/td> &lt;td>27&lt;/td> &lt;td>28&lt;/td> &lt;td>29&lt;/td> &lt;td>30&lt;/td> &lt;/tr> &lt;tr> &lt;td>31&lt;/td> <td class="pad" colspan="6"\> &lt;/td> &lt;/tr> &lt;/tbody> &lt;/table> &lt;/div> &lt;/li> &lt;li> &lt;h2>Turpis nulla&lt;/h2> <ul class="list1"\> &lt;li><a href="\#"\><img src="images/img17.jpg" alt="" width="90" height="90" /\>&lt;/a>&lt;/li> <li class="alt"\><a href="\#"\><img src="images/img18.jpg" alt="" width="90" height="90" /\>&lt;/a>&lt;/li> &lt;li>&lt;/li> <li class="alt"\><a href="\#"\>&lt;/a>&lt;/li> &lt;/ul> <p style="clear: both; margin: 0; line-height: normal; text-align: right;"\><a href="\#"\>More photos >&lt;/a>&lt;/p> &lt;/li> &lt;/ul> &lt;/div> <!-- end \#sidebar --\> <div style="clear: both;"\> &lt;/div> &lt;/div> <!-- end \#page --\> <div id="footer"\> &lt;p>Copyright (c) 2008 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/"\>Free CSS Templates&lt;/a>.&lt;/p> &lt;/div> <!-- end \#footer --\> &lt;/body> &lt;/html>  Save the below code as <strong>index.php</strong>  &lt;?php include_once(&#8216;include/header.php&#8217;); ?> <div id="content"\> <div class="post"\> <h2 class="title"\>Welcome to Commission&lt;/h2> <p class="meta"\>&lt;em>{ Posted by <a href="\#"\>admin&lt;/a> on March 10, 2008 }&lt;/em>&lt;/p> <div class="entry"\> &lt;p>This is &lt;strong>Commission&lt;/strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org/"\>Free CSS Templates&lt;/a>, released for free under the <a href="http://creativecommons.org/licenses/by/2.5/"\>Creative Commons Attribution 2.5&lt;/a> license. The photos in this design are from <a href="http://www.pdphoto.org/"\>PDPhoto.org&lt;/a>. You&#8217;re free to use this template for anything as long as you link back to <a href="http://www.freecsstemplates.org/"\>my site&lt;/a>. Enjoy :)&lt;/p> &lt;p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum ipsum. Proin imperdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum ipsum.&lt;/p> <p class="links"\><a href="\#" class="comments"\>Comments (64)&lt;/a> <a href="\#" class="permalink"\>Full article&lt;/a>&lt;/p> &lt;/div> &lt;/div> <div class="post"\> <h2 class="title"\>Lorem ipsum sed aliquam&lt;/h2> <p class="meta"\>&lt;em>{ Posted by <a href="\#"\>admin&lt;/a> on March 8, 2008 }&lt;/em>&lt;/p> <div class="entry"\> &lt;p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="\#"\>dapibus semper urna&lt;/a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Phasellus pellentesque. Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.&lt;/p> <p class="links"\><a href="\#" class="comments"\>Comments (64)&lt;/a> <a href="\#" class="permalink"\>Full article&lt;/a>&lt;/p> &lt;/div> &lt;/div> &lt;/div> <!-- end \#content --\> &lt;?php include_once(&#8216;include/footer.php&#8217;); ?>  Save the below code as <strong>about.php</strong>  &lt;?php include_once(&#8216;include/header.php&#8217;); ?> <div id="content"\> <div class="post"\> <h2 class="title"\>Welcome to About&lt;/h2> <p class="meta"\>&lt;em>{ Posted by <a href="\#"\>admin&lt;/a> on March 10, 2008 }&lt;/em>&lt;/p> <div class="entry"\> &lt;p>This is &lt;strong>Commission&lt;/strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org/"\>Free CSS Templates&lt;/a>, released for free under the <a href="http://creativecommons.org/licenses/by/2.5/"\>Creative Commons Attribution 2.5&lt;/a> license. The photos in this design are from <a href="http://www.pdphoto.org/"\>PDPhoto.org&lt;/a>. You&#8217;re free to use this template for anything as long as you link back to <a href="http://www.freecsstemplates.org/"\>my site&lt;/a>. Enjoy :)&lt;/p> &lt;p>This is about page. &lt;/p> <p class="links"\><a href="\#" class="comments"\>Comments (64)&lt;/a> <a href="\#" class="permalink"\>Full article&lt;/a>&lt;/p> &lt;/div> &lt;/div> <div class="post"\> <h2 class="title"\>Lorem ipsum sed aliquam&lt;/h2> <p class="meta"\>&lt;em>{ Posted by <a href="\#"\>admin&lt;/a> on March 8, 2008 }&lt;/em>&lt;/p> <div class="entry"\> &lt;p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="\#"\>dapibus semper urna&lt;/a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Phasellus pellentesque. Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.&lt;/p> <p class="links"\><a href="\#" class="comments"\>Comments (64)&lt;/a> <a href="\#" class="permalink"\>Full article&lt;/a>&lt;/p> &lt;/div> &lt;/div> &lt;/div> <!-- end \#content --\> &lt;?php include_once(&#8216;include/footer.php&#8217;); ?>  Save the below code as <strong>contact.php</strong>  &lt;?php if ($_POST[&#8216;submit&#8217;] = &#8220;Post Comments&#8221; ) { //Check whether all datas are entered. Else display errors. if (strlen($_POST[&#8216;urname&#8217;]) &amp;&amp; strlen($_POST[&#8216;urmsg&#8217;])) { $string = &#8220;Thank you&#8221;; //Mail if needed . Change mailID with ur ID //mail(&#8220;mailID&#8221;,&#8221;subject&#8221;,$_POST[&#8216;urname&#8217;].$_POST[&#8216;urmsg&#8217;]); } else { $string = &#8220;Sorry please fill all.&#8221;; } } include_once(&#8216;include/header.php&#8217;); ?> <div id="content"\> <div class="post"\> <h2 class="title"\>Welcome to Contact&lt;/h2> <p class="meta"\>&lt;em>{ Posted by <a href="\#"\>admin&lt;/a> on March 10, 2008 }&lt;/em>&lt;/p> <div class="entry"\> &lt;?php if (strlen($string)) { echo &#8220;&lt;p>&#8221;.$string.&#8221;&lt;/p>&#8221;; } ?> &lt;p> <form method="post" action="<?php echo $PHP\_SELF ?\>&#8221;> <table cellpadding="0" cellspacing="0"\> &lt;tr> &lt;td>Your Name : &lt;/td> &lt;td><input type="text" name="urname" value="" /\>&lt;/td> &lt;/tr> &lt;tr> &lt;td>Your Message : &lt;/td> &lt;td><input type="textarea" name="urmsg" value="" row="5" col="10" /\>&lt;/td> &lt;/tr> &lt;/table> <input type="submit" name="submit" value="Post Comments" /\> &lt;/form> &lt;/p> &lt;/div> &lt;/div> &lt;/div> <!-- end \#content --\> &lt;?php include_once(&#8216;include/footer.php&#8217;); ?>  Hope you have downloaded the <a href="http://www.freecsstemplates.org/preview/commission">commission template from freecsstemplates else download it pressing this link</a> . Extract the files. Copy the images folder ,and the css to the document root.  Try in your local http://localhost/ . If you need more pages copy and paste index.php and rename it . And add the link in header.php , footer.php or where ever you need.  Yes you can see it in action . Look and learn . Its a good practice to use the complete path in the include_once , include , require or require_once . Feel free to ask any doubts . I will help you . Thanks</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-29T08:26:00+05:30" pubdate data-updated="true">Jan 29<span>th</span>, 2009</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2009/01/29/5-convert-static-html-to-a-dynamic-one-with-php/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2009/01/29/5-convert-static-html-to-a-dynamic-one-with-php/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/01/27/earn-money/" title="Previous Post: How to earn money from internet ?">&laquo; How to earn money from internet ?</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/01/30/linux/" title="Next Post: Some History About GNU/Linux">Some History About GNU/Linux &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

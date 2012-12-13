@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="   Hi guys , I got a chance to review the book &#8220;Zend Framework 1.8 Web Application Development&#8221; by Keith Pope published by Packt. I was &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/page/11/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/14/zend-framework-18-web-application-development/">Zend Framework 1.8 Web Application Development</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-14T00:35:00+05:30" pubdate data-updated="true">Oct 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.flickr.com/photos/harikt/4008823767/"><img src="http://farm3.static.flickr.com/2612/4008823767_bf58143231.jpg" alt="Zend Framework 1.8 Web Application Development" /></a>   Hi guys , I got a chance to review the book &#8220;Zend Framework 1.8 Web Application Development&#8221; by Keith Pope published by Packt. I was glad to hear that they have choosen me as one of the reviewer . Let me tell you something how I came to review the book and my experience in Zendframework . After completing my Btech from Calicut University Institute of Engineering and Technology ( CUIET ) joined ISPG technologies Cochin as PHP developer from November 2007, and was interested to learn one of the frameworks like symfony , cake , codeignitter , zf , yii . It was my client Christopher Van Ittersum of Design customs who pushed me to learn ZF .     I started learning ZF after more than 1.5 years of experience developing web applications with PHP. Developed a simple blog using ZF and posted it here which was later published in devzone ( http://devzone.zend.com/article/9755-A-simple-blog-with-Zend-Framework-1.9 ) pushes me to write a review for “<a href="http://www.packtpub.com/zend-framework-1-8-web-application-development?utm_source=harikt.com&amp;utm_medium=bookrev&amp;utm_content=blog&amp;utm_campaign=mdb_000989">Zend Framework 1.8 Web Application Development</a>” by Keith Pope . <strong>Introduction/summary:</strong>     <a href="http://zend.com">Zend</a> “The PHP company” who is behind <a href="http://framework.zend.com">Zend framework</a> ( ZF ) is one of the fastest growing opensource PHP frameworks . This book is for those who know PHP and want to learn ZF or use the components . ( If you are a newbie to MVC then its like jumping to sea without a life jacket , so this book is a jacket ) . When I started reading the book I started loving it and I hope you too will defnitely love reading it. <strong>What’s the book about?</strong> The “Zend Framework 1.8 Web Application Development” book is really useful for those who want to learn Zend framework or who wants to use the ZF library in their projects . You must have some knowledge about PHP and OOP. It teaches you the mostly used zendframework components and thus improving your knowledge and shortening the learning curve. <strong>Does it achieve its promises?</strong> I was new to ZF and MVC, so I hope every like me have the same views . Many people says ZF has great docs and is easy to learn . According to me, the curve is steep , but once you learned it , you will be comfortable in it . So to climb up you need a ladder . This book is a ladder for you to learn ZF which will shorten your learning cure . It starts with a small “Hello world” application which uses the zf commands like the one used by quickstart and explains each and every details. When the book was written ( according to the author) , the command zf create module <module name\> was not available and he has created modules folder manually and so the cart doesn&#8217;t use the zf commands. But the structure is same. The module is the one everyone new to ZF will try to learn like the database connection . This book uses some modules , so it will help you to learn about module structure . The other toughest part every person searching will the Zend_Acl and Zend_Auth which is also covered . You can learn some about unit testing with phpunit and debugging with xdebug . The book covers how to install and configure these . You will learn some of the techniques to beautify a form using the Zend_Form , also how to make pretty urls.  First I thought of writing a small comparison, after downloading the source code from Manning ( &#8220;Zend framework in Action&#8221; by Rob Allen of http://akrabat.com ) and Packt , but later thought of leaving it ( cannot compare 1.6 with 1.8 ). If you are interested you can try it out . According to me the Zend Framework 1.8 Web Application Development will really help you reducing the learning curve as its having a good example as shopping cart . <strong>Conclusion :</strong> The book “Zend Framework 1.8 Web Application Development” will really help you learning ZF in a better way. Every book , has its own limitations as when the book is ready to release many new features will be introduced and some features will be deprecated. Also writing a blog post itself is tedious job , so what about writing a book ? He has tried to help you learn ZF very well without much mistakes . So the book is not the last step to learn ZF, but will help you learn zend framework quickly. The one thing I have noticed working with the example was you need to configure virtual host else the style sheets will not be taken . ie http://localhost/ and have some trouble with http://localhost/store/public/ . Or you may need to edit the layout script and give the exact path . If you are not conviced, then may want to get a <a href="http://www.packtpub.com/zend-framework-1-8-web-application-development?utm_source=harikt.com&amp;utm_medium=bookrev&amp;utm_content=blog&amp;utm_campaign=mdb_000989">sample chapter of the book</a> The book “Zend Framework 1.8 Web Application Development” is available in e-book and hardcopy . Consider <a href="http://www.packtpub.com/zend-framework-1-8-web-application-development?utm_source=harikt.com&amp;utm_medium=bookrev&amp;utm_content=blog&amp;utm_campaign=mdb_000989">buying a hardcopy than an e-book</a> , for its hard to sit infront of the system for a long time in the same position ( after all its upto you ). I would like to express my sincere thanks to each and every one behind Zend Framework, and to all behind Packt publishers for giving me a chance to write a review for the book “Zend Framework 1.8 Web Application Development” . Would like to Thank each and every one ( bloggers ) who has helped me directly or indirectly .  <strong>Updated ( Not about the book )</strong>: If you have any doubts regarding how zend framework will help you, then its not late you can also join the Zend conference( http://www.zendcon.com/ or follow in twitter http://twitter.com/zendcon ) and learn more about the ZF and brush up your PHP skills  . Ah I forget the name of the site where I was in a few days back ( You can see the link from http://weierophinney.net aaah here it comes for you http://caseysoftware.com/blog/so-its-your-first-conference ) . It really tells you about the conference and it will really help you, if you are new to the Zend conference .  You can see lots of speakers who have contibuted much to the opensource. Also the post makes you remember , that you may be a fan of some one and don&#8217;t get over excited . Its not just a talk about ZF, but the great frameworks ( like symfony , cake etc , phpunit testing ) and future of PHP . So if you have some $$ to spend , go and be there . Hope I am not so late to point about this . Anyway enjoy the sessions and I will read from your blogs how it went . Looking forward to see nice posts .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/13/configuring-zendframework-gnulinux-or-any/">Configuring Zendframework 1.9 in GNU/Linux or Any</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-13T23:28:00+05:30" pubdate data-updated="true">Oct 13<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I got some request from some people asking how to configure / install zendframework 1.9 . Though its easy to do, I thought of writing it as some one who is lookingmay get some help . If you are new configuring PHP consider installing LAMP , WAMP or XAMPP . XAMPP comes with zend framework . So no need to do much work . If you in GNU/Linux you can go and get php , apache , mysql , phpmyadmin through synaptic or mannually download and configure it .  1 ) I hope you have the server LAMP or WAMP or MAMP is ready and running .  2 ) If you are using GNU/Linux use the command locate php.ini file , windows guys search it , you don&#8217;t need commands right ?  Open it in your editor . GNU/Linux guys can do in vim or gedit . Search for the keyword include_path and add your zend framework location . I assume it as /var/ZendFramework/library . You can place anywhere and its not a big deal .  ; UNIX: &#8220;/path1:/path2&#8221; ;include_path = &#8220;.:/usr/share/php&#8221; include_path = &#8220;.:/var/ZendFramework/library&#8221; ; ; Windows: &#8220;\path1;\path2&#8221; ;include_path = &#8220;.;c:\php\includes&#8221;  As I am from GNU/Linux I uncommented the line and added the path where the zendframework library is located . Windows guys can add your folder path to zendframework library .  3 ) Now you have done . If you need the zf command , then you have to do some more .  Make a symbolic link and place in the /bin . That is # ln -s /var/ZendFramework/bin/zf.sh /bin/zf  If you are in windows you need to add environment variables ( Right click on My computer - > Properties -> Settings tab ( I think ) Don&#8217;t ask me more about it , you may need to google search. Search for adding environment variables in java , as the process is same ) . So will be easy to run command from any where as # zf &lt;command> . Else you may need to give the full path where zendframework is placed. Like  /var/ZendFramework/bin/zf.sh or c:\ZendFramework\bin\zf.bat if you are in windows . ( Hope you have zendframework in c drive ) .  Now its ready to use your zendframework 1.9 for your projects . You have successfully installed and configured your Zendframework 1.9 . Any trouble in GNU/Linux let me know . I will help you configuring it .  *Note : You must be root and must restart apache after you have done completely .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/13/opensource-microblogging-client-gwibber-gnulinux/">Opensource Microblogging ( Twitter ) Clients for GNU/Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-13T22:31:00+05:30" pubdate data-updated="true">Oct 13<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Tweet Deck was the one I used as many of them fails to connect to twitter . It was available for free download , but don&#8217;t think is an opensource product. Today I was looking for some opensource microblogging client . Wow lol I have already installed it, then why I have not tried it before ?  <a href="http://www.flickr.com/photos/harikt/4008444565/"><img src="http://farm3.static.flickr.com/2464/4008444565_e3718e1969.jpg" alt="Gwibber Opensource micro blogging client" /></a>  Thought of trying Gwibber . Wow its pretty cool to see . I loved the appearance . First impression is the best impression <img src="http://www.harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . Its developed in Python and suppots many of the opensocial networking sites like twitter , facebook , Jaiku, Identi.ca, Flickr, Digg, and RSS. If you are an ubuntu user then you can go and get it through synaptic package manager . The Gwibber has two tabs , one to show all the tweets appearing whom we follow and the other the replies to us . Hope you too will enjoy tweeting with Gwibber . You can get it from https://launchpad.net/gwibber .At present its not supporting Windows, don&#8217;t know but may come in the future , and its not a big deal for opensource lovers .  Don&#8217;t know every one faces the same problem. Sometimes gwibber fails to load the twitter feeds . I thought of looking for an alternative for gwibber . Found choqok something similar to tweet deck. Don&#8217;t know how tweet deck looks now .. But it was having a similar look when I first installed . You can see from the screenshot how it looks .  <a href="http://www.flickr.com/photos/harikt/4299005571/"><img src="http://farm5.static.flickr.com/4069/4299005571_fc17342920.jpg" alt="twitter microblogging client for GNU/Linux" /></a>  You can reply , retweet , mark favourite , delete etc . It looks really awesome and currently supports twitter and identi.ca . May come with more support for others like facebook. <del>The missing feature I feel in choqok is auto shortening of url</del> . Gwibber comes with many short url services . <del>I dinot find an option to follow a person from itself for both like the one in tweetdeck</del>. Sorry auto shortening is there . Goto Settings->Configure choqok , url shortening tab , tick shorten urls on paste and select one auto shortening service. There is option to follow the person too. Also have noticed that when you point on the short url , the real url is shown in an alt, which is pretty good ( trust and security ). So bye for now . Enjoy tweets .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/13/google-builder-and-supported-operating-systems/">Google Builder and Supported Operating Systems</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-13T21:14:00+05:30" pubdate data-updated="true">Oct 13<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently in googles blog , it has published a new tool called Google Builder , which is used to create a threee dimensional model for everything built on earth . Google describes builder as a game , but the others say its a tool .  <a href="http://www.flickr.com/photos/harikt/4008305011/"><img src="http://farm4.static.flickr.com/3524/4008305011_253151fe7d.jpg" alt="Builder not for you GNU/Linux users" /></a>  These are some of the things that the blog says we must be aware,  1 ) Builder maker is entirely a browser based and the list contains my favourite browser Firefox too .  2 ) You need to signup before you start the application .  3 ) Google Sketchup a free 3D modelling tool will help you edit and modify.  and some more things like this . You can read more about it from http://googleblog.blogspot.com/2009/10/introducing-google-building-maker.html .  I was little curious and thought ( let me experiment my skills ) of trying it as its an online free tool.  But I this time too I am disappointed . Both the tools google sketup and google builder will support Windows and Mac . Its not supporting the powerful operating system GNU/Linux . I don&#8217;t know how come we can call it as a browser based tool as once the isro says the map of isro is a browser based one . I can call it now as an Operating System dependent tool only till it can support every Operating Systems without installing additional softwares .  I am waiting for the release of the Google Chrome OS , so I hope the new tools will defnitely support GNU / Linux operating system .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/12/your-network-secure/">Is Your Network Secure ?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-12T22:27:00+05:30" pubdate data-updated="true">Oct 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="http://farm3.static.flickr.com/2509/4005823080_2cddac3e94_m.jpg" alt="Secure network" />After the session by Manu Zacharia ( An ISO 27001-2005 lead auditor , Director Information Security &#8230; ) from Barcamp 6, I thought of looking closely my system and who all are trying to get into the system. Yes, he was correct . We can see the attempts from different IP&#8217;s and I just looked to get the details of the IP address .  Many of the IP&#8217;s which where in the events blocked where from New Delhi and the ISP was BSNL . I don&#8217;t even know whether these guys are crackers or not . Some of the IP&#8217;s that where reported in the blocked events where from Singapore too .( Not looked all the IP details and events ).  I was wondering about the case of common people who don&#8217;t know much about the problems and attacks like this . Is their network secure ? Even though there is good administrators , the many portals are cracked. So guys, go for open-source products , so the code is open and you can check , rather than getting a free or shareware softwares and asking a cracker to enter in your system . Be secured with some great firewall .  Don&#8217;t go for a properitery firewall, go for opensource . Once again I am remembering you . I am planning to learn something about the security system , so that it will help me in the webdevelopment to make it much more secure than what I know now. I think every coder must learn how attacks are happening than just writing some code for money, so can make the things much more secure. We all know about XSS attack and many sites are being attacked each day now too. Why its so ? Is the coder aware how to secure it ? Yes the first thing is to learn about the attack and how its happening and then we have to stop anymore attacks like it in the future. So according to me, I think a coder must learn about security systems.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/11/rajgiri-college-cochin-hosted-6th-barcamp-kerala/">Rajgiri College Cochin Hosted the 6th Barcamp-Kerala</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-11T17:41:00+05:30" pubdate data-updated="true">Oct 11<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The sixth barcamp kerala which was held on Rajgiri college cochin ( RASAT ) ended with colors . The college campus of Rajgiri was a beautiful one. I just thought of my campus days at CUIET ( Nostalgic feelings ) .  <a href="http://www.flickr.com/photos/harikt/4005098016/"><img src="http://farm3.static.flickr.com/2636/4005098016_c79bb99238.jpg" alt="Barcamp6 at Rajgiri college" /></a>  Photo credits to Kenny  It was really a colorful campus ( We cannot compare CUIET to Rajgiri , you must see both the college to understand why I am saying so ). The event was on the main building and there was a beautiful pond infront of it and some geese where swimming in it ( Awesome ) . Keeping a picture of it ( photo credits to Jins Abraham which was on the Barcamp site <img src="http://www.harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> ).  <a href="http://www.flickr.com/photos/harikt/4004409621/"><img src="http://farm3.static.flickr.com/2672/4004409621_8607c1d308.jpg" alt="Geese in the front of Rajgiri college cochin" /></a>  There was a total of eight sessions . As I am attending Barcamp for the second time I was familiar with many of them . It was really great fun to share things and see the great guys . One of the nice talks was by Arun Basi Lal of Millionclues . Its hard to see people like Arun Basi Lal who is a studying for BTech and attending Barcamps . Many of them never looked like this events . If you are into some professional colleges , then I think you should atleast participate in events like this . I know the limitations , but it will be really useful in your future especially when you are out from college . I remember the one of the presentation in Barcamp five by Binny V A , &#8220;What they don&#8217;t teach you in college&#8221; and I agree with it . Many people who came to Barcamp have achieved something only because of their hardwork . Though the event was from Rajgiri a professional college , only a few from the college where present .  Another session by Manu Zacharia of Milleninnium IT consultants was a great one about Ethical Hacking , &#8220;Hacking in its real sense&#8221; . The one I remember about his talk was about the 7 line shell script which make Windows 7 down . ( To the persons who are hearing the term hacking for the first time , consider looking the ietf http://www.ietf.org/rfc/rfc2828.txt for the difference between hacker and cracker ).  The Anand ( He is popularly called as The Anand ie why writte so ) introduced the concept of carpooling which must be introduced in the cities of India . Its really good to see group of people of same likes moving in a city than going single in each car . There are lots of advatages . You can think about it . Soon they may be coming with a portal .  All the remaining sessions where really interesting and finally we wrapped the event saying &#8220;See you in the next Barcamp&#8221; .  <a href="http://www.flickr.com/photos/harikt/4116483191/"><img src="http://farm3.static.flickr.com/2753/4116483191_d540894cf7.jpg" alt="Barcamp 6 Kerala" /></a>  I was walking with Nithin and we took some snaps from the campus . Will upload it soon after getting those pictures . Before leaving Rajgiri we took a nice snap . Hope I will get the snaps of it soon .  Uploaded some of them to picasa . If you are intrested you can get it from http://picasaweb.google.com/kthari85/Barcamp6 .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/07/does-css-frameworks-helps-rapid-development-websites/">Does CSS Frameworks Helps in Rapid Development of Websites ?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-07T13:05:00+05:30" pubdate data-updated="true">Oct 7<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently I was reading an article in <a href="http://www.sitepoint.com/blogs/2009/10/06/css-frameworks-semantic-class-names/">sitepoint</a> about the css frameworks . Though I have heard about the css frameworks earlier I was not able to get completely . But after seeing the article I thought of looking once again deeply into it .  Some of the most commonly used css frameworks are  1 ) Blue print CSS : http://www.blueprintcss.org/  2 ) 960 Grid system : http://960.gs/  3 ) YUI Grid : http://developer.yahoo.com/yui/grids/  4 ) Elastic : http://elasticss.com/  5 ) YAML : http://www.yaml.de/en/ and many more .  You may be thinking why I thought of writing about CSS framework though I am a PHP developer ? Am I right ? Recently I got a chance to slice a website . As I am doing for the first time , it takes some time to complete it . The problems every one face is browser compatibility . Here comes the use of these frameworks .  These comes with inbuilt classes for the need and is fully tested <img src="http://www.harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . But the only problem is with the name of the class ( Eg : grid_1 prefix_6 suffix_5 ) . What makes me interested to look again to the css frameworks after reading the sitepoint article is we can make custom classes now .  Yes every designers will be using the class names like header , footer , content , sidebar etc rather than the css grid_1 , grid_2 &#8230;. grid_15 . Though name is not a big deal for a good designer it makes some easiness for guys who donot have much css background .  We can download the psd of the grid systems and slice the website with the size provided in it . A screenshot taken from 960 grid is given below . Look carefully the menu and other parts and see how its done . We should use the grid system when we start designing it . So will help much not to arrange any more text and images to left and right when we start slicing it .  <a href="http://www.flickr.com/photos/harikt/3989881052/"><img src="http://farm3.static.flickr.com/2436/3989881052_2e6d5a5d1a_o.png" alt="960 grid css framework example" /></a>  Thus we can increase our productivity for the sites ( As its tested in many browsers you may never spend much time. ) . It may take a few additional hours when we are new . But it will be really helpful in the future when slicing web site . Wish you good luck and try slicing a psd from scratch using your favourite css frameworks.  Updated : Now 960 grid system has one more layout , 24 column . Previously was only having 12 and 16 . I want to redesign this site using 960 grid . Hope I can come with a nice design for this drupal site . Want to brush up the theming concepts . Many things in the to do list .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/18/google-acquires-recaptcha/">Google Acquires reCAPTCHA</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-18T11:07:00+05:30" pubdate data-updated="true">Sep 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.flickr.com/photos/harikt/3931206160/"><img src="http://farm3.static.flickr.com/2591/3931206160_ce8a948f2e.jpg" alt="reCAPTCHA" /></a>Today I saw a post in Googles official blog about their acquasition of recaptcha . Recaptcha is a wonderful service that stops spam like mollom of Dries Butt . If you have a mail id , then you may know what spam is . Gmail may be the best mail service which can protect spam . Now adays every mail service do like that . But gmail seems to be much better than any .  If you have a website with a contact form , you can notice that it will be the most visited page . As a webdeveloper we should use a captcha service to block spam . Else our domain will be listed in the domain which generates spam . Recaptcha is a free service that can protect your forms from spam . There are many plugins or modules for wordpress , drupal etc .  <a href="http://www.flickr.com/photos/harikt/3931206156/"><img src="http://farm3.static.flickr.com/2507/3931206156_351f973d40.jpg" alt="MolloM" /></a>I am using mollom for protecting my forms as its a project developed by Dries the author of Drupal . Thanks to mollom too . I love mollom because it will not show the captcha unless it thinks its spam . There may be many other wonderful services like Mollom and recaptcha . You can use it, according to your taste .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/17/add-wysiwyg-ckeditor-zendtextarea-element-zendform/">Add WYSIWYG Ckeditor to Zend_Textarea Element of Zend_Form</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-17T10:01:00+05:30" pubdate data-updated="true">Sep 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Adding a WYSIWYG editor to Zend_Textarea element of zend framework . I don&#8217;t know whether this is the right way to this . Anyway I would love to share the piece of code to you . I am using the ckeditor the opensource WYSIWYG editor which was previously called fckeditor. I love the new look of it than the tiny mce . So switched to it <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> .  Extract the files of ckeditor and upload to public folder . I am keeping this in the /js/ckeditor .  Add the below piece of code to the layout . As we dont need to load the js of the ckeditor every time we can add a flag.      &lt;?php         if ( $this->ckeditor ) {             echo $this->headScript()->appendFile( $this->baseUrl().&#8217;/js/ckeditor/ckeditor.js&#8217;);          }     ?>  Now you need a helper . Keep the below code in /application/views/helpers/SetupEditor.php .      &lt;?php     class Zend_View_Helper_SetupEditor {          function setupEditor( $textareaId ) {             return &#8221;<script type=\"text/javascript\">         CKEDITOR.replace( '". $textareaId ."' );             </script>&#8221;;         }     }     ?>  I have used a baseUrl helper also . So if you are new I am keeping it for those .      &lt;?php     class Zend_View_Helper_BaseUrl {         function baseUrl() {             $fc = Zend_Controller_Front::getInstance();             return $fc->getBaseUrl();         }     }     ?>  Now you can include the small piece of code in the view script where you are printing the form . For this eg: I am using the application/views/scripts/index/edit.phtml      &lt;?php         $this->ckeditor = &#8216;ckeditor&#8217;; //To tell the layout ckeditor must be loaded .     ?>     <h2>Edit Post</h2>     <div>&lt;?php echo $this->postForm; ?></div>     <!-- Description is the id of the textarea -->     &lt;?php echo $this->setupEditor( &#8216;Description&#8217; ); ?>  You must know the name of the id of the textarea to pass to the setupEditor . I have used the name Description when creating the textarea element . You must have atleast tried the Zend framework quickstart to understand how it works . I hope I have not missed any .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/15/complete-working-example-pagination-using-zendpaginator/">Complete Working Example for Pagination Using Zend_Paginator</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-15T13:03:00+05:30" pubdate data-updated="true">Sep 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I was trying to use pagination I didnot find a complete example . From different blogs and mannuals I finally figured it . So I thought of posting it for myself and for others trying to learn it .  You need to grab the result and pass to Zend_Paginator .      /<em>     * Get the page number , default 1     </em>/     $page = $this->_getParam(&#8216;page&#8217;,1);     /<em>     * Object of Zend_Paginator     </em>/     $paginator = Zend_Paginator::factory($result);     /<em>     * Set the number of counts in a page     </em>/     $paginator->setItemCountPerPage(2);     /<em>     * Set the current page number     </em>/     $paginator->setCurrentPageNumber($page);     /<em>     * Assign to view     </em>/     $this->view->paginator = $paginator;  I hope you have this code in the indexAction . If its in indexAction add the below code in the index.phtml view script , else according to the view of your Action .      <h1>Example</h1>     &lt;?php if (count($this->paginator)): ?>     <ul>     &lt;?php     /<em>     * Iterate through the paginator to show the results     </em>/     foreach ($this->paginator as $item): ?>     <li>&lt;?php echo $item[&#8216;FirstName&#8217;] .&#8221; &#8220;.$item[&#8216;LastName&#8217;]; ?></li>     &lt;?php endforeach; ?>     </ul>     &lt;?php endif; ?>     &lt;?php     /<em>     * Print the pagination of type , drop down or search type or of your choice.     </em>/     echo $this->paginationControl($this->paginator,                                         &#8216;Sliding&#8217;,                                         &#8216;/partials/my_pagination_control.phtml&#8217;); ?>  This code is from the zend mannuals , but it didnot tell where to keep this . You need to keep this in the views folder . I am keeping it in application/views/scripts/partials/my_pagination_control.phtml . I have added the 3 types of pagination in this . You can remove or comment it and look how each type of pagination looks . The drop down is uncommented for now .      &lt;?php     /<em>     * Search pagination     </em>/     ?>     &lt;?php /<em>if ($this->pageCount): ?>     <div class="paginationControl">     <!-- Previous page link -->     &lt;?php if (isset($this->previous)): ?>     <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->previous)); ?>&#8221;> &lt;&lt; Previous</a> |     &lt;?php else: ?>     <span class="disabled">&lt; Previous</span> |     &lt;?php endif; ?>     <!-- Numbered page links -->     &lt;?php foreach ($this->pagesInRange as $page): ?>     &lt;?php if ($page != $this->current): ?>         <a href="<?php echo $this->url(array(&#8216;page&#8217; => $page)); ?>&#8221;>             &lt;?php echo $page; ?>         </a> |       &lt;?php else: ?>         &lt;?php echo $page; ?> |       &lt;?php endif; ?>     &lt;?php endforeach; ?>     <!-- Next page link -->     &lt;?php if (isset($this->next)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->next)); ?>&#8221;>         Next &gt;       </a>     &lt;?php else: ?>       <span class="disabled">Next &gt;</span>     &lt;?php endif; ?>     </div>     &lt;?php endif; </em>/?>     &lt;?php     /<em>      </em> Item pagination example      <em>      </em>/     ?>     <!--     See http://developer.yahoo.com/ypatterns/pattern.php?pattern=itempagination     -->     &lt;?php /<em>if ($this->pageCount): ?>     <div class="paginationControl">     &lt;?php echo $this->firstItemNumber; ?> - &lt;?php echo $this->lastItemNumber; ?>     of &lt;?php echo $this->totalItemCount; ?>     <!-- First page link -->     &lt;?php if (isset($this->previous)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->first)); ?>&#8221;>First </a> |     &lt;?php else: ?>       <span class="disabled">First</span> |     &lt;?php endif; ?>     <!-- Previous page link -->     &lt;?php if (isset($this->previous)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->previous)); ?>&#8221;> &lt; Previous  </a> |     &lt;?php else: ?>       <span class="disabled">&lt; Previous</span> |     &lt;?php endif; ?>     <!-- Next page link -->     &lt;?php if (isset($this->next)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->next)); ?>&#8221;>  Next &gt; </a> |     &lt;?php else: ?>       <span class="disabled">Next &gt;</span> |     &lt;?php endif; ?>     <!-- Last page link -->     &lt;?php if (isset($this->next)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->last)); ?>&#8221;>  Last  </a>     &lt;?php else: ?>       <span class="disabled">Last</span>     &lt;?php endif; ?>     </div>     &lt;?php endif; </em>/?>     &lt;?php     /<em>      </em> Drop down paginaton example      */     ?>     &lt;?php if ($this->pageCount): ?>     <select id="paginationControl" size="1">     &lt;?php foreach ($this->pagesInRange as $page): ?>       &lt;?php $selected = ($page == $this->current) ? &#8217; selected=&#8221;selected&#8221;&#8217; : &#8221;; ?>       <option value="<?php             echo $this->url(array(&#8216;page&#8217; => $page));?>&#8221;&lt;?php echo $selected ?>>         &lt;?php echo $page; ?>       </option>     &lt;?php endforeach; ?>     </select>     &lt;?php endif; ?>     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.2/prototype.js"></script>     <script type="text/javascript">     $('paginationControl').observe('change', function() {         window.location = this.options[this.selectedIndex].value;     })     </script>  Hope it works for you . Thanks</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/12/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/10/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

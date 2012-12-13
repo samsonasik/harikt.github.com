@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Does he opens the mail I send ? Why the images are blocked in mail ? - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="Every one will be eager to know whether the mail send by you has been read or not by him/her  ( Especailly love letters , email campaigns , news &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2010/03/06/does-he-opens-mail-i-send-why-images-are-blocked-mail/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Does He Opens the Mail I Send ? Why the Images Are Blocked in Mail ?</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-06T08:57:00+05:30" pubdate data-updated="true">Mar 6<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Every one will be eager to know whether the mail send by you has been read or not by him/her <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/wink_smile.gif" alt="image" /> ( Especailly love letters , email campaigns , news letters etc ) right ?  <a href="http://www.flickr.com/photos/harikt/4410492336/"><img src="http://farm3.static.flickr.com/2716/4410492336_c7b6ec185c_o.jpg" alt="Did he / she read my mail ?" /></a>  Today I would love to share with you how you can track this . I am not going to write any code. But will go through how you can acheive this . I hope you are a web-developer or know something about programming in PHP .  I am going through some of the functions in PHP . There will be similar functions in .NET too . The <a href="http://harikt.com/content/swiftmailer-powerful-php-mailer-library">swiftmailer</a> already have a function to send whether the mail is opened or not . But it will ask the user the permission before sending it .  I am going through a different one . Every one knows the mail function . Either we can use the php mail or swiftmailer or phpmailer or Zend_Mail any to send mails . Its easy to send mails with Swiftmailer . Now we need to get the confirmation for the mail send right ?  We all know its easy to create dynamic images with the PHP GD library . Every one would have created it for captcha images right ? . So we need to write some PHP code to create a dynamic image . So the link will be something like http://example.com/mygd-image.php which will output an image . If we are sending to a single person we don&#8217;t need to pass values using GET . ie <a href="http://example.com/mygd-image.php?openedBy=5467">http://example.com/mygd-image.php?openedBy=5467</a> . But when its for email campaigns and all we need a way to track which person has opened the mail . We will be having the names of the users and corresponding key ( I mean primary key or we can create a hash based on the mail or something different according to your logic ) . We just need to pass that to the link which creates the image . Track it using the PHP GET method and update the database . Yes now you know whether the mail is opened or not .  There is also a possibility that the images will be blocked . The reason why the images is blocked is due to these type of things which will be used for bad also . For eg : spammers can check whether the email address is faque or not using just sending these sort of mails . So when you open the mail and the image loads it confirms your email address . So gmail usually blocks these type of images .  The image is taken from the flickr photostream of Davide Restivo <a href="http://www.flickr.com/people/somemixedstuff/">http://www.flickr.com/people/somemixedstuff/</a> ( Thanks and credits for the image to him ) . I hope I have not missed any  . You can look the php gd library for how to create dynamic images . The mail functions and your favourite php library to send mails . Thanks guys . That&#8217;s all for today . Enjoy .</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-06T08:57:00+05:30" pubdate data-updated="true">Mar 6<span>th</span>, 2010</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2010/03/06/does-he-opens-mail-i-send-why-images-are-blocked-mail/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2010/03/06/does-he-opens-mail-i-send-why-images-are-blocked-mail/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/03/05/8th-barcamp-kerala-mar-athanasios-college-advanced-studies-tiruvalla-macfast/" title="Previous Post: 8th Barcamp Kerala at Mar Athanasios College For Advanced Studies, Tiruvalla (MACFAST)">&laquo; 8th Barcamp Kerala at Mar Athanasios College For Advanced Studies, Tiruvalla (MACFAST)</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/03/14/translate-english-any-native-languages/" title="Next Post: Translate from English to any native languages">Translate from English to any native languages &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

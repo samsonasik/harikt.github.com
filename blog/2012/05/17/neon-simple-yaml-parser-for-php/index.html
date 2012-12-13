@@ -90,72 +90,7 @@
   </header>
 
 
-<div class="entry-content"><p>Hi guys, have you heard about Neon ? Probably no I guess. </p>
-
-
-<p>Neon is the project by David Grudl (http://davidgrudl.com) which is part of Nette Framework (http://nette.org) . I recently found Neon , but it was not in github for people may not have noticed that much. Also David Grudl tweets almost everything in Czech. So I assume he may be having less followers in twitter who speaks English or any language other than Czech. But he is an awesome guy who has some awesome projects. One of it is <a href="http://ne-on.org/">Neon</a> and the other one is Texy . I will cover texy in another post.</p>
-
-
-<p>You can create the php array from json, yaml etc with Neon . See the example below we are parsing as a json and getting $data as array . And then later we are encoding it and you will get Yaml. You can see the live demo at Neon website : http://ne-on.org/</p>
-
-
-<p>
-{syntaxhighlighter class=&#8221;php&#8221;}
-$data = Neon::decode(&#8217;
-{
- &#8220;repo&#8221;: [
-   { &#8220;name&#8221;: &#8220;resque&#8221; },
-   { &#8220;name&#8221;: &#8220;hub&#8221; },
-   { &#8220;name&#8221;: &#8220;rip&#8221; },
- ]
-}
-&#8217;);
-print_r($data);
-echo &#8217;<hr>&#8217;;
-$neon = Neon::encode($data, Neon::BLOCK);
-{/syntaxhighlighter}
-</p>
-
-
-<p>
-PHP array
-</p>
-
-
-<p>
-{syntaxhighlighter class=&#8221;php&#8221;}
-Array
-(
-   [repo] => Array
-       (
-           [0] => Array
-               (
-                   [name] => resque
-               )
-           [1] => Array
-               (
-                   [name] => hub
-               )
-           [2] => Array
-               (
-                   [name] => rip
-               )
-       )
-)
-
-repo:
-    -
-        name: resque
-    -
-        name: hub
-    -
-        name: rip
-{/syntaxhighlighter}
-</p>
-
-
-<p>You can see the source code at https://github.com/harikt/Neon for David Grudl has not kept in github. You can get more details from Neon Website http://ne-on.org/</p>
-
+<div class="entry-content"><p>Hi guys, have you heard about Neon ? Probably no I guess.  Neon is the project by David Grudl (http://davidgrudl.com) which is part of Nette Framework (http://nette.org) . I recently found Neon , but it was not in github for people may not have noticed that much. Also David Grudl tweets almost everything in Czech. So I assume he may be having less followers in twitter who speaks English or any language other than Czech. But he is an awesome guy who has some awesome projects. One of it is <a href="http://ne-on.org/">Neon</a> and the other one is Texy . I will cover texy in another post.  You can create the php array from json, yaml etc with Neon . See the example below we are parsing as a json and getting $data as array . And then later we are encoding it and you will get Yaml. You can see the live demo at Neon website : http://ne-on.org/  {syntaxhighlighter class=&#8221;php&#8221;} $data = Neon::decode(&#8217; { &#8220;repo&#8221;: [ { &#8220;name&#8221;: &#8220;resque&#8221; }, { &#8220;name&#8221;: &#8220;hub&#8221; }, { &#8220;name&#8221;: &#8220;rip&#8221; }, ] } &#8216;); print_r($data); echo &#8217;   * * * * *  &#8216;; $neon = Neon::encode($data, Neon::BLOCK); {/syntaxhighlighter} PHP array  {syntaxhighlighter class=&#8221;php&#8221;} Array ( [repo] => Array ( [0] => Array ( [name] => resque ) [1] => Array ( [name] => hub ) [2] => Array ( [name] => rip ) ) ) repo: - name: resque - name: hub - name: rip {/syntaxhighlighter}  You can see the source code at https://github.com/harikt/Neon for David Grudl has not kept in github. You can get more details from Neon Website http://ne-on.org/</p>
 </div>
 
 
@@ -215,23 +150,23 @@ repo:
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/09/23/workshop-on-aura-project-for-php/">Workshop on Aura Project for PHP at OSI Days</a>
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/15/contributor-to-aura-project/">How I became a contributor to aura project</a>
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/">Thoughts on installing Zend Framework via composer</a>
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/27/how-to-install-aura-framework/">How to install aura framework</a>
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a>
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

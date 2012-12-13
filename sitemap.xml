@@ -1,133 +1,983 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://harikt.github.com/blog/2009/01/27/node-22/</loc>
+        <lastmod>2012-12-13T22:11:20+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/01/27/earn-money/</loc>
+        <lastmod>2012-12-13T22:21:57+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/01/29/5-convert-static-html-to-a-dynamic-one-with-php/
+        </loc>
+        <lastmod>2012-12-13T22:20:53+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/01/30/linux/</loc>
+        <lastmod>2012-12-13T22:22:46+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/02/01/7-downloading-a-file/</loc>
+        <lastmod>2012-12-13T22:21:41+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/02/05/8-change-is-the-law-of-life/</loc>
+        <lastmod>2012-12-13T22:22:49+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/02/13/9-learning-ajax/</loc>
+        <lastmod>2012-12-13T22:09:14+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/02/22/10-phpdirector-have-your-own-free-video-cms-site/
+        </loc>
+        <lastmod>2012-12-13T22:22:42+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/03/04/14-comments-extension-in-joomla/</loc>
+        <lastmod>2012-12-13T22:22:58+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/03/04/13-captcha-image-for-joomla/</loc>
+        <lastmod>2012-12-13T22:21:19+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/03/08/16-adding-digg-delicious-button-in-blogger/
+        </loc>
+        <lastmod>2012-12-13T22:21:17+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/03/11/17-downloading-youtube-videos-to-your-system/
+        </loc>
+        <lastmod>2012-12-13T22:19:52+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/03/13/19-piwik-and-google-webanalytics/</loc>
+        <lastmod>2012-12-13T22:22:20+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/03/13/18-bookmark-manager-foxmarks-now-xmarks/
+        </loc>
+        <lastmod>2012-12-13T22:09:32+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/03/20/22-select-box-poking-out-through-menu-in-ie-6/
+        </loc>
+        <lastmod>2012-12-13T22:09:24+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/03/21/24-frameworks-in-php/</loc>
+        <lastmod>2012-12-13T22:20:55+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/03/21/23-yahoo-like-folder-in-gmail/</loc>
+        <lastmod>2012-12-13T22:23:12+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/03/23/25-gnu-gpl-licenced-e-commerce-systems/
+        </loc>
+        <lastmod>2012-12-13T22:20:46+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/03/26/27-kompozer-a-wonderful-dreamweaver-like-wysiwyg-editor-for-gnulinux-windows-mac/
+        </loc>
+        <lastmod>2012-12-13T22:11:10+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/03/27/28-fireftp-filezilla-a-wonderful-tool-for-web-developers/
+        </loc>
+        <lastmod>2012-12-13T22:21:27+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/09/29-reunion-of-chinmaya-vidyalaya-calicut/
+        </loc>
+        <lastmod>2012-12-13T22:11:32+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/10/30-barcamp-kerala-5th-edition-on-may-3rd-technopark-trivandrum/
+        </loc>
+        <lastmod>2012-12-13T22:09:37+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/12/31-resizing-image-using-command-line-in-gnulinux/
+        </loc>
+        <lastmod>2012-12-13T22:21:13+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/04/12/32-web-hosting-service-/</loc>
+        <lastmod>2012-12-13T22:09:08+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/15/33-opensolaris-installation-on-ubuntu-and-after-effects-of-grub/
+        </loc>
+        <lastmod>2012-12-13T22:09:53+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/04/19/34-bad-day-but-enjoyed-a-good-movie/</loc>
+        <lastmod>2012-12-13T22:20:13+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/19/35-low-disk-space-store-images-and-files-in-database-or-/
+        </loc>
+        <lastmod>2012-12-13T22:22:06+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/04/21/36-ubuntu-904-is-about-to-release/</loc>
+        <lastmod>2012-12-13T22:11:25+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix/
+        </loc>
+        <lastmod>2012-12-13T22:20:46+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/23/38-celebrating-my-24-th-bday-with-ubuntu-904-colleagues-at-ispg-friends-and-dear-o/
+        </loc>
+        <lastmod>2012-12-13T22:19:39+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/26/39-replacement-for-skype-with-ekiga-or-twinkle-or-coccinella-or-sip-communicator/
+        </loc>
+        <lastmod>2012-12-13T22:23:04+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/27/40-concern-over-open-source-softwares-and-big-giants-over-mysql/
+        </loc>
+        <lastmod>2012-12-13T22:22:02+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/04/28/41-google-maps-yahoo-maps-and-open-street-maps/
+        </loc>
+        <lastmod>2012-12-13T22:23:40+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/02/43-booting-gnewsense-gnulinux-from-usb/
+        </loc>
+        <lastmod>2012-12-13T22:11:04+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/02/42-firebug-a-handy-tool-for-web-developers/
+        </loc>
+        <lastmod>2012-12-13T22:11:17+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/03/45-chinmaya-vidyalaya-2000-01-batch-reunion-on-may-2nd-rocked/
+        </loc>
+        <lastmod>2012-12-13T22:20:03+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/04/47-enjoyed-barcamp-5-from-park-center-technopark/
+        </loc>
+        <lastmod>2012-12-13T22:20:56+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/05/06/49-is-gpl-misused-/</loc>
+        <lastmod>2012-12-13T22:23:25+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/05/11/53-working-with-joomla-and-drupal/</loc>
+        <lastmod>2012-12-13T22:21:09+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/13/54-things-that-you-must-take-care-before-selecting-a-hosting/
+        </loc>
+        <lastmod>2012-12-13T22:11:27+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/16/56-2009-election-results-of-kerala-and-india/
+        </loc>
+        <lastmod>2012-12-13T22:10:05+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/20/58-ides-for-php-development-or-php-development-softwares/
+        </loc>
+        <lastmod>2012-12-13T22:09:02+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/20/57-getting-value-of-objects-inside-a-multidimensional-array-in-php/
+        </loc>
+        <lastmod>2012-12-13T22:19:58+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/20/59-track-every-coin-to-save-your-budget-a-product-from-ion-labs/
+        </loc>
+        <lastmod>2012-12-13T22:09:06+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/21/60-introducing-git-version-control-system-by-linus-torvalds-the-man-behind-it/
+        </loc>
+        <lastmod>2012-12-13T22:08:54+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/30/61-google-recently-launched-study-tips-for-students/
+        </loc>
+        <lastmod>2012-12-13T22:20:00+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/30/62-editing-flickr-photos-online-with-picnik/
+        </loc>
+        <lastmod>2012-12-13T22:22:27+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/05/31/20-welcome-to-the-world-of-hari-k-t-php-developer/
+        </loc>
+        <lastmod>2012-12-13T22:10:47+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/06/01/quick-move-from-joomla-to-drupal/</loc>
+        <lastmod>2012-12-13T22:21:21+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/06/03/google-book-store-vs-amazon/</loc>
+        <lastmod>2012-12-13T22:20:37+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/06/10/learn-your-failures/</loc>
+        <lastmod>2012-12-13T22:21:56+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/06/13/visual-search-searchme/</loc>
+        <lastmod>2012-12-13T22:11:09+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/06/21/playing-video-ubuntu-904-jaunty-ends-session-fixed/
+        </loc>
+        <lastmod>2012-12-13T22:22:54+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/06/29/dhtml-jquery-based-google-week-planner-and-calendar/
+        </loc>
+        <lastmod>2012-12-13T22:21:23+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/06/29/introducing-google-phone-number/</loc>
+        <lastmod>2012-12-13T22:20:59+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/06/30/spread-fire-fox-ie-firefox/</loc>
+        <lastmod>2012-12-13T22:10:41+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/07/03/download-videos-which-are-played-your-browser/
+        </loc>
+        <lastmod>2012-12-13T22:23:34+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/07/05/running-aptana-studio-php-ide-ubuntu-904/
+        </loc>
+        <lastmod>2012-12-13T22:10:11+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/06/setting-run-mysql-query-within-aptana/</loc>
+        <lastmod>2012-12-13T22:09:58+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/07/07/zimbra-desktop-manage-email-calendars-and-much-more/
+        </loc>
+        <lastmod>2012-12-13T22:23:31+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/07/07/google-introducing-wave-application-coming-rock-2009/
+        </loc>
+        <lastmod>2012-12-13T22:22:22+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/07/08/google-coming-google-chrome-os-lately-2010/
+        </loc>
+        <lastmod>2012-12-13T22:21:45+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/09/wolfram-new-way-learn/</loc>
+        <lastmod>2012-12-13T22:21:59+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/11/gmail-password-recovery-phone/</loc>
+        <lastmod>2012-12-13T22:19:51+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/11/gmail-voice-and-video-chat-plugin/</loc>
+        <lastmod>2012-12-13T22:23:19+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/14/never-compare-ruby-rails-php/</loc>
+        <lastmod>2012-12-13T22:10:34+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/19/whats-value-education/</loc>
+        <lastmod>2012-12-13T22:23:08+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/21/i-got-google-voice-invitation/</loc>
+        <lastmod>2012-12-13T22:09:26+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/07/23/easy-tutorial-quickly-learn-zendframework-18/
+        </loc>
+        <lastmod>2012-12-13T22:23:29+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/25/configuring-bsnl-zte-evdo-opensolaris/</loc>
+        <lastmod>2012-12-13T22:22:57+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/28/yahoo-new-redesign/</loc>
+        <lastmod>2012-12-13T22:19:36+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/07/31/browser-ware-seems-end-os-war-starts/</loc>
+        <lastmod>2012-12-13T22:09:21+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/08/15/6-different-drupal-themes-i-love/</loc>
+        <lastmod>2012-12-13T22:09:28+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/08/15/zend-framework-command-line-tools/</loc>
+        <lastmod>2012-12-13T22:09:04+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/08/23/administration-module-generation-zendframework-greater-18/
+        </loc>
+        <lastmod>2012-12-13T22:20:42+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/08/23/working-zendstudio-i5/</loc>
+        <lastmod>2012-12-13T22:20:50+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/08/25/will-bhuvan-get-much-popularity-google-earth/
+        </loc>
+        <lastmod>2012-12-13T22:11:00+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/08/26/selenium-good-tool-testers-record-action/
+        </loc>
+        <lastmod>2012-12-13T22:19:44+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/08/26/phpunit-tool-write-tests/</loc>
+        <lastmod>2012-12-13T22:22:25+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/08/31/onam-celebration-ispg-cochin/</loc>
+        <lastmod>2012-12-13T22:10:10+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/09/09/mozilla-service-week-and-rewards-you/</loc>
+        <lastmod>2012-12-13T22:20:39+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/09/10/new-advertisement-oracle-and-sun-and-message-ibm/
+        </loc>
+        <lastmod>2012-12-13T22:20:27+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/09/10/great-firefox-addons-download-files-easily/
+        </loc>
+        <lastmod>2012-12-13T22:22:40+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/09/13/windows7-not-released-windows7sinsorg-active/
+        </loc>
+        <lastmod>2012-12-13T22:19:35+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/09/15/complete-working-example-pagination-using-zendpaginator/
+        </loc>
+        <lastmod>2012-12-13T22:20:17+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/09/17/add-wysiwyg-ckeditor-zendtextarea-element-zendform/
+        </loc>
+        <lastmod>2012-12-13T22:19:56+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/09/18/google-acquires-recaptcha/</loc>
+        <lastmod>2012-12-13T22:21:52+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/10/07/does-css-frameworks-helps-rapid-development-websites/
+        </loc>
+        <lastmod>2012-12-13T22:08:59+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/10/11/rajgiri-college-cochin-hosted-6th-barcamp-kerala/
+        </loc>
+        <lastmod>2012-12-13T22:20:15+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/10/12/your-network-secure/</loc>
+        <lastmod>2012-12-13T22:10:21+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/10/13/google-builder-and-supported-operating-systems/
+        </loc>
+        <lastmod>2012-12-13T22:20:05+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/10/13/opensource-microblogging-client-gwibber-gnulinux/
+        </loc>
+        <lastmod>2012-12-13T22:19:38+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/10/13/configuring-zendframework-gnulinux-or-any/
+        </loc>
+        <lastmod>2012-12-13T22:21:34+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/10/14/zend-framework-18-web-application-development/
+        </loc>
+        <lastmod>2012-12-13T22:10:01+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/10/19/great-wonders-world-mozilla-firefox/</loc>
+        <lastmod>2012-12-13T22:22:31+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/10/29/ubuntu-910-and-you-get-2gb-online-storage-free/
+        </loc>
+        <lastmod>2012-12-13T22:21:45+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/11/02/finally-i-too-got-google-wave/</loc>
+        <lastmod>2012-12-13T22:10:30+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/11/07/do-we-php-developers-need-follow-single-framework/
+        </loc>
+        <lastmod>2012-12-13T22:10:25+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/11/18/drupal-6-content-administration-book/</loc>
+        <lastmod>2012-12-13T22:10:58+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/11/18/zend-framework-bug-hunt/</loc>
+        <lastmod>2012-12-13T22:21:36+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/11/19/alexa-traffic-rank-website/</loc>
+        <lastmod>2012-12-13T22:20:33+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/11/19/base-files-start-your-zend-framework-project/
+        </loc>
+        <lastmod>2012-12-13T22:22:43+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/11/19/google-comes-movie-search-your-location/
+        </loc>
+        <lastmod>2012-12-13T22:19:54+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/11/28/what-i-feel-after-using-google-chrome-os/
+        </loc>
+        <lastmod>2012-12-13T22:09:57+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/12/07/google-internet-bus-kerala-karnataka-tamil-nadu-andhra-pradesh/
+        </loc>
+        <lastmod>2012-12-13T22:23:38+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/12/16/netbeans-68-comes-support-symfony-framework/
+        </loc>
+        <lastmod>2012-12-13T22:22:35+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/12/20/seventh-barcamp-kristu-jyoti-college-management-and-technology/
+        </loc>
+        <lastmod>2012-12-13T22:09:48+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/12/22/node-120/</loc>
+        <lastmod>2012-12-13T22:20:35+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2009/12/23/introducing-processingjs-visualisation-language/
+        </loc>
+        <lastmod>2012-12-13T22:22:13+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2009/12/31/good-bye-2009-lets-welcome-2010/</loc>
+        <lastmod>2012-12-13T22:10:55+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/01/22/benefits-open-source-frameworks-over-custom-frameworks/
+        </loc>
+        <lastmod>2012-12-13T22:22:33+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2010/01/22/pranav-mistry-ted/</loc>
+        <lastmod>2012-12-13T22:20:12+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2010/02/01/symfony-live-2010-paris/</loc>
+        <lastmod>2012-12-13T22:09:35+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/02/18/twitter-retweet-button-show-tweets-twitter-feeds-your-websites/
+        </loc>
+        <lastmod>2012-12-13T22:19:48+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/02/18/symfony-workshop-bangalore-brings-qaeet-application/
+        </loc>
+        <lastmod>2012-12-13T22:21:30+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2010/02/24/second-symfony-workshop-bangalore/</loc>
+        <lastmod>2012-12-13T22:21:39+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/03/05/8th-barcamp-kerala-mar-athanasios-college-advanced-studies-tiruvalla-macfast/
+        </loc>
+        <lastmod>2012-12-13T22:09:42+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/03/06/does-he-opens-mail-i-send-why-images-are-blocked-mail/
+        </loc>
+        <lastmod>2012-12-13T22:22:53+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/03/14/translate-english-any-native-languages/
+        </loc>
+        <lastmod>2012-12-13T22:22:08+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2010/03/22/how-strong-are-you-php-and-mysql/</loc>
+        <lastmod>2012-12-13T22:22:15+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/03/22/converting-psd-xhtml-and-cross-browser-compatibility/
+        </loc>
+        <lastmod>2012-12-13T22:20:02+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/03/28/looking-back-barcamp-8-mar-athanasios-college-advanced-studies-macfast/
+        </loc>
+        <lastmod>2012-12-13T22:11:29+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/04/06/kerala-google-technology-users-group-and-adobe-launch-event/
+        </loc>
+        <lastmod>2012-12-13T22:20:31+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/04/19/making-firefox-look-similar-google-chrome/
+        </loc>
+        <lastmod>2012-12-13T22:11:34+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2010/04/28/worlds-most-secure-browser/</loc>
+        <lastmod>2012-12-13T22:11:23+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2010/05/06/link-mootools-doc-jquery-website/</loc>
+        <lastmod>2012-12-13T22:09:50+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/05/07/change-thunderbird-microsoft-outlook-2007/
+        </loc>
+        <lastmod>2012-12-13T22:20:21+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/06/15/thinking-developing-application-zend-framework/
+        </loc>
+        <lastmod>2012-12-13T22:09:30+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/06/24/playing-ratproxy-passive-web-application-security-assessment-tool/
+        </loc>
+        <lastmod>2012-12-13T22:10:49+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/07/25/osi-days-asias-largest-opensource-conference/
+        </loc>
+        <lastmod>2012-12-13T22:10:45+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2010/08/29/php5-cms-framework-development/</loc>
+        <lastmod>2012-12-13T22:08:55+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/08/29/integrating-doctrine-zendframework-modules/
+        </loc>
+        <lastmod>2012-12-13T22:21:00+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/09/05/install-mongodb-aptitude-and-not-synaptic/
+        </loc>
+        <lastmod>2012-12-13T22:19:43+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2010/09/11/meeting-richard-mathew-stallman-calicut/
+        </loc>
+        <lastmod>2012-12-13T22:20:23+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2010/09/22/looking-back-osidays-2010/</loc>
+        <lastmod>2012-12-13T22:22:38+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2010/10/31/your-first-cup-lithium/</loc>
+        <lastmod>2012-12-13T22:10:53+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/01/20/local-search-li3docs-zendsearchlucene/</loc>
+        <lastmod>2012-12-13T22:11:19+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/03/10/relationship-support-lithium-aka-li3/</loc>
+        <lastmod>2012-12-13T22:21:05+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/03/12/adding-html-purifier-library-lithium/</loc>
+        <lastmod>2012-12-13T22:10:13+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2011/03/13/replacing-mysql-query-browser-and-phpmyadmin-adminer/
+        </loc>
+        <lastmod>2012-12-13T22:20:10+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/04/15/peep-through-php-53-frameworks/</loc>
+        <lastmod>2012-12-13T22:10:29+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2011/04/29/contributing-opensource-project-github/
+        </loc>
+        <lastmod>2012-12-13T22:23:27+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/07/17/wordpress-3-ultimate-security/</loc>
+        <lastmod>2012-12-13T22:23:18+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2011/07/17/get-set-go-yes-come-lets-start-playing-aura-packages/
+        </loc>
+        <lastmod>2012-12-13T22:22:18+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2011/08/05/documentation-help-sphinx-and-readthedocs/
+        </loc>
+        <lastmod>2012-12-13T22:09:46+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/08/21/contributing-php/</loc>
+        <lastmod>2012-12-13T22:09:10+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/09/03/scraping-web-goutte/</loc>
+        <lastmod>2012-12-13T22:23:05+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/09/03/reading-and-writing-csv-files-php/</loc>
+        <lastmod>2012-12-13T22:22:04+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2011/09/18/book-review-kohana3-beginners-guide-by-packt/
+        </loc>
+        <lastmod>2012-12-13T22:10:17+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/10/02/symfony2-the-future-of-php/</loc>
+        <lastmod>2012-12-13T22:09:17+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/10/02/resolving-rpc-failed-for-github/</loc>
+        <lastmod>2012-12-13T22:09:44+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/10/03/dries-coming-for-drupal-camp-india/</loc>
+        <lastmod>2012-12-13T22:10:02+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2011/10/03/things-that-will-help-you-for-the-smooth-running-of-a-company/
+        </loc>
+        <lastmod>2012-12-13T22:11:02+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/10/03/mercury-editor-fluid-baseline/</loc>
+        <lastmod>2012-12-13T22:23:43+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2011/10/05/search-for-good-internet-service-provider-in-kerala/
+        </loc>
+        <lastmod>2012-12-13T22:10:42+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2011/11/12/hTML5-beyond-shwetank-dixit/</loc>
+        <lastmod>2012-12-13T22:23:24+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2011/11/24/speaking-for-bck11-or-barcamp-kerala-at-iim-kozhikode/
+        </loc>
+        <lastmod>2012-12-13T22:20:29+05:30</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://harikt.github.com/blog/2011/12/23/integrating-facebook-graph-api-with-php/
+        </loc>
+        <lastmod>2012-12-13T22:21:31+05:30</lastmod>
+    </url>
+    <url>
         <loc>http://harikt.github.com/blog/2012/01/01/aura-project-moving-to-php54/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:11:15+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/01/05/installing-configuring-php54/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:20:19+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/02/02/twitter-relationship/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:21:26+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/02/13/mongodb-and-php-steve-francia-oreilly/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:22:51+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/02/13/aura-project-releases-beta2/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:21:48+05:30</lastmod>
     </url>
     <url>
         <loc>
             http://harikt.github.com/blog/2012/02/17/autoloading-classes-psr0-with-symfony2/
         </loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:11:07+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/03/06/standalone-form-component-for-php/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:23:36+05:30</lastmod>
     </url>
     <url>
         <loc>
             http://harikt.github.com/blog/2012/03/09/any-design-flaw-for-components-packages-for-symfony2-zf2/
         </loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:10:27+05:30</lastmod>
     </url>
     <url>
         <loc>
             http://harikt.github.com/blog/2012/03/27/speaking-about-aura-project-barcamp-kerala/
         </loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:19:47+05:30</lastmod>
     </url>
     <url>
         <loc>
             http://harikt.github.com/blog/2012/04/26/getting-started-with-oauth2-by-ryan-boyd/
         </loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:23:10+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/05/17/neon-simple-yaml-parser-for-php/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:20:25+05:30</lastmod>
     </url>
     <url>
         <loc>
             http://harikt.github.com/blog/2012/05/27/bored-seeing-php-as-templating-language/
         </loc>
-        <lastmod>2012-12-13T06:50:11+05:30</lastmod>
+        <lastmod>2012-12-13T23:05:20+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/06/01/standalone-menu-and-breadcrumb-in-php/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:20:43+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/06/13/why-you-should-write-test/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:21:48+05:30</lastmod>
     </url>
     <url>
         <loc>
             http://harikt.github.com/blog/2012/06/21/kmug-monthly-meeting-google-io-extended-2012/
         </loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:10:51+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/07/06/the-fifth-elephant-by-hasgeek/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:10:07+05:30</lastmod>
     </url>
     <url>
         <loc>
             http://harikt.github.com/blog/2012/07/17/rest-api-design-rulebook-by-mark-masse/
         </loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:23:14+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/07/27/day-one-the-fifth-elephant/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:23:22+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/07/30/day2-at-thefifthelephant/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:20:08+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/07/30/yahoo-open-hack-india2012/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:23:01+05:30</lastmod>
     </url>
     <url>
         <loc>
             http://harikt.github.com/blog/2012/07/30/speaking-at-barcamp-bangalore-on-auraphp/
         </loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:21:52+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/08/16/yahoo-open-hack-india-2012/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:10:37+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/08/27/how-to-install-aura-framework/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:11:12+05:30</lastmod>
     </url>
     <url>
         <loc>
             http://harikt.github.com/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/
         </loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:09:39+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/09/15/contributor-to-aura-project/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:22:10+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/09/23/workshop-on-aura-project-for-php/</loc>
-        <lastmod>2012-12-12T01:21:18+05:30</lastmod>
+        <lastmod>2012-12-13T22:22:23+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/10/04/node-217/</loc>
+        <lastmod>2012-12-13T22:21:15+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/10/17/node-218/</loc>
+        <lastmod>2012-12-13T22:23:16+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/10/20/node-219/</loc>
+        <lastmod>2012-12-13T22:22:11+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/10/28/node-220/</loc>
+        <lastmod>2012-12-13T22:09:19+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/11/06/node-221/</loc>
+        <lastmod>2012-12-13T22:22:01+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/11/24/node-223/</loc>
+        <lastmod>2012-12-13T22:09:54+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/11/24/node-224/</loc>
+        <lastmod>2012-12-13T22:22:47+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/11/29/node-225/</loc>
+        <lastmod>2012-12-13T22:10:38+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/12/04/node-226/</loc>
+        <lastmod>2012-12-13T22:10:33+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://harikt.github.com/blog/2012/12/06/node-227/</loc>
+        <lastmod>2012-12-13T22:23:02+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/</loc>
-        <lastmod>2012-12-13T06:50:11+05:30</lastmod>
+        <lastmod>2012-12-13T23:05:20+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/archives/</loc>
-        <lastmod>2012-12-13T06:50:11+05:30</lastmod>
+        <lastmod>2012-12-13T23:05:20+05:30</lastmod>
     </url>
 </urlset>

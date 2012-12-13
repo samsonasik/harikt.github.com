@@ -90,161 +90,7 @@
   </header>
 
 
-<div class="entry-content"><p>The era of standalone components is here. Yes people will definitely take and promote standalone components . Lets have a look into the <a href="http://github.com/knplabs/KnpMenu">KnpMenu</a> . Its awesome that you can create awesome menu . Yes with PHP and after all there is no dependencies . Lets see some examples</p>
-
-<p>{syntaxhighlighter class=&#8221;php&#8221;}
-use Knp\Menu\MenuFactory;
-use Knp\Menu\Renderer\ListRenderer;</p>
-
-<p>$factory = new MenuFactory();
-$menu = $factory->createItem(&#8216;My menu&#8217;);
-$home = $menu->addChild(&#8216;Home&#8217;, array(&#8216;uri&#8217; => &#8216;/&#8217;));
-$home1 = $home->addChild(&#8216;&lt; Home1&#8217;, array(&#8216;uri&#8217; => &#8216;/about&#8217;));
-$home1->addChild(&#8216;Company&#8217;, array(&#8216;uri&#8217; => &#8216;/about/company&#8217;));
-$home1->addChild(&#8216;Life&#8217;, array(&#8216;uri&#8217; => &#8216;/about/life&#8217;));
-$home1->addChild(&#8216;Work&#8217;, array(&#8216;uri&#8217; => &#8216;/about/work&#8217;));
-$menu->addChild(&#8216;Comments&#8217;, array(&#8216;uri&#8217; => &#8216;#comments&#8217;));
-$menu->addChild(&#8216;Aura&#8217;, array(&#8216;uri&#8217; => &#8216;http://auraphp.github.com/&#8217;));
-$menu->addChild(&#8216;Coming soon&#8217;);</p>
-
-<p>$renderer = new ListRenderer();
-echo $renderer->render($menu);
-{/syntaxhighlighter}
-The above will give you the below output.
-{syntaxhighlighter class=&#8221;html&#8221;}</p>
-
-<ul>
-  <li class="first">
-    <a href="/">Home</a>
-    <ul class="menu_level_1">
-      <li class="first last">
-        <a href="/about">&lt; Home1</a>
-        <ul class="menu_level_2">
-          <li class="first">
-            <a href="/about/company">Company</a>
-          </li>
-          <li>
-            <a href="/about/life">Life</a>
-          </li>
-          <li class="last">
-            <a href="/about/work">Work</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="#comments">Comments</a>
-  </li>
-  <li>
-    <a href="http://auraphp.github.com/">Aura</a>
-  </li>
-  <li class="last">
-    <span>Coming soon</span>
-  </li>
-</ul>
-
-
-<p>{/syntaxhighlighter}</p>
-
-<p>You can also create from an array. I was having some issue and Thank you Christophe Coevoet ( <a href="https://twitter.com/#!/Stof70">@Stof70</a> ) for quickly helping me. I was copying some test data and didn&#8217;t noticed one of the display value was hidden :P . So here it comes :-) .</p>
-
-<p>{syntaxhighlighter class=&#8221;php&#8221;}
-use Knp\Menu\MenuFactory;
-use Knp\Menu\Renderer\ListRenderer;</p>
-
-<p>$factory = new MenuFactory();
-$array = array(</p>
-
-<pre><code>'name' =&gt; 'test_menu',
-'label' =&gt; "Home",
-'uri' =&gt; 'homepage',
-'attributes' =&gt; array(),
-'labelAttributes' =&gt; array(),
-'linkAttributes' =&gt; array(),
-'display' =&gt; true,
-'displayChildren' =&gt; true,
-'children' =&gt; array(
-    'jack' =&gt; array(
-        'name' =&gt; 'jack',
-        'label' =&gt; "Jack",
-        'uri' =&gt; 'http://php.net',
-        'attributes' =&gt; array(),
-        'labelAttributes' =&gt; array(),
-        'linkAttributes' =&gt; array('title' =&gt; 'php'),
-        'display' =&gt; true,
-        'displayChildren' =&gt; true,
-        'children' =&gt; array(
-            'john' =&gt; array(
-                'name' =&gt; 'john',
-                'label' =&gt; "John",
-                'uri' =&gt; null,
-                'attributes' =&gt; array(),
-                'labelAttributes' =&gt; array(),
-                'linkAttributes' =&gt; array(),
-                'display' =&gt; true,
-                'displayChildren' =&gt; true,
-                'children' =&gt; array(
-                        'doe' =&gt; array(
-                            'name' =&gt; 'doe',
-                            'label' =&gt; 'doe',
-                            'uri' =&gt; 'http://google.com'
-                        )
-                    ),
-            ),
-        ),
-    ),
-    'joe' =&gt; array(
-        'name' =&gt; 'joe',
-        'label' =&gt; 'test',
-        'uri' =&gt; null,
-        'attributes' =&gt; array('class' =&gt; 'leaf'),
-        'labelAttributes' =&gt; array('class' =&gt; 'center'),
-        'linkAttributes' =&gt; array(),
-        'display' =&gt; true,
-        'displayChildren' =&gt; false,
-        'children' =&gt; array(),
-    ),
-),
-</code></pre>
-
-<p>);</p>
-
-<p>$menu = $factory->createFromArray($array);
-$renderer = new ListRenderer();
-echo $renderer->render($menu);
-{/syntaxhighlighter}</p>
-
-<p>And this will print the below html. Consider making values hidden etc . You can notice how the output changes.</p>
-
-<p>{syntaxhighlighter class=&#8221;html&#8221;}</p>
-
-<ul>
-  <li class="first">
-    <a href="http://php.net" title="php">jack</a>
-    <ul class="menu_level_1">
-      <li class="first last">
-        <span>john</span>
-        <ul class="menu_level_2">
-          <li class="first last">
-            <a href="http://google.com">doe</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li class="leaf last">
-    <span class="center">test</span>
-  </li>
-</ul>
-
-
-<p>{/syntaxhighlighter}</p>
-
-<p>There is Breadcrumb also in the latest 2.0 master branch ( Not yet released ? ) . I have not explored more how we can make it . I will update the post once I play with the Breadcrumbs. So good bye to Zend_Navigation. Its a new beginning for <a href="http://knplabs.com/">Knplabs</a> , KnpMenu . Ryan Weaver deserves some credits for its a port of http://github.com/weaverryan/ioMenuPlugin ( symfony 1 plugin, but for the PHP community as a whole ).</p>
-
-<p>Source Code : http://github.com/knplabs/KnpMenu
-Its already having great documentation :) . Go and explore guys .. Look through tests if you have doubts ;-) . Ask support at Symfony irc . May be at a different one later ?</p>
+<div class="entry-content"><p>The era of standalone components is here. Yes people will definitely take and promote standalone components . Lets have a look into the <a href="http://github.com/knplabs/KnpMenu">KnpMenu</a> . Its awesome that you can create awesome menu . Yes with PHP and after all there is no dependencies . Lets see some examples {syntaxhighlighter class=&#8221;php&#8221;} use Knp\Menu\MenuFactory; use Knp\Menu\Renderer\ListRenderer; $factory = new MenuFactory(); $menu = $factory->createItem(&#8216;My menu&#8217;); $home = $menu->addChild(&#8216;Home&#8217;, array(&#8216;uri&#8217; => &#8216;/&#8217;)); $home1 = $home->addChild(&#8217; Home1&#8217;, array(&#8216;uri&#8217; => &#8216;/about&#8217;)); $home1->addChild(&#8216;Company&#8217;, array(&#8216;uri&#8217; => &#8216;/about/company&#8217;)); $home1->addChild(&#8216;Life&#8217;, array(&#8216;uri&#8217; => &#8216;/about/life&#8217;)); $home1->addChild(&#8216;Work&#8217;, array(&#8216;uri&#8217; => &#8216;/about/work&#8217;)); $menu->addChild(&#8216;Comments&#8217;, array(&#8216;uri&#8217; => &#8216;#comments&#8217;)); $menu->addChild(&#8216;Aura&#8217;, array(&#8216;uri&#8217; => &#8216;http://auraphp.github.com/&#8217;)); $menu->addChild(&#8216;Coming soon&#8217;); $renderer = new ListRenderer(); echo $renderer->render($menu); {/syntaxhighlighter} The above will give you the below output. {syntaxhighlighter class=&#8221;html&#8221;} -   <a href="/">Home</a>     -   <a href="/about">&lt; Home1</a>         -   <a href="/about/company">Company</a>         -   <a href="/about/life">Life</a>         -   <a href="/about/work">Work</a>   -   <a href="#comments">Comments</a> -   <a href="http://auraphp.github.com/">Aura</a> -   Coming soon  {/syntaxhighlighter} You can also create from an array. I was having some issue and Thank you Christophe Coevoet ( <a href="https://twitter.com/#!/Stof70">@Stof70</a> ) for quickly helping me. I was copying some test data and didn&#8217;t noticed one of the display value was hidden :P . So here it comes :-) . {syntaxhighlighter class=&#8221;php&#8221;} use Knp\Menu\MenuFactory; use Knp\Menu\Renderer\ListRenderer; $factory = new MenuFactory(); $array = array( &#8216;name&#8217; => &#8216;test_menu&#8217;, &#8216;label&#8217; => &#8220;Home&#8221;, &#8216;uri&#8217; => &#8216;homepage&#8217;, &#8216;attributes&#8217; => array(), &#8216;labelAttributes&#8217; => array(), &#8216;linkAttributes&#8217; => array(), &#8216;display&#8217; => true, &#8216;displayChildren&#8217; => true, &#8216;children&#8217; => array( &#8216;jack&#8217; => array( &#8216;name&#8217; => &#8216;jack&#8217;, &#8216;label&#8217; => &#8220;Jack&#8221;, &#8216;uri&#8217; => &#8216;http://php.net&#8217;, &#8216;attributes&#8217; => array(), &#8216;labelAttributes&#8217; => array(), &#8216;linkAttributes&#8217; => array(&#8216;title&#8217; => &#8216;php&#8217;), &#8216;display&#8217; => true, &#8216;displayChildren&#8217; => true, &#8216;children&#8217; => array( &#8216;john&#8217; => array( &#8216;name&#8217; => &#8216;john&#8217;, &#8216;label&#8217; => &#8220;John&#8221;, &#8216;uri&#8217; => null, &#8216;attributes&#8217; => array(), &#8216;labelAttributes&#8217; => array(), &#8216;linkAttributes&#8217; => array(), &#8216;display&#8217; => true, &#8216;displayChildren&#8217; => true, &#8216;children&#8217; => array( &#8216;doe&#8217; => array( &#8216;name&#8217; => &#8216;doe&#8217;, &#8216;label&#8217; => &#8216;doe&#8217;, &#8216;uri&#8217; => &#8216;http://google.com&#8217; ) ), ), ), ), &#8216;joe&#8217; => array( &#8216;name&#8217; => &#8216;joe&#8217;, &#8216;label&#8217; => &#8216;test&#8217;, &#8216;uri&#8217; => null, &#8216;attributes&#8217; => array(&#8216;class&#8217; => &#8216;leaf&#8217;), &#8216;labelAttributes&#8217; => array(&#8216;class&#8217; => &#8216;center&#8217;), &#8216;linkAttributes&#8217; => array(), &#8216;display&#8217; => true, &#8216;displayChildren&#8217; => false, &#8216;children&#8217; => array(), ), ), ); $menu = $factory->createFromArray($array); $renderer = new ListRenderer(); echo $renderer->render($menu); {/syntaxhighlighter} And this will print the below html. Consider making values hidden etc . You can notice how the output changes. {syntaxhighlighter class=&#8221;html&#8221;} -   <a href="http://php.net" title="php">jack</a>     -   john         -   <a href="http://google.com">doe</a>   -   test  {/syntaxhighlighter} There is Breadcrumb also in the latest 2.0 master branch ( Not yet released ? ) . I have not explored more how we can make it . I will update the post once I play with the Breadcrumbs. So good bye to Zend_Navigation. Its a new beginning for <a href="http://knplabs.com/">Knplabs</a> , KnpMenu . Ryan Weaver deserves some credits for its a port of http://github.com/weaverryan/ioMenuPlugin ( symfony 1 plugin, but for the PHP community as a whole ). Source Code : http://github.com/knplabs/KnpMenu Its already having great documentation :) . Go and explore guys .. Look through tests if you have doubts ;-) . Ask support at Symfony irc . May be at a different one later ?</p>
 </div>
 
 
@@ -304,23 +150,23 @@ Its already having great documentation :) . Go and explore guys .. Look through 
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/09/23/workshop-on-aura-project-for-php/">Workshop on Aura Project for PHP at OSI Days</a>
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/15/contributor-to-aura-project/">How I became a contributor to aura project</a>
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/">Thoughts on installing Zend Framework via composer</a>
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/27/how-to-install-aura-framework/">How to install aura framework</a>
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a>
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

@@ -90,74 +90,7 @@
   </header>
 
 
-<div class="entry-content"><p>So I got a chance to be at Bangalore for Open Hack India 2012 conducted by Yahoo.</p>
-
-
-<div style="margin:0px; text-align: center;">
-<p><a title="IMG_5052 by mrowan, on Flickr" href="http://www.flickr.com/photos/mrowan/7751044880/"><img height="375" width="500" alt="IMG_5052" src="http://farm9.staticflickr.com/8286/7751044880_e0cb1fea0b.jpg" /></a></p>
-<p><a title="IMG_5065 by mrowan, on Flickr" href="http://www.flickr.com/photos/mrowan/7751030446/"><img height="375" width="500" alt="IMG_5065" src="http://farm9.staticflickr.com/8296/7751030446_54abd3bc44.jpg" /></a></p>
-</div>
-
-
-<p>It was really a great time to learn and do some of the experiments on Yahoo developer network (ydn) tools.</p>
-
-
-<p>So we ended up trying to do some stuff with <a href="http://open.dapper.net/">dapper</a>. Dapper is a tool used for scrapping. It seems interesting from the workshop. But when I started using it, I was not successful. The dapper stopped responding / showing updating preview and stuffs.</p>
-
-
-<p>What I was trying todo?&lt; /p&gt;</p>
-
-
-<p>I used to buy books comparing prices from isbn.net.in . It helped me a lot in buying books very cheap in India. But isbn.net.in was not having a feature called search for book title, and isbn details and as it does currently. Yes there were various other services that do the same. But if you think so then you must think why gmail was developed for there were yahoo mail, aol, msn etc were there.</p>
-
-
-<p>So anyway learning was the idea, but as dapper fails to respond, it seems hard. I tried to contact the developers via the contact form. But I didn&#8217;t got a reply on Hack days to further proceed on it. So I tried various other methods via Yahoo pipes, yql etc.</p>
-
-
-<p>It was really nice to learn and make my hands dirty with yql. I tried different stuffs. Exploring it I found the url shortner from Yahoo.</p>
-
-
-<p>So once I reached home I made a url shortner which is currently in github ( http://harikt.github.com/openhackindia/ ) . Its simple with a few lines.</p>
-
-
-<p>{syntaxhighlighter class=&quot;html&quot;} <script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script> <script>
-// Create a YUI sandbox on your page.
-YUI().use('node', 'yql', function (Y) {
-    //onclick
-    Y.one('#shorten').on('click', function (e) {
-        e.preventDefault();
-        var url = Y.one('#url').get('value');
-        Y.YQL("insert into yahoo.y.ahoo.it (url, keysize) values ('"+url+"', 5)", function (r) {
-            Y.one('#shortened').append('<p>' + r.query.results.url + '</p>');
-        });
-    });
-});
-</script> {/syntaxhighlighter}</p>
-
-
-<p>YQL is powerful, try and play. Its awesome guys.</p>
-
-
-<p>I also came to know about Boomerang from Yahoo.</p>
-
-
-<p>I was planning to buy a Bean Bag, and yes I got as a present from Yahoo.</p>
-
-
-<p>Thank you guys for the awesome event. I am really sad for not able to submit a Hack :( . But I will explore more the ydn resoucres in future. Hope to see you next time if everything permits.</p>
-
-
-<p>References :</p>
-
-
-<p>YUI for jQuery Developers and vice versa : <a href="http://www.jsrosettastone.com/">http://www.jsrosettastone.com/</a></p>
-
-
-<p>Quick start to learn YUI : <a href="http://yuilibrary.com/yui/quick-start/">http://yuilibrary.com/yui/quick-start/</a></p>
-
-
-<p>Using YQL with YUI : <a href="http://yuilibrary.com/yui/docs/yql/">http://yuilibrary.com/yui/docs/yql/</a></p>
-
+<div class="entry-content"><p>So I got a chance to be at Bangalore for Open Hack India 2012 conducted by Yahoo.  <a href="http://www.flickr.com/photos/mrowan/7751044880/" title="IMG_5052 by mrowan, on Flickr"><img src="http://farm9.staticflickr.com/8286/7751044880_e0cb1fea0b.jpg" alt="IMG_5052" /></a>  <a href="http://www.flickr.com/photos/mrowan/7751030446/" title="IMG_5065 by mrowan, on Flickr"><img src="http://farm9.staticflickr.com/8296/7751030446_54abd3bc44.jpg" alt="IMG_5065" /></a>  It was really a great time to learn and do some of the experiments on Yahoo developer network (ydn) tools.  So we ended up trying to do some stuff with <a href="http://open.dapper.net/">dapper</a>. Dapper is a tool used for scrapping. It seems interesting from the workshop. But when I started using it, I was not successful. The dapper stopped responding / showing updating preview and stuffs.  What I was trying todo?&lt; /p>  I used to buy books comparing prices from isbn.net.in . It helped me a lot in buying books very cheap in India. But isbn.net.in was not having a feature called search for book title, and isbn details and as it does currently. Yes there were various other services that do the same. But if you think so then you must think why gmail was developed for there were yahoo mail, aol, msn etc were there.  So anyway learning was the idea, but as dapper fails to respond, it seems hard. I tried to contact the developers via the contact form. But I didn&#8217;t got a reply on Hack days to further proceed on it. So I tried various other methods via Yahoo pipes, yql etc.  It was really nice to learn and make my hands dirty with yql. I tried different stuffs. Exploring it I found the url shortner from Yahoo.  So once I reached home I made a url shortner which is currently in github ( http://harikt.github.com/openhackindia/ ) . Its simple with a few lines.  {syntaxhighlighter class=&#8221;html&#8221;} {/syntaxhighlighter} YQL is powerful, try and play. Its awesome guys.  I also came to know about Boomerang from Yahoo.  I was planning to buy a Bean Bag, and yes I got as a present from Yahoo.  Thank you guys for the awesome event. I am really sad for not able to submit a Hack :( . But I will explore more the ydn resoucres in future. Hope to see you next time if everything permits.  References :  YUI for jQuery Developers and vice versa : <a href="http://www.jsrosettastone.com/">http://www.jsrosettastone.com/</a>  Quick start to learn YUI : <a href="http://yuilibrary.com/yui/quick-start/">http://yuilibrary.com/yui/quick-start/</a>  Using YQL with YUI : <a href="http://yuilibrary.com/yui/docs/yql/">http://yuilibrary.com/yui/docs/yql/</a></p>
 </div>
 
 
@@ -217,23 +150,23 @@ YUI().use('node', 'yql', function (Y) {
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/09/23/workshop-on-aura-project-for-php/">Workshop on Aura Project for PHP at OSI Days</a>
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/15/contributor-to-aura-project/">How I became a contributor to aura project</a>
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/">Thoughts on installing Zend Framework via composer</a>
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/27/how-to-install-aura-framework/">How to install aura framework</a>
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a>
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="I know I have missed to post lots of nice applications. You may be aware or may not be . Anyway this is really interesting one to every one. I hope &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/page/9/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/18/twitter-retweet-button-show-tweets-twitter-feeds-your-websites/">Twitter Retweet Button, Show Tweets ( Twitter Feeds ) on Your Websites</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-18T20:49:00+05:30" pubdate data-updated="true">Feb 18<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I know I have missed to post lots of nice applications. You may be aware or may not be . Anyway this is really interesting one to every one. I hope every one is using twitter or you may have atleast heard about twitter . I am really addicted to twitter the micro blogging client . Twitter may be one reason that makes me lasy to post long description blog posts .  These are some of the things that twitter misses , or we all love to see in twitter .  1 ) Updating the tweets quickly : Now we need to refresh the page manually or you may be using a twitter client like choqok or tweetdeck or some other. We can use one jquery based twitter client which can be used in websites to show the recent tweets from you or your favourite terms . Yes juitter a javascript tool will do the work . You just need to download the scripts and do the necessary things .  Eg :  Download the script from http://www.juitter.com/  &lt;code>  <script language="javascript" src="/js/jquery-1.3.1.min.js" type="text/javascript"\>&lt;/script> <script language="javascript" src="/js/jquery.juitter.js" type="text/javascript"\>&lt;/script> <script language="javascript" src="/js/system.js" type="text/javascript"\>&lt;/script>  &lt;/code>  The system.js files contains the configuration . Not much just a few lines  &lt;code>  $(document).ready(function() {     $.Juitter.start({         searchType:"fromUser",         searchObject:"harikt",         lang:"en",         live:"live-15",         placeHolder:"juitterContainer",         loadMSG: "Loading messages...",         imgName: "loader.gif",         total: 20,         readMore: "Read it on Twitter",         nameUser:"image"     }); );  &lt;/code>  The place holder is where the tweets will be showing . ie <div id="juitterContainer"\>&lt;/div> now shows the twitter feeds which you have given as the search term .  I noticed this wonderful tool after following the lithium php framework . Have already written about the new born rapidly growing framework . You can <a href="http://harikt.com/node/120">read about lithium over here</a> . You can go and look the demo at http://www.juitter.com/ .  2 ) Retweet button : Every site owner will be trying to increase the amount of visitors to their website . Twitter brings some visitors to your website too. So why not keeping a retweet button . Yes John Resig ( the author of jquery , employee at Mozilla and much more ....) has developed a retweet button . Its easier than the tweetme button . Will be send directly to twitter website . You can see the sample and use the code located at http://ejohn.org/blog/retweet/  These two applications uses jquery . If you are interested to learn jquery, Packt has a wonderful book "Learn jquery 1.3" , also John Resig have written some books . You can consider buying one and enjoying working with jquery to build your next website UI .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/01/symfony-live-2010-paris/">Symfony Live 2010 at Paris</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-01T22:14:00+05:30" pubdate data-updated="true">Feb 1<span>st</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I started learning symfony after some of my experiments with zend framework and others . So I think I want to write something about the symfony live conference which will be held on February 15 to 17th of 2010 .  <a href="http://www.flickr.com/photos/harikt/4323132806/"><img src="http://farm5.static.flickr.com/4031/4323132806_78a0d70d8e.jpg" alt="symfony live conference" /></a>  Be part of the symfony live 2010 as symfony 2 will be revealed . There are lots of sessions by core players of git , zend , doctrine etc . Get more information about schedule from http://www.symfony-live.com/schedule .  Symfony project is supported by sensio labs . The lead developer and owner of symfony framework . Awesome community supported project . Available in MIT licence. Lots of other stand alone components are available for php developers from symfony. YAML , Dependency injection ,Templating , Event Dispatcher, Request handler etc.  Why I started learning symfony ?  Some of you may be interested to know why I started to learn symfony . After recognising the beneficts of MVC I thought of learning an open-source MVC framework. Though I was interested to learn symfony I was forced to move with Zend . Though it is documented , some one who comes without much knowledge of MVC will be weired. It was missing a good example .  Though I developed a sample application I was not feeling much comfortable to work with zend. And at that time I came to know about the presentation by Fabien Potentier &#8220;using symfony and zend&#8221; . Many people tried to convince me about the beneficts moving with zend for zend is the PHP company . But if you are not comfortable enough then I think its not good to go with that right ? ( Especially when there is none to help you ).  I was interested to see the auto generation of codes by symfony. I am a GNU/Linux user, so I used to work on command line. Working with symfony is really awesome . If you are a command line guy then you too will defnitely love symfony. Recently I came to know about the PHP bangalore users meet up was having a framework shootout . I would have been there if I was in Bangalore. But I missed that too . If anyone missed that session there is one more chance to get trained with symfony . Yes there is a new symfony bangalore group started http://www.symfony-bangalore.org .  You can get more information from http://www.symfony-project.org/ about the symfony project.  Stand alone components are available from http://components.symfony-project.org/ .  You will be hearing about lots of interesting open-source projects like swift-mailer , doctrine , twig etc .  I may be using zend components in the future, but anyway not now ;) .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/22/pranav-mistry-ted/">Pranav Mistry at TED : The Sixth Sense</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-22T12:53:00+05:30" pubdate data-updated="true">Jan 22<span>nd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently I heard about Pranav Mistry from one of my friend Prajith . Though I saw the video I didnot get much time to write about that . I don&#8217;t know whether every one may have heard about him too. Let me keep those two awesome videos .  I hope you too enjoyed it . And I am very happy to hear and tell you that he puts all as opensource . Does any one do like that ?  I am not keeping all the links to his projects . Check <a href="http://www.pranavmistry.com/">Pranav mistry&#8217;s website</a> for more information . Lots there guys .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/22/benefits-open-source-frameworks-over-custom-frameworks/">Benefits of Open Source Frameworks Over Custom Frameworks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-22T11:25:00+05:30" pubdate data-updated="true">Jan 22<span>nd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.flickr.com/photos/harikt/4294304881/" title="opensource_logo by K T Hari, on Flickr"><img src="http://farm5.static.flickr.com/4049/4294304881_87b173eb57_t.jpg" alt="opensource_logo" /></a>Recently I was arguing with one of my friend over the beneficts of opensource frameworks over custom . I know there may be lots of posts describing the beneficts and drawbacks . But I just thought of writing it as I can say I have written about that in my blog. You can check it out .  I hope every one knows about <a href="http://www.opensource.org/docs/osd">opensource</a> and the <a href="http://www.opensource.org/licenses/alphabetical">licences</a> . I have been using and learning some of the most popular opensource frameworks like zend, lithium , drupal etc . So lets move on to what are the beneficts I feel .  Beneficts of open source :  1 ) Mainly community supported .  2 ) Coding standards will be followed .  3 ) Throughly tested and immediate patches will be available if any thing breaks .  4 ) Can get quick help from the community .  5 ) Flexible for maintaince ( ie not throw away prototyping )  6 ) Many do unit testing using the popular test tools like phpunit , simpletest etc .  Beneficts of custom :  1 ) Custom frameworks may be good for a developer as he knows what he has written . I don&#8217;t think there is much beneficts for users .  Drawbacks of custom frameworks :  1 ) It will be developed by a single or some group of people.  2 ) May be tested by some group of peoples , but lacks the tests done by community ( mass of people )  3 ) Developing from scratch is not a big deal , but maintainence is the one that&#8217;s costly than development . When its custom made , you may need to get the exact people for that . Else its like &#8220;too many cooks spoil the broothe&#8221;. Pretty enough community developers, so not a big deal to get one.  4 ) May or may not be flexible . For example lets compare with drupal . When you starts your project , you may have thought just a small blog , then later you thought of having forums , after that you thought you need to sell some goods.  When its drupal like framework , its easy as you just need to maintain the common code base which comes with much of the features and some other contributed and custom modules will make everything fine . But when its custom , you may need to mess with the code , or may need to go extending it , which is not so easy like drupal or any other .  These are what I feel for now . May be more points , but for the time I am not remebering it . If any one feels I missed any , please add your comments I will update it .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/31/good-bye-2009-lets-welcome-2010/">Good Bye 2009 Let's Welcome 2010</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-31T19:56:00+05:30" pubdate data-updated="true">Dec 31<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi guys, first of all I wish you and your family a Happy and Prosperous Newyear .  <a href="http://www.flickr.com/photos/harikt/4231563110/" title="Happy_New_Year_2010 by K T Hari, on Flickr"><img src="http://farm3.static.flickr.com/2607/4231563110_37045dfe0d.jpg" alt="Happy_New_Year_2010" /></a>  I cannot say 2009 was a bad year for me . I gained a lot of things in 2009 . But I am looking even more in 2010. Lets celebrate this Newyear 2010 with some of the friends I am using and learning ( This is not a full stop , but just a start <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/wink_smile.gif" alt="image" /> ) . You may be familiar with much of the logos . Anyway let me introduce to those who are not familiar with these .  Zend framework : Which makes my blog so popular . Thanks to Zend&#8217;s devzone , google to make my website in the search list and all my visitors  and well wishers.  jQuery and Prototype : Recognised the powerful javascript framework. But I was forced to move with prototype .  Drupal : I recognised the power of Drupal as I started using it . Its really a wonderful framework . But the sad thing is I didnot get any chance to work on any drupal projects.  Many of you may be familiar with the logo of windows . So I may not need to introduce Microsoft Windows. Never think I hate windows, this was a picture I got from <a href="http://www.new-dream.de/">http://www.new-dream.de/</a> . The other ones on the left and right of burning windows is GNU/Linux and free bsd.  If you are not a techie , you may not be familiar with the tag &lt;?php <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . Its nothing other than a powerful webscripting language php, on which I used to work daily . Every logos are copyright to their respective owners . I don&#8217;t have any copyright on any of these.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/23/introducing-processingjs-visualisation-language/">Introducing Processingjs a Visualisation Language</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-23T18:35:00+05:30" pubdate data-updated="true">Dec 23<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="http://processingjs.org/content/download/Processingjs%20Logo%20v8.1.svg" alt="processingjs svg image" />You may be knowing about the canvas which is introduced in the HTML 5 . The canvas will be only visible in HTML 5 compatible browsers . If you are an IE user it will never work in the near future . If you are using Mozilla firefox , Google Chrome , Opera with the latest version , then it will works for you .  Using Canvas and the power of javascript the flash and much are going to disappear in the future . I would like to introduce a new one processingjs . John Resig who developed jQuery and at present working for Mozilla firefox and some others are behind this project . He has joined after the project has started . The image I have placed is an SVG one . This image will never loose the clarity even if you have stretched . That&#8217;s the power of SVG .  Explore and develop images using codes and forget about flash and java applets . Let&#8217;s create an operating system independent web applications with javascript and HTML 5 .  You can see more details about the project from <a href="http://processingjs.org/">http://processingjs.org/</a> . If you are interested to see the demos of the processingjs you can visit the link <a href="http://processingjs.org/exhibition">http://processingjs.org/exhibition</a> .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/22/node-120/">Somethiing About Kohana and Lithium PHP Framework</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-22T21:14:00+05:30" pubdate data-updated="true">Dec 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.flickr.com/photos/harikt/4205957465/"><img src="http://farm3.static.flickr.com/2639/4205957465_0c3be9763b.jpg" alt="kohana by K T Hari, on Flickr" /></a>I have heard about Kohana before too, but have not looked into it . But today I understood the fact that Kohana is a PHP 5 MVC framework and is a fork of Codeigniter.  Kohana follows strict OOP concepts . I have to admit that Zend has great libraries for Webservices and it will defnitely improve . So what importing the Zend libraries ? Yes you can <a href="http://docs.kohanaphp.com/general/libraries">import zend framework libraries in Kohana</a> . Another thing is Kohana uses swiftmailer , the PHP mail library .  You may have thought why I was attracted with in a few minutes looking Kohana right ? If so then I think you want to look into the <a href="http://www.dealtaker.com/blog/2009/11/20/kohana-php-3-0-ko3-tutorial-part-1/">tutorial of Kohana 3</a> which is under development . Zend framework may need the examples like the above ones , you may wonder at seeing some documentation where to keep this and how it works etc . I sometimes even remebered reading some books from page 80 asking us to look page 480 for more details. On page 480 it may be telling about some other chapters . Kohana is not using unit testing . So if you are a big fan of unit tests , then you may want to look other frameworks like Zend, Symfony etc .  <a href="http://www.flickr.com/photos/harikt/4205957193/"><img src="http://farm3.static.flickr.com/2697/4205957193_e0e75b521a_m.jpg" alt="Lithium PHP 5 framework" /></a>That&#8217;s all about Kohana . This is about the new born PHP 5.3 framework Lithium. I don&#8217;t know whether you have heard about the Lithium project . It was announced after zend-con . I have heard the podcasts in php architect some long days back .  Lithium uses PHP 5.3 and is a RAD framework. The project is brought to you by cakephp guys, not just cake guys , but some others too . Lithium can be used on servers who supports PHP version 5.3 . Its in the development stage. You can see more details from <a href="http://li3.rad-dev.org/">http://li3.rad-dev.org/</a> . I remember the tweet by Nate Abele  promising Li3 will have a stable release before Solar. This promise was made after Nate says <a href="http://twitter.com/nateabele/status/6275380270">to codeigniter guys</a> &#8220;Dear #CodeIgniter People, Don&#8217;t you care that it&#8217;s almost 2010 and you&#8217;re still running PHP4 code? Yours, - Nate&#8221; and he got a <a href="http://twitter.com/enygma/status/6275503250">reply from Chris Cornutt</a> of <a href="http://phpdeveloper.org">phpdeveloper.org</a> &#8220;@nateabele it&#8217;s okay&#8230;we only have two more years until the world ends. Will Lithium have a stable release before then? ;)&#8221; . So you can see another wonderful PHP 5 strict OOP based framework soon . Explore the development versions to keep in touch with it.  Update : Lithium PHP framework development is going too fast. Now the version <del>0.5</del> 0.6 has been released ie they have gone more than half way . Some of the features are missing, but you can see those missing features in the coming versions . Also I have seen some of the projects started using lithium . Some of the zend framework developers also have joined the Lithium project . Don&#8217;t remember the sites I have seen . If any of you are from Lithium reading this post, add your comments . If any trouble ( goo the project leader was telling about the problem with mollom ) just mail to me .  For more details about the versions you can see <a href="http://rad-dev.org/lithium/versions">http://rad-dev.org/lithium/versions</a> . You can see how fast its moving .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/20/seventh-barcamp-kristu-jyoti-college-management-and-technology/">Seventh Barcamp at Kristu Jyoti College of Management and Technology</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-20T19:32:00+05:30" pubdate data-updated="true">Dec 20<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.flickr.com/photos/harikt/4138281774/"><img src="http://farm3.static.flickr.com/2665/4138281774_4e7f05f292_t.jpg" alt="Barcamp Kerala 7" /></a>And finally the 7th barcamp has <del>been announced</del> ended with colors . It<del>s scheduled for</del> was on 20th December, 2009, Sunday at Kristu Jyoti College of Management and Technology, Kottayam .  <del>I hope to see you guys there .</del>Hearing about barcamp for the first time ? Wiki have the answer <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> .  This Barcamp 7 was really really interesting . If you are a techie you missed it, thats what I can say .  Some of the sessions were  1 ) Barcamp Kerala (History and Present) by Kevin Babu 2 ) 3D Computer Graphics Programming by Praseed Pai 3 ) Building complex web site the Drupal way by Fredrik Jonsson 4 ) Media Hypocrisy and Freedom of Speech by Kenney Jacob 5 ) Giving life to discarded Computers with LTSP by VU2SWX ( by Sunil ) 6 ) Innovation! - &#8220;The UST Global Way&#8221; by Harikrishnan Nair 7 ) Multi Monitor Machines by Binny V A 8 ) Device management in modern Linux system by Unnikrishnan  This time my favorite one was presnted by Fredrik Jonsson &#8220;Building complex web site the Drupal way&#8221; . He was a person from Sweden who have came here on vaccassion. I have planned that what ever thing happens I will go to Kristu Jyoti College of Management and Technlogy only because of his presntation . I love Drupal and I was interested to learn something he knows . He has already done some websites in Drupal . I got a chance to discuss with him and also Thanks for sharing his slides .If I get a picture I will keep it here .  I was little late so I didn&#8217;t cover the presentation by Kevin Babu . Sorry the private buses from Ernakulam to Kottayam was on strike .  When I reached there Praseed Pai was the person who was speaking about the 3D Computer Graphics Programming. He just takes me to my college life . The last semester programming computer graphics . Algorithms used for drawing lines , Open GL and so on . Thanks for taking me to my college CUIET again in Barcamp .  Kenny Jacob came up with the &#8220;Media Hypocrisy and Freedom of Speech&#8221; . We discussed some of the recent issues like total for you sabarinath case , love jihad issues etc .  Giving life to discarded Computers with LTSP by VU2SWX was also a great session . I think people like him are missing in the colleges. I have only some faces like him in Engineering Colleges . These type of guys are really needed in Engineering Colleges to make more professional software developers .  Innovation! - &#8220;The UST Global Way&#8221; by Harikrishnan Nair was a great one . He spoke about the Microsoft share point which the UST uses . He was poiting Microsoft guys called them and they were having a webinar with them . I have a chit chat with him , and he appreciated us for conducting these type of events .  I was hearing about the Multi Monitor Machines for the first time from my client, then from Eric of devzone and now I know Binny V A is using one . He invited us to his home to see the working demo. I am interested to visit and see a live session. So Binny you can expect me at any time <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/wink_smile.gif" alt="image" /> .  Device management in modern Linux system by Unnikrishnan was a good one . I can see more systems coming to Barcamps are with Ubuntu . Great to see that open-source and GNU/Linux and all are changing the world .  And finally we have a talk about the entrepreneur ship and the freelancing, which was not included in the session . Some of them came with their models . One of the father came and told about his experience learning and working and building the organisation . I loved his speech and that was really awesome . He invited us for the BCK8 at his college premises . Thanks to him for the offer . Hoping to see you on BCK8 there .  Forgot to tell you that we celebrated the Christmas by cutting a cake by Fredrik Jonsson our guest for the BCK7 . Let me celebrate this Christmas with the moments from Barcamp Kerala 7 . I hope every one who was there enjoyed . During the return also I enjoyed with the barcamp guys . Thanks for the lift also Mr Dileep .</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/16/netbeans-68-comes-support-symfony-framework/">Netbeans 6.8 Comes With Support for Symfony Framework , Zend Framework</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-16T19:53:00+05:30" pubdate data-updated="true">Dec 16<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I know I don&#8217;t want any one to introduce about Netbeans . When I started my mini project in Java I was using notepad, vim etc . I was not aware about the IDE&#8217;s like Eclipse , Netbeans etc . Jose Antony was the person who introduced me wonderful IDE netbeans. Thanks to him .  <a href="http://www.flickr.com/photos/harikt/4190704958/"><img src="http://farm3.static.flickr.com/2558/4190704958_c5cb8a4d2d.jpg" alt="Get Tomorrow Today with Netbeans IDE" /></a>  I started using Netbeans for developing some of my Java applications . Below is an in introductory video of Netbeans 6.8 , feel free to watch it .  When I moved to PHP Netbeans started supporting PHP too . The lastest version of Netbeans 6.8 comes with support for the symfony and zend framework ( Get more information from the <a href="http://blogs.sun.com/netbeansphp/entry/zend_framework_support_added">blog of sun microsystems</a> ) . If you have not used an IDE , you may not know the power of an IDE . But the thing is that you will forget many of the keywords <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . For example a ctrl + space gives lots of methods and members of the particular class . So when some one ask you , you may say aah I don&#8217;t remember it, I want to look into it . Thats the problem with an IDE . If you are using vim , you will never forget the methods and names, for you don&#8217;t have enough time to look the class and get the necessary information .  Netbeans supports many dynamic languages like Java , PHP , Ruby , C++ etc . Netbeans is an opensource IDE and its totally free . I started using Netbeans after I got a free CD from netbeans team previously . I don&#8217;t want to avoid netbeans as I love it . So get your <a href="http://netbeans.org/downloads/">free copy of the popular opensource IDE</a> . The caption for the Netbeans 6.8 is also interesting I loved it &#8220;Get Tomorrow Today&#8221;.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/07/google-internet-bus-kerala-karnataka-tamil-nadu-andhra-pradesh/">The Google Internet Bus in Kerala , Karnataka , Tamil Nadu , Andhra Pradesh</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-07T23:18:00+05:30" pubdate data-updated="true">Dec 7<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am little late to hear and pubish the news that Google Bus is in Kerala . I hope many of you may not have heard about this too . The Internet Bus Project by Google is an attempt to educate people about what the Internet is, and how it may be beneficial to their lives, by taking the Internet experience to them through a customised Internet-enabled bus, which will travel to several towns and cities across India.  The dates and places are as follows  05 Dec Kochi 10 Dec Allapuzha 12 Dec Kollam 14 Dec Trivandrum 19 Dec Thrissur 21 Dec Pallakad 23 Dec Kozhikode 26 Dec Thalasery  If you are interested you can subscribe to sms channel by sending an sms with message &#8220;on internetbus&#8221; to 9870-807070 and get upto date .  You can get more information from <a href="http://www.google.co.in/intl/en/landing/internetbus/">http://www.google.co.in/intl/en/landing/internetbus/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/10/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/8/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

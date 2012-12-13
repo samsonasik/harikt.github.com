@@ -4,7 +4,7 @@
   <title><![CDATA[Random thoughts on PHP | Hari KT]]></title>
   <link href="http://harikt.github.com/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-13T23:56:50+05:30</updated>
+  <updated>2012-12-13T23:58:08+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -55,7 +55,7 @@
 </span><span class='line'><span class="x">$connection-&gt;setPdo($pdo); </span>
 </span><span class='line'><span class="x"> ```</span>
 </span><span class='line'>
-</span><span class='line'><span class="x">  Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#39;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below  </span>
+</span><span class='line'><span class="x">Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#39;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below  </span>
 </span></code></pre></td></tr></table></div></figure>
 
 

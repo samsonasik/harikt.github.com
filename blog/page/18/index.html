@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="Every one uses internet in their day today life , like a cup of tea . Yes , the world wide web has gain great popularity . I don&#8217;t know , &hellip;">
+  <meta name="description" content="Writing my post from Open solaris . This is a great experience , so thought to share with you , so may help some of you. I have once installed the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/15/33-opensolaris-installation-on-ubuntu-and-after-effects-of-grub/">Opensolaris Installation on Ubuntu and After Effects of Grub</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-15T09:11:00+05:30" pubdate data-updated="true">Apr 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Writing my post from Open solaris . This is a great experience , so thought to share with you , so may help some of you.  I have once installed the Sun Solaris , not the Open Solaris of sun . And it was really a tedious job . So I was aware of the consequences . But thought of trying the Open Solaris , as I love to use it after trying the Live CD. Though I have got the CD some days before , not able to try it.  Current OS and status  1 ) Installed Ubuntu 8.10 , having lots of additional softwares installed and lots of valuable data&#8217;s :-) .  2 ) Don&#8217;t want to miss any , like the previous case.  Started Installation around 12:30 noon . It takes some time to install the OS. I came after my Lunch and by the time it has finished the installation .  Restarted the system. The grub loads &#8230;&#8230;&#8230;&#8230; OOP&#8217;s really fucking , the Ubuntu is not there , it has gone . The boot loader has gone . Anyway thought of reinstalling the grub . I have installed from Fedora the boot loader , but not from Ubuntu , so thought of editing the grub file for the sun solaris. But I need to know the real path to the Ubuntu kernel . Booted from Ubuntu Live CD , searched google to find from where I will get the complete path ? Yes, found a solution for it , ( https://sourceforge.net/projects/bootinfoscript/ ). Downloaded and tried , got the result. Saved in gmail :-) . Restarted the system , logged to Open solairs .  Looked to edit grub . Searched a lot , got some information from blog of sun. He is a worker at Sun . ( http://blogs.sun.com/agraj/entry/editing_grub_bootloader ) . But I was not able to find the /etc/grub.conf nor the /boot/grub/menu.lst ( Skipping some of the steps I have tried to edit grub from command prompt ) . And finally I was forced to login to Live CD , and tried to do like the steps in http://ubuntuforums.org/archive/index.php/t-24113.html the post . But what I missed was Open Solaris loader and time and the updated kernel of Ubuntu . What it does was installed the Ubuntu OS again .So never go in these ways , I will shortly tell the other one. Why I told never go in this way is because it will remove some of the files of our updated kernel , though it can backup our files. And finally I edited the /boot/grub/menu.lst of the Ubuntu distro and added the code  title Open Solaris root (hd0,0) makeactive chainloader +1  <strong>The pretty simple way</strong> ( I was not able to try this , but found the menu.lst of Open Solaris ) :  1 ) Install Solaris  2 ) Boot with Live CD , install the boot info script and run it ( https://sourceforge.net/projects/bootinfoscript/ ) . Save the RESULTS.txt may be in you mail or thumb .  3 ) Restart to login to Open Solaris . Edit the menu.lst , ( its not located at /etc/grub.conf nor at /boot/grub/ ) . The menu.lst has moved to /rpool/boot/grub/ folder . So what you need to do is just edit the /rpool/boot/grub/menu.lst . You must be root to edit this file ( Use su or sudo ).  Copy and paste the lines you have got from the RESULTS.txt which is produced by the boot info script . Some thing starting like ## ## End Default Options ## and ending with ### END DEBIAN AUTOMAGIC KERNELS LIST . You can have a search if you are using gedit .  Now restart your system . It will works . Defnitely it will work . Have fun with solaris too . Spend my whole day for this experiment :-( . But learned a lot of new things , so I gained :-)  Thanks guys , let me have some sleep its 1:05 Am . Want to cast my vote and leave to work tomorrow morning . Bye have a great day .</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -389,42 +425,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/03/20/22-select-box-poking-out-through-menu-in-ie-6/">Select Box Poking Out Through Menu in IE 6</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-20T08:45:00+05:30" pubdate data-updated="true">Mar 20<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Internet Explorer is always a pain for developers and web designers. Many of the functions are not recognised by IE . Some people who loves the buggy browser still uses it . There are lots of features and security available in Mozilla. Don&#8217;t know why some people still stick onto it . Aaah its upto them .  I was looking for a solution for the IE6 bug . The bug was the select box is pocking through the javascript menu . All the other elements excpet the select box will come on the top :( . I want to make it clear. Spend a lot of time to get a solution for it. Finally I was successful .  This was the solution  Need to load the menu above an iframe .Referring the site w3schools I got some helps too . We need to make the z-index of menu 1 more than that of iframe. That is when z-index of iframeis 1, z-index of menu should be 2 or more. The default z-index will be 0 . z-index -1 has lower priority . The z-index property will be availale only when position:absolute is defined for it. When position:absolute is used , there will be some design issues arrising and you need to over come these .  <iframe name="iframeblocker" id="iframeblocker" src="" style="position:absolute; z-index:1; border:0; height:200px; width:50px; top:-1000px; left:-1000px;"\>&lt;/iframe>  So we can make the iframe visible by making the changes to x, y co-ordinates. You need to make the changes through DOM .  $blocker = document.getElementById(&#8216;iframebblocker&#8217;);  blocker.style.left = document.getElementById(&#8216;MenuDiv&#8217;).offsetLeft; // IE only  blocker.style.top = document.getElementById(&#8216;MenuDiv&#8217;).offsetTop; // IE only  blocker.style.width = document.getElementById(&#8216;MenuDiv&#8217;).offsetWidth;  blocker.style.height = document.getElementById(&#8216;MenuDiv&#8217;).offsetHeight;  The above code should be made available in the javascript menu . You can look the code where its saying to show the menu and hide. On hiding you can set the left , top , width and height to 0px. Else the iframe will be visible blocking other contents . The MenuDiv is the ID of the menu . We need to get the exact width , height , x and y c0-ordinate to show the iframe exactly below the menu . Else the iframe will be wide covering other values of the page.  Some of the features where IE specific. I have referred a lots of site , to fix this problem . Now I can handle this bug. This post is to make me remember how to solve this bug.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/19/">&larr; Older</a>
@@ -442,6 +442,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
@@ -455,10 +459,6 @@
     
       <li class="post">
         <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

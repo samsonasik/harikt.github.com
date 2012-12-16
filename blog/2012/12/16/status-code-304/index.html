@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Status code 304 - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="Everyone knows Http is the underlying concept of Web. The base concept is a request is initiated by a browser or web-client and you get a response &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2012/12/16/status-code-304/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Status Code 304</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-16T23:03:00+05:30" pubdate data-updated="true">Dec 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Everyone knows Http is the underlying concept of Web. The base concept is a request is initiated by a browser or web-client and you get a response back. Some day&#8217;s back I noticed some interesting slides from Alessandro Nadalin&#8217;s talk (Mixing the history of HTTP, SPDY and HTTP/2.0)[http://odino.org/mixing-the-history-of-http-spdy-and-http-slash-2-dot-0/]</p>
+
+<p>It really inspired me to look more into the Http. I also understood a fact that I was missing many basic stuffs. I thought of playing with it.</p>
+
+<p>Note : This is just experimental stuffs which I tried to learn looking at various sources. Things can be wrong also, feel free to correct if you think so.</p>
+
+<p>Normally you don&#8217;t care about the underlying http headers. There are status codes which are passed before an actual content is send. So the browser knows the state whether the content is available in server, what content-type is coming, for eg like html, json, xml etc. The content-length, accept-language, etc. You can see a list of http request and response headers at http://en.wikipedia.org/wiki/List_of_HTTP_header_fields.</p>
+
+<p>So we are going to create the headers other than the normal apache header. By default the status is 200 OK.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you notice the broswer headers you can see something like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">Request URL:http://localhost:8000/</span>
+</span><span class='line'><span class="x">Request Method:GET</span>
+</span><span class='line'><span class="x">Status Code:200 OK</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">Request Headers</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span>
+</span><span class='line'><span class="x">Accept-Charset:ISO-8859-1,utf-8;q=0.7,*;q=0.3</span>
+</span><span class='line'><span class="x">Accept-Encoding:gzip,deflate,sdch</span>
+</span><span class='line'><span class="x">Accept-Language:en-US,en;q=0.8</span>
+</span><span class='line'><span class="x">Cache-Control:max-age=0</span>
+</span><span class='line'><span class="x">Connection:keep-alive</span>
+</span><span class='line'><span class="x">Host:localhost:8000</span>
+</span><span class='line'><span class="x">User-Agent:Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/11.10 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">Response Headers</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">HTTP/1.1 200 OK</span>
+</span><span class='line'><span class="x">Host: localhost:8000</span>
+</span><span class='line'><span class="x">Connection: close</span>
+</span><span class='line'><span class="x">X-Powered-By: PHP/5.4.4-1~oneiric+1</span>
+</span><span class='line'><span class="x">Content-Type: text/html</span>
+</span><span class='line'><span class="x">Last-Modified: Tue, 15 Jan 2011 12:00</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and the respose source as</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;</span>Hello World<span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Http Caching:</p>
+
+<p>So you may not have seen any benefict in the above for its what you normally get. Now lets enter to the world of http caching.</p>
+
+<p>You may have heard about Expires, Cache-Control, Last-Modified, Etag headers. Yes with the help of these we can make use of http caching. Let&#8217;s see a base example.</p>
+
+<p>What will happen when you request the same url? It reloads the page. So the base concept is same, the client requests to server and server responds. But the scenario changes, if the browser is asking with some additional headers like If-Modified-Since or If-None-Match.</p>
+
+<p>If the response from server has set Last-Modified header value, then the request initiated by broswer will be having If-Modified-Since header.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">header(&#39;Last-Modified: Tue, 15 Jan 2011 12:00 GMT&#39;);</span>
+</span><span class='line'><span class="x">echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now if you look into the Request Headers, you can notice the If-Modified-Since is send.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</span><span class='line'>Accept-Charset:ISO-8859-1,utf-8;q=0.7,*;q=0.3
+</span><span class='line'>Accept-Encoding:gzip,deflate,sdch
+</span><span class='line'>Accept-Language:en-US,en;q=0.8
+</span><span class='line'>Cache-Control:max-age=0
+</span><span class='line'>Connection:keep-alive
+</span><span class='line'>Host:localhost:8000
+</span><span class='line'>If-Modified-Since:Tue, 15 Jan 2011 12:00
+</span><span class='line'>User-Agent:Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/11.10 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But we weren&#8217;t validating the data to make use of caching. What we need to do is check whether the server variable HTTP_IF_MODIFIED_SINCE is set. If its set, we need to validate whether its being modified. If both are same we just need to send a 304 status code which means not modified with out any content. I am hard coding for demonstration purpose.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if ( isset($_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;]) &amp;&amp; </span>
+</span><span class='line'><span class="x">    $_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;] == &#39;Tue, 15 Jan 2011 12:00 GMT&#39; ) {</span>
+</span><span class='line'><span class="x">    http_response_code(304);</span>
+</span><span class='line'><span class="x">} else {</span>
+</span><span class='line'><span class="x">    header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">    header(&#39;Last-Modified: Tue, 15 Jan 2011 12:00 GMT&#39;);</span>
+</span><span class='line'><span class="x">    echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span><span class='line'><span class="x">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So in this case if you reload the page, it will send a 304 not modified header. Getting the 304 header browser knows its not modified. This is too fast and we save a huge band width and server processing. Isn&#8217;t it too good? I recall his slides 21 years of http which still not used very nicely :-/</p>
+
+<p>Let&#8217;s move on to E-tag. As you have noticed the problem with Last-Modified and Expires is it uses GMT time. If the server and the client are not sync, then its hard. Thus the E-tag is introduced. You can create a md5 hash and set the E-tag header.</p>
+
+<p>If you are setting a E-tag, then you can use the server variable HTTP_IF_NONE_MATCH to validate it and send a status of 304.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if ( isset($_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;]) &amp;&amp; </span>
+</span><span class='line'><span class="x">    $_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;] == &#39;Tue, 15 Jan 2011 12:00 GMT&#39; ) {</span>
+</span><span class='line'><span class="x">    http_response_code(304);</span>
+</span><span class='line'><span class="x">} elseif ( isset($_SERVER[&#39;HTTP_IF_NONE_MATCH&#39;]) &amp;&amp; </span>
+</span><span class='line'><span class="x">    $_SERVER[&#39;HTTP_IF_NONE_MATCH&#39;] == md5(&#39;Hello&#39;) ) {</span>
+</span><span class='line'><span class="x">    http_response_code(304);</span>
+</span><span class='line'><span class="x">} else {</span>
+</span><span class='line'><span class="x">    header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">    header(&#39;Last-Modified: Tue, 15 Jan 2011 12:00 GMT&#39;);</span>
+</span><span class='line'><span class="x">    header(&#39;ETag: &#39; . md5(&#39;Hello&#39;));</span>
+</span><span class='line'><span class="x">    echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span><span class='line'><span class="x">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>References :</p>
+
+<p>Status Code : http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+Response : http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html
+Caching in Http : http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html
+http://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+http://en.wikipedia.org/wiki/HTTP_ETag
+http://stackoverflow.com/questions/691318/what-headers-do-i-want-to-send-together-with-a-304-response
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19
+http://tomayko.com/writings/things-caches-do
+http://www.peej.co.uk/articles/http-caching.html
+http://www.mnot.net/cache_docs/
+https://developers.google.com/storage/docs/reference-headers#cachecontrol
+https://developers.google.com/speed/docs/best-practices/caching#LeverageBrowserCaching</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-16T23:03:00+05:30" pubdate data-updated="true">Dec 16<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2012/12/16/status-code-304/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2012/12/16/status-code-304/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/12/06/node-227/" title="Previous Post: Aura.Sql can now make use of existing PDO connection">&laquo; Aura.Sql can now make use of existing PDO connection</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

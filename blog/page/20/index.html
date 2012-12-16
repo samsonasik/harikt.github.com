@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="Linus Torvalds was born on December 28 1969 in Helsinki Finland . Linus Torvalds enrolled at the university of Helsinki where he studied computer &hellip;">
+  <meta name="description" content="{syntaxhighlighter class=&#8221;php&#8221;} 404 File not found!&#8221;); } //Gather relevent info about file $len = filesize($file); $filename = &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +70,42 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2009/02/01/7-downloading-a-file/">Downloading a File</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-01T08:24:00+05:30" pubdate data-updated="true">Feb 1<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>{syntaxhighlighter class=&#8221;php&#8221;} 404 File not found!&#8221;); } //Gather relevent info about file $len = filesize($file); $filename = basename($file); $file_extension = strtolower(substr(strrchr($filename, &#8220;.&#8221;), 1)); //This will set the Content-Type to the appropriate setting for the file switch ($file_extension) { case &#8220;pdf&#8221;: $ctype = &#8220;application/pdf&#8221;; break; case &#8220;exe&#8221;: $ctype = &#8220;application/octet-stream&#8221;; break; case &#8220;zip&#8221;: $ctype = &#8220;application/zip&#8221;; break; case &#8220;doc&#8221;: $ctype = &#8220;application/msword&#8221;; break; case &#8220;xls&#8221;: $ctype = &#8220;application/vnd.ms-excel&#8221;; break; case &#8220;ppt&#8221;: $ctype = &#8220;application/vnd.ms-powerpoint&#8221;; break; case &#8220;gif&#8221;: $ctype = &#8220;image/gif&#8221;; break; case &#8220;png&#8221;: $ctype = &#8220;image/png&#8221;; break; case &#8220;jpeg&#8221;: case &#8220;jpg&#8221;: $ctype = &#8220;image/jpg&#8221;; break; case &#8220;mp3&#8221;: $ctype = &#8220;audio/mpeg&#8221;; break; case &#8220;wav&#8221;: $ctype = &#8220;audio/x-wav&#8221;; break; case &#8220;mpeg&#8221;: case &#8220;mpg&#8221;: case &#8220;mpe&#8221;: $ctype = &#8220;video/mpeg&#8221;; break; case &#8220;mov&#8221;: $ctype = &#8220;video/quicktime&#8221;; break; case &#8220;avi&#8221;: $ctype = &#8220;video/x-msvideo&#8221;; break; //The following are for extensions that shouldn&#8217;t be downloaded (sensitive stuff, like php files) case &#8220;php&#8221;: case &#8220;htm&#8221;: case &#8220;html&#8221;: case &#8220;txt&#8221;: die(&#8221;<strong>Cannot be used for &#8221; . $file_extension . &#8221; files!</strong>&#8221;); break; default: $ctype = &#8220;application/force-download&#8221;; } //Begin writing headers header(&#8220;Pragma: public&#8221;); header(&#8220;Expires: 0&#8221;); header(&#8220;Cache-Control: must-revalidate, post-check=0, pre-check=0&#8221;); header(&#8220;Cache-Control: public&#8221;); header(&#8220;Content-Description: File Transfer&#8221;); //Use the switch-generated Content-Type header(&#8220;Content-Type: $ctype&#8221;); //Force the download $header = &#8220;Content-Disposition: attachment; filename=&#8221; . $filename . &#8220;;&#8221;; header($header); header(&#8220;Content-Transfer-Encoding: binary&#8221;); header(&#8220;Content-Length: &#8221; . $len); @readfile($file); exit; } } {/syntaxhighlighter} Create an object of this class and call the method dl_file. {syntaxhighlighter class=&#8221;php&#8221;} $dwnldObj = new Download(); $dwnldObj->dl_file(&#8220;full path of the file in server&#8221;); {/syntaxhighlighter} Note : Give the complete path of file . Else it may cause errors.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2009/01/30/linux/">Some History About GNU/Linux</a></h1>
     
     
@@ -93,7 +129,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Linus Torvalds was born on December 28 1969 in Helsinki Finland . Linus Torvalds enrolled at the university of Helsinki where he studied computer science . He bought an intel 386 computer and he began using Minix a Unix version developed by Andrew Tannenbaum. He was not able to connect to his university computer from home from the terminal . So he developed one and was successful connecting it . Later he needs more features like send and receive files .He like to name the new one as Freax . But later named it as Linux after his friend suggests it.  This is what he sends to minix news group .      From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)Newsgroups: comp.os.minixSubject: What would you like to see most in minix?Summary: small poll for my new operating systemMessage-ID: <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x31;&#57;&#x39;&#49;&#x41;&#117;&#103;&#x32;&#x35;&#x2e;&#x32;&#x30;&#53;&#55;&#x30;&#x38;&#46;&#57;&#53;&#x34;&#x31;&#x40;&#107;&#108;&#97;&#x61;&#118;&#97;&#46;&#72;&#x65;&#x6c;&#115;&#105;&#110;&#x6b;&#x69;&#46;&#x46;&#73;">&#x31;&#57;&#57;&#x31;&#65;&#x75;&#103;&#50;&#x35;&#x2e;&#50;&#x30;&#53;&#55;&#x30;&#x38;&#x2e;&#x39;&#x35;&#52;&#x31;&#x40;&#x6b;&#x6c;&#x61;&#x61;&#x76;&#97;&#x2e;&#72;&#x65;&#108;&#115;&#x69;&#x6e;&#x6b;&#105;&#46;&#x46;&#x49;</a>Date: 25 Aug 91 20:57:08 GMTOrganization: University of HelsinkiHello everybody out there using minix -I&#8217;m doing a (free) operating system (just a hobby, won&#8217;t be big andprofessional like gnu) for 386(486) AT clones.  This has been brewingsince april, and is starting to get ready.  I&#8217;d like any feedback onthings people like/dislike in minix, as my OS resembles it somewhat(same physical layout of the file-system (due to practical reasons)among other things).I&#8217;ve currently ported bash(1.08) and gcc(1.40), and things seem to work.This implies that I&#8217;ll get something practical within a few months, andI&#8217;d like to know what features most people would want.  Any suggestionsare welcome, but I won&#8217;t promise I&#8217;ll implement them :-)               Linus (torvalds@kruuna.helsinki.fi)PS.  Yes - it&#8217;s free of any minix code, and it has a multi-threaded fs.It is NOT protable (uses 386 task switching etc), and it probably neverwill support anything other than AT-harddisks, as that&#8217;s all I have :-(.  He uploaded in september 1991 . Thus new operating system was born . The people around the world loved the code and started adding and modifying codes .  Now there are various distributions of Linux . Some are the debain , ubuntu , fedora , kubuntu , redhatetc . If you are interested to try linux you can use it with out installng the system . You can use a live cd to boot and see linux . There is another one wubi which can be used for installing linux from windows in a single click . Just need to give the password , grab a cup of tea and come . The wubi installer will do the rest. Try wubi if you dont want to burn a live cd . wubi only installs ubuntu distro for now. You can see FAQ of the wubi site for more details .</p>
+  <div class="entry-content"><p>Linus Torvalds was born on December 28 1969 in Helsinki Finland . Linus Torvalds enrolled at the university of Helsinki where he studied computer science . He bought an intel 386 computer and he began using Minix a Unix version developed by Andrew Tannenbaum. He was not able to connect to his university computer from home from the terminal . So he developed one and was successful connecting it . Later he needs more features like send and receive files .He like to name the new one as Freax . But later named it as Linux after his friend suggests it.  This is what he sends to minix news group .      From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)Newsgroups: comp.os.minixSubject: What would you like to see most in minix?Summary: small poll for my new operating systemMessage-ID: <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#49;&#57;&#x39;&#x31;&#65;&#x75;&#103;&#50;&#53;&#x2e;&#50;&#x30;&#x35;&#x37;&#48;&#x38;&#46;&#57;&#53;&#x34;&#x31;&#64;&#x6b;&#108;&#x61;&#97;&#118;&#x61;&#46;&#72;&#x65;&#108;&#115;&#105;&#x6e;&#x6b;&#105;&#x2e;&#x46;&#73;">&#x31;&#x39;&#x39;&#49;&#x41;&#117;&#x67;&#x32;&#53;&#x2e;&#50;&#x30;&#53;&#x37;&#48;&#x38;&#46;&#57;&#x35;&#52;&#49;&#64;&#107;&#108;&#x61;&#x61;&#x76;&#x61;&#x2e;&#x48;&#x65;&#108;&#115;&#x69;&#110;&#x6b;&#x69;&#x2e;&#70;&#x49;</a>Date: 25 Aug 91 20:57:08 GMTOrganization: University of HelsinkiHello everybody out there using minix -I&#8217;m doing a (free) operating system (just a hobby, won&#8217;t be big andprofessional like gnu) for 386(486) AT clones.  This has been brewingsince april, and is starting to get ready.  I&#8217;d like any feedback onthings people like/dislike in minix, as my OS resembles it somewhat(same physical layout of the file-system (due to practical reasons)among other things).I&#8217;ve currently ported bash(1.08) and gcc(1.40), and things seem to work.This implies that I&#8217;ll get something practical within a few months, andI&#8217;d like to know what features most people would want.  Any suggestionsare welcome, but I won&#8217;t promise I&#8217;ll implement them :-)               Linus (torvalds@kruuna.helsinki.fi)PS.  Yes - it&#8217;s free of any minix code, and it has a multi-threaded fs.It is NOT protable (uses 386 task switching etc), and it probably neverwill support anything other than AT-harddisks, as that&#8217;s all I have :-(.  He uploaded in september 1991 . Thus new operating system was born . The people around the world loved the code and started adding and modifying codes .  Now there are various distributions of Linux . Some are the debain , ubuntu , fedora , kubuntu , redhatetc . If you are interested to try linux you can use it with out installng the system . You can use a live cd to boot and see linux . There is another one wubi which can be used for installing linux from windows in a single click . Just need to give the password , grab a cup of tea and come . The wubi installer will do the rest. Try wubi if you dont want to burn a live cd . wubi only installs ubuntu distro for now. You can see FAQ of the wubi site for more details .</p>
 </div>
   
   
@@ -224,6 +260,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
@@ -237,10 +277,6 @@
     
       <li class="post">
         <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

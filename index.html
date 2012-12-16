@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="Aura.Sql can now make use of an existing PDO connection with the recent commit here . This all came after a short discussion with Stan Lemon. A big &hellip;">
+  <meta name="description" content="Everyone knows Http is the underlying concept of Web. The base concept is a request is initiated by a browser or web-client and you get a response &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,227 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/16/status-code-304/">Status Code 304</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-16T23:03:00+05:30" pubdate data-updated="true">Dec 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Everyone knows Http is the underlying concept of Web. The base concept is a request is initiated by a browser or web-client and you get a response back. Some day&#8217;s back I noticed some interesting slides from Alessandro Nadalin&#8217;s talk (Mixing the history of HTTP, SPDY and HTTP/2.0)[http://odino.org/mixing-the-history-of-http-spdy-and-http-slash-2-dot-0/]</p>
+
+<p>It really inspired me to look more into the Http. I also understood a fact that I was missing many basic stuffs. I thought of playing with it.</p>
+
+<p>Note : This is just experimental stuffs which I tried to learn looking at various sources. Things can be wrong also, feel free to correct if you think so.</p>
+
+<p>Normally you don&#8217;t care about the underlying http headers. There are status codes which are passed before an actual content is send. So the browser knows the state whether the content is available in server, what content-type is coming, for eg like html, json, xml etc. The content-length, accept-language, etc. You can see a list of http request and response headers at http://en.wikipedia.org/wiki/List_of_HTTP_header_fields.</p>
+
+<p>So we are going to create the headers other than the normal apache header. By default the status is 200 OK.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you notice the broswer headers you can see something like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">Request URL:http://localhost:8000/</span>
+</span><span class='line'><span class="x">Request Method:GET</span>
+</span><span class='line'><span class="x">Status Code:200 OK</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">Request Headers</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span>
+</span><span class='line'><span class="x">Accept-Charset:ISO-8859-1,utf-8;q=0.7,*;q=0.3</span>
+</span><span class='line'><span class="x">Accept-Encoding:gzip,deflate,sdch</span>
+</span><span class='line'><span class="x">Accept-Language:en-US,en;q=0.8</span>
+</span><span class='line'><span class="x">Cache-Control:max-age=0</span>
+</span><span class='line'><span class="x">Connection:keep-alive</span>
+</span><span class='line'><span class="x">Host:localhost:8000</span>
+</span><span class='line'><span class="x">User-Agent:Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/11.10 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">Response Headers</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">HTTP/1.1 200 OK</span>
+</span><span class='line'><span class="x">Host: localhost:8000</span>
+</span><span class='line'><span class="x">Connection: close</span>
+</span><span class='line'><span class="x">X-Powered-By: PHP/5.4.4-1~oneiric+1</span>
+</span><span class='line'><span class="x">Content-Type: text/html</span>
+</span><span class='line'><span class="x">Last-Modified: Tue, 15 Jan 2011 12:00</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and the respose source as</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;</span>Hello World<span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Http Caching:</p>
+
+<p>So you may not have seen any benefict in the above for its what you normally get. Now lets enter to the world of http caching.</p>
+
+<p>You may have heard about Expires, Cache-Control, Last-Modified, Etag headers. Yes with the help of these we can make use of http caching. Let&#8217;s see a base example.</p>
+
+<p>What will happen when you request the same url? It reloads the page. So the base concept is same, the client requests to server and server responds. But the scenario changes, if the browser is asking with some additional headers like If-Modified-Since or If-None-Match.</p>
+
+<p>If the response from server has set Last-Modified header value, then the request initiated by broswer will be having If-Modified-Since header.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">header(&#39;Last-Modified: Tue, 15 Jan 2011 12:00 GMT&#39;);</span>
+</span><span class='line'><span class="x">echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now if you look into the Request Headers, you can notice the If-Modified-Since is send.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</span><span class='line'>Accept-Charset:ISO-8859-1,utf-8;q=0.7,*;q=0.3
+</span><span class='line'>Accept-Encoding:gzip,deflate,sdch
+</span><span class='line'>Accept-Language:en-US,en;q=0.8
+</span><span class='line'>Cache-Control:max-age=0
+</span><span class='line'>Connection:keep-alive
+</span><span class='line'>Host:localhost:8000
+</span><span class='line'>If-Modified-Since:Tue, 15 Jan 2011 12:00
+</span><span class='line'>User-Agent:Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/11.10 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But we weren&#8217;t validating the data to make use of caching. What we need to do is check whether the server variable HTTP_IF_MODIFIED_SINCE is set. If its set, we need to validate whether its being modified. If both are same we just need to send a 304 status code which means not modified with out any content. I am hard coding for demonstration purpose.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if ( isset($_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;]) &amp;&amp; </span>
+</span><span class='line'><span class="x">    $_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;] == &#39;Tue, 15 Jan 2011 12:00 GMT&#39; ) {</span>
+</span><span class='line'><span class="x">    http_response_code(304);</span>
+</span><span class='line'><span class="x">} else {</span>
+</span><span class='line'><span class="x">    header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">    header(&#39;Last-Modified: Tue, 15 Jan 2011 12:00 GMT&#39;);</span>
+</span><span class='line'><span class="x">    echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span><span class='line'><span class="x">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So in this case if you reload the page, it will send a 304 not modified header. Getting the 304 header browser knows its not modified. This is too fast and we save a huge band width and server processing. Isn&#8217;t it too good? I recall his slides 21 years of http which still not used very nicely :-/</p>
+
+<p>Let&#8217;s move on to E-tag. As you have noticed the problem with Last-Modified and Expires is it uses GMT time. If the server and the client are not sync, then its hard. Thus the E-tag is introduced. You can create a md5 hash and set the E-tag header.</p>
+
+<p>If you are setting a E-tag, then you can use the server variable HTTP_IF_NONE_MATCH to validate it and send a status of 304.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if ( isset($_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;]) &amp;&amp; </span>
+</span><span class='line'><span class="x">    $_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;] == &#39;Tue, 15 Jan 2011 12:00 GMT&#39; ) {</span>
+</span><span class='line'><span class="x">    http_response_code(304);</span>
+</span><span class='line'><span class="x">} elseif ( isset($_SERVER[&#39;HTTP_IF_NONE_MATCH&#39;]) &amp;&amp; </span>
+</span><span class='line'><span class="x">    $_SERVER[&#39;HTTP_IF_NONE_MATCH&#39;] == md5(&#39;Hello&#39;) ) {</span>
+</span><span class='line'><span class="x">    http_response_code(304);</span>
+</span><span class='line'><span class="x">} else {</span>
+</span><span class='line'><span class="x">    header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">    header(&#39;Last-Modified: Tue, 15 Jan 2011 12:00 GMT&#39;);</span>
+</span><span class='line'><span class="x">    header(&#39;ETag: &#39; . md5(&#39;Hello&#39;));</span>
+</span><span class='line'><span class="x">    echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span><span class='line'><span class="x">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>References :</p>
+
+<p>Status Code : http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+Response : http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html
+Caching in Http : http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html
+http://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+http://en.wikipedia.org/wiki/HTTP_ETag
+http://stackoverflow.com/questions/691318/what-headers-do-i-want-to-send-together-with-a-304-response
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19
+http://tomayko.com/writings/things-caches-do
+http://www.peej.co.uk/articles/http-caching.html
+http://www.mnot.net/cache_docs/
+https://developers.google.com/storage/docs/reference-headers#cachecontrol
+https://developers.google.com/speed/docs/best-practices/caching#LeverageBrowserCaching</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -522,42 +743,6 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/04/node-217/">Aura T-Shirts</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-04T10:44:00+05:30" pubdate data-updated="true">Oct 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>So today I got the custom designed T-Shirts with Aura Logo. Its time to brand :)  <img src="https://pbs.twimg.com/media/A4V654qCAAEudRT.jpg" title="Aura T-Shirt with github url" alt="Aura T-Shirt with github url" />  T-shirts with logo is here &#8230;.. Yey @<a href="https://twitter.com/auraphp">auraphp</a>:) .  <img src="https://pbs.twimg.com/media/A4V7Dv3CUAAIp8U.jpg" title="Aura T-Shirt with logo" alt="Aura T-Shirt with logo" />  A closer look into the logo, made with embroidery  <img src="https://pbs.twimg.com/media/A4V7SHhCYAAt6x-.jpg" title="Closer look at logo" alt="Closer look at logo" />  I have designed thes from ilogo.in .  Status : https://twitter.com/harikt/status/253744088891916288 , https://twitter.com/harikt/status/253744258329235456, https://twitter.com/harikt/status/253744505197584384</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -573,6 +758,10 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
@@ -586,10 +775,6 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
     
       <li class="post">
         <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

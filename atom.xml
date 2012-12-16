@@ -4,7 +4,7 @@
   <title><![CDATA[Random thoughts on PHP | Hari KT]]></title>
   <link href="http://harikt.github.com/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-13T23:58:08+05:30</updated>
+  <updated>2012-12-17T00:14:03+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -12,6 +12,200 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Status code 304]]></title>
+    <link href="http://harikt.github.com/blog/2012/12/16/status-code-304/"/>
+    <updated>2012-12-16T23:03:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/12/16/status-code-304</id>
+    <content type="html"><![CDATA[<p>Everyone knows Http is the underlying concept of Web. The base concept is a request is initiated by a browser or web-client and you get a response back. Some day&#8217;s back I noticed some interesting slides from Alessandro Nadalin&#8217;s talk (Mixing the history of HTTP, SPDY and HTTP/2.0)[http://odino.org/mixing-the-history-of-http-spdy-and-http-slash-2-dot-0/]</p>
+
+<p>It really inspired me to look more into the Http. I also understood a fact that I was missing many basic stuffs. I thought of playing with it.</p>
+
+<p>Note : This is just experimental stuffs which I tried to learn looking at various sources. Things can be wrong also, feel free to correct if you think so.</p>
+
+<p>Normally you don&#8217;t care about the underlying http headers. There are status codes which are passed before an actual content is send. So the browser knows the state whether the content is available in server, what content-type is coming, for eg like html, json, xml etc. The content-length, accept-language, etc. You can see a list of http request and response headers at http://en.wikipedia.org/wiki/List_of_HTTP_header_fields.</p>
+
+<p>So we are going to create the headers other than the normal apache header. By default the status is 200 OK.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you notice the broswer headers you can see something like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">Request URL:http://localhost:8000/</span>
+</span><span class='line'><span class="x">Request Method:GET</span>
+</span><span class='line'><span class="x">Status Code:200 OK</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">Request Headers</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span>
+</span><span class='line'><span class="x">Accept-Charset:ISO-8859-1,utf-8;q=0.7,*;q=0.3</span>
+</span><span class='line'><span class="x">Accept-Encoding:gzip,deflate,sdch</span>
+</span><span class='line'><span class="x">Accept-Language:en-US,en;q=0.8</span>
+</span><span class='line'><span class="x">Cache-Control:max-age=0</span>
+</span><span class='line'><span class="x">Connection:keep-alive</span>
+</span><span class='line'><span class="x">Host:localhost:8000</span>
+</span><span class='line'><span class="x">User-Agent:Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/11.10 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">Response Headers</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">HTTP/1.1 200 OK</span>
+</span><span class='line'><span class="x">Host: localhost:8000</span>
+</span><span class='line'><span class="x">Connection: close</span>
+</span><span class='line'><span class="x">X-Powered-By: PHP/5.4.4-1~oneiric+1</span>
+</span><span class='line'><span class="x">Content-Type: text/html</span>
+</span><span class='line'><span class="x">Last-Modified: Tue, 15 Jan 2011 12:00</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and the respose source as</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;</span>Hello World<span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Http Caching:</p>
+
+<p>So you may not have seen any benefict in the above for its what you normally get. Now lets enter to the world of http caching.</p>
+
+<p>You may have heard about Expires, Cache-Control, Last-Modified, Etag headers. Yes with the help of these we can make use of http caching. Let&#8217;s see a base example.</p>
+
+<p>What will happen when you request the same url? It reloads the page. So the base concept is same, the client requests to server and server responds. But the scenario changes, if the browser is asking with some additional headers like If-Modified-Since or If-None-Match.</p>
+
+<p>If the response from server has set Last-Modified header value, then the request initiated by broswer will be having If-Modified-Since header.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">header(&#39;Last-Modified: Tue, 15 Jan 2011 12:00 GMT&#39;);</span>
+</span><span class='line'><span class="x">echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now if you look into the Request Headers, you can notice the If-Modified-Since is send.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</span><span class='line'>Accept-Charset:ISO-8859-1,utf-8;q=0.7,*;q=0.3
+</span><span class='line'>Accept-Encoding:gzip,deflate,sdch
+</span><span class='line'>Accept-Language:en-US,en;q=0.8
+</span><span class='line'>Cache-Control:max-age=0
+</span><span class='line'>Connection:keep-alive
+</span><span class='line'>Host:localhost:8000
+</span><span class='line'>If-Modified-Since:Tue, 15 Jan 2011 12:00
+</span><span class='line'>User-Agent:Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/11.10 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But we weren&#8217;t validating the data to make use of caching. What we need to do is check whether the server variable HTTP_IF_MODIFIED_SINCE is set. If its set, we need to validate whether its being modified. If both are same we just need to send a 304 status code which means not modified with out any content. I am hard coding for demonstration purpose.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if ( isset($_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;]) &amp;&amp; </span>
+</span><span class='line'><span class="x">    $_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;] == &#39;Tue, 15 Jan 2011 12:00 GMT&#39; ) {</span>
+</span><span class='line'><span class="x">    http_response_code(304);</span>
+</span><span class='line'><span class="x">} else {</span>
+</span><span class='line'><span class="x">    header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">    header(&#39;Last-Modified: Tue, 15 Jan 2011 12:00 GMT&#39;);</span>
+</span><span class='line'><span class="x">    echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span><span class='line'><span class="x">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So in this case if you reload the page, it will send a 304 not modified header. Getting the 304 header browser knows its not modified. This is too fast and we save a huge band width and server processing. Isn&#8217;t it too good? I recall his slides 21 years of http which still not used very nicely :-/</p>
+
+<p>Let&#8217;s move on to E-tag. As you have noticed the problem with Last-Modified and Expires is it uses GMT time. If the server and the client are not sync, then its hard. Thus the E-tag is introduced. You can create a md5 hash and set the E-tag header.</p>
+
+<p>If you are setting a E-tag, then you can use the server variable HTTP_IF_NONE_MATCH to validate it and send a status of 304.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if ( isset($_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;]) &amp;&amp; </span>
+</span><span class='line'><span class="x">    $_SERVER[&#39;HTTP_IF_MODIFIED_SINCE&#39;] == &#39;Tue, 15 Jan 2011 12:00 GMT&#39; ) {</span>
+</span><span class='line'><span class="x">    http_response_code(304);</span>
+</span><span class='line'><span class="x">} elseif ( isset($_SERVER[&#39;HTTP_IF_NONE_MATCH&#39;]) &amp;&amp; </span>
+</span><span class='line'><span class="x">    $_SERVER[&#39;HTTP_IF_NONE_MATCH&#39;] == md5(&#39;Hello&#39;) ) {</span>
+</span><span class='line'><span class="x">    http_response_code(304);</span>
+</span><span class='line'><span class="x">} else {</span>
+</span><span class='line'><span class="x">    header(&#39;Content-Type: text/html&#39;);</span>
+</span><span class='line'><span class="x">    header(&#39;Last-Modified: Tue, 15 Jan 2011 12:00 GMT&#39;);</span>
+</span><span class='line'><span class="x">    header(&#39;ETag: &#39; . md5(&#39;Hello&#39;));</span>
+</span><span class='line'><span class="x">    echo &#39;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;&#39;;</span>
+</span><span class='line'><span class="x">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>References :</p>
+
+<p>Status Code : http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+Response : http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html
+Caching in Http : http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html
+http://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+http://en.wikipedia.org/wiki/HTTP_ETag
+http://stackoverflow.com/questions/691318/what-headers-do-i-want-to-send-together-with-a-304-response
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19
+http://tomayko.com/writings/things-caches-do
+http://www.peej.co.uk/articles/http-caching.html
+http://www.mnot.net/cache_docs/
+https://developers.google.com/storage/docs/reference-headers#cachecontrol
+https://developers.google.com/speed/docs/best-practices/caching#LeverageBrowserCaching</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Aura.Sql can now make use of existing PDO connection]]></title>
@@ -314,15 +508,6 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
     <updated>2012-07-27T21:17:00+05:30</updated>
     <id>http://harikt.github.com/blog/2012/07/27/day-one-the-fifth-elephant</id>
     <content type="html"><![CDATA[<p>9:30 - 10:15 : Crunching Big Data, Google Scale by Rahul Kulkarni   I was little bit late, but it was something interesting to know about bigquery.cloud.google.com . I am still trying to figure out how I can make use of these stuffs. Its really a cool thing to hackon.     10:15 - 11:00 : In Data We Believe Harish Pillay of Red Hat   This talk was also an interesting one to learn and know about glusters. I met some of these guys of glusters at the Redhat stall. Gluster was an open-source tool which was developed by guys at Bangalore and later acquired by Redhat. It was something great to know about it.     11:00 – 11:30 : Tea and chitchat. It was interesting to meet the Hacknight guys Sidharth, Siju, Raison etc.   11:30 – 12:15 : An Introduction to Data Visualization and Processing by Uttam Grandhi   Uttam presented nicely. He was so cool and shared how the Japanese fountain shows the numbers and stuffs in fountain.     He also showed how we can working with Processing a java based tool and how we can visualize without data itself.   12:15 – 1:00 : Visualizing Text by S Anand of Gramener.com   Yes S Anand is so popular among developers. Yes I know him via s-anand.net some years back. But I wan&#8217;t able to recognize him when he was infront of me at #Hacknight. But this time I didn&#8217;t missed to say &#8220;Hi&#8221; to him. He with his collegue presented the talk so awesome. I as a participant feel that was the awesome talk of the day. He presents stuffs in a different way. I liked it. There was a difference in the way he speaks. Yes that makes him different from others. He mentioned about wordle.net, sip.s-anand.net, trendsmap.com, openbible.info, sentimental analysis, circular vizualisation and many more.     1:00 – 2:00 we had an awesome Lunch   2:00 – 2:30 Looking Beyond the Usual Suspects for Near Real-time Analytics on Big Data by Navjot Sidhu of Paypal. When we hear about people who has more problems than what we face, we know ours is not a big problem at all. Navjot Sidhu mentioned paypal having 500 transactions per second, 25 TB data and stuffs like that. I wonder how paypal really scales. It was interesting to know that the core of paypal is C which is almost 75 % of the code. He also talked about the events firing for a single transaction. I remembered about the Aura.Signal for a while.     2:30 – 3:00 : Build Your Own Real-time Analytics and Visualization, Enable Complex Event Processing, Event Patterns and Aggregates by Ramesh Perumalsamy and Vishnu H. Rao of Flipkart.     It was nice to know about logstash, graylog2, elastic search, statsD, graphite etc. I want to explore some of them.   3:00 – 3:30 “I know what you are going to do next summer” – Predicting Repeat Purchase Behavior by using Bayesian Hierarchical model and Regression Techniques Biswajit Pal, Subhasish Mishra and Manav Shroff I expected something, but as the talk goes on I didn&#8217;t see much importance sitting over there. So left the hall and had a chat with the guys over the stall.   3:30 – 4:00 Oh Tea break :) .   4:00 – 4:30 : Building, Analyzing and Visualizing Large Graphs by Ashwin Rajeev There were lots of people for this talk than the room can accomodate. I was sitting on the floor. The session was interesting to learn more on graphs. He mentioned about rapheljs, d3.js as Uttam mentioned earlier in his talk.   4:30 – 5:00 : Approaches to ML Techniques on Real World Data by Venkata Ramana I was able to understand what he was trying to explain for I was at #Hacknight. But I feel most of them didn&#8217;t find the talk interesting.   5:00 – 5:30 : Build Your Own Search Engine by Siddhartha Reddy of flipkart.     This was an interesting talk. I learned something interesting. Indexer, Searcher, Text Analysis, Tokenisation, Stop Word Removal, Normalization, Case folding, Synonyms, Others, Stemming, Lemmatization etc.  He also showed Term document matrix, inverted index, ranking, inverse document frequency etc. He suggestested a text titled Introduction to Information Retrieval for further reading   http://nlp.stanford.edu/IR-book/   And finally winding up day one with 5:30 – 6:15 Panel Discussion: Best Practices by Kalpana Krishnaswami, Prithvijit Roy, Joydeep Sen Sarma, Anand S, Rohit Chattar, Navjot Sidhu Moderated by Govind Kanshi   I don&#8217;t know how I missed to hear the talk Anand Chitipothu and Noufal Ibrahim - How the Internet Archive Preserves Petabytes of Data  </p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[REST API Design Rulebook by Mark Massé; O'Reilly Media]]></title>
-    <link href="http://harikt.github.com/blog/2012/07/17/rest-api-design-rulebook-by-mark-masse/"/>
-    <updated>2012-07-17T23:35:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/07/17/rest-api-design-rulebook-by-mark-masse</id>
-    <content type="html"><![CDATA[<p>Everyone has been hearing the buzz REST. As web services and api for websites are becoming popular, all are busy developing REST api&#8217;s for their websites. What exactly is REST? REpresentational State Transfer (REST) is a style of software architecture for distributed systems such as the World Wide Web. REST has emerged over the past few years as a predominant Web service design model. This is what wiki mentions . The book REST API Design Rulebook by Mark Massé; O&#8217;Reilly Media will teach you some rules which needs to be followed. This book has really helped me to understand some of the basic concepts of HTTP protocol. Yes really I was able to understand more on REST and how it should be represented etc. Probably you would have noticed websites with format .html , .json , .xml . If you have ever thought its REST, then its not :-) . Do you know a trailing forward slash (/) should not be included in URIs ? Underscores (_) should not be used in URIs ? There are more rules , but you can read and learn the rest from the book. The book has a total of 94 pages, but will serve you for a good reference. It also introduces WRML (http://www.wrml.org/) . Cons : Yes I feel there are some cons for the book. There are some examples when introducing WRML like the one below . {syntaxhighlighter class=&#8221;html&#8221;} application/wrml; format=&#8221;http://api.formats.wrml.org/application/json&#8221;; schema=&#8221;http://api.schemas.wrml.org/soccer/Player&#8221; {/syntaxhighlighter} But when you point your browser to http://api.formats.wrml.org/application/json you will get a 404. Example url : Its always a good way to mention example.com than mentioning http://api.schemas.wrml.org/soccer/Player . There are at many places its happening . You will not get completely on a first read when the chapters are moving, but sometimes you may want to read it many times. But I loved this book for I learned some basic stuffs really and also this is always a reference for future. In a rating of 5 , I will rate 4 . If you are interested in this book, you can buy this from REST API Design Rulebook by Mark Massé : http://shop.oreilly.com/product/0636920021575.do Pages: 116 Print ISBN:978-1-4493-1050-9 | ISBN 10:1-4493-1050-8</p>
 ]]></content>
   </entry>
   

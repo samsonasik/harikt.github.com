@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="Though Microsoft has not officially released the Windows 7 , their new operating system , FSF ( Free Software Foundation ) has started the site http &hellip;">
+  <meta name="description" content="When I was trying to use pagination I didnot find a complete example . From different blogs and mannuals I finally figured it . So I thought of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/15/complete-working-example-pagination-using-zendpaginator/">Complete Working Example for Pagination Using Zend_Paginator</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-15T13:03:00+05:30" pubdate data-updated="true">Sep 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I was trying to use pagination I didnot find a complete example . From different blogs and mannuals I finally figured it . So I thought of posting it for myself and for others trying to learn it .  You need to grab the result and pass to Zend_Paginator .      /<em>     * Get the page number , default 1     </em>/     $page = $this->_getParam(&#8216;page&#8217;,1);     /<em>     * Object of Zend_Paginator     </em>/     $paginator = Zend_Paginator::factory($result);     /<em>     * Set the number of counts in a page     </em>/     $paginator->setItemCountPerPage(2);     /<em>     * Set the current page number     </em>/     $paginator->setCurrentPageNumber($page);     /<em>     * Assign to view     </em>/     $this->view->paginator = $paginator;  I hope you have this code in the indexAction . If its in indexAction add the below code in the index.phtml view script , else according to the view of your Action .      <h1>Example</h1>     &lt;?php if (count($this->paginator)): ?>     <ul>     &lt;?php     /<em>     * Iterate through the paginator to show the results     </em>/     foreach ($this->paginator as $item): ?>     <li>&lt;?php echo $item[&#8216;FirstName&#8217;] .&#8221; &#8220;.$item[&#8216;LastName&#8217;]; ?></li>     &lt;?php endforeach; ?>     </ul>     &lt;?php endif; ?>     &lt;?php     /<em>     * Print the pagination of type , drop down or search type or of your choice.     </em>/     echo $this->paginationControl($this->paginator,                                         &#8216;Sliding&#8217;,                                         &#8216;/partials/my_pagination_control.phtml&#8217;); ?>  This code is from the zend mannuals , but it didnot tell where to keep this . You need to keep this in the views folder . I am keeping it in application/views/scripts/partials/my_pagination_control.phtml . I have added the 3 types of pagination in this . You can remove or comment it and look how each type of pagination looks . The drop down is uncommented for now .      &lt;?php     /<em>     * Search pagination     </em>/     ?>     &lt;?php /<em>if ($this->pageCount): ?>     <div class="paginationControl">     <!-- Previous page link -->     &lt;?php if (isset($this->previous)): ?>     <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->previous)); ?>&#8221;> &lt;&lt; Previous</a> |     &lt;?php else: ?>     <span class="disabled">&lt; Previous</span> |     &lt;?php endif; ?>     <!-- Numbered page links -->     &lt;?php foreach ($this->pagesInRange as $page): ?>     &lt;?php if ($page != $this->current): ?>         <a href="<?php echo $this->url(array(&#8216;page&#8217; => $page)); ?>&#8221;>             &lt;?php echo $page; ?>         </a> |       &lt;?php else: ?>         &lt;?php echo $page; ?> |       &lt;?php endif; ?>     &lt;?php endforeach; ?>     <!-- Next page link -->     &lt;?php if (isset($this->next)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->next)); ?>&#8221;>         Next &gt;       </a>     &lt;?php else: ?>       <span class="disabled">Next &gt;</span>     &lt;?php endif; ?>     </div>     &lt;?php endif; </em>/?>     &lt;?php     /<em>      </em> Item pagination example      <em>      </em>/     ?>     <!--     See http://developer.yahoo.com/ypatterns/pattern.php?pattern=itempagination     -->     &lt;?php /<em>if ($this->pageCount): ?>     <div class="paginationControl">     &lt;?php echo $this->firstItemNumber; ?> - &lt;?php echo $this->lastItemNumber; ?>     of &lt;?php echo $this->totalItemCount; ?>     <!-- First page link -->     &lt;?php if (isset($this->previous)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->first)); ?>&#8221;>First </a> |     &lt;?php else: ?>       <span class="disabled">First</span> |     &lt;?php endif; ?>     <!-- Previous page link -->     &lt;?php if (isset($this->previous)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->previous)); ?>&#8221;> &lt; Previous  </a> |     &lt;?php else: ?>       <span class="disabled">&lt; Previous</span> |     &lt;?php endif; ?>     <!-- Next page link -->     &lt;?php if (isset($this->next)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->next)); ?>&#8221;>  Next &gt; </a> |     &lt;?php else: ?>       <span class="disabled">Next &gt;</span> |     &lt;?php endif; ?>     <!-- Last page link -->     &lt;?php if (isset($this->next)): ?>       <a href="<?php echo $this->url(array(&#8216;page&#8217; => $this->last)); ?>&#8221;>  Last  </a>     &lt;?php else: ?>       <span class="disabled">Last</span>     &lt;?php endif; ?>     </div>     &lt;?php endif; </em>/?>     &lt;?php     /<em>      </em> Drop down paginaton example      */     ?>     &lt;?php if ($this->pageCount): ?>     <select id="paginationControl" size="1">     &lt;?php foreach ($this->pagesInRange as $page): ?>       &lt;?php $selected = ($page == $this->current) ? &#8217; selected=&#8221;selected&#8221;&#8217; : &#8221;; ?>       <option value="<?php             echo $this->url(array(&#8216;page&#8217; => $page));?>&#8221;&lt;?php echo $selected ?>>         &lt;?php echo $page; ?>       </option>     &lt;?php endforeach; ?>     </select>     &lt;?php endif; ?>     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.2/prototype.js"></script>     <script type="text/javascript">     $('paginationControl').observe('change', function() {         window.location = this.options[this.selectedIndex].value;     })     </script>  Hope it works for you . Thanks</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -389,42 +425,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/08/23/administration-module-generation-zendframework-greater-18/">Administration Module Generation for ZendFramework 1.9</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-23T09:56:00+05:30" pubdate data-updated="true">Aug 23<span>rd</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hello Guys  Are you new to Zend Framework ? Are you new to MVC ?  Then really you may have thought like me . Where to start and how to start ? Am I right ?  Then this is post is for you my dear friend . I can admit one thing that learning Zend framework is hard though there is a big documentation . There is good examples to the components too . But we will not understand how to bind each other ? Am I right ?  I am also new to Zend Framework . I like the ZF command line most. I looked for many articles , but many was in the old style . Recently I came to a pdf document which was very interesting which is used to administer the site . Every one will look for how to create an admin side using zend frameowork greater than 1.8 . Now its 1.9 too .  I am keeping the pdf which was seen from Slideshare by <a href="http://blog.nickbelhomme.com/">Nick Belhomme</a>. This is a great one for each and every one to start . Hope it may help you . There are many more people who writes about Zendframework in their blog. I recently created a search to search those sites which I think may be helpful to you too . So you can explore it too . The link is <a href="http://www.google.com/coop/cse?cx=005733697890798280623:f49mfrxmsje">http://www.google.com/coop/cse?cx=005733697890798280623:f49mfrxmsje</a>  Good Luck guys . Explore the search engine and grab the Zend Framework .  Bye for now . You can see some from me too in the coming days . lol  Have created the base files need to start your zend framework project . Check it out from http://harikt.com/content/base-files-start-your-zend-framework-project . Thanks to all who have supported me knowingly or unknowingly :) .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/13/">&larr; Older</a>
@@ -442,6 +442,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
@@ -455,10 +459,6 @@
     
       <li class="post">
         <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

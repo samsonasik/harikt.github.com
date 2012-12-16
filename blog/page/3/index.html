@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="The Fifth Elephant is going to happen on 27 &amp; 28 July 2012 , Nimhans Convention Centre, Bangalore . The Fifth Elephant is a community-powered &hellip;">
+  <meta name="description" content="Everyone has been hearing the buzz REST. As web services and api for websites are becoming popular, all are busy developing REST api&#8217;s for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/17/rest-api-design-rulebook-by-mark-masse/">REST API Design Rulebook by Mark Massé; O&#8217;Reilly Media</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-17T23:35:00+05:30" pubdate data-updated="true">Jul 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Everyone has been hearing the buzz REST. As web services and api for websites are becoming popular, all are busy developing REST api&#8217;s for their websites. What exactly is REST? REpresentational State Transfer (REST) is a style of software architecture for distributed systems such as the World Wide Web. REST has emerged over the past few years as a predominant Web service design model. This is what wiki mentions . The book REST API Design Rulebook by Mark Massé; O&#8217;Reilly Media will teach you some rules which needs to be followed. This book has really helped me to understand some of the basic concepts of HTTP protocol. Yes really I was able to understand more on REST and how it should be represented etc. Probably you would have noticed websites with format .html , .json , .xml . If you have ever thought its REST, then its not :-) . Do you know a trailing forward slash (/) should not be included in URIs ? Underscores (_) should not be used in URIs ? There are more rules , but you can read and learn the rest from the book. The book has a total of 94 pages, but will serve you for a good reference. It also introduces WRML (http://www.wrml.org/) . Cons : Yes I feel there are some cons for the book. There are some examples when introducing WRML like the one below . {syntaxhighlighter class=&#8221;html&#8221;} application/wrml; format=&#8221;http://api.formats.wrml.org/application/json&#8221;; schema=&#8221;http://api.schemas.wrml.org/soccer/Player&#8221; {/syntaxhighlighter} But when you point your browser to http://api.formats.wrml.org/application/json you will get a 404. Example url : Its always a good way to mention example.com than mentioning http://api.schemas.wrml.org/soccer/Player . There are at many places its happening . You will not get completely on a first read when the chapters are moving, but sometimes you may want to read it many times. But I loved this book for I learned some basic stuffs really and also this is always a reference for future. In a rating of 5 , I will rate 4 . If you are interested in this book, you can buy this from REST API Design Rulebook by Mark Massé : http://shop.oreilly.com/product/0636920021575.do Pages: 116 Print ISBN:978-1-4493-1050-9 | ISBN 10:1-4493-1050-8</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -405,42 +441,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/06/standalone-form-component-for-php/">Standalone Form Component for PHP</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T22:18:00+05:30" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Recently I was reading the post <a href="http://webmozarts.com/2012/03/06/symfony2-form-architecture/">Symfony2 Form Architecture</a> by <a href="https://twitter.com/#!/webmozart">Bernhard Schussek</a> . The main aim of his post was to make use of Symfony2 form component in Zend Framework 2 as the form architecture which was written in <a href="http://framework.zend.com/wiki/display/ZFDEV2/RFC+-+Forms">RFC</a> seems almost the same. This is a small feedback I would love to give as I am interested to make the Form as a standalone component, what ever framework we are using.  These all started with probably @fabpot tweets about it .     > Is it just me or is the <a href="https://twitter.com/search/%23ZF2">#ZF2</a> > form RFC heavily inspired by > <a href="https://twitter.com/search/%23Symfony2">#Symfony2</a>? /cc > @<a href="https://twitter.com/webmozart">webmozart</a> > <a href="http://t.co/cRf01a3X" title="http://framework.zend.com/wiki/display/ZFDEV2/RFC+-+Forms">framework.zend.com/wiki/display/Z…</a> > > — Fabien Potencier (@fabpot) > <a href="https://twitter.com/fabpot/status/174153351372611584">February 27, 2012</a>     Some months back as of Symfony2 stable was released I tried to incorporate the Form component to <a href="https://github.com/auraphp">Aura Project for PHP</a> which was aiming for 5.3 at that time. But now looking forward to 5.4 + only  Let have a look into the Symfony2 dependencies for Form component which is described in pear.symfony.com   EventDispatcher, Validator, Locale .  AuraPHP already have a Signal / Slot / Event Handler , so it doesn&#8217;t need the EventDispatcher, like the same ZF2 already have one, so I feel EventDispatcher is not needed for both the frameworks. Lets don&#8217;t think what we have, lets see whether adding these components really solve in creating to make it as a standalone component ?  <a href="http://www.flickr.com/photos/harikt/6813319456/" title="Sf2Form by K T Hari, on Flickr"><img src="http://farm8.staticflickr.com/7055/6813319456_3441d6be49.jpg" alt="Sf2Form" /></a>  I have taken a screenshot of the tweets I got in reply. Thanks to all who tried to help me .Below is the link to the details, and I hope you can go more detailed on the tweets if needed.  > @<a href="https://twitter.com/harikt">harikt</a> You don&#8217;t need Twig. Simply > the Twig form rendering is easier to get standalone. the PHP one is > in the bundle @<a href="https://twitter.com/weaverryan">weaverryan</a> > @<a href="https://twitter.com/fabpot">fabpot</a> > > — Christophe Coevoet (@Stof70) > <a href="https://twitter.com/Stof70/status/142643884047089664">December 2, 2011</a>     So what is missing for Symfony2 form component ? It needs more components as shown in the gist  below     So to conclude though the Symfony2 Form mentions as a standalone, its not a standalone component at-least looking from a user point of view like me. You can see various people asking about how to use Symfony2 Form component as a standalone in <a href="https://groups.google.com/forum/?fromgroups#!topic/symfony-users/aAqDJjkl2gQ">google groups</a>. But what people points is to Silex again build on the shoulder of Symfony2 component . I am not against Symfony2 , please don&#8217;t feel so. But I just want to bring the fact that, than writing a big architecture, people would be looking how we can integrate it as standalone .  So in my view I am looking forward to see how ZF2 will make a change from Symfony2 or will it be the same like binding everything . I am also looking forward to see how <a href="http://auraphp.github.com">Aura project for PHP 5.4</a> can bring Form . I have limited knowledge, so I may be wrong on the above things too. Feel free to correct me  I am looking for something like the one below, yes of-course we need validation and stuffs , but it will be standalone , no matter :-) .      &lt;?php     //PFBC 2.x PHP 5 >= 5.3     session_start();     include($<em>SERVER[&#8220;DOCUMENT_ROOT&#8221;] . &#8220;/PFBC/Form.php&#8221;);     $form = new PFBC\Form(&#8220;GettingStarted&#8221;, 300);     $form->addElement(new PFBC\Element\Textbox(&#8220;My Textbox:&#8221;, &#8220;MyTextbox&#8221;));     $form->addElement(new PFBC\Element\Select(&#8220;My Select:&#8221;, &#8220;MySelect&#8221;, array(        &#8220;Option #1&#8221;,        &#8220;Option #2&#8221;,        &#8220;Option #3&#8221;     )));     $form->addElement(new PFBC\Element\Button);     $form->render();      //PFBC 2.x PHP 5     session_start();     include($</em>SERVER[&#8220;DOCUMENT_ROOT&#8221;] . &#8220;/PFBC/Form.php&#8221;);     $form = new Form(&#8220;GettingStarted&#8221;, 300);     $form->addElement(new Element_Textbox(&#8220;My Textbox:&#8221;, &#8220;MyTextbox&#8221;));     $form->addElement(new Element_Select(&#8220;My Select:&#8221;, &#8220;MySelect&#8221;, array(        &#8220;Option #1&#8221;,        &#8220;Option #2&#8221;,        &#8220;Option #3&#8221;     )));     $form->addElement(new Element_Button);     $form->render();     ?>  An example where I can show such a standalone one is http://code.google.com/p/php-form-builder-class/ . Currently to render the form either you need <a href="https://github.com/symfony/TwigBridge">TwigBridge</a> or <a href="https://github.com/symfony/FrameworkBundle">FrameworkBundle</a> .  > @<a href="https://twitter.com/harikt">harikt</a> There is 2 implementations: > TwigBridge and in FrameworkBundle but you could write one for > Aura.View /cc @<a href="https://twitter.com/webmozart">webmozart</a> > > — Christophe Coevoet (@Stof70) > <a href="https://twitter.com/Stof70/status/177148060881788929">March 6, 2012</a>  If you are using Framework bundle you need <a href="https://github.com/symfony/FrameworkBundle/blob/master/Templating/Helper/FormHelper.php">Templating component</a> and to my understanding if you are using TwigBundle you need Twig itself . So is this a standalone ? Also if its really a standalone why it didn&#8217;t find a documentation as in http://symfony.com/doc/current/components/index.html . The Symfony2 has released months back, so I don&#8217;t feel Symfony2 form is a standalone in the sense as I shown in the example .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -458,6 +458,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
@@ -471,10 +475,6 @@
     
       <li class="post">
         <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

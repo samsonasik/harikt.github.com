@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="There are various distribution of GNU/Linux available now. I think every disto have a Live CD . So people can try it out and if they love it , can &hellip;">
+  <meta name="description" content="I still remember my old pages, got html templates for free . Downloaded and added the contents and the design was broken usually. I was not much &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/02/42-firebug-a-handy-tool-for-web-developers/">Firebug a Handy Tool for Web Developers</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-02T09:44:00+05:30" pubdate data-updated="true">May 2<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I still remember my old pages, got html templates for free . Downloaded and added the contents and the design was broken usually. I was not much aware of why the design breaks . My experiences teaches me a lot why its happening. I have only 1 year 5 months experience, but I when looking back I may be having more than that because of my self learning <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-laughing.gif" title="Laughing" alt="Laughing" /> . I think in one of my post I have expressed my Thanks to Dileep often called Dilpu , a student from NIT . He is one of the person, who makes me think and learn HTML . I used my class hours at Library to learn HTML . I was not aware of HTML , CSS or W3C or any standards of Web . So when adding contents to pages , I often fails at those times . It was just static pages . But later I learned why its happening , what W3C is what XHTML and all.  <img src="http://farm4.static.flickr.com/3563/3490763401_8c2b1abfc2.jpg?v=0" title="Firebug mozilla firefox addon in action" alt="Firebug mozilla firefox addon in action" />  These were only to static HTML. When I started my profession I was eager to learn more and found Firebug a mozilla firefox add-on once . Installed it just to try , as its all free and open source projects . Firebug may be one of the easy tool that can be used to fix the design issues. When the designers convert to XHTML , some of them uses fixed width . But in dynamic pages , the height often changes and it may be a mess to fid out whats the problem .So here comes the role of firebug . You can view the properties for each of the tag . So you can recognise which all are inherited and all . So its easy to fix issues arising to font&#8217;s and all . I think Firebug was introduced when I was looking the carrers in Mozilla <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-cool.gif" title="Cool" alt="Cool" /> . They are looking people who are familiar in firebug, that forced me to install firebug . Now I know why they are looking for people who uses firebug . Great guys .</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -389,42 +425,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/04/15/33-opensolaris-installation-on-ubuntu-and-after-effects-of-grub/">Opensolaris Installation on Ubuntu and After Effects of Grub</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-04-15T09:11:00+05:30" pubdate data-updated="true">Apr 15<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Writing my post from Open solaris . This is a great experience , so thought to share with you , so may help some of you.  I have once installed the Sun Solaris , not the Open Solaris of sun . And it was really a tedious job . So I was aware of the consequences . But thought of trying the Open Solaris , as I love to use it after trying the Live CD. Though I have got the CD some days before , not able to try it.  Current OS and status  1 ) Installed Ubuntu 8.10 , having lots of additional softwares installed and lots of valuable data&#8217;s :-) .  2 ) Don&#8217;t want to miss any , like the previous case.  Started Installation around 12:30 noon . It takes some time to install the OS. I came after my Lunch and by the time it has finished the installation .  Restarted the system. The grub loads &#8230;&#8230;&#8230;&#8230; OOP&#8217;s really fucking , the Ubuntu is not there , it has gone . The boot loader has gone . Anyway thought of reinstalling the grub . I have installed from Fedora the boot loader , but not from Ubuntu , so thought of editing the grub file for the sun solaris. But I need to know the real path to the Ubuntu kernel . Booted from Ubuntu Live CD , searched google to find from where I will get the complete path ? Yes, found a solution for it , ( https://sourceforge.net/projects/bootinfoscript/ ). Downloaded and tried , got the result. Saved in gmail :-) . Restarted the system , logged to Open solairs .  Looked to edit grub . Searched a lot , got some information from blog of sun. He is a worker at Sun . ( http://blogs.sun.com/agraj/entry/editing_grub_bootloader ) . But I was not able to find the /etc/grub.conf nor the /boot/grub/menu.lst ( Skipping some of the steps I have tried to edit grub from command prompt ) . And finally I was forced to login to Live CD , and tried to do like the steps in http://ubuntuforums.org/archive/index.php/t-24113.html the post . But what I missed was Open Solaris loader and time and the updated kernel of Ubuntu . What it does was installed the Ubuntu OS again .So never go in these ways , I will shortly tell the other one. Why I told never go in this way is because it will remove some of the files of our updated kernel , though it can backup our files. And finally I edited the /boot/grub/menu.lst of the Ubuntu distro and added the code  title Open Solaris root (hd0,0) makeactive chainloader +1  <strong>The pretty simple way</strong> ( I was not able to try this , but found the menu.lst of Open Solaris ) :  1 ) Install Solaris  2 ) Boot with Live CD , install the boot info script and run it ( https://sourceforge.net/projects/bootinfoscript/ ) . Save the RESULTS.txt may be in you mail or thumb .  3 ) Restart to login to Open Solaris . Edit the menu.lst , ( its not located at /etc/grub.conf nor at /boot/grub/ ) . The menu.lst has moved to /rpool/boot/grub/ folder . So what you need to do is just edit the /rpool/boot/grub/menu.lst . You must be root to edit this file ( Use su or sudo ).  Copy and paste the lines you have got from the RESULTS.txt which is produced by the boot info script . Some thing starting like ## ## End Default Options ## and ending with ### END DEBIAN AUTOMAGIC KERNELS LIST . You can have a search if you are using gedit .  Now restart your system . It will works . Defnitely it will work . Have fun with solaris too . Spend my whole day for this experiment :-( . But learned a lot of new things , so I gained :-)  Thanks guys , let me have some sleep its 1:05 Am . Want to cast my vote and leave to work tomorrow morning . Bye have a great day .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/18/">&larr; Older</a>
@@ -442,6 +442,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
@@ -455,10 +459,6 @@
     
       <li class="post">
         <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/24/node-223/">vfsStream and file system</a>
       </li>
     
   </ul>

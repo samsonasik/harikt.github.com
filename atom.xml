@@ -4,7 +4,7 @@
   <title><![CDATA[Random thoughts on PHP | Hari KT]]></title>
   <link href="http://harikt.github.com/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-17T00:14:03+05:30</updated>
+  <updated>2012-12-17T00:17:49+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -18,7 +18,7 @@
     <link href="http://harikt.github.com/blog/2012/12/16/status-code-304/"/>
     <updated>2012-12-16T23:03:00+05:30</updated>
     <id>http://harikt.github.com/blog/2012/12/16/status-code-304</id>
-    <content type="html"><![CDATA[<p>Everyone knows Http is the underlying concept of Web. The base concept is a request is initiated by a browser or web-client and you get a response back. Some day&#8217;s back I noticed some interesting slides from Alessandro Nadalin&#8217;s talk (Mixing the history of HTTP, SPDY and HTTP/2.0)[http://odino.org/mixing-the-history-of-http-spdy-and-http-slash-2-dot-0/]</p>
+    <content type="html"><![CDATA[<p>Everyone knows Http is the underlying concept of Web. The base concept is a request is initiated by a browser or web-client and you get a response back. Some day&#8217;s back I noticed some interesting slides from Alessandro Nadalin&#8217;s talk <a href="http://odino.org/mixing-the-history-of-http-spdy-and-http-slash-2-dot-0/">Mixing the history of HTTP, SPDY and HTTP/2.0</a></p>
 
 <p>It really inspired me to look more into the Http. I also understood a fact that I was missing many basic stuffs. I thought of playing with it.</p>
 

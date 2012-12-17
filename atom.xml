@@ -4,7 +4,7 @@
   <title><![CDATA[Random thoughts on PHP | Hari KT]]></title>
   <link href="http://harikt.github.com/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-17T23:38:35+05:30</updated>
+  <updated>2012-12-17T23:42:30+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -20,7 +20,8 @@
     <id>http://harikt.github.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress</id>
     <content type="html"><![CDATA[<p>Recently I ported the blog from <a href="http://drupal.org">Drupal7</a> to <a href="http://octopress.org/">octopress</a> for certain reasons. The php script that helped me to do the porting from drupal to octopress is given below. This is a port of the ruby script with some additional fixes on the SQL. This needs <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> to be installed to convert from Html to Markdown. There is also slight isssue with the syntaxhighlighter, which you may want to manually fix.</p>
 
-<figure class='code'><figcaption><span>drupal7 to octopress</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>drupal7 to octopress  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

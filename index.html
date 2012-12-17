@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="Everyone knows Http is the underlying concept of Web. The base concept is a request is initiated by a browser or web-client and you get a response &hellip;">
+  <meta name="description" content="I was working with Imagine recently. I want to create a standard width and height for the image that is created. Eg: 500 X 300 . The user will be &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,113 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize Image Keeping Aspect Ratio in Imagine</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-17T22:24:00+05:30" pubdate data-updated="true">Dec 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was working with Imagine recently. I want to create a standard width and height for the image that is created. Eg: 500 X 300 .</p>
+
+<p>The user will be uploading different size images and I want to resize the image to X width and Y height. I was using imagine and the code helps to make this happen filling the blank space with white color without loosing aspect ratio.</p>
+
+<figure class='code'><figcaption><span>resize image with imagine</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'><span class="nv">$source</span> <span class="o">=</span> <span class="s1">&#39;image.jpeg&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$destination</span> <span class="o">=</span> <span class="s1">&#39;resize.jpg&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$width</span>  <span class="o">=</span> <span class="mi">300</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$height</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$imagine</span>   <span class="o">=</span> <span class="k">new</span> <span class="nx">Imagine\Gd\Imagine</span><span class="p">();</span>
+</span><span class='line'><span class="nv">$size</span>      <span class="o">=</span> <span class="k">new</span> <span class="nx">Imagine\Image\Box</span><span class="p">(</span><span class="nv">$width</span><span class="p">,</span> <span class="nv">$height</span><span class="p">);</span>
+</span><span class='line'><span class="nv">$mode</span>      <span class="o">=</span> <span class="nx">Imagine\Image\ImageInterface</span><span class="o">::</span><span class="na">THUMBNAIL_INSET</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$resizeimg</span> <span class="o">=</span> <span class="nv">$imagine</span><span class="o">-&gt;</span><span class="na">open</span><span class="p">(</span><span class="nv">$source</span><span class="p">)</span>
+</span><span class='line'>                <span class="o">-&gt;</span><span class="na">thumbnail</span><span class="p">(</span><span class="nv">$size</span><span class="p">,</span> <span class="nv">$mode</span><span class="p">);</span>
+</span><span class='line'><span class="nv">$sizeR</span>     <span class="o">=</span> <span class="nv">$resizeimg</span><span class="o">-&gt;</span><span class="na">getSize</span><span class="p">();</span>
+</span><span class='line'><span class="nv">$widthR</span>    <span class="o">=</span> <span class="nv">$sizeR</span><span class="o">-&gt;</span><span class="na">getWidth</span><span class="p">();</span>
+</span><span class='line'><span class="nv">$heightR</span>   <span class="o">=</span> <span class="nv">$sizeR</span><span class="o">-&gt;</span><span class="na">getHeight</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$preserve</span>  <span class="o">=</span> <span class="nv">$imagine</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="nv">$size</span><span class="p">);</span>
+</span><span class='line'><span class="nv">$startX</span> <span class="o">=</span> <span class="nv">$startY</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nv">$widthR</span> <span class="o">&lt;</span> <span class="nv">$width</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$startX</span> <span class="o">=</span> <span class="p">(</span> <span class="nv">$width</span> <span class="o">-</span> <span class="nv">$widthR</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nv">$heightR</span> <span class="o">&lt;</span> <span class="nv">$height</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$startY</span> <span class="o">=</span> <span class="p">(</span> <span class="nv">$height</span> <span class="o">-</span> <span class="nv">$heightR</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nv">$preserve</span><span class="o">-&gt;</span><span class="na">paste</span><span class="p">(</span><span class="nv">$resizeimg</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Imagine\Image\Point</span><span class="p">(</span><span class="nv">$startX</span><span class="p">,</span> <span class="nv">$startY</span><span class="p">))</span>
+</span><span class='line'>    <span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="nv">$destination</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A normal image of size 500 X 500</p>
+
+<p><img class="http://placekitten.com/500/500?image=6 [500] [500] [Image coutsey" src="http://placekitten.com/" title="[a kitten]]" ></p>
+
+<p>when resized to 300 X 200</p>
+
+<p><img src="/assets/images/resize-image300x200.jpg" title="[300] [200] [Image resized to 300X200 [resized image]]" ></p>
+
+<p>and 300 X 400</p>
+
+<p><img src="/assets/images/resize-image300x400.jpg" title="[300] [400] [Image resized to 300X400 [resized image]]" ></p>
+
+<p>A huge Thanks to the person who helped me on Symfony2 irc to find the different modes. I am not recalling the irc handle currently. I will update once I remember the same.</p>
+
+<p>Image courtsey <a href="http://placekitten.com/">http://placekitten.com/</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -345,9 +452,6 @@
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
 </pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">use Aura\Sql\ConnectionFactory; </span>
 </span><span class='line'><span class="x">$connection_factory = new ConnectionFactory; </span>
 </span><span class='line'><span class="x">$connection = $connection_factory-&gt;newInstance( </span>
@@ -363,33 +467,39 @@
 </span><span class='line'><span class="x">    &#39;&#39; </span>
 </span><span class='line'><span class="x">); </span>
 </span><span class='line'><span class="x">$connection-&gt;setPdo($pdo); </span>
-</span><span class='line'><span class="x"> ```</span>
-</span><span class='line'>
-</span><span class='line'><span class="x">Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#39;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below  </span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>php
-$params = array(</p>
+<p>Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#8217;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below</p>
 
-<pre><code>'driver' =&gt; 'pdo_mysql', 
-'user' =&gt; 'username', 
-'password' =&gt; 'password', 
-'dbname' =&gt; 'database-name' 
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">$params = array( </span>
+</span><span class='line'><span class="x">    &#39;driver&#39; =&gt; &#39;pdo_mysql&#39;, </span>
+</span><span class='line'><span class="x">    &#39;user&#39; =&gt; &#39;username&#39;, </span>
+</span><span class='line'><span class="x">    &#39;password&#39; =&gt; &#39;password&#39;, </span>
+</span><span class='line'><span class="x">    &#39;dbname&#39; =&gt; &#39;database-name&#39; </span>
+</span><span class='line'><span class="x">); </span>
+</span><span class='line'><span class="x">$dsn = &#39;mysql:host=localhost;dbname=&#39; . $params[&#39;dbname&#39;]; </span>
+</span><span class='line'><span class="x">$pdo = new Pdo(</span>
+</span><span class='line'><span class="x">    $dsn, </span>
+</span><span class='line'><span class="x">    $params[&#39;user&#39;], </span>
+</span><span class='line'><span class="x">    $params[&#39;password&#39;], </span>
+</span><span class='line'><span class="x">    $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &#39;SET NAMES utf8&#39;, ) </span>
+</span><span class='line'><span class="x">); </span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>);
-$dsn = &#8216;mysql:host=localhost;dbname=&#8217; . $params[&#8216;dbname&#8217;];
-$pdo = new Pdo(</p>
-
-<pre><code>$dsn, 
-$params['user'], 
-$params['password'], 
-$options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', ) 
-</code></pre>
-
-<p>);
-&#8220;`</p>
 </div>
   
   
@@ -721,42 +831,6 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/17/node-218/">HTML5 and Upcoming Web Technologies</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-17T19:41:00+05:30" pubdate data-updated="true">Oct 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Probably you may have already heard about the full day workshop on HTML5 and Upcoming Web Technologies by <a href="https://twitter.com/shwetank">Shwetank Dixit</a> of Opera at <a href="http://interface-tech.in/">Interface</a> which will be held on 3rd November 2012 . Where ? The Woods Manor, Cochin . Why you should participate? HTML5 is the future of internet. Why not learn from the leader? Who should attend ? Are you a web developer? A person who works on android, iphone or any device ? If you said yes, then its for you. What is the cost? This time we are charging 500 INR. The money is used to give you tea/coffee and snacks plus an awesome lunch during the event and to cover the event expenses. I don&#8217;t think its a huge amount for I have been spending more than 500 INR to travel from Cochin to Bangalore to participate in such awesome workshops. You are only spending a 500 INR in a year which will be a worth in your career. There is also discounts available for group registration for companies, please contact Sofie Holmberg via sofie.holmberg at interface-tech dot in or 0484 4433638 . There is only limited seats available , so be there and don&#8217;t loose the best chance attending the workshop and interacting with <a href="https://twitter.com/shwetank">Shwetank Dixit</a>. Register and get your tickets from : http://interface-tech.in/register</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -772,6 +846,10 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize image keeping aspect ratio in Imagine</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
       </li>
     
@@ -785,10 +863,6 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
     
       <li class="post">
         <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
   </ul>

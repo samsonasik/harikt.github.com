@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="When I was trying to use pagination I didnot find a complete example . From different blogs and mannuals I finally figured it . So I thought of &hellip;">
+  <meta name="description" content="Adding a WYSIWYG editor to Zend_Textarea element of zend framework . I don&#8217;t know whether this is the right way to this . Anyway I would love &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/17/add-wysiwyg-ckeditor-zendtextarea-element-zendform/">Add WYSIWYG Ckeditor to Zend_Textarea Element of Zend_Form</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-17T10:01:00+05:30" pubdate data-updated="true">Sep 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Adding a WYSIWYG editor to Zend_Textarea element of zend framework . I don&#8217;t know whether this is the right way to this . Anyway I would love to share the piece of code to you . I am using the ckeditor the opensource WYSIWYG editor which was previously called fckeditor. I love the new look of it than the tiny mce . So switched to it <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> .  Extract the files of ckeditor and upload to public folder . I am keeping this in the /js/ckeditor .  Add the below piece of code to the layout . As we dont need to load the js of the ckeditor every time we can add a flag.      &lt;?php         if ( $this->ckeditor ) {             echo $this->headScript()->appendFile( $this->baseUrl().&#8217;/js/ckeditor/ckeditor.js&#8217;);          }     ?>  Now you need a helper . Keep the below code in /application/views/helpers/SetupEditor.php .      &lt;?php     class Zend_View_Helper_SetupEditor {          function setupEditor( $textareaId ) {             return &#8221;<script type=\"text/javascript\">         CKEDITOR.replace( '". $textareaId ."' );             </script>&#8221;;         }     }     ?>  I have used a baseUrl helper also . So if you are new I am keeping it for those .      &lt;?php     class Zend_View_Helper_BaseUrl {         function baseUrl() {             $fc = Zend_Controller_Front::getInstance();             return $fc->getBaseUrl();         }     }     ?>  Now you can include the small piece of code in the view script where you are printing the form . For this eg: I am using the application/views/scripts/index/edit.phtml      &lt;?php         $this->ckeditor = &#8216;ckeditor&#8217;; //To tell the layout ckeditor must be loaded .     ?>     <h2>Edit Post</h2>     <div>&lt;?php echo $this->postForm; ?></div>     <!-- Description is the id of the textarea -->     &lt;?php echo $this->setupEditor( &#8216;Description&#8217; ); ?>  You must know the name of the id of the textarea to pass to the setupEditor . I have used the name Description when creating the textarea element . You must have atleast tried the Zend framework quickstart to understand how it works . I hope I have not missed any .</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -389,42 +425,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/08/23/working-zendstudio-i5/">Working on Zendstudio I5</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-23T11:33:00+05:30" pubdate data-updated="true">Aug 23<span>rd</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I am learning Zendframework . When you are working on some frameworks you need a good IDE ( Integrated Development Environment ) . There are many IDE&#8217;s that are opensource and properitery . I was using Aptana once and then jumped to Eclipse . Recently I got a Zendstudio i5 licence . I was very Happy to see the Zendstudio licence.  If they have not given me a licence I may not be able to buy one too . I don&#8217;t earn that much money a month lol .  I have loved to buy many videos and studio . But I was unable as I don&#8217;t have as much penny in my pocket. Anyway I got the Zendstudio-i5 which is a Perpetual license . So I am trying the IDE and will let you know how it looks and what are the things new in it .  Keeping a screenshot of the zendstudio i5 .  <img src="http://farm3.static.flickr.com/2597/3847184227_2dfa1c6eaa.jpg" alt="Zendstudio i5 to make easy development of Zendframework projects" />  Bye and Thanks Zend once again for giving me one copy .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/13/">&larr; Older</a>
@@ -442,6 +442,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize image keeping aspect ratio in Imagine</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
       </li>
     
@@ -455,10 +459,6 @@
     
       <li class="post">
         <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
   </ul>

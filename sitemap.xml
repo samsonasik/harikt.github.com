@@ -970,18 +970,24 @@
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/12/06/node-227/</loc>
-        <lastmod>2012-12-13T23:57:56+05:30</lastmod>
+        <lastmod>2012-12-17T23:01:11+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/2012/12/16/status-code-304/</loc>
         <lastmod>2012-12-17T00:29:47+05:30</lastmod>
     </url>
     <url>
+        <loc>
+            http://harikt.github.com/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/
+        </loc>
+        <lastmod>2012-12-17T23:02:07+05:30</lastmod>
+    </url>
+    <url>
         <loc>http://harikt.github.com/</loc>
-        <lastmod>2012-12-17T00:29:47+05:30</lastmod>
+        <lastmod>2012-12-17T23:02:07+05:30</lastmod>
     </url>
     <url>
         <loc>http://harikt.github.com/blog/archives/</loc>
-        <lastmod>2012-12-17T00:29:47+05:30</lastmod>
+        <lastmod>2012-12-17T23:02:07+05:30</lastmod>
     </url>
 </urlset>

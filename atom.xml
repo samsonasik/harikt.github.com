@@ -4,7 +4,7 @@
   <title><![CDATA[Random thoughts on PHP | Hari KT]]></title>
   <link href="http://harikt.github.com/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-17T00:30:06+05:30</updated>
+  <updated>2012-12-17T23:03:37+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -12,6 +12,86 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Resize image keeping aspect ratio in Imagine]]></title>
+    <link href="http://harikt.github.com/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/"/>
+    <updated>2012-12-17T22:24:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine</id>
+    <content type="html"><![CDATA[<p>I was working with Imagine recently. I want to create a standard width and height for the image that is created. Eg: 500 X 300 .</p>
+
+<p>The user will be uploading different size images and I want to resize the image to X width and Y height. I was using imagine and the code helps to make this happen filling the blank space with white color without loosing aspect ratio.</p>
+
+<figure class='code'><figcaption><span>resize image with imagine</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'><span class="nv">$source</span> <span class="o">=</span> <span class="s1">&#39;image.jpeg&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$destination</span> <span class="o">=</span> <span class="s1">&#39;resize.jpg&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$width</span>  <span class="o">=</span> <span class="mi">300</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$height</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$imagine</span>   <span class="o">=</span> <span class="k">new</span> <span class="nx">Imagine\Gd\Imagine</span><span class="p">();</span>
+</span><span class='line'><span class="nv">$size</span>      <span class="o">=</span> <span class="k">new</span> <span class="nx">Imagine\Image\Box</span><span class="p">(</span><span class="nv">$width</span><span class="p">,</span> <span class="nv">$height</span><span class="p">);</span>
+</span><span class='line'><span class="nv">$mode</span>      <span class="o">=</span> <span class="nx">Imagine\Image\ImageInterface</span><span class="o">::</span><span class="na">THUMBNAIL_INSET</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$resizeimg</span> <span class="o">=</span> <span class="nv">$imagine</span><span class="o">-&gt;</span><span class="na">open</span><span class="p">(</span><span class="nv">$source</span><span class="p">)</span>
+</span><span class='line'>                <span class="o">-&gt;</span><span class="na">thumbnail</span><span class="p">(</span><span class="nv">$size</span><span class="p">,</span> <span class="nv">$mode</span><span class="p">);</span>
+</span><span class='line'><span class="nv">$sizeR</span>     <span class="o">=</span> <span class="nv">$resizeimg</span><span class="o">-&gt;</span><span class="na">getSize</span><span class="p">();</span>
+</span><span class='line'><span class="nv">$widthR</span>    <span class="o">=</span> <span class="nv">$sizeR</span><span class="o">-&gt;</span><span class="na">getWidth</span><span class="p">();</span>
+</span><span class='line'><span class="nv">$heightR</span>   <span class="o">=</span> <span class="nv">$sizeR</span><span class="o">-&gt;</span><span class="na">getHeight</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$preserve</span>  <span class="o">=</span> <span class="nv">$imagine</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="nv">$size</span><span class="p">);</span>
+</span><span class='line'><span class="nv">$startX</span> <span class="o">=</span> <span class="nv">$startY</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nv">$widthR</span> <span class="o">&lt;</span> <span class="nv">$width</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$startX</span> <span class="o">=</span> <span class="p">(</span> <span class="nv">$width</span> <span class="o">-</span> <span class="nv">$widthR</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nv">$heightR</span> <span class="o">&lt;</span> <span class="nv">$height</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$startY</span> <span class="o">=</span> <span class="p">(</span> <span class="nv">$height</span> <span class="o">-</span> <span class="nv">$heightR</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nv">$preserve</span><span class="o">-&gt;</span><span class="na">paste</span><span class="p">(</span><span class="nv">$resizeimg</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Imagine\Image\Point</span><span class="p">(</span><span class="nv">$startX</span><span class="p">,</span> <span class="nv">$startY</span><span class="p">))</span>
+</span><span class='line'>    <span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="nv">$destination</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A normal image of size 500 X 500</p>
+
+<p><img class="http://placekitten.com/500/500?image=6 [500] [500] [Image coutsey" src="http://placekitten.com/" title="[a kitten]]" ></p>
+
+<p>when resized to 300 X 200</p>
+
+<p><img src="http://harikt.github.com/assets/images/resize-image300x200.jpg" title="[300] [200] [Image resized to 300X200 [resized image]]" ></p>
+
+<p>and 300 X 400</p>
+
+<p><img src="http://harikt.github.com/assets/images/resize-image300x400.jpg" title="[300] [400] [Image resized to 300X400 [resized image]]" ></p>
+
+<p>A huge Thanks to the person who helped me on Symfony2 irc to find the different modes. I am not recalling the irc handle currently. I will update once I remember the same.</p>
+
+<p>Image courtsey <a href="http://placekitten.com/">http://placekitten.com/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Status code 304]]></title>
@@ -243,9 +323,6 @@
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
 </pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">use Aura\Sql\ConnectionFactory; </span>
 </span><span class='line'><span class="x">$connection_factory = new ConnectionFactory; </span>
 </span><span class='line'><span class="x">$connection = $connection_factory-&gt;newInstance( </span>
@@ -261,33 +338,39 @@
 </span><span class='line'><span class="x">    &#39;&#39; </span>
 </span><span class='line'><span class="x">); </span>
 </span><span class='line'><span class="x">$connection-&gt;setPdo($pdo); </span>
-</span><span class='line'><span class="x"> ```</span>
-</span><span class='line'>
-</span><span class='line'><span class="x">Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#39;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below  </span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>php
-$params = array(</p>
+<p>Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#8217;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below</p>
 
-<pre><code>'driver' =&gt; 'pdo_mysql', 
-'user' =&gt; 'username', 
-'password' =&gt; 'password', 
-'dbname' =&gt; 'database-name' 
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">$params = array( </span>
+</span><span class='line'><span class="x">    &#39;driver&#39; =&gt; &#39;pdo_mysql&#39;, </span>
+</span><span class='line'><span class="x">    &#39;user&#39; =&gt; &#39;username&#39;, </span>
+</span><span class='line'><span class="x">    &#39;password&#39; =&gt; &#39;password&#39;, </span>
+</span><span class='line'><span class="x">    &#39;dbname&#39; =&gt; &#39;database-name&#39; </span>
+</span><span class='line'><span class="x">); </span>
+</span><span class='line'><span class="x">$dsn = &#39;mysql:host=localhost;dbname=&#39; . $params[&#39;dbname&#39;]; </span>
+</span><span class='line'><span class="x">$pdo = new Pdo(</span>
+</span><span class='line'><span class="x">    $dsn, </span>
+</span><span class='line'><span class="x">    $params[&#39;user&#39;], </span>
+</span><span class='line'><span class="x">    $params[&#39;password&#39;], </span>
+</span><span class='line'><span class="x">    $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &#39;SET NAMES utf8&#39;, ) </span>
+</span><span class='line'><span class="x">); </span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>);
-$dsn = &#8216;mysql:host=localhost;dbname=&#8217; . $params[&#8216;dbname&#8217;];
-$pdo = new Pdo(</p>
-
-<pre><code>$dsn, 
-$params['user'], 
-$params['password'], 
-$options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', ) 
-</code></pre>
-
-<p>);
-&#8220;`</p>
 ]]></content>
   </entry>
   
@@ -513,15 +596,6 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
     <updated>2012-07-30T23:17:00+05:30</updated>
     <id>http://harikt.github.com/blog/2012/07/30/day2-at-thefifthelephant</id>
     <content type="html"><![CDATA[<p>I reached so early that <a href="http://www.acodersdream.com/2012/07/walking-through-nimhans.html">I walked through the NIMHANS compound.</a>   The first talk was   1 ) Your GNOME on the cloud: Big data challenges in Personalized Medicine by Ramesh Hariharan :   My interest to medical field is too less that I am here into the field of IT. So I didn&#8217;t concentrate that much to the talk. I understood they are facing more problems than in Big data itself.     2 ) Building Watson : A breif overview of DeepQA and the Jeopardy! Challenge by Karthik Visweswariah :   The talk was some of the challenges facing in the terms used in search like &#8220;see&#8221; and &#8220;saw&#8221; and much more than that. The talk was interesting to know about the problems faced. Some of the audience expressed the talk was too good that it dived into the problems they really face in search. They also mentioned some people who search for malayalam words in english is too hard to understand what they are really searching.   We have some time for tea and networking. Discussed with friends whom I met in Hacknight in which room they are going etc.   3 ) Exponential Growth Models and Impact on Sales Forecast, Data Volume, Query Latency, Capacity, Planning and Search Latency by Ashok Banerjee   He started with the slide Fungus on White Bread. The talk was so interesting that he mentioned lots of stuffs that can impact on business. As he was from flipkart he has some real world examples also. He mentioned how the growth of certain products like books can go up where as certain products like under wear or tissue which can be used to wipe, when your eyes are wet will not. He also mentioned how it can bring new customers from the friends circle. Lately I came to know more about Ashok Banerjee from Mohith that he previously  worked with google and twitter. I feel this is the most interesting talk of the day.     4 ) The Elephant that flew: Big data analytics @ Inmobi by Gaurav Agarwal :   Though I loved to sit for the Aadhaar - worlds largest biometric identity platform I went to hear the talk The Elephant that flew. It was mainly for I came to know that in the mobile world there are none other than them. Guarav went through the challenges, the tools they used and the current tools they are using to build it for their customers. He showed a demo on Yoda which can be released open-source, but still they are thinking on how they should open-source it. Its mainly like whether they want to release as small components or as a whole itself.  What is Yoda ? Yoda is nothing but something similar to Hive or Pig. But Yoda according to them is more powerful and flexible. It takes less time to process.   5 ) Messaging architecture at Facebook by Joydeep Sen Sharma :    The talk went something deep into the architecture at facebook. As he was having limited time he was running too fast. The stuffs were somewhat deep, the truth is I wasn&#8217;t able to understand some of them. According to my friends the talk was interesting as they were delaing / facing it.     6 ) Real time intelligent systems and Big data streams by Deepinder Dhingra :    I didn&#8217;t find the talk that much interesting, probably for I am not really into the field.   7 ) Recommendation Play at flipkart by Gaurav Bhalotia, Pavan Srinivas, Renuka Khandewal :   The subject was so interesting. But they presented not in that interesting way. I felt they were not prepared well also. As the talk was for only 30 minutes when you have 3 speakers, there is hardly 10 minutes of time a speaker needs to talk. But even that they didn&#8217;t prepared is a bad thing. Probably they were nervous for may be their first talk? Anyway I feel they can improve, but these are just my thoughts on it.   After tea I skipped the 2 talks and we were talking with wikipedia foundation, the internet archive guys and open data people. The internet archive has a new project called openlibrary.org which has a collection of books. They also have an API which I want/love to explore. We also discussed how they scan old books and how google used to scan books. They mentioned google was using distructive scanning which means they will cut the side where the books are tied and is then run by the system itself. It was nice to learn how these guys scan these much books. I came to know that for internet archive they can scan around 1000 pages per day. We also went to the cis ( centre for internet and society ) stall. I came to know more about the cis.   So wrapping up, the fifth elephant by Hasgeek was good. The event organizers did a good job in making the sessions running on time. When I was at osidays in 2010, what I faced was some sessions will exceed the time given that will create issues with other sessions running in parallel. So the people who love to attend session  in A1 and then loved to move to A2 or A3 will get into trouble. Either they want to skip the last minutes of the talk on one place to join the other or the other session may not have ended there. But this didn&#8217;t happened once in the fifth elephant.   The organizers also did a good job for the food. We had tea/snacks in morning and evening and lunch in afternoon. I feel 2500 rupees was worth and affordable for a techie. The problem with osidays is they have many passes which costs much more price. And also the sessions sometimes overlaps. The rate of pass if something like 2500 is an affordable one for I want to spend more on lodging also. So the total cost of the event will again go up in my accomodation and travelling. But this time I have submitted my talk for osidays and foss.in. I am looking forward to see what will happen whether I get a chance as a speaker or not :-) .   I talked with the geeks at flipkart whom I met on Hacknight. Thanks to Vivek Mehta for offering me a flipkart T-shirt. But unfortunately  the size they gave me was small, for they felt its same as that of Medium. But I cannot enter my head through that hole :P . Probably the wrong decision by me not asking again for the Medium. Anyway I will give it to someone as a present, though I wished I could keep it remembering my day on HackNight.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Day 1 at The Fifth Elephant]]></title>
-    <link href="http://harikt.github.com/blog/2012/07/27/day-one-the-fifth-elephant/"/>
-    <updated>2012-07-27T21:17:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/07/27/day-one-the-fifth-elephant</id>
-    <content type="html"><![CDATA[<p>9:30 - 10:15 : Crunching Big Data, Google Scale by Rahul Kulkarni   I was little bit late, but it was something interesting to know about bigquery.cloud.google.com . I am still trying to figure out how I can make use of these stuffs. Its really a cool thing to hackon.     10:15 - 11:00 : In Data We Believe Harish Pillay of Red Hat   This talk was also an interesting one to learn and know about glusters. I met some of these guys of glusters at the Redhat stall. Gluster was an open-source tool which was developed by guys at Bangalore and later acquired by Redhat. It was something great to know about it.     11:00 – 11:30 : Tea and chitchat. It was interesting to meet the Hacknight guys Sidharth, Siju, Raison etc.   11:30 – 12:15 : An Introduction to Data Visualization and Processing by Uttam Grandhi   Uttam presented nicely. He was so cool and shared how the Japanese fountain shows the numbers and stuffs in fountain.     He also showed how we can working with Processing a java based tool and how we can visualize without data itself.   12:15 – 1:00 : Visualizing Text by S Anand of Gramener.com   Yes S Anand is so popular among developers. Yes I know him via s-anand.net some years back. But I wan&#8217;t able to recognize him when he was infront of me at #Hacknight. But this time I didn&#8217;t missed to say &#8220;Hi&#8221; to him. He with his collegue presented the talk so awesome. I as a participant feel that was the awesome talk of the day. He presents stuffs in a different way. I liked it. There was a difference in the way he speaks. Yes that makes him different from others. He mentioned about wordle.net, sip.s-anand.net, trendsmap.com, openbible.info, sentimental analysis, circular vizualisation and many more.     1:00 – 2:00 we had an awesome Lunch   2:00 – 2:30 Looking Beyond the Usual Suspects for Near Real-time Analytics on Big Data by Navjot Sidhu of Paypal. When we hear about people who has more problems than what we face, we know ours is not a big problem at all. Navjot Sidhu mentioned paypal having 500 transactions per second, 25 TB data and stuffs like that. I wonder how paypal really scales. It was interesting to know that the core of paypal is C which is almost 75 % of the code. He also talked about the events firing for a single transaction. I remembered about the Aura.Signal for a while.     2:30 – 3:00 : Build Your Own Real-time Analytics and Visualization, Enable Complex Event Processing, Event Patterns and Aggregates by Ramesh Perumalsamy and Vishnu H. Rao of Flipkart.     It was nice to know about logstash, graylog2, elastic search, statsD, graphite etc. I want to explore some of them.   3:00 – 3:30 “I know what you are going to do next summer” – Predicting Repeat Purchase Behavior by using Bayesian Hierarchical model and Regression Techniques Biswajit Pal, Subhasish Mishra and Manav Shroff I expected something, but as the talk goes on I didn&#8217;t see much importance sitting over there. So left the hall and had a chat with the guys over the stall.   3:30 – 4:00 Oh Tea break :) .   4:00 – 4:30 : Building, Analyzing and Visualizing Large Graphs by Ashwin Rajeev There were lots of people for this talk than the room can accomodate. I was sitting on the floor. The session was interesting to learn more on graphs. He mentioned about rapheljs, d3.js as Uttam mentioned earlier in his talk.   4:30 – 5:00 : Approaches to ML Techniques on Real World Data by Venkata Ramana I was able to understand what he was trying to explain for I was at #Hacknight. But I feel most of them didn&#8217;t find the talk interesting.   5:00 – 5:30 : Build Your Own Search Engine by Siddhartha Reddy of flipkart.     This was an interesting talk. I learned something interesting. Indexer, Searcher, Text Analysis, Tokenisation, Stop Word Removal, Normalization, Case folding, Synonyms, Others, Stemming, Lemmatization etc.  He also showed Term document matrix, inverted index, ranking, inverse document frequency etc. He suggestested a text titled Introduction to Information Retrieval for further reading   http://nlp.stanford.edu/IR-book/   And finally winding up day one with 5:30 – 6:15 Panel Discussion: Best Practices by Kalpana Krishnaswami, Prithvijit Roy, Joydeep Sen Sarma, Anand S, Rohit Chattar, Navjot Sidhu Moderated by Govind Kanshi   I don&#8217;t know how I missed to hear the talk Anand Chitipothu and Noufal Ibrahim - How the Internet Archive Preserves Petabytes of Data  </p>
 ]]></content>
   </entry>
   

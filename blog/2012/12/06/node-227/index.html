@@ -107,9 +107,6 @@
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
 </pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">use Aura\Sql\ConnectionFactory; </span>
 </span><span class='line'><span class="x">$connection_factory = new ConnectionFactory; </span>
 </span><span class='line'><span class="x">$connection = $connection_factory-&gt;newInstance( </span>
@@ -125,33 +122,39 @@
 </span><span class='line'><span class="x">    &#39;&#39; </span>
 </span><span class='line'><span class="x">); </span>
 </span><span class='line'><span class="x">$connection-&gt;setPdo($pdo); </span>
-</span><span class='line'><span class="x"> ```</span>
-</span><span class='line'>
-</span><span class='line'><span class="x">Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#39;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below  </span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>php
-$params = array(</p>
+<p>Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don&#8217;t love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at https://github.com/auraphp/Aura.Sql .  Assuming you have a PDO object created something like the one below</p>
 
-<pre><code>'driver' =&gt; 'pdo_mysql', 
-'user' =&gt; 'username', 
-'password' =&gt; 'password', 
-'dbname' =&gt; 'database-name' 
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">$params = array( </span>
+</span><span class='line'><span class="x">    &#39;driver&#39; =&gt; &#39;pdo_mysql&#39;, </span>
+</span><span class='line'><span class="x">    &#39;user&#39; =&gt; &#39;username&#39;, </span>
+</span><span class='line'><span class="x">    &#39;password&#39; =&gt; &#39;password&#39;, </span>
+</span><span class='line'><span class="x">    &#39;dbname&#39; =&gt; &#39;database-name&#39; </span>
+</span><span class='line'><span class="x">); </span>
+</span><span class='line'><span class="x">$dsn = &#39;mysql:host=localhost;dbname=&#39; . $params[&#39;dbname&#39;]; </span>
+</span><span class='line'><span class="x">$pdo = new Pdo(</span>
+</span><span class='line'><span class="x">    $dsn, </span>
+</span><span class='line'><span class="x">    $params[&#39;user&#39;], </span>
+</span><span class='line'><span class="x">    $params[&#39;password&#39;], </span>
+</span><span class='line'><span class="x">    $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &#39;SET NAMES utf8&#39;, ) </span>
+</span><span class='line'><span class="x">); </span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>);
-$dsn = &#8216;mysql:host=localhost;dbname=&#8217; . $params[&#8216;dbname&#8217;];
-$pdo = new Pdo(</p>
-
-<pre><code>$dsn, 
-$params['user'], 
-$params['password'], 
-$options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', ) 
-</code></pre>
-
-<p>);
-&#8220;`</p>
 </div>
 
 
@@ -211,6 +214,10 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize image keeping aspect ratio in Imagine</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
       </li>
     
@@ -224,10 +231,6 @@ $options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', )
     
       <li class="post">
         <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/24/node-224/">The making of Hari.Extras</a>
       </li>
     
   </ul>

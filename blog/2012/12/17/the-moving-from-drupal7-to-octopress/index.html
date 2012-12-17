@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The moving from Drupal7 to octopress - Random thoughts on PHP | Hari KT</title>
+  <meta name="author" content="Hari K T">
+
+  
+  <meta name="description" content="Recently I ported the blog from Drupal7 to octopress for certain reasons. The php script that helped me to do the porting from drupal to octopress is &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://harikt.github.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="" rel="alternate" title="Random thoughts on PHP | Hari KT" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Random thoughts on PHP | Hari KT</a></h1>
+  
+    <h2>Random thoughts on PHP | Hari KT</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:harikt.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">The Moving From Drupal7 to Octopress</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-17T23:23:00+05:30" pubdate data-updated="true">Dec 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Recently I ported the blog from <a href="http://drupal.org">Drupal7</a> to <a href="http://octopress.org/">octopress</a> for certain reasons. The php script that helped me to do the porting from drupal to octopress is given below. This is a port of the ruby script with some additional fixes on the SQL. This needs <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> to be installed to convert from Html to Markdown. There is also slight isssue with the syntaxhighlighter, which you may want to manually fix.</p>
+
+<figure class='code'><figcaption><span>drupal7 to octopress</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">function drupalProcess($dbname, $username, $password, $host = &#39;localhost&#39;) {</span>
+</span><span class='line'><span class="x">    $dsn = &quot;mysql:host=$host;dbname=&quot; . $dbname;</span>
+</span><span class='line'><span class="x">    $pdo = new Pdo($dsn, $username, $password, $options = array(</span>
+</span><span class='line'><span class="x">          PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &#39;SET NAMES utf8&#39;,</span>
+</span><span class='line'><span class="x">      )</span>
+</span><span class='line'><span class="x">    );</span>
+</span><span class='line'><span class="x">    $sql = &quot;SELECT n.nid, </span>
+</span><span class='line'><span class="x">            n.title, </span>
+</span><span class='line'><span class="x">            n.created, </span>
+</span><span class='line'><span class="x">            n.changed, </span>
+</span><span class='line'><span class="x">            b.body_value AS &#39;body&#39;, </span>
+</span><span class='line'><span class="x">            b.body_summary, </span>
+</span><span class='line'><span class="x">            b.body_format, </span>
+</span><span class='line'><span class="x">            n.status, </span>
+</span><span class='line'><span class="x">            l.alias AS &#39;slug&#39;, </span>
+</span><span class='line'><span class="x">            GROUP_CONCAT( d.name SEPARATOR &#39;, &#39; ) AS &#39;tags&#39; </span>
+</span><span class='line'><span class="x">        FROM node AS n </span>
+</span><span class='line'><span class="x">        JOIN field_data_body b ON b.entity_id = n.nid </span>
+</span><span class='line'><span class="x">        JOIN taxonomy_index t ON t.nid = n.nid </span>
+</span><span class='line'><span class="x">        JOIN taxonomy_term_data d ON t.tid = d.tid </span>
+</span><span class='line'><span class="x">        LEFT JOIN url_alias AS l ON l.source = CONCAT( &#39;node/&#39;, n.nid ) </span>
+</span><span class='line'><span class="x">        WHERE n.type = &#39;blog&#39; AND b.revision_id = n.vid </span>
+</span><span class='line'><span class="x">        GROUP BY n.nid&quot;;</span>
+</span><span class='line'><span class="x">    $sth = $pdo-&gt;prepare($sql);</span>
+</span><span class='line'><span class="x">    $sth-&gt;execute();</span>
+</span><span class='line'><span class="x">    $rows = $sth-&gt;fetchAll();</span>
+</span><span class='line'><span class="x">    $bool = array(0 =&gt; &#39;false&#39;, 1 =&gt; &#39;true&#39;);</span>
+</span><span class='line'><span class="x">    foreach ($rows as $row) {</span>
+</span><span class='line'><span class="x">        $fp = fopen(&#39;htmlcontents.html&#39;, &#39;w&#39;);</span>
+</span><span class='line'><span class="x">        fwrite($fp, $row[&#39;body&#39;]);</span>
+</span><span class='line'><span class="x">        fclose($fp);</span>
+</span><span class='line'><span class="x">        $datetime = new DateTime();</span>
+</span><span class='line'><span class="x">        $datetime-&gt;setTimestamp($row[&#39;created&#39;]);</span>
+</span><span class='line'><span class="x">        $date = $datetime-&gt;format(&#39;Y-m-d&#39;);</span>
+</span><span class='line'><span class="x">        $contents = &#39;---&#39; . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;layout: post&#39; . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;title: &#39; . $row[&#39;title&#39;] . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;tags: [&#39; . $row[&#39;tags&#39;] . &#39;]&#39; . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;published: &#39; . $bool[$row[&#39;status&#39;]] . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;date: &#39; . $datetime-&gt;format(&#39;Y-m-d H:i&#39;) . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;---&#39; . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        if (!empty($row[&#39;slug&#39;])) {</span>
+</span><span class='line'><span class="x">            $list = explode(&#39;/&#39;, $row[&#39;slug&#39;]);</span>
+</span><span class='line'><span class="x">            if (count($list) &gt; 1) {</span>
+</span><span class='line'><span class="x">                $row[&#39;slug&#39;] = end($list);</span>
+</span><span class='line'><span class="x">            }</span>
+</span><span class='line'><span class="x">        } else {</span>
+</span><span class='line'><span class="x">            $row[&#39;slug&#39;] = &#39;node-&#39; . $row[&#39;nid&#39;];</span>
+</span><span class='line'><span class="x">        }</span>
+</span><span class='line'><span class="x">      </span>
+</span><span class='line'><span class="x">      $pandoc = &#39;&#39;;</span>
+</span><span class='line'><span class="x">      exec(&#39;pandoc -t markdown -f html htmlcontents.html&#39;, &amp;$pandoc);</span>
+</span><span class='line'><span class="x">        $contents .= implode(&#39; &#39;, $pandoc);</span>
+</span><span class='line'><span class="x">        $url = &#39;source/posts/&#39; . $date . &#39;-&#39; . $row[&#39;slug&#39;] . &#39;.markdown&#39;;</span>
+</span><span class='line'><span class="x">        </span>
+</span><span class='line'><span class="x">        $contents .= &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        if ( !file_exists($url)) {</span>
+</span><span class='line'><span class="x">            $fp = fopen($url, &quot;w&quot;);</span>
+</span><span class='line'><span class="x">            fwrite($fp, $contents);</span>
+</span><span class='line'><span class="x">            fclose($fp);</span>
+</span><span class='line'><span class="x">        } else {</span>
+</span><span class='line'><span class="x">            echo &quot;File exists issue : &quot; . $row[&#39;slug&#39;] . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        }</span>
+</span><span class='line'><span class="x">    }</span>
+</span><span class='line'><span class="x">}</span>
+</span><span class='line'><span class="x">//optional hostname</span>
+</span><span class='line'><span class="x">drupalProcess(&#39;dbname&#39;, &#39;username&#39;, &#39;password&#39;);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Happy porting!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hari K T</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-17T23:23:00+05:30" pubdate data-updated="true">Dec 17<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/drupal7/'>drupal7</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://harikt.github.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress/" data-via="harikt" data-counturl="http://harikt.github.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/" title="Previous Post: Resize image keeping aspect ratio in Imagine">&laquo; Resize image keeping aspect ratio in Imagine</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/17/the-moving-from-drupal7-to-octopress/">The moving from Drupal7 to octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize image keeping aspect ratio in Imagine</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/harikt">@harikt</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'harikt',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("harikt", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/harikt" class="twitter-follow-button" data-show-count="false">Follow @harikt</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Hari K T -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

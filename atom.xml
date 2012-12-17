@@ -4,7 +4,7 @@
   <title><![CDATA[Random thoughts on PHP | Hari KT]]></title>
   <link href="http://harikt.github.com/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-17T23:16:55+05:30</updated>
+  <updated>2012-12-17T23:32:00+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -12,6 +12,154 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The moving from Drupal7 to octopress]]></title>
+    <link href="http://harikt.github.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress/"/>
+    <updated>2012-12-17T23:23:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress</id>
+    <content type="html"><![CDATA[<p>Recently I ported the blog from <a href="http://drupal.org">Drupal7</a> to <a href="http://octopress.org/">octopress</a> for certain reasons. The php script that helped me to do the porting from drupal to octopress is given below. This is a port of the ruby script with some additional fixes on the SQL. This needs <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> to be installed to convert from Html to Markdown. There is also slight isssue with the syntaxhighlighter, which you may want to manually fix.</p>
+
+<figure class='code'><figcaption><span>drupal7 to octopress</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">function drupalProcess($dbname, $username, $password, $host = &#39;localhost&#39;) {</span>
+</span><span class='line'><span class="x">    $dsn = &quot;mysql:host=$host;dbname=&quot; . $dbname;</span>
+</span><span class='line'><span class="x">    $pdo = new Pdo($dsn, $username, $password, $options = array(</span>
+</span><span class='line'><span class="x">          PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &#39;SET NAMES utf8&#39;,</span>
+</span><span class='line'><span class="x">      )</span>
+</span><span class='line'><span class="x">    );</span>
+</span><span class='line'><span class="x">    $sql = &quot;SELECT n.nid, </span>
+</span><span class='line'><span class="x">            n.title, </span>
+</span><span class='line'><span class="x">            n.created, </span>
+</span><span class='line'><span class="x">            n.changed, </span>
+</span><span class='line'><span class="x">            b.body_value AS &#39;body&#39;, </span>
+</span><span class='line'><span class="x">            b.body_summary, </span>
+</span><span class='line'><span class="x">            b.body_format, </span>
+</span><span class='line'><span class="x">            n.status, </span>
+</span><span class='line'><span class="x">            l.alias AS &#39;slug&#39;, </span>
+</span><span class='line'><span class="x">            GROUP_CONCAT( d.name SEPARATOR &#39;, &#39; ) AS &#39;tags&#39; </span>
+</span><span class='line'><span class="x">        FROM node AS n </span>
+</span><span class='line'><span class="x">        JOIN field_data_body b ON b.entity_id = n.nid </span>
+</span><span class='line'><span class="x">        JOIN taxonomy_index t ON t.nid = n.nid </span>
+</span><span class='line'><span class="x">        JOIN taxonomy_term_data d ON t.tid = d.tid </span>
+</span><span class='line'><span class="x">        LEFT JOIN url_alias AS l ON l.source = CONCAT( &#39;node/&#39;, n.nid ) </span>
+</span><span class='line'><span class="x">        WHERE n.type = &#39;blog&#39; AND b.revision_id = n.vid </span>
+</span><span class='line'><span class="x">        GROUP BY n.nid&quot;;</span>
+</span><span class='line'><span class="x">    $sth = $pdo-&gt;prepare($sql);</span>
+</span><span class='line'><span class="x">    $sth-&gt;execute();</span>
+</span><span class='line'><span class="x">    $rows = $sth-&gt;fetchAll();</span>
+</span><span class='line'><span class="x">    $bool = array(0 =&gt; &#39;false&#39;, 1 =&gt; &#39;true&#39;);</span>
+</span><span class='line'><span class="x">    foreach ($rows as $row) {</span>
+</span><span class='line'><span class="x">        $fp = fopen(&#39;htmlcontents.html&#39;, &#39;w&#39;);</span>
+</span><span class='line'><span class="x">        fwrite($fp, $row[&#39;body&#39;]);</span>
+</span><span class='line'><span class="x">        fclose($fp);</span>
+</span><span class='line'><span class="x">        $datetime = new DateTime();</span>
+</span><span class='line'><span class="x">        $datetime-&gt;setTimestamp($row[&#39;created&#39;]);</span>
+</span><span class='line'><span class="x">        $date = $datetime-&gt;format(&#39;Y-m-d&#39;);</span>
+</span><span class='line'><span class="x">        $contents = &#39;---&#39; . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;layout: post&#39; . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;title: &#39; . $row[&#39;title&#39;] . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;tags: [&#39; . $row[&#39;tags&#39;] . &#39;]&#39; . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;published: &#39; . $bool[$row[&#39;status&#39;]] . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;date: &#39; . $datetime-&gt;format(&#39;Y-m-d H:i&#39;) . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        $contents .= &#39;---&#39; . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        if (!empty($row[&#39;slug&#39;])) {</span>
+</span><span class='line'><span class="x">            $list = explode(&#39;/&#39;, $row[&#39;slug&#39;]);</span>
+</span><span class='line'><span class="x">            if (count($list) &gt; 1) {</span>
+</span><span class='line'><span class="x">                $row[&#39;slug&#39;] = end($list);</span>
+</span><span class='line'><span class="x">            }</span>
+</span><span class='line'><span class="x">        } else {</span>
+</span><span class='line'><span class="x">            $row[&#39;slug&#39;] = &#39;node-&#39; . $row[&#39;nid&#39;];</span>
+</span><span class='line'><span class="x">        }</span>
+</span><span class='line'><span class="x">      </span>
+</span><span class='line'><span class="x">      $pandoc = &#39;&#39;;</span>
+</span><span class='line'><span class="x">      exec(&#39;pandoc -t markdown -f html htmlcontents.html&#39;, &amp;$pandoc);</span>
+</span><span class='line'><span class="x">        $contents .= implode(&#39; &#39;, $pandoc);</span>
+</span><span class='line'><span class="x">        $url = &#39;source/posts/&#39; . $date . &#39;-&#39; . $row[&#39;slug&#39;] . &#39;.markdown&#39;;</span>
+</span><span class='line'><span class="x">        </span>
+</span><span class='line'><span class="x">        $contents .= &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        if ( !file_exists($url)) {</span>
+</span><span class='line'><span class="x">            $fp = fopen($url, &quot;w&quot;);</span>
+</span><span class='line'><span class="x">            fwrite($fp, $contents);</span>
+</span><span class='line'><span class="x">            fclose($fp);</span>
+</span><span class='line'><span class="x">        } else {</span>
+</span><span class='line'><span class="x">            echo &quot;File exists issue : &quot; . $row[&#39;slug&#39;] . &quot;\n&quot;;</span>
+</span><span class='line'><span class="x">        }</span>
+</span><span class='line'><span class="x">    }</span>
+</span><span class='line'><span class="x">}</span>
+</span><span class='line'><span class="x">//optional hostname</span>
+</span><span class='line'><span class="x">drupalProcess(&#39;dbname&#39;, &#39;username&#39;, &#39;password&#39;);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Happy porting!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Resize image keeping aspect ratio in Imagine]]></title>
@@ -587,15 +735,6 @@
     <updated>2012-07-30T23:20:00+05:30</updated>
     <id>http://harikt.github.com/blog/2012/07/30/yahoo-open-hack-india2012</id>
     <content type="html"><![CDATA[<p>I have already tweeted about the Yahoo Open Hack India 2012 which will be held on August 11th and 12th at Yewanthpur Bangalore. You can know more details and register from http://openhackindia2012hackticket.eventbrite.com. See you guys there!.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Day 2 at the fifth elephant]]></title>
-    <link href="http://harikt.github.com/blog/2012/07/30/day2-at-thefifthelephant/"/>
-    <updated>2012-07-30T23:17:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/07/30/day2-at-thefifthelephant</id>
-    <content type="html"><![CDATA[<p>I reached so early that <a href="http://www.acodersdream.com/2012/07/walking-through-nimhans.html">I walked through the NIMHANS compound.</a>   The first talk was   1 ) Your GNOME on the cloud: Big data challenges in Personalized Medicine by Ramesh Hariharan :   My interest to medical field is too less that I am here into the field of IT. So I didn&#8217;t concentrate that much to the talk. I understood they are facing more problems than in Big data itself.     2 ) Building Watson : A breif overview of DeepQA and the Jeopardy! Challenge by Karthik Visweswariah :   The talk was some of the challenges facing in the terms used in search like &#8220;see&#8221; and &#8220;saw&#8221; and much more than that. The talk was interesting to know about the problems faced. Some of the audience expressed the talk was too good that it dived into the problems they really face in search. They also mentioned some people who search for malayalam words in english is too hard to understand what they are really searching.   We have some time for tea and networking. Discussed with friends whom I met in Hacknight in which room they are going etc.   3 ) Exponential Growth Models and Impact on Sales Forecast, Data Volume, Query Latency, Capacity, Planning and Search Latency by Ashok Banerjee   He started with the slide Fungus on White Bread. The talk was so interesting that he mentioned lots of stuffs that can impact on business. As he was from flipkart he has some real world examples also. He mentioned how the growth of certain products like books can go up where as certain products like under wear or tissue which can be used to wipe, when your eyes are wet will not. He also mentioned how it can bring new customers from the friends circle. Lately I came to know more about Ashok Banerjee from Mohith that he previously  worked with google and twitter. I feel this is the most interesting talk of the day.     4 ) The Elephant that flew: Big data analytics @ Inmobi by Gaurav Agarwal :   Though I loved to sit for the Aadhaar - worlds largest biometric identity platform I went to hear the talk The Elephant that flew. It was mainly for I came to know that in the mobile world there are none other than them. Guarav went through the challenges, the tools they used and the current tools they are using to build it for their customers. He showed a demo on Yoda which can be released open-source, but still they are thinking on how they should open-source it. Its mainly like whether they want to release as small components or as a whole itself.  What is Yoda ? Yoda is nothing but something similar to Hive or Pig. But Yoda according to them is more powerful and flexible. It takes less time to process.   5 ) Messaging architecture at Facebook by Joydeep Sen Sharma :    The talk went something deep into the architecture at facebook. As he was having limited time he was running too fast. The stuffs were somewhat deep, the truth is I wasn&#8217;t able to understand some of them. According to my friends the talk was interesting as they were delaing / facing it.     6 ) Real time intelligent systems and Big data streams by Deepinder Dhingra :    I didn&#8217;t find the talk that much interesting, probably for I am not really into the field.   7 ) Recommendation Play at flipkart by Gaurav Bhalotia, Pavan Srinivas, Renuka Khandewal :   The subject was so interesting. But they presented not in that interesting way. I felt they were not prepared well also. As the talk was for only 30 minutes when you have 3 speakers, there is hardly 10 minutes of time a speaker needs to talk. But even that they didn&#8217;t prepared is a bad thing. Probably they were nervous for may be their first talk? Anyway I feel they can improve, but these are just my thoughts on it.   After tea I skipped the 2 talks and we were talking with wikipedia foundation, the internet archive guys and open data people. The internet archive has a new project called openlibrary.org which has a collection of books. They also have an API which I want/love to explore. We also discussed how they scan old books and how google used to scan books. They mentioned google was using distructive scanning which means they will cut the side where the books are tied and is then run by the system itself. It was nice to learn how these guys scan these much books. I came to know that for internet archive they can scan around 1000 pages per day. We also went to the cis ( centre for internet and society ) stall. I came to know more about the cis.   So wrapping up, the fifth elephant by Hasgeek was good. The event organizers did a good job in making the sessions running on time. When I was at osidays in 2010, what I faced was some sessions will exceed the time given that will create issues with other sessions running in parallel. So the people who love to attend session  in A1 and then loved to move to A2 or A3 will get into trouble. Either they want to skip the last minutes of the talk on one place to join the other or the other session may not have ended there. But this didn&#8217;t happened once in the fifth elephant.   The organizers also did a good job for the food. We had tea/snacks in morning and evening and lunch in afternoon. I feel 2500 rupees was worth and affordable for a techie. The problem with osidays is they have many passes which costs much more price. And also the sessions sometimes overlaps. The rate of pass if something like 2500 is an affordable one for I want to spend more on lodging also. So the total cost of the event will again go up in my accomodation and travelling. But this time I have submitted my talk for osidays and foss.in. I am looking forward to see what will happen whether I get a chance as a speaker or not :-) .   I talked with the geeks at flipkart whom I met on Hacknight. Thanks to Vivek Mehta for offering me a flipkart T-shirt. But unfortunately  the size they gave me was small, for they felt its same as that of Medium. But I cannot enter my head through that hole :P . Probably the wrong decision by me not asking again for the Medium. Anyway I will give it to someone as a present, though I wished I could keep it remembering my day on HackNight.</p>
 ]]></content>
   </entry>
   

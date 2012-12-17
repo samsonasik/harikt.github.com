@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="You don&#8217;t want to be a strong C programmer to contribute to PHP. You just need to know some XML to contriute to the documentation of PHP and &hellip;">
+  <meta name="description" content="Some months back I read the article php|architect&#8217;s guide to Web Scraping with PHP - Don&#8217;t let the title fool you. It was a review for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/03/scraping-web-goutte/">Scraping the Web With Goutte</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-03T13:38:00+05:30" pubdate data-updated="true">Sep 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Some months back I read the article <a href="http://devzone.zend.com/article/12584">php|architect&#8217;s guide to Web Scraping with PHP - Don&#8217;t let the title fool you</a>. It was a review for the <a href="http://www.phparch.com/books/phparchitects-guide-to-web-scraping-with-php/">book</a> of Mathew Turland ( <a href="http://twitter.com/elazar">@elazar</a> ) by Cal Evans . But I didnot read the book too . Days passes I saw <a href="https://github.com/fabpot/Goutte">Goutte</a> a simple web scrapper by @fabpot (  <a href="http://fabien.potencier.org">Fabien Potentier</a> ) .  But two days back I was looking how I can download my friends contact details from facebook. I didnot find a means to get the mobile numbers or email address. I looked the API , but it didnot provide some functionalities like that . Then what to do ?  If I have got the email and phone number I can sync with my gmail and via it to my android handset . But I didnot find anything , may be other softwares will be there . But I simply thought of learning scraping than going to do something .  Goutte is a simple library which can be downloaded as a phar file also. So you just want to add a require for the phar file . It utilises some of the symfony components and zend http component . You can login , select links , clicks on it , filter the content , fetch data etc.  I was able to make the script going through some of the articles below .  Read me of https://github.com/fabpot/Goutte  http://www.phparch.com/2010/04/four-new-php-5-3-components-and-goutte-a-simple-web-scraper/  http://fabien.potencier.org/article/42/parsing-xml-documents-with-css-selectors  Also the api :) . Its really a powerful php scraping tool. Yes its easy if you know how the css selectors work .  Download Goutte over https://github.com/fabpot/Goutte or using wget https://raw.github.com/fabpot/Goutte/master/goutte.phar . Start scraping :) .</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -389,42 +425,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/01/20/local-search-li3docs-zendsearchlucene/">A Local Search for the Li3_docs With Zend_Search_Lucene</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-20T20:25:00+05:30" pubdate data-updated="true">Jan 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Oh I am lazy for not posting my second cup of lithium over here . But you can check something over <a href="http://dev.lithify.me/forks/harikt/lithium_blog/wiki/home">http://dev.lithify.me/forks/harikt/lithium_blog/wiki/home</a> . So you know I am a fan boy of Lithium. I used to hang on #li3 irc just for fun, though I am not developing anything serious with lithium for now .  We used to read the documentation with the help of li3_docs plugin. Its so cool. But searching locally was not possible. If you have internet connection then it may not be a trouble too :) . Questions come and go, sometimes we may be knowing where we read it, but don&#8217;t remember the exact controller action or the property. Oh my :-)  So I finally decided to hack on li3_docs plugin to make a search locally with the help of the Zend_Search_Lucene &#8216;s power . You can read more about <a href="http://framework.zend.com/manual/en/zend.search.lucene.overview.html">Zend Lucene component over here</a>. This is also a good point to show you that anything can be integrated with li3 ;). So no more blha blha blha . Just codes coming on the way .  First you need to create the index pointing to /searches/makeindex . Before doing that change the url according to yours. For now I assume http://lithium.local/docs/ which is the only part I have hard coded. Nate has agreed to look into it and make the necessary changes and we will try to make it as plugin if he loves :-). So the files are below. I hope know something about li3, li3_docs etc. This uses the extractor from li3_docs :-)  You can see how I have included the Zend library as from <a href="http://dev.lithify.me/lithium/wiki/guides/using/zend">http://dev.lithify.me/lithium/wiki/guides/using/zend</a>  Do create an empty file makeindex.html.php in the searches folder of view before creating index.  Now do your way, may be add a form and point to the controller and action or what ever you love. As always licensed under the same licene of <a href="http://lithify.me/">http://lithify.me/</a> . Hang on to #li3 on irc.freenode.net to ask anything more on it :-) .  Note : Set time limit to 0 . ie  set_time_limit( 0 ); in bootstrap.php for creating the index. The methods are called recursively and needs sometime to create the index . Once indexed you don&#8217;t want , just query through it .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -442,6 +442,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/17/the-moving-from-drupal7-to-octopress/">The moving from Drupal7 to octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize image keeping aspect ratio in Imagine</a>
       </li>
     
@@ -455,10 +459,6 @@
     
       <li class="post">
         <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
       </li>
     
   </ul>

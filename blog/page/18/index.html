@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="I was sleeping when Faizal , called me and told about the Calicut University declared the fourth and sixth semester results . There was little hope &hellip;">
+  <meta name="description" content="Every one may have fallen in this trouble , when your disk space exceeds . Yes , I was trying to create a folder and upload some images . I noticed a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/19/35-low-disk-space-store-images-and-files-in-database-or-/">Low Disk Space , Store Images and Files in Database Or</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-19T09:49:00+05:30" pubdate data-updated="true">Apr 19<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Every one may have fallen in this trouble , when your disk space exceeds . Yes , I was trying to create a folder and upload some images . I noticed a fact , there is no space remaining to upload one . Yes , every one , who have a web hosting space may have thought an alternative way to store images and files . Yes, don&#8217;t worry I just uploaded to my picasa web albums <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-smile.gif" title="Smile" alt="Smile" /> .  But there is also another alternative if you have a database . Yes , you can store images and files in MySQL . To store images and files use the BLOB format . It can store binary data . What you need to do is  Create a table Image , with pkid of type int(10) as unique id , data of type BLOB , format ( jpeg , png &#8230; ) and description.  Read the binary contents from the image . using file_get_contents() or fread() functions of php .  Insert to database . Now you can retrieve the image using the id . Pass the id to a page which outputs the header of image . Yes, its pretty simple to do this . The below code is a sample . You can try it out . I have not tested , just made for the post now .  &lt;?php /* Create a table something like this CREATE TABLE `Labs`.`Images` ( `pkid` INT( 10 ) NOT NULL , `Content` BLOB NOT NULL , `Description` VARCHAR( 300 ) NOT NULL , `Type` VARCHAR( 5 ) NOT NULL , PRIMARY KEY ( `pkid` ) ) ENGINE = MYISAM */ //insertImage.php $mysqli = new mysqli(&#8220;localhost&#8221;, &#8220;my_user&#8221;, &#8220;my_password&#8221;, &#8220;database&#8221;); /* check connection */ if (mysqli_connect_errno()) { printf(&#8220;Connect failed: %s\n&#8221;, mysqli_connect_error()); exit(); } //Read file contents $fp = fopen(&#8220;image.jpg&#8221;,&#8221;rb&#8221;); $contents = fread( $fp , filesize(&#8220;image.jpg&#8221;) ); fclose( $fp ); if ($result = $mysqli->query(&#8220;INSERT INTO Images(&#8216;pkid&#8217;,&#8217;Content&#8217;,&#8217;Description&#8217;) VALUES(&#8216;NULL&#8217;,&#8217;&#8221;.$contents.&#8221;&#8217;,&#8217;test me&#8217;)&#8221;)) { echo &#8220;Successful insert&#8221;; } $mysqli->close(); ?> &lt;?php //getImage.php $mysqli = new mysqli(&#8220;localhost&#8221;, &#8220;my_user&#8221;, &#8220;my_password&#8221;, &#8220;database&#8221;); /* check connection */ if (mysqli_connect_errno()) { printf(&#8220;Connect failed: %s\n&#8221;, mysqli_connect_error()); exit(); } //Read image contents if ($result = $mysqli->query(&#8220;SELECT Content FROM Images WHERE pkid = &#8216;&#8221;.$_GET[&#8216;pkid&#8217;].&#8221;&#8217;&#8221;)) { $row = $result->fetch_assoc(); } header(&#8216;Content-Type: image/jpeg&#8217;); echo $row[&#8216;Content&#8217;]; ?>  <img src="getImage.php?pkid=<?php echo $pkid ?\>&#8221; alt=&#8221;&lt;?php echo $description ?>&#8221; title=&#8221;&lt;?php echo $description ?>&#8221; />  This is just a sample. I hope you know some basics of PHP . You can modify the script as needed, and also do care about SQL injections <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-tongue-out.gif" title="Tongue out" alt="Tongue out" /> . You can encrypt the values that are passed for additional security measures . Have not tested this , just made this in a hurry . So may contains errors. Please do report if you find some . I will be happy to hear it from you .  You can use the sameway to store the word , pdf etc in the MySQL . Its simple to make it work . You can change the content type of header , so as to make it dynamic .</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -389,42 +425,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/03/21/23-yahoo-like-folder-in-gmail/">Yahoo Like Folder in Gmail</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-21T08:27:00+05:30" pubdate data-updated="true">Mar 21<span>st</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It may be with the introduction of Gmail many email providers makes their service free of cost , and increasing their space and features. I was having Yahoo and Gmail accounts. It was easy for me to manage emails by using filters in Yahoo. I looked for something similar in gmail.  Yes, this post is for those who don&#8217;t know how to move the mails to a particular folder , with out keeping it in inbox. What you want to do is goto Settings tab , from top right of gmail page . Then create some labels, from the label tab . For eg : if you have subscribed for Joomla news letter , then name it as Joomla , so you can recognise quickly . Now your labels are ready . Want to create filters to move your mails directly to those labels . The labels can act something similar as folders.  Now select the Filters tab and Create a new filter . You can also edit your existing filters . When you click on the Create filter , it ask you for the From , To , subject , Has the words, Doesn&#8217;t have . If you want an exact one, then it will be better to look the mail , for which you need to create the folder. Click show details and get the details. You can see the details there. The from address is the person who sends you the mail , the To address is the person who have mailed through some group if so , else your address or list of other peoples to whom the user sends . If you need selected terms included in that . Add to Has the words , to remove certain words , add it to doesn&#8217;t have .  Next screen will show  Skip the Inbox (Archive it) Mark as read Star it Apply the label: Forward it to: Delete it Never send it to Spam  Tick the ones you need. skip the inbox will skip to the particular label. Now when you receive a mail from Joomla news group, then the mail will be moved to Joomla labeled one. Yes , this is pretty simple. You now can have the folders as like Yahoo .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/19/">&larr; Older</a>
@@ -442,6 +442,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/17/the-moving-from-drupal7-to-octopress/">The moving from Drupal7 to octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize image keeping aspect ratio in Imagine</a>
       </li>
     
@@ -455,10 +459,6 @@
     
       <li class="post">
         <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/29/node-225/">First stable release for Aura components</a>
       </li>
     
   </ul>

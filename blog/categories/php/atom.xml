@@ -4,7 +4,7 @@
   <title><![CDATA[Category: php | Random thoughts on PHP | Hari KT]]></title>
   <link href="http://harikt.github.com/blog/categories/php/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-17T23:14:55+05:30</updated>
+  <updated>2012-12-17T23:16:55+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -64,15 +64,15 @@ $preserve->paste($resizeimg, new Imagine\Image\Point($startX, $startY))</p>
 
 <p>A normal image of size 500 X 500</p>
 
-<p><img class="center /assets/images/kitten.jpg 500 500 'Image coutsey" src="http://placekitten.com/'" title="'a kitten'" ></p>
+<p><img class="center" src="/assets/images/kitten.jpg" width="500" height="500" title="A cute kitten" alt="a kitten"></p>
 
 <p>when resized to 300 X 200</p>
 
-<p><img src="/assets/images/resize-image300x200.jpg" width="300" height="200" title="Image resized to 300X200" alt="resized image"></p>
+<p><img class="center" src="/assets/images/resize-image300x200.jpg" width="300" height="200" title="Image resized to 300X200" alt="resized image"></p>
 
 <p>and 300 X 400</p>
 
-<p><img src="/assets/images/resize-image300x400.jpg" width="300" height="400" title="Image resized to 300X400" alt="resized image"></p>
+<p><img class="center" src="/assets/images/resize-image300x400.jpg" width="300" height="400" title="Image resized to 300X400" alt="resized image"></p>
 
 <p>A huge Thanks to the person who helped me on Symfony2 irc to find the different modes. I am not recalling the irc handle currently. I will update once I remember the same.</p>
 

@@ -92,8 +92,7 @@
 
 <div class="entry-content"><p>Recently I ported the blog from <a href="http://drupal.org">Drupal7</a> to <a href="http://octopress.org/">octopress</a> for certain reasons. The php script that helped me to do the porting from drupal to octopress is given below. This is a port of the ruby script with some additional fixes on the SQL. This needs <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> to be installed to convert from Html to Markdown. There is also slight isssue with the syntaxhighlighter, which you may want to manually fix.</p>
 
-<figure class='code'><figcaption><span>drupal7 to octopress  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>drupal7 to octopress</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -160,73 +159,75 @@
 <span class='line-number'>65</span>
 <span class='line-number'>66</span>
 <span class='line-number'>67</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">function drupalProcess($dbname, $username, $password, $host = &#39;localhost&#39;) {</span>
-</span><span class='line'><span class="x">    $dsn = &quot;mysql:host=$host;dbname=&quot; . $dbname;</span>
-</span><span class='line'><span class="x">    $pdo = new Pdo($dsn, $username, $password, $options = array(</span>
-</span><span class='line'><span class="x">          PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &#39;SET NAMES utf8&#39;,</span>
-</span><span class='line'><span class="x">      )</span>
-</span><span class='line'><span class="x">    );</span>
-</span><span class='line'><span class="x">    $sql = &quot;SELECT n.nid, </span>
-</span><span class='line'><span class="x">            n.title, </span>
-</span><span class='line'><span class="x">            n.created, </span>
-</span><span class='line'><span class="x">            n.changed, </span>
-</span><span class='line'><span class="x">            b.body_value AS &#39;body&#39;, </span>
-</span><span class='line'><span class="x">            b.body_summary, </span>
-</span><span class='line'><span class="x">            b.body_format, </span>
-</span><span class='line'><span class="x">            n.status, </span>
-</span><span class='line'><span class="x">            l.alias AS &#39;slug&#39;, </span>
-</span><span class='line'><span class="x">            GROUP_CONCAT( d.name SEPARATOR &#39;, &#39; ) AS &#39;tags&#39; </span>
-</span><span class='line'><span class="x">        FROM node AS n </span>
-</span><span class='line'><span class="x">        JOIN field_data_body b ON b.entity_id = n.nid </span>
-</span><span class='line'><span class="x">        JOIN taxonomy_index t ON t.nid = n.nid </span>
-</span><span class='line'><span class="x">        JOIN taxonomy_term_data d ON t.tid = d.tid </span>
-</span><span class='line'><span class="x">        LEFT JOIN url_alias AS l ON l.source = CONCAT( &#39;node/&#39;, n.nid ) </span>
-</span><span class='line'><span class="x">        WHERE n.type = &#39;blog&#39; AND b.revision_id = n.vid </span>
-</span><span class='line'><span class="x">        GROUP BY n.nid&quot;;</span>
-</span><span class='line'><span class="x">    $sth = $pdo-&gt;prepare($sql);</span>
-</span><span class='line'><span class="x">    $sth-&gt;execute();</span>
-</span><span class='line'><span class="x">    $rows = $sth-&gt;fetchAll();</span>
-</span><span class='line'><span class="x">    $bool = array(0 =&gt; &#39;false&#39;, 1 =&gt; &#39;true&#39;);</span>
-</span><span class='line'><span class="x">    foreach ($rows as $row) {</span>
-</span><span class='line'><span class="x">        $fp = fopen(&#39;htmlcontents.html&#39;, &#39;w&#39;);</span>
-</span><span class='line'><span class="x">        fwrite($fp, $row[&#39;body&#39;]);</span>
-</span><span class='line'><span class="x">        fclose($fp);</span>
-</span><span class='line'><span class="x">        $datetime = new DateTime();</span>
-</span><span class='line'><span class="x">        $datetime-&gt;setTimestamp($row[&#39;created&#39;]);</span>
-</span><span class='line'><span class="x">        $date = $datetime-&gt;format(&#39;Y-m-d&#39;);</span>
-</span><span class='line'><span class="x">        $contents = &#39;---&#39; . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">        $contents .= &#39;layout: post&#39; . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">        $contents .= &#39;title: &#39; . $row[&#39;title&#39;] . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">        $contents .= &#39;tags: [&#39; . $row[&#39;tags&#39;] . &#39;]&#39; . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">        $contents .= &#39;published: &#39; . $bool[$row[&#39;status&#39;]] . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">        $contents .= &#39;date: &#39; . $datetime-&gt;format(&#39;Y-m-d H:i&#39;) . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">        $contents .= &#39;---&#39; . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">        if (!empty($row[&#39;slug&#39;])) {</span>
-</span><span class='line'><span class="x">            $list = explode(&#39;/&#39;, $row[&#39;slug&#39;]);</span>
-</span><span class='line'><span class="x">            if (count($list) &gt; 1) {</span>
-</span><span class='line'><span class="x">                $row[&#39;slug&#39;] = end($list);</span>
-</span><span class='line'><span class="x">            }</span>
-</span><span class='line'><span class="x">        } else {</span>
-</span><span class='line'><span class="x">            $row[&#39;slug&#39;] = &#39;node-&#39; . $row[&#39;nid&#39;];</span>
-</span><span class='line'><span class="x">        }</span>
-</span><span class='line'><span class="x">      </span>
-</span><span class='line'><span class="x">      $pandoc = &#39;&#39;;</span>
-</span><span class='line'><span class="x">      exec(&#39;pandoc -t markdown -f html htmlcontents.html&#39;, &amp;$pandoc);</span>
-</span><span class='line'><span class="x">        $contents .= implode(&#39; &#39;, $pandoc);</span>
-</span><span class='line'><span class="x">        $url = &#39;source/posts/&#39; . $date . &#39;-&#39; . $row[&#39;slug&#39;] . &#39;.markdown&#39;;</span>
-</span><span class='line'><span class="x">        </span>
-</span><span class='line'><span class="x">        $contents .= &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">        if ( !file_exists($url)) {</span>
-</span><span class='line'><span class="x">            $fp = fopen($url, &quot;w&quot;);</span>
-</span><span class='line'><span class="x">            fwrite($fp, $contents);</span>
-</span><span class='line'><span class="x">            fclose($fp);</span>
-</span><span class='line'><span class="x">        } else {</span>
-</span><span class='line'><span class="x">            echo &quot;File exists issue : &quot; . $row[&#39;slug&#39;] . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">        }</span>
-</span><span class='line'><span class="x">    }</span>
-</span><span class='line'><span class="x">}</span>
-</span><span class='line'><span class="x">//optional hostname</span>
-</span><span class='line'><span class="x">drupalProcess(&#39;dbname&#39;, &#39;username&#39;, &#39;password&#39;);</span>
+<span class='line-number'>68</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'><span class="k">function</span> <span class="nf">drupalProcess</span><span class="p">(</span><span class="nv">$dbname</span><span class="p">,</span> <span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$host</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$dsn</span> <span class="o">=</span> <span class="s2">&quot;mysql:host=</span><span class="si">$host</span><span class="s2">;dbname=&quot;</span> <span class="o">.</span> <span class="nv">$dbname</span><span class="p">;</span>
+</span><span class='line'>    <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Pdo</span><span class="p">(</span><span class="nv">$dsn</span><span class="p">,</span> <span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$options</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>          <span class="nx">PDO</span><span class="o">::</span><span class="na">MYSQL_ATTR_INIT_COMMAND</span> <span class="o">=&gt;</span> <span class="s1">&#39;SET NAMES utf8&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="p">)</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>    <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;SELECT n.nid, </span>
+</span><span class='line'><span class="s2">            n.title, </span>
+</span><span class='line'><span class="s2">            n.created, </span>
+</span><span class='line'><span class="s2">            n.changed, </span>
+</span><span class='line'><span class="s2">            b.body_value AS &#39;body&#39;, </span>
+</span><span class='line'><span class="s2">            b.body_summary, </span>
+</span><span class='line'><span class="s2">            b.body_format, </span>
+</span><span class='line'><span class="s2">            n.status, </span>
+</span><span class='line'><span class="s2">            l.alias AS &#39;slug&#39;, </span>
+</span><span class='line'><span class="s2">            GROUP_CONCAT( d.name SEPARATOR &#39;, &#39; ) AS &#39;tags&#39; </span>
+</span><span class='line'><span class="s2">        FROM node AS n </span>
+</span><span class='line'><span class="s2">        JOIN field_data_body b ON b.entity_id = n.nid </span>
+</span><span class='line'><span class="s2">        JOIN taxonomy_index t ON t.nid = n.nid </span>
+</span><span class='line'><span class="s2">        JOIN taxonomy_term_data d ON t.tid = d.tid </span>
+</span><span class='line'><span class="s2">        LEFT JOIN url_alias AS l ON l.source = CONCAT( &#39;node/&#39;, n.nid ) </span>
+</span><span class='line'><span class="s2">        WHERE n.type = &#39;blog&#39; AND b.revision_id = n.vid </span>
+</span><span class='line'><span class="s2">        GROUP BY n.nid&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+</span><span class='line'>    <span class="nv">$sth</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+</span><span class='line'>    <span class="nv">$rows</span> <span class="o">=</span> <span class="nv">$sth</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">();</span>
+</span><span class='line'>    <span class="nv">$bool</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;false&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">=&gt;</span> <span class="s1">&#39;true&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$rows</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s1">&#39;htmlcontents.html&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">]);</span>
+</span><span class='line'>        <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
+</span><span class='line'>        <span class="nv">$datetime</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DateTime</span><span class="p">();</span>
+</span><span class='line'>        <span class="nv">$datetime</span><span class="o">-&gt;</span><span class="na">setTimestamp</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;created&#39;</span><span class="p">]);</span>
+</span><span class='line'>        <span class="nv">$date</span> <span class="o">=</span> <span class="nv">$datetime</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="s1">&#39;Y-m-d&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nv">$contents</span> <span class="o">=</span> <span class="s1">&#39;---&#39;</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$contents</span> <span class="o">.=</span> <span class="s1">&#39;layout: post&#39;</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$contents</span> <span class="o">.=</span> <span class="s1">&#39;title: &#39;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$contents</span> <span class="o">.=</span> <span class="s1">&#39;tags: [&#39;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;tags&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s1">&#39;]&#39;</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$contents</span> <span class="o">.=</span> <span class="s1">&#39;published: &#39;</span> <span class="o">.</span> <span class="nv">$bool</span><span class="p">[</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]]</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$contents</span> <span class="o">.=</span> <span class="s1">&#39;date: &#39;</span> <span class="o">.</span> <span class="nv">$datetime</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="s1">&#39;Y-m-d H:i&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$contents</span> <span class="o">.=</span> <span class="s1">&#39;---&#39;</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;slug&#39;</span><span class="p">]))</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nv">$list</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;slug&#39;</span><span class="p">]);</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;slug&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">end</span><span class="p">(</span><span class="nv">$list</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;slug&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;node-&#39;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;nid&#39;</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nv">$pandoc</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nb">exec</span><span class="p">(</span><span class="s1">&#39;pandoc -t markdown -f html htmlcontents.html&#39;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nv">$pandoc</span><span class="p">);</span>
+</span><span class='line'>        <span class="nv">$contents</span> <span class="o">.=</span> <span class="nb">implode</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nv">$pandoc</span><span class="p">);</span>
+</span><span class='line'>        <span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;source/posts/&#39;</span> <span class="o">.</span> <span class="nv">$date</span> <span class="o">.</span> <span class="s1">&#39;-&#39;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;slug&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s1">&#39;.markdown&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nv">$contents</span> <span class="o">.=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$url</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nv">$contents</span><span class="p">);</span>
+</span><span class='line'>            <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">echo</span> <span class="s2">&quot;File exists issue : &quot;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;slug&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">//optional hostname</span>
+</span><span class='line'><span class="nx">drupalProcess</span><span class="p">(</span><span class="s1">&#39;dbname&#39;</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 

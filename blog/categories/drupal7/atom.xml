@@ -4,7 +4,7 @@
   <title><![CDATA[Category: drupal7 | Random thoughts on PHP | Hari KT]]></title>
   <link href="http://harikt.github.com/blog/categories/drupal7/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-17T23:42:30+05:30</updated>
+  <updated>2012-12-18T07:16:43+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -20,148 +20,79 @@
     <id>http://harikt.github.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress</id>
     <content type="html"><![CDATA[<p>Recently I ported the blog from <a href="http://drupal.org">Drupal7</a> to <a href="http://octopress.org/">octopress</a> for certain reasons. The php script that helped me to do the porting from drupal to octopress is given below. This is a port of the ruby script with some additional fixes on the SQL. This needs <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> to be installed to convert from Html to Markdown. There is also slight isssue with the syntaxhighlighter, which you may want to manually fix.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>drupal7 to octopress  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">function drupalProcess($dbname, $username, $password, $host = &#39;localhost&#39;) {&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="x">&lt;pre&gt;&lt;code&gt;$dsn = &quot;mysql:host=$host;dbname=&quot; . $dbname;</span>
-</span><span class='line'><span class="x">$pdo = new Pdo($dsn, $username, $password, $options = array(</span>
-</span><span class='line'><span class="x">      PDO::MYSQL_ATTR_INIT_COMMAND =&amp;gt; &#39;SET NAMES utf8&#39;,</span>
-</span><span class='line'><span class="x">  )</span>
-</span><span class='line'><span class="x">);</span>
-</span><span class='line'><span class="x">$sql = &quot;SELECT n.nid, </span>
-</span><span class='line'><span class="x">        n.title, </span>
-</span><span class='line'><span class="x">        n.created, </span>
-</span><span class='line'><span class="x">        n.changed, </span>
-</span><span class='line'><span class="x">        b.body_value AS &#39;body&#39;, </span>
-</span><span class='line'><span class="x">        b.body_summary, </span>
-</span><span class='line'><span class="x">        b.body_format, </span>
-</span><span class='line'><span class="x">        n.status, </span>
-</span><span class='line'><span class="x">        l.alias AS &#39;slug&#39;, </span>
-</span><span class='line'><span class="x">        GROUP_CONCAT( d.name SEPARATOR &#39;, &#39; ) AS &#39;tags&#39; </span>
-</span><span class='line'><span class="x">    FROM node AS n </span>
-</span><span class='line'><span class="x">    JOIN field_data_body b ON b.entity_id = n.nid </span>
-</span><span class='line'><span class="x">    JOIN taxonomy_index t ON t.nid = n.nid </span>
-</span><span class='line'><span class="x">    JOIN taxonomy_term_data d ON t.tid = d.tid </span>
-</span><span class='line'><span class="x">    LEFT JOIN url_alias AS l ON l.source = CONCAT( &#39;node/&#39;, n.nid ) </span>
-</span><span class='line'><span class="x">    WHERE n.type = &#39;blog&#39; AND b.revision_id = n.vid </span>
-</span><span class='line'><span class="x">    GROUP BY n.nid&quot;;</span>
-</span><span class='line'><span class="x">$sth = $pdo-&amp;gt;prepare($sql);</span>
-</span><span class='line'><span class="x">$sth-&amp;gt;execute();</span>
-</span><span class='line'><span class="x">$rows = $sth-&amp;gt;fetchAll();</span>
-</span><span class='line'><span class="x">$bool = array(0 =&amp;gt; &#39;false&#39;, 1 =&amp;gt; &#39;true&#39;);</span>
-</span><span class='line'><span class="x">foreach ($rows as $row) {</span>
-</span><span class='line'><span class="x">    $fp = fopen(&#39;htmlcontents.html&#39;, &#39;w&#39;);</span>
-</span><span class='line'><span class="x">    fwrite($fp, $row[&#39;body&#39;]);</span>
-</span><span class='line'><span class="x">    fclose($fp);</span>
-</span><span class='line'><span class="x">    $datetime = new DateTime();</span>
-</span><span class='line'><span class="x">    $datetime-&amp;gt;setTimestamp($row[&#39;created&#39;]);</span>
-</span><span class='line'><span class="x">    $date = $datetime-&amp;gt;format(&#39;Y-m-d&#39;);</span>
-</span><span class='line'><span class="x">    $contents = &#39;---&#39; . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">    $contents .= &#39;layout: post&#39; . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">    $contents .= &#39;title: &#39; . $row[&#39;title&#39;] . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">    $contents .= &#39;tags: [&#39; . $row[&#39;tags&#39;] . &#39;]&#39; . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">    $contents .= &#39;published: &#39; . $bool[$row[&#39;status&#39;]] . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">    $contents .= &#39;date: &#39; . $datetime-&amp;gt;format(&#39;Y-m-d H:i&#39;) . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">    $contents .= &#39;---&#39; . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">    if (!empty($row[&#39;slug&#39;])) {</span>
-</span><span class='line'><span class="x">        $list = explode(&#39;/&#39;, $row[&#39;slug&#39;]);</span>
-</span><span class='line'><span class="x">        if (count($list) &amp;gt; 1) {</span>
-</span><span class='line'><span class="x">            $row[&#39;slug&#39;] = end($list);</span>
-</span><span class='line'><span class="x">        }</span>
-</span><span class='line'><span class="x">    } else {</span>
-</span><span class='line'><span class="x">        $row[&#39;slug&#39;] = &#39;node-&#39; . $row[&#39;nid&#39;];</span>
-</span><span class='line'><span class="x">    }</span>
-</span><span class='line'>
-</span><span class='line'><span class="x">    $pandoc = &#39;&#39;;</span>
-</span><span class='line'><span class="x">    exec(&#39;pandoc -t markdown -f html htmlcontents.html&#39;, &amp;amp;$pandoc);</span>
-</span><span class='line'><span class="x">    $contents .= implode(&#39; &#39;, $pandoc);</span>
-</span><span class='line'><span class="x">    $url = &#39;source/posts/&#39; . $date . &#39;-&#39; . $row[&#39;slug&#39;] . &#39;.markdown&#39;;</span>
-</span><span class='line'>
-</span><span class='line'><span class="x">    $contents .= &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">    if ( !file_exists($url)) {</span>
-</span><span class='line'><span class="x">        $fp = fopen($url, &quot;w&quot;);</span>
-</span><span class='line'><span class="x">        fwrite($fp, $contents);</span>
-</span><span class='line'><span class="x">        fclose($fp);</span>
-</span><span class='line'><span class="x">    } else {</span>
-</span><span class='line'><span class="x">        echo &quot;File exists issue : &quot; . $row[&#39;slug&#39;] . &quot;\n&quot;;</span>
-</span><span class='line'><span class="x">    }</span>
-</span><span class='line'><span class="x">}</span>
-</span><span class='line'><span class="x">&lt;/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="x">&lt;p&gt;}</span>
-</span><span class='line'><span class="x">//optional hostname</span>
-</span><span class='line'><span class="x">drupalProcess(&#39;dbname&#39;, &#39;username&#39;, &#39;password&#39;);</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>``` php drupal7 to octopress
+&lt;?php
+function drupalProcess($dbname, $username, $password, $host = 'localhost') {</p>
+
+<pre><code>$dsn = "mysql:host=$host;dbname=" . $dbname;
+$pdo = new Pdo($dsn, $username, $password, $options = array(
+      PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8',
+  )
+);
+$sql = "SELECT n.nid, 
+        n.title, 
+        n.created, 
+        n.changed, 
+        b.body_value AS 'body', 
+        b.body_summary, 
+        b.body_format, 
+        n.status, 
+        l.alias AS 'slug', 
+        GROUP_CONCAT( d.name SEPARATOR ', ' ) AS 'tags' 
+    FROM node AS n 
+    JOIN field_data_body b ON b.entity_id = n.nid 
+    JOIN taxonomy_index t ON t.nid = n.nid 
+    JOIN taxonomy_term_data d ON t.tid = d.tid 
+    LEFT JOIN url_alias AS l ON l.source = CONCAT( 'node/', n.nid ) 
+    WHERE n.type = 'blog' AND b.revision_id = n.vid 
+    GROUP BY n.nid";
+$sth = $pdo-&gt;prepare($sql);
+$sth-&gt;execute();
+$rows = $sth-&gt;fetchAll();
+$bool = array(0 =&gt; 'false', 1 =&gt; 'true');
+foreach ($rows as $row) {
+    $fp = fopen('htmlcontents.html', 'w');
+    fwrite($fp, $row['body']);
+    fclose($fp);
+    $datetime = new DateTime();
+    $datetime-&gt;setTimestamp($row['created']);
+    $date = $datetime-&gt;format('Y-m-d');
+    $contents = '---' . "\n";
+    $contents .= 'layout: post' . "\n";
+    $contents .= 'title: ' . $row['title'] . "\n";
+    $contents .= 'tags: [' . $row['tags'] . ']' . "\n";
+    $contents .= 'published: ' . $bool[$row['status']] . "\n";
+    $contents .= 'date: ' . $datetime-&gt;format('Y-m-d H:i') . "\n";
+    $contents .= '---' . "\n";
+    if (!empty($row['slug'])) {
+        $list = explode('/', $row['slug']);
+        if (count($list) &gt; 1) {
+            $row['slug'] = end($list);
+        }
+    } else {
+        $row['slug'] = 'node-' . $row['nid'];
+    }
+
+    $pandoc = '';
+    exec('pandoc -t markdown -f html htmlcontents.html', &amp;$pandoc);
+    $contents .= implode(' ', $pandoc);
+    $url = 'source/posts/' . $date . '-' . $row['slug'] . '.markdown';
+
+    $contents .= "\n";
+    if ( !file_exists($url)) {
+        $fp = fopen($url, "w");
+        fwrite($fp, $contents);
+        fclose($fp);
+    } else {
+        echo "File exists issue : " . $row['slug'] . "\n";
+    }
+}
+</code></pre>
+
+<p>}
+//optional hostname
+drupalProcess('dbname', 'username', 'password');
+```</p>
 
 <p>Happy porting!</p>
 ]]></content>

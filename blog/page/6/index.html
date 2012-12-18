@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="Some months back I read the article php|architect&#8217;s guide to Web Scraping with PHP - Don&#8217;t let the title fool you. It was a review for &hellip;">
+  <meta name="description" content="PHP provides fgetcsv and fputcsv. But I was interested to use a PHP 5.3 library Easy CSV by Jonathan H. Wage, one of the core contributor of Doctrine &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/03/reading-and-writing-csv-files-php/">Reading and Writing CSV Files in PHP</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-03T14:07:00+05:30" pubdate data-updated="true">Sep 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>PHP provides <a href="http://php.net/manual/en/function.fgetcsv.php">fgetcsv</a> and <a href="http://www.php.net/manual/en/function.fputcsv.php">fputcsv</a>. But I was interested to use a PHP 5.3 library <a href="https://github.com/jwage/EasyCSV">Easy CSV</a> by <a href="http://www.twitter.com/jwage">Jonathan H. Wage</a>, one of the core contributor of Doctrine Project , for the easiness to use .  I just copied some of the examples from the library for you. You can always look over https://github.com/jwage/EasyCSV and use it :) .  Reader :      $reader = new \EasyCSV\Reader(&#8216;read.csv&#8217;);     while ($row = $reader->getRow()) {         print_r($row);     }  Writer      $writer = new \EasyCSV\Writer(&#8216;write.csv&#8217;);     $writer->writeFromArray(array(             &#8216;value1, value2, value3&#8217;,             array(&#8216;value1&#8217;, &#8216;value2&#8217;, &#8216;value3&#8217;)     ));</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -401,42 +437,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/03/10/relationship-support-lithium-aka-li3/">Relationship Support in Lithium Aka Li3</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-03-10T08:37:00+05:30" pubdate data-updated="true">Mar 10<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>So now some of the relationship support has been there in lithium&#8217;s x-relationships branch . I was talking with Howard Lince and Nateabele about the progress in relationships .  You can see the updated roadmap <a href="http://dev.lithify.me/lithium/wiki/about/roadmap">here</a> .  So lets start playing with relationships right ?  Currently we have  1 ) hasOne => 1 to 1  2 ) hasMany = > 1 to N  3 ) belongsTo => N to 1 or 1 to 1  4 ) HABTM work in progress  Eg 1 : A user has one profile . hasOne  Eg 2 : A user has many posts  Eg 3 : A user has many comments  Eg 4 : Single or many comments belongs to user .  Eg 5 : A single or many posts belongs to user .  Currently as the work for relationships is in progress I cannot point you to http://lithify.me/docs. But Cake PHP has good documentation of the concepts. You can read it from <a href="http://book.cakephp.org/view/1039/Associations-Linking-Models-">cakephp</a>  I am going to show only some snippets of code how to create relationships. Once you have done with it , you will be a master.  Note :The command &#8220;li3 create model&#8221; previoulsy was creating models as singular. But from now onwards its Plural, so the command may be creating singular named file. So you need to do the necessary changes , will be fixed soon before 1.0 release.  We are moving to x-relationships branch. ie  $git checkout x-relationships  What I am going to show is relationship with user and post and user with comments. I assume only registered users can add posts and comments .  So lets dive into it .  Below is the table structure  Now you want to create Comments , Posts , Users models in your app/models folder .  Comments are posted for a particular post by a user .  So we are relating it via variable belongsTo . It must be public.  The $_schema is the array which is the same order the fields are created in table.  The $validates array contains the validations needed.  A user can post many comments and posts . Here in hasMany we have shown the relationship to the other .But its not needed as lithium is smart enough to know your foreign key relationships if you followed it.  Lithium uses filters. Filters are essentially an efficient way of introducing event-driven communication between classes in your application. You can read over <a href="http://dev.lithify.me/drafts/source/en/02_lithium_basics/02_filters.wiki">filters</a> .  So in your controllers action , you can fetch data like the below.  The Post::find() fetches the post of that particular id and the user who posted it .The Comments::find() fetches the comments and the user who posted it .  If you are storing the users name , email etc in comments table and not like the one I showed then the best way is to add Comments also to the with in Post::find()  A print_r for $post->data() will show the values. You can use a filter to check whether a query is fired and dump the query.  Add the below code in bootstrap.php  Thanks to Nate Abele , Howard and all my #li3 friends who helped me to make this post.  You can see the whole things over https://github.com/harikt/li3_tests . More experiments will be added to it :) .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -454,6 +454,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/18/aura-framework-releases-beta4/">Aura Framework releases Beta4</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/17/the-moving-from-drupal7-to-octopress/">The moving from Drupal7 to octopress</a>
       </li>
     
@@ -467,10 +471,6 @@
     
       <li class="post">
         <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
       </li>
     
   </ul>

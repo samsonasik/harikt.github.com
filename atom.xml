@@ -4,7 +4,7 @@
   <title><![CDATA[Random thoughts | Hari KT]]></title>
   <link href="http://harikt.github.com/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-18T07:44:16+05:30</updated>
+  <updated>2012-12-18T23:44:22+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Aura Framework releases Beta4]]></title>
+    <link href="http://harikt.github.com/blog/2012/12/18/aura-framework-releases-beta4/"/>
+    <updated>2012-12-18T23:25:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/12/18/aura-framework-releases-beta4</id>
+    <content type="html"><![CDATA[<p>Aura.Framework released Beta4. In this release <a href="http://auraphp.github.com/Aura.Framework">Aura.Framework</a> has extracted the Hello Word package and renamed it as <a href="http://auraphp.github.com/Aura.Demo">Aura.Demo</a>.</p>
+
+<p>You can get the system as a whole from <a href="http://auraphp.github.com/system/downloads/">http://auraphp.github.com/system/downloads/</a></p>
+
+<p>Read more about this release from the <a href="https://groups.google.com/d/topic/auraphp/uPsSK7OqOoI/discussion">auraphp group</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The moving from Drupal7 to octopress]]></title>
@@ -728,15 +741,6 @@
     <updated>2012-07-30T23:24:00+05:30</updated>
     <id>http://harikt.github.com/blog/2012/07/30/speaking-at-barcamp-bangalore-on-auraphp</id>
     <content type="html"><![CDATA[<p>If you have never heard or came to know about Aura Project for PHP or love to know something what I know, come join on a healthy conversation at Barcamp Bangalore which will be held on August 25th 2012. I will walk you through some of the components like Router, Web, Http componets which can be used in your next PHP project. If you want to use it as a full stack framework, we have the system. The good thing is its easy to learn and use, and as its not tied to any other components you can create your own next framework with Aura components :-). Find some documentation api and code at https://github.com/auraphp . See you at Barcamp Bangalore! Note : I expect you know about PHP and the new things which are already there in PHP 5.3 and 5.4 . I will not be teaching PHP for its time limited talk. If you want to learn more on PHP and new features, get in touch with me. I will give a talk on it at your place.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Yahoo Open Hack India 2012, on August 11th, 12th at Bangalore]]></title>
-    <link href="http://harikt.github.com/blog/2012/07/30/yahoo-open-hack-india2012/"/>
-    <updated>2012-07-30T23:20:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/07/30/yahoo-open-hack-india2012</id>
-    <content type="html"><![CDATA[<p>I have already tweeted about the Yahoo Open Hack India 2012 which will be held on August 11th and 12th at Yewanthpur Bangalore. You can know more details and register from http://openhackindia2012hackticket.eventbrite.com. See you guys there!.</p>
 ]]></content>
   </entry>
   

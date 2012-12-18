@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="Oh I am lazy for not posting my second cup of lithium over here . But you can check something over http://dev.lithify.me/forks/harikt/lithium_blog/ &hellip;">
+  <meta name="description" content="So now some of the relationship support has been there in lithium&#8217;s x-relationships branch . I was talking with Howard Lince and Nateabele &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/10/relationship-support-lithium-aka-li3/">Relationship Support in Lithium Aka Li3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-10T08:37:00+05:30" pubdate data-updated="true">Mar 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So now some of the relationship support has been there in lithium&#8217;s x-relationships branch . I was talking with Howard Lince and Nateabele about the progress in relationships .  You can see the updated roadmap <a href="http://dev.lithify.me/lithium/wiki/about/roadmap">here</a> .  So lets start playing with relationships right ?  Currently we have  1 ) hasOne => 1 to 1  2 ) hasMany = > 1 to N  3 ) belongsTo => N to 1 or 1 to 1  4 ) HABTM work in progress  Eg 1 : A user has one profile . hasOne  Eg 2 : A user has many posts  Eg 3 : A user has many comments  Eg 4 : Single or many comments belongs to user .  Eg 5 : A single or many posts belongs to user .  Currently as the work for relationships is in progress I cannot point you to http://lithify.me/docs. But Cake PHP has good documentation of the concepts. You can read it from <a href="http://book.cakephp.org/view/1039/Associations-Linking-Models-">cakephp</a>  I am going to show only some snippets of code how to create relationships. Once you have done with it , you will be a master.  Note :The command &#8220;li3 create model&#8221; previoulsy was creating models as singular. But from now onwards its Plural, so the command may be creating singular named file. So you need to do the necessary changes , will be fixed soon before 1.0 release.  We are moving to x-relationships branch. ie  $git checkout x-relationships  What I am going to show is relationship with user and post and user with comments. I assume only registered users can add posts and comments .  So lets dive into it .  Below is the table structure  Now you want to create Comments , Posts , Users models in your app/models folder .  Comments are posted for a particular post by a user .  So we are relating it via variable belongsTo . It must be public.  The $_schema is the array which is the same order the fields are created in table.  The $validates array contains the validations needed.  A user can post many comments and posts . Here in hasMany we have shown the relationship to the other .But its not needed as lithium is smart enough to know your foreign key relationships if you followed it.  Lithium uses filters. Filters are essentially an efficient way of introducing event-driven communication between classes in your application. You can read over <a href="http://dev.lithify.me/drafts/source/en/02_lithium_basics/02_filters.wiki">filters</a> .  So in your controllers action , you can fetch data like the below.  The Post::find() fetches the post of that particular id and the user who posted it .The Comments::find() fetches the comments and the user who posted it .  If you are storing the users name , email etc in comments table and not like the one I showed then the best way is to add Comments also to the with in Post::find()  A print_r for $post->data() will show the values. You can use a filter to check whether a query is fired and dump the query.  Add the below code in bootstrap.php  Thanks to Nate Abele , Howard and all my #li3 friends who helped me to make this post.  You can see the whole things over https://github.com/harikt/li3_tests . More experiments will be added to it :) .</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -401,42 +437,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/06/15/thinking-developing-application-zend-framework/">Thinking of Developing an Application With Zend Framework</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-06-15T23:35:00+05:30" pubdate data-updated="true">Jun 15<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.flickr.com/photos/harikt/4703475643/"><img src="http://farm5.static.flickr.com/4031/4703475643_c68bbc34ce.jpg" alt="Zendframework 2 logo by zend technologies" /></a>  Picture courtsey to <a href="http://www.facebook.com/pages/Zend-Technologies/190917412139">zend technologies</a> . When I started learning a MVC framework like Zend ( version 1.8 ) with out any prior knowledge in an MVC architectured framework , it was hard for me to figure out many of the things documented in framework.zend.com . I spend lot of time to figure out what they have shown in the examples to <a href="http://harikt.com/content/simple-blog-using-zend-framework-19">develop a simple application which I later published to help people</a> learning zend framework ( Though it was not developed thinking in my mind to publish, I hope it helped some ) . But looking today the zend framework documentation has lots of improvements, may be because I learned something looking other frameworks too. I was interested to see much of the things what symfony does in the command line ( for I love my GNU/Linux terminal and love to work on it ). But after sometime I came to know many of the things that symfony does is with doctrine ORM ( There are lots of other commands too for symfony ) . Doctrine2 will be integrating with zend framework version 2 onwards .  Sometimes I have even blamed zend framework , for I was angry unable to do what I needed spending hours of searching . But I am sorry for that zend. You may ask me why you didn&#8217;t get into irc or mailing list and ask your doubts . Ya I entered to irc for the first time when I started learning #zf , but its hard to get a quick reply. I saw many people asking questions , but many were not answered . I know the reasons for they will be working on their on projects and getting a quick reply was hard.  Ok let&#8217;s move on to my topic, I am planning to learn/ sharpen my knowledge in <a href="http://framework.zend.com/">Zend framework</a> . I would you to suggest me some topics , that you love to see implemented with zend framework in my spare time. I will be trying to use <a href="http://www.doctrine-project.org/">Doctrine ORM</a>. I would love to develop it with TDD using <a href="http://www.phpunit.de">phpunit</a> ( Every thing is new just having some knowledge which is harmful <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> ). If you have anything in your mind let me know .  Thanks for reading my unwanted thoughts .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -454,6 +454,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/18/aura-framework-releases-beta4/">Aura Framework releases Beta4</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/17/the-moving-from-drupal7-to-octopress/">The moving from Drupal7 to octopress</a>
       </li>
     
@@ -467,10 +471,6 @@
     
       <li class="post">
         <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/04/node-226/">Paid to Speak</a>
       </li>
     
   </ul>

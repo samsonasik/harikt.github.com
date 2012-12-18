@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ends session | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/ends-session/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Playing video in Ubuntu 9.04 ( jaunty ) ends session fixed]]></title>
+    <link href="http://harikt.github.com/blog/2009/06/21/playing-video-ubuntu-904-jaunty-ends-session-fixed/"/>
+    <updated>2009-06-21T11:49:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/06/21/playing-video-ubuntu-904-jaunty-ends-session-fixed</id>
+    <content type="html"><![CDATA[<p>I have updated my Ubuntu 8.10 to 9.04 in the previous month . After the update I was facing a problem when playing videos . When we plays a video the user is being logged out . It was a strange one . I looked the forum , yes many have reported the bug. As I will not be using mainly to view video I thought of not considering the issue much .  But today I was forced to fix for I want to play a movie . What to do with the bug ?  <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/omg_smile.gif" alt="image" /> . As every one do I go for a google <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/whatchutalkingabout_smile.gif" alt="image" /> . Yes I got the solution and its working fine .  These are the things you must do .  Edit the /etc/apt/sources.list and add the lines ( You must be root to do this . Eg: From terminal $ sudo vim /etc/apt/sources.lst ) You can use either vim or gedit or your favourite editor . I am using terminal .  deb http://ppa.launchpad.net/siretart/ppa/ubuntu jaunty main deb-src http://ppa.launchpad.net/siretart/ppa/ubuntu jaunty main  $ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xce90d8983e731f79  $ sudo apt-get update $ sudo apt-get install xserver-xorg-video-intel-2.4  Just restart your system . Hope it will work for you too .  For a better understanding of the following please do look the source from where I got the information .  <a href="https://bugs.launchpad.net/ubuntu/+source/xserver-xorg-video-intel/+bug/354889" title="Playing video logs out">https://bugs.launchpad.net/ubuntu/+source/xserver-xorg-video-intel/+bug/354889</a>  <a href="https://wiki.ubuntu.com/ReinhardTartler/X/RevertingIntelDriverTo2.4" title="Fix for the end session playing video in ubuntu">https://wiki.ubuntu.com/ReinhardTartler/X/RevertingIntelDriverTo2.4</a>  *Do at your own risk . Don't blame me if it doesn't works for you .</p>
+]]></content>
+  </entry>
+  
+</feed>

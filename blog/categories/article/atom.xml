@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: article | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/article/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Autoloading classes in PHP, the PSR-0 Standard way with Symfony2]]></title>
+    <link href="http://harikt.github.com/blog/2012/02/17/autoloading-classes-psr0-with-symfony2/"/>
+    <updated>2012-02-17T10:12:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/02/17/autoloading-classes-psr0-with-symfony2</id>
+    <content type="html"><![CDATA[<p>Recently I wrote a post on how autoloading works, and the current standard implemented by the PHP community the PSR-0 standard autoloader which is used by Symfony2 , Lithium , Zend , Aura etc .  You can read more on the post <a href="http://phpmaster.com/autoloading-and-the-psr-0-standard/">Autoloading in PHP and the PSR-0 Standard</a> .  If you are using PHP 5.4 , <a href="http://auraphp.github.com/Aura.Autoload/">Aura Autoload</a> also provides a <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md">PSR-0 Standard</a> SPL autoloader implementation for PHP. It also matches the proposed <a href="https://wiki.php.net/rfc/splclassloader">SplClassLoader</a> interface.  Thank you once again for sitepoint and the whole team giving me an opporchunity to make this post available to you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Writing for Sitepoint]]></title>
+    <link href="http://harikt.github.com/blog/2011/12/23/integrating-facebook-graph-api-with-php/"/>
+    <updated>2011-12-23T12:58:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2011/12/23/integrating-facebook-graph-api-with-php</id>
+    <content type="html"><![CDATA[<p>Recently ( around September ) I got a chance to write for Sitepoint's phpmaster.com. I wrote how we can <a href="http://phpmaster.com/integrating-with-facebook/">intergrate Facebook Graph API with PHP</a> . You can read the article over phpmaster. Thanks to Timothy Boronczyk ( Editor at phpmaster.com ) for giving me an opporchunity to write. Hope you will enjoy the article.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: google voice | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/google-voice/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[I got Google voice invitation, but :(]]></title>
+    <link href="http://harikt.github.com/blog/2009/07/21/i-got-google-voice-invitation/"/>
+    <updated>2009-07-21T11:35:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/07/21/i-got-google-voice-invitation</id>
+    <content type="html"><![CDATA[<p>I have registered an account for google voice some weeks before. Today I got an invitation from the google team . I was really excited to see it . With in a few seconds I clicked the link to test it . I got the login screen which asks for my password again though I am logged into gmail .  <img src="http://farm3.static.flickr.com/2521/3742249876_e74336d736.jpg?v=0" alt="Login screen to google voice" />  I logged into it . But alas it just shows me a screen . its not in your country and its only for US now , and in the future will be available  .  <img src="http://farm4.static.flickr.com/3450/3742249870_3677ccf1de.jpg?v=0" alt="Google voice is not available in your country" />  Hm I was thinking, if its not for India now then why do they need to send an invitation . The google has geoip to find from where a user is browsing . So they can ignore me . May be the coder doesn't utilises those great function . Anyway Thanks to google for the nice invitation .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing Google Phone number]]></title>
+    <link href="http://harikt.github.com/blog/2009/06/29/introducing-google-phone-number/"/>
+    <updated>2009-06-29T20:23:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/06/29/introducing-google-phone-number</id>
+    <content type="html"><![CDATA[<p>Hello my dear friends,  Google has introduced a new service . The service is called google voice. This service is available for free now . Don't know what will be in the future . This service is  available only for those who get invites .  The small video demonstrates how it works .  Hoping to enjoy the google voice soon <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" />. For more information you can go and read <a href="http://www.google.com/googlevoice/about.html#">http://www.google.com/googlevoice/about.html</a></p>
+]]></content>
+  </entry>
+  
+</feed>

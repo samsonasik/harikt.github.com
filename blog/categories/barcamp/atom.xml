@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: barcamp | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/barcamp/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Speaking at Barcamp Bangalore August 25th 2012 on Aura PHP]]></title>
+    <link href="http://harikt.github.com/blog/2012/07/30/speaking-at-barcamp-bangalore-on-auraphp/"/>
+    <updated>2012-07-30T23:24:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/07/30/speaking-at-barcamp-bangalore-on-auraphp</id>
+    <content type="html"><![CDATA[<p>If you have never heard or came to know about Aura Project for PHP or love to know something what I know, come join on a healthy conversation at Barcamp Bangalore which will be held on August 25th 2012. I will walk you through some of the components like Router, Web, Http componets which can be used in your next PHP project. If you want to use it as a full stack framework, we have the system. The good thing is its easy to learn and use, and as its not tied to any other components you can create your own next framework with Aura components :-). Find some documentation api and code at https://github.com/auraphp . See you at Barcamp Bangalore! Note : I expect you know about PHP and the new things which are already there in PHP 5.3 and 5.4 . I will not be teaching PHP for its time limited talk. If you want to learn more on PHP and new features, get in touch with me. I will give a talk on it at your place.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Speaking about Aura Project for PHP at Barcamp Kerala]]></title>
+    <link href="http://harikt.github.com/blog/2012/03/27/speaking-about-aura-project-barcamp-kerala/"/>
+    <updated>2012-03-27T21:13:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/03/27/speaking-about-aura-project-barcamp-kerala</id>
+    <content type="html"><![CDATA[<p>May be you have already heard, the 12th edition of BarCamp Kerala ( #BCK12 ), will be held at Technopark, Thiruvananthapuram on 22 April 2012.  I am giving an introduction to Aura Project for PHP 5.4, as of now Beta2 . Hope you will be there to discuss more on it ;) .  Slides of my talk are here . If you was there please give me feedback https://joind.in/talk/view/6279 , so I can improve next time.  <strong><a href="http://www.slideshare.net/harikt/aura-project-for-php" title="Aura Project for PHP">Aura Project for PHP</a></strong> View more <a href="http://www.slideshare.net/">presentations</a> from <a href="http://www.slideshare.net/harikt">Hari K T</a> Watch http://www.barcampkerala.org/blog/sessions/ to see more sessions.  Have added to Joind.in https://joind.in/event/view/928 , claim your sessions there .  Website : http://auraphp.github.com  Source Code : https://github.com/auraphp</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Speaking at Barcamp Kerala 11th Edition at IIM(K)]]></title>
+    <link href="http://harikt.github.com/blog/2011/11/24/speaking-for-bck11-or-barcamp-kerala-at-iim-kozhikode/"/>
+    <updated>2011-11-24T11:31:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2011/11/24/speaking-for-bck11-or-barcamp-kerala-at-iim-kozhikode</id>
+    <content type="html"><![CDATA[<p>The 11th BarCamp Kerala to be conducted on 20th Nov 2011 is IIM( K ) campus at Calicut. I have been thinking to speak on BCK for a long. But this time I thought of going for a try.  The session is on Social media and Business  Not a huge talk , but a small one. Remember I am not a Business man, nor marketing manager and is interested to talk on integrating facebook with PHP on your website, or on PHP 5.3. But this will go more specifically for a PHP Developer and I don't know the level and enthusiasm of the audience.  So this talk is to make you think how you can utilize social media from the eyes of a developer. I loved to make the session to be an interactive one. And I guess the IIM guys, marketing guys, entrepreneurs all can give some input for this talk. If anyone is interested I will show some codes and demonstrate how easy its to integrate Facebook on your website and make you think how to make business out of it.  The slides I prepared to talk on the event is below .  <strong><a href="http://www.slideshare.net/harikt/iim-10274824" title="Speaking at Barcamp Kerala 11th Edition at IIM(K)">Speaking at Barcamp Kerala 11th Edition at IIM(K)</a></strong> View more <a href="http://www.slideshare.net/">presentations</a> from <a href="http://www.slideshare.net/harikt">Hari K T</a> As I reached IIM, I didn't see that much people who are in Managers, but most of them was having a technical background. So switched my topic, how you can integrate Facebook on ypur Website. But the slides of that is not here, for it will be soon available as an article in <a href="http://phpmaster.com">phpmaster.com</a>. When I was writing the article I made a playground with Aura Autoloader , oEmbed, Zend_Http_Client, FB-SDK etc . See it in action at <a href="http://harikt.com/fbgapi">harikt.com/fbgapi</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Looking back Barcamp 8 at Mar Athanasios College For Advanced Studies ( MACFAST )]]></title>
+    <link href="http://harikt.github.com/blog/2010/03/28/looking-back-barcamp-8-mar-athanasios-college-advanced-studies-macfast/"/>
+    <updated>2010-03-28T22:49:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2010/03/28/looking-back-barcamp-8-mar-athanasios-college-advanced-studies-macfast</id>
+    <content type="html"><![CDATA[<p>Mar Athanasios College For Advanced Studies ( MACFAST ) hosted the eighth Barcamp of Kerala.  <a href="http://www.flickr.com/photos/harikt/4470034917/" title="mar athanasios college for advanced studies by K T Hari, on Flickr"><img src="http://farm5.static.flickr.com/4057/4470034917_023d0cc7af.jpg" alt="mar-athanasios-college-for-advanced-studies" /></a>  It may be the one of the only college which runs a radio. Got pictures from@deepakp7 and @arunbasillal . The college was the sponsor of BCK8 and he offered us to be there at any time we want. We are really Thankful for the Management and the Principal Father Abraham Mulamootil.  <a href="http://www.flickr.com/photos/harikt/4469923633/" title="campus-radio-macfast by K T Hari, on Flickr"><img src="http://farm5.static.flickr.com/4025/4469923633_53e3c445fe.jpg" alt="campus-radio-macfast" /></a>  Entrepreneurship by Adv. Ivin Gancius was the one I loved, though the presentation was not so colourful. He answered many of the questions raised by the attendees. The other one was Statistical Machine Translation by @deepakp7. He demonstrated how the translations are working and all with some examples. This time @shwetank( The evangelist of opera ) disappointed me. The session registered was The HTML5 Bandwagon and he went with Mobile Web. I was expecting something similar to the awesome presentation made by him at BCK5, Technopark Trivandrum.  Y Perl? by Alan Haggai Alavi was also an interesting one. He was interested to show more stuffs related to Perl if any of us are willing to learn. There was other sessions like Spara - Energy Conservation Product by Deepa Eswar. You may be knowing her, she was one of the anchor at Kairali TV ( The Malayalam Communications Limited ) , Web Penetration in Kerala - Status Report &amp; Forecast by Aravind Jose, No Negative Day etc was some other sessions. Niju Mohan presented his experience on Tata Jagriti Yatra. Ajith Sam John a BTech student speaks about Social Media Recruitment. Its interesting to see he too recuits people to do work :). Kenny Jacob is going to getting married soon. May be the reason he came with Cultural Invasion Vs Social Evolution. Arun Basil Lal went with a session WordPress-ing It. He started with installation of wordpress, plugins, themes etc. Though these were the stuffs we do often, but there are people who don't know how to install it. I think it was very useful for those people and hope they will explore wordpress. Its really nice to see Engineering Students active in Barcamps. The last session was by Binny V A launching the product  eNGO.  <a href="http://www.flickr.com/photos/harikt/4484449720/"><img src="http://farm5.static.flickr.com/4007/4484449720_a15ea94ddb.jpg" alt="8th Barcamp Kerala at MACFAST" /></a>  A snapshot from BCK8 . Photo credits to <a href="http://picasaweb.google.com/aravindjose/BCK8">Aravind Jose</a>  The lunch and evenining tea was provided by the college. The food was so delicious. We all enjoyed the lunch and tea made some conversations with the Principal Father Abraham Mulamootil. He was also an active attendee and its nice to see such a college and Principal. The college provide internet facility 24 X 7 for the students. When I was at CUIET doing my BTech ( 2003-2007 ), our lab was not open 24 X 7 or we was not having full time internet facility. But its really nice to see colleges like MACFAST and a good principal who motivates his students. Motivation is a key factor that makes a professional. If it lags then its something like schooling than doing BTech as a professional Degree . So the campus needs such colleges, lectures , pricipals to make a better next generation. So bye for now hoping to see you for the next Barcamp 9.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[8th Barcamp Kerala at Mar Athanasios College For Advanced Studies, Tiruvalla (MACFAST)]]></title>
+    <link href="http://harikt.github.com/blog/2010/03/05/8th-barcamp-kerala-mar-athanasios-college-advanced-studies-tiruvalla-macfast/"/>
+    <updated>2010-03-05T12:56:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2010/03/05/8th-barcamp-kerala-mar-athanasios-college-advanced-studies-tiruvalla-macfast</id>
+    <content type="html"><![CDATA[<p><a href="http://www.flickr.com/photos/harikt/4408541076/"><img src="http://farm5.static.flickr.com/4005/4408541076_af0003409b_o.gif" alt="Barcamp Kerala" /></a>  Finally the Eighth Barcamp (BCK8), is scheduled for 28th March, 2010, Sunday at Mar Athanasios College For Advanced Studies, Tiruvalla (MACFAST).  The image is got from a google search ( Thanks to <a href="http://laughingsquid.com">http://laughingsquid.com</a> ) and I made some edits <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/wink_smile.gif" alt="image" /> ( not much ) .  What will make this Barcamp awesome is the speech by Shwetank Dixit . He was one of the speaker previously in the Barcamp which was held at Technopark ( I think it was BCK5 ) . If you are a web-developer who works on server side languages like PHP , Pearl , Python , .NET or any or a designer who converts PSD to XHTML or moving to HTML5 , then you will defnitely love this .  Ya there are other speakers too that I love to hear . I am not going into all who are taking those sessions , its not becuase I don't love to write here , but its already there ;) . Catch it from <a href="http://www.barcampkerala.org/blog/sessions/">http://www.barcampkerala.org/blog/sessions/</a> . Be part of the awesome Barcamp held at Kerala .  <del>I am also planning to take a session. But I am not sure whether I want to go with it or not as I have not mastered it . Anyway if I get some time making some slides or prepare some I will go for a session . Let's wait and see , the date is on 28th , so some more days for me to prepare .</del> You can see the updated post about the <a href="http://harikt.com/content/looking-back-barcamp-8-mar-athanasios-college-advanced-studies-macfast">BC8 here</a> :).</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ajax example | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/ajax-example/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Ajax]]></title>
+    <link href="http://harikt.github.com/blog/2009/02/13/9-learning-ajax/"/>
+    <updated>2009-02-13T07:45:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/02/13/9-learning-ajax</id>
+    <content type="html"><![CDATA[<p>AJAX - Asynchronous JavaScript and XML , is the popular one now used in the web. Doesn't need to load the complete page . Only part of a page is loaded. Its a good technique introduced by google suggest . Don't know whether I am right that google has introduced this . Sorry if its wrong , but I have learned that its google that introduces ajax in 2005 with the introduction of google suggest . This is just my trials to learn ajax. If it helps some one I am great ful. I suggest you to learn the basics from mozilla . This example I have created is after learning from Mozilla. I have modified some. But the ajax engine is same. :-) Save the file as test.php Hello this is a test for ajax. I am not a great ajax worker , but learned it. You can also learn about ajax from the w3c or mozilla . I learned the basics from w3schools and now from mozilla. Now learning some xml . :-) "; } function ajaxTutorials() { echo ' Mozilla : <a href="https://developer.mozilla.org/En/AJAX">https://developer.mozilla.org/En/AJAX</a> w3c working draft <a href="http://www.w3.org/TR/XMLHttpRequest/">http://www.w3.org/TR/XMLHttpRequest/</a> Tutorials <a href="http://www.xul.fr/en-xml-ajax.html">http://www.xul.fr/en-xml-ajax.html</a>  '; } ?> Save as index.php Ajax tutorial This is an ajax tutorial. Make a request Ajax Tutorials</p>
+]]></content>
+  </entry>
+  
+</feed>

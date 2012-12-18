@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: doctrine | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/doctrine/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Integrating Doctrine with Zendframework for modules]]></title>
+    <link href="http://harikt.github.com/blog/2010/08/29/integrating-doctrine-zendframework-modules/"/>
+    <updated>2010-08-29T21:39:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2010/08/29/integrating-doctrine-zendframework-modules</id>
+    <content type="html"><![CDATA[<p>When I started learning PHP framework I started with <a href="http://www.symfony-project.org/">symfony-project</a> . <a href="http://www.doctrine-project.org">Doctrine</a> was one of the coolest feature I loved. So I thought of learning Doctrine to use with <a href="http://framework.zend.com/">Zend-framework</a> . Recently I was looking  <a href="http://zendcasts.com">zendcasts.com</a> to integrate doctrine with zend-framework . I think Jon didn't get much time to think about this solution else he may have come with the module based solution . But I was interested to provide how we can bring the doctrine models to different modules for zendframework. Use the below code in doctrine.php when using <a href="http://www.zendcasts.com/deep-integration-between-zend-and-doctrine-1-2/2010/01/">zendcasts doctrine integration with zendframework</a> .  The way it works is  $./doctrine &lt; arguments for doctrine > module <module name \>  Module name is the zendframework module . If no module is specified or the specified module directory is not found , will create in the application/models folder . Else the models folder of the particular module. Assuming the migrations , schema.yml , fixtures etc are  there for each specific module :) .</p>
+]]></content>
+  </entry>
+  
+</feed>

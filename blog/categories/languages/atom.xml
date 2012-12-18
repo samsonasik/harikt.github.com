@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: languages | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/languages/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Translate from English to any native languages]]></title>
+    <link href="http://harikt.github.com/blog/2010/03/14/translate-english-any-native-languages/"/>
+    <updated>2010-03-14T11:31:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2010/03/14/translate-english-any-native-languages</id>
+    <content type="html"><![CDATA[<p><a href="http://www.flickr.com/photos/harikt/4430871117/"><img src="http://farm5.static.flickr.com/4022/4430871117_0af98119cc_o.jpg" alt="Translate from English to your native labguage with the help of google" /></a>  Different people in different parts of the world speaks different languages . Oh no just considering India ( my country ) itself there are lots of languages ( More than the number of states itself <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> ) . I don't know every language too . Google has recently came with a desktop application which currently translate from 14 different languages - Arabic, Bengali, Farsi (Persian), Greek, Gujarati, Hindi, Kannada, Malayalam, Marathi, Nepali, Punjabi, Tamil, Telugu and Urdu.  Some of the fatures are  1 ) Offline Support : You don't need an internet connection.  2 ) Word Completions : Dictionary based word completions for prefixes.  3 ) Personalized Choices : Remember user corrections for personalized service.  4 ) Easy Keyboard : Dictionary enabled keyboard to enter rare and complex words.  5 ) Quick Search : Single click web search for highlighted word.  6 ) Cool Customization : Customize suggestions page size, display font and more.  The thing is its only available for windows <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/tounge_smile.gif" alt="image" /> . So I have not tried the application , but you guys can have a try . You can get it from <a href="http://www.google.com/ime/transliteration/">http://www.google.com/ime/transliteration/</a>   You can also use the online version http://www.google.com/transliterate/ which can convert from english to different languages like malayalam , hindi , urudu , nepali , punjabi , arabic , kannada , tamil etc . The image shown above is developed with the help of gimp and google transliterate tool .</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: password | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/password/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Gmail password recovery on phone]]></title>
+    <link href="http://harikt.github.com/blog/2009/07/11/gmail-password-recovery-phone/"/>
+    <updated>2009-07-11T21:57:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/07/11/gmail-password-recovery-phone</id>
+    <content type="html"><![CDATA[<p>You may forget some of your passwords when its not used often . Its really a painful process for me as I am having lots of accounts . I don't love to make the same password for every one. So forget password link always helps you . You may need to open the secondary email and configure the new password. Recently google has launched a new service . You can enter your mobile number , so the new password will be send to your mobile. So you don't need to open some other mail and get the password .( Or if you have forget the password of that then <img src="http://harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> )  You can sign into <a href="https://www.google.com/accounts/">https://www.google.com/accounts/</a> and add a phone number in the SMS tab . Screenshot of it is attached .  <img src="http://farm3.static.flickr.com/2639/3710605492_9735670a27.jpg?v=0" alt="Gmail password on your cell phone" />  Note : Please do not give your connection to some one else if you have added this option . Do confirm that the number typed is your mobile number itself .</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: jush | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/jush/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Replacing mysql query browser and phpmyadmin with Adminer]]></title>
+    <link href="http://harikt.github.com/blog/2011/03/13/replacing-mysql-query-browser-and-phpmyadmin-adminer/"/>
+    <updated>2011-03-13T11:10:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2011/03/13/replacing-mysql-query-browser-and-phpmyadmin-adminer</id>
+    <content type="html"><![CDATA[<p>If you have read my post on OSI Days you may have already heard about <a href="http://www.vrana.cz/">Jakub Vrana</a>. Jakub Vrana is one of the active contributors of <a href="http://php.net">php.net</a> . He introduced <a href="http://www.adminer.org/">adminer</a> and <a href="http://www.notorm.com/">NotORM</a> before us at OSI Days.  After that I have been promoting <a href="http://www.adminer.org/">adminer</a>, to my friends and collegues who were mostly using <a href="http://phpmyadmin.net">phpmyadmin</a>. Also if you were on phpmyadmin groups you may already have gone through the conversation with Jakub Vrana.  I am not going into it and why I prefer Adminer, its all personal preference. Anyway my friends who started using are impressed with this single php file which can do almost all stuffs which they have been doing in phpmyadmin, and additionaly which is fast, secure and powerful tool.  Today I replaced completely the mysql query browser which was consuming around 10MB of my hard disk with this single php file Adminer. Yes now life rocks with more MB to use as I was running out of disk space.  Also I started using <a href="http://jush.sourceforge.net/">Jush</a> . Jush is a JavaScript Syntax Highlighter which can be used for client-side syntax highlighting of following languages: HTML, CSS, JavaScript, PHP, SQL, HTTP and SMTP protocol, php.ini and Apache config. Its available as a jQuery plugin also.</p>
+]]></content>
+  </entry>
+  
+</feed>

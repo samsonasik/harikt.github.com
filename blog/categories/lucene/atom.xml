@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lucene | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/lucene/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A local search for the li3_docs with Zend_Search_Lucene]]></title>
+    <link href="http://harikt.github.com/blog/2011/01/20/local-search-li3docs-zendsearchlucene/"/>
+    <updated>2011-01-20T20:25:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2011/01/20/local-search-li3docs-zendsearchlucene</id>
+    <content type="html"><![CDATA[<p>Oh I am lazy for not posting my second cup of lithium over here . But you can check something over <a href="http://dev.lithify.me/forks/harikt/lithium_blog/wiki/home">http://dev.lithify.me/forks/harikt/lithium_blog/wiki/home</a> . So you know I am a fan boy of Lithium. I used to hang on #li3 irc just for fun, though I am not developing anything serious with lithium for now .  We used to read the documentation with the help of li3_docs plugin. Its so cool. But searching locally was not possible. If you have internet connection then it may not be a trouble too :) . Questions come and go, sometimes we may be knowing where we read it, but don't remember the exact controller action or the property. Oh my :-)  So I finally decided to hack on li3_docs plugin to make a search locally with the help of the Zend_Search_Lucene 's power . You can read more about <a href="http://framework.zend.com/manual/en/zend.search.lucene.overview.html">Zend Lucene component over here</a>. This is also a good point to show you that anything can be integrated with li3 ;). So no more blha blha blha . Just codes coming on the way .  First you need to create the index pointing to /searches/makeindex . Before doing that change the url according to yours. For now I assume http://lithium.local/docs/ which is the only part I have hard coded. Nate has agreed to look into it and make the necessary changes and we will try to make it as plugin if he loves :-). So the files are below. I hope know something about li3, li3_docs etc. This uses the extractor from li3_docs :-)  You can see how I have included the Zend library as from <a href="http://dev.lithify.me/lithium/wiki/guides/using/zend">http://dev.lithify.me/lithium/wiki/guides/using/zend</a>  Do create an empty file makeindex.html.php in the searches folder of view before creating index.  Now do your way, may be add a form and point to the controller and action or what ever you love. As always licensed under the same licene of <a href="http://lithify.me/">http://lithify.me/</a> . Hang on to #li3 on irc.freenode.net to ask anything more on it :-) .  Note : Set time limit to 0 . ie  set_time_limit( 0 ); in bootstrap.php for creating the index. The methods are called recursively and needs sometime to create the index . Once indexed you don't want , just query through it .</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: library | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/library/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Aura Project for PHP releases Beta 2]]></title>
+    <link href="http://harikt.github.com/blog/2012/02/13/aura-project-releases-beta2/"/>
+    <updated>2012-02-13T22:08:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/02/13/aura-project-releases-beta2</id>
+    <content type="html"><![CDATA[<p>The Aura Project for PHP 5.4 releases Beta2 for the components. Now all the Aura packages are releases via release tool which makes it automated way. Currently Aura Components can be installed via composer and github. We will soon release the pear packages once the new phar file is released by Pyrus which includes the fix for creating packages with dot. See https://github.com/pyrus/Pyrus/issues/75 Don't think this as the official announcement . Official announcement will be posted by <a href="http://paul-m-jones.com">Paul M Jones the lead for Aura PHP</a> Source Code : https://github.com/auraphp Update : So Paul M Jones officially declared the <a href="http://paul-m-jones.com/archives/2277">Release of Aura 1.0.0-beta2</a></p>
+]]></content>
+  </entry>
+  
+</feed>

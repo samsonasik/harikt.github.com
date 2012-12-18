@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: module | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/module/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Base files to start your Zend framework project]]></title>
+    <link href="http://harikt.github.com/blog/2009/11/19/base-files-start-your-zend-framework-project/"/>
+    <updated>2009-11-19T11:23:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/11/19/base-files-start-your-zend-framework-project</id>
+    <content type="html"><![CDATA[<p>I have combined the basic things that are needed when you are developing a website using zend framework . Not included the zend framework library . This zfbase contains an admin module and a default module ( <a href="http://blog.nickbelhomme.com">Nick Belhomme</a> technique <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> ) .  It also uses the <a href="http://amazium.be/">amazium blog</a> technique ( Jeroen Keppens ) to load the different layout for admin and front page .  If you need to connect to a db just uncomment the line in the application.ini of config directory and give the necessary details . This was a technique I learned from Rob Allen author of the book "zend framework in action" , zend framework educaton advisory board member and owner of the site <a href="http://akrabat.com">akrabat</a> .  I hope these files can be just copied to start another project . You don't want to issue the command zf create project <project name\> any more <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . You can still use zf command to generate contollers and actions . Many of you may be having your own zend framework skelton . This is for those who don't have one and who is looking to learn how module , layout etc works in zend framework .  The zfbase skelton contains an admin module where you can place admin models and controllers . Default module the same as that of quickstart , not having any difference . So this will help newbie to zend-framework . You don't need to spend any more time googling . All you need is to get this and start your zend framework project .  There are many techniques , this is one way that you can do it . If you have some other nice way share and let others learn that technique too .  Tweet ( #zfbase , tinyurl : <a href="http://bit.ly/1y5me" title="http://bit.ly/1y5me">http://bit.ly/1y5me</a> ) this if you liked it . Don't forget to <a href="http://www.dzone.com/links/zend_framework_skelton_for_newbies_to_start_your.html">promote this link in dzone</a> . You don't want to pay anything for writing comments , then why are you waiting ?.  Thanks to zend framework and all zend framework bloggers who are helping . I don't have any copy-right all rights to respective owners <img src="http://www.harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> .  Get it from github <a href="http://github.com/harikt/zfbase">http://github.com/harikt/zfbase</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Administration module generation for ZendFramework 1.9]]></title>
+    <link href="http://harikt.github.com/blog/2009/08/23/administration-module-generation-zendframework-greater-18/"/>
+    <updated>2009-08-23T09:56:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/08/23/administration-module-generation-zendframework-greater-18</id>
+    <content type="html"><![CDATA[<p>Hello Guys  Are you new to Zend Framework ? Are you new to MVC ?  Then really you may have thought like me . Where to start and how to start ? Am I right ?  Then this is post is for you my dear friend . I can admit one thing that learning Zend framework is hard though there is a big documentation . There is good examples to the components too . But we will not understand how to bind each other ? Am I right ?  I am also new to Zend Framework . I like the ZF command line most. I looked for many articles , but many was in the old style . Recently I came to a pdf document which was very interesting which is used to administer the site . Every one will look for how to create an admin side using zend frameowork greater than 1.8 . Now its 1.9 too .  I am keeping the pdf which was seen from Slideshare by <a href="http://blog.nickbelhomme.com/">Nick Belhomme</a>. This is a great one for each and every one to start . Hope it may help you . There are many more people who writes about Zendframework in their blog. I recently created a search to search those sites which I think may be helpful to you too . So you can explore it too . The link is <a href="http://www.google.com/coop/cse?cx=005733697890798280623:f49mfrxmsje">http://www.google.com/coop/cse?cx=005733697890798280623:f49mfrxmsje</a>  Good Luck guys . Explore the search engine and grab the Zend Framework .  Bye for now . You can see some from me too in the coming days . lol  Have created the base files need to start your zend framework project . Check it out from http://harikt.com/content/base-files-start-your-zend-framework-project . Thanks to all who have supported me knowingly or unknowingly :) .</p>
+]]></content>
+  </entry>
+  
+</feed>

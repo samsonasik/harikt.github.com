@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sixth sense | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/sixth-sense/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Pranav Mistry at TED :The sixth sense]]></title>
+    <link href="http://harikt.github.com/blog/2010/01/22/pranav-mistry-ted/"/>
+    <updated>2010-01-22T12:53:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2010/01/22/pranav-mistry-ted</id>
+    <content type="html"><![CDATA[<p>Recently I heard about Pranav Mistry from one of my friend Prajith . Though I saw the video I didnot get much time to write about that . I don't know whether every one may have heard about him too. Let me keep those two awesome videos .  I hope you too enjoyed it . And I am very happy to hear and tell you that he puts all as opensource . Does any one do like that ?  I am not keeping all the links to his projects . Check <a href="http://www.pranavmistry.com/">Pranav mistry's website</a> for more information . Lots there guys .</p>
+]]></content>
+  </entry>
+  
+</feed>

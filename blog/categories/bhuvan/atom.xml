@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bhuvan | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/bhuvan/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Will Bhuvan get much popularity like Google earth ?]]></title>
+    <link href="http://harikt.github.com/blog/2009/08/25/will-bhuvan-get-much-popularity-google-earth/"/>
+    <updated>2009-08-25T21:27:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/08/25/will-bhuvan-get-much-popularity-google-earth</id>
+    <content type="html"><![CDATA[<p>I was hearing about Bhuvan recently . I was little busy , but after receiving a mail with subject "Bhuvan: ISRO's answer to google earth" I thought of looking the site .  This is the address . http://bhuvan.nrsc.gov.in/ . I saw new news Bhuvan is available in Mozilla firefox and netscape .  Bhuvan is only for the geographical area of India only . But I don't think whether it will gain much popularity if they have not supported or developed a plugin for GNU/Linux or in common *nix systems . I think many of the Indians are now opensource lovers and have moved to *nix platform . So the ISRO which is a goverment body must really support the opensource projects rather than developing something for properitery OS. Now the web is a platform which makes the OS independent . So try to make something which is not an OS dependent software .  I hope they may come with a plugin for *nix systems . I would like to explore Bhuvan after that , and now its not an answer for Google earth . Google earth can be viewed from *nix systems .  This is for ISRO people <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> , track your site vistors Operating system and Browser and compare . You can see the difference . Google analytics is a good one or you can go for piwik an opensource web analytics tool .</p>
+]]></content>
+  </entry>
+  
+</feed>

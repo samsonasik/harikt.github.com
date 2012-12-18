@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: google-io | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/google-io/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[K-MUG Monthly Meeting & Google IO Extended 2012]]></title>
+    <link href="http://harikt.github.com/blog/2012/06/21/kmug-monthly-meeting-google-io-extended-2012/"/>
+    <updated>2012-06-21T15:47:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/06/21/kmug-monthly-meeting-google-io-extended-2012</id>
+    <content type="html"><![CDATA[<p>1 ) K-MUG Monthly Meeting June 23rd 2012 : Saturday 10:00am until 1:00pm Orion Hall, Orion India Systems Pvt Ltd, Thejomaya, Infopark Join the discussions and sessions from 10 AM to 1 PM. https://www.facebook.com/events/249677748474768/ What are the topics we need to cover in the next K-MUG session? What I love to hear is 1 ) Introduction to NodeJS Have a look at the other sessions in the list which can be added. https://www.facebook.com/questions/308786822539334/ 2 ) Google IO Extended 2012 Thapasya , Infopark , Cochin Kochi, Kerala India Saturday, June 30, 2012 from 9:00 AM to 6:30 PM (GMT+0530) Register before June 27 http://www.eventbrite.com/event/3745334396/es2?srnk=2</p>
+]]></content>
+  </entry>
+  
+</feed>

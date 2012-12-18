@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cmf | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/cmf/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Design Principles for a Better CMS]]></title>
+    <link href="http://harikt.github.com/blog/2012/11/06/node-221/"/>
+    <updated>2012-11-06T21:32:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/11/06/node-221</id>
+    <content type="html"><![CDATA[<p>May be the question is so simple for you. But many times I feel it much complicated. Everyone would have started their website with a custom cms and later moved to Wordpress, Drupal, Joomla or something similar. I used to look for a better book in any language which has design decisions made for the cms to make it such a way that it can be extended. Some of the books that seems interesting to me are 1 ) <a href="http://www.apress.com/9781430218791">Pro Zend Framework CMS</a> 2 ) <a href="http://www.packtpub.com/php-5-cms-framework-development-2nd-edition/book">PHP 5 CMS Framework Development</a> It will be great to see if you have came across such books or do you recommend any other books. I am not just looking for PHP, but I am interested to read any sort of books, which will help me to build the next blogger. Waiting to hear you suggestions on the same.</p>
+]]></content>
+  </entry>
+  
+</feed>

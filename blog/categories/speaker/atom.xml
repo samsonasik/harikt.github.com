@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: speaker | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/speaker/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Paid to Speak]]></title>
+    <link href="http://harikt.github.com/blog/2012/12/04/node-226/"/>
+    <updated>2012-12-04T06:03:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/12/04/node-226</id>
+    <content type="html"><![CDATA[<p>Before going to speak at osidays, the first thing I did was read the book Paid to Speak. It gave me lots of insights how I can improve. The book was given to me by Jennifer Kumar. I have shared my thoughts on her blog. You can read more from <a href="http://www.authenticjourneys.info/2012/12/9-lessons-on-being-public-speaker.html">9 Lessons on Being a Public Speaker</a></p>
+]]></content>
+  </entry>
+  
+</feed>

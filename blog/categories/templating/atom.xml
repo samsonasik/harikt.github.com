@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: templating | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/templating/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Getting bored of seeing PHP as a templating language]]></title>
+    <link href="http://harikt.github.com/blog/2012/05/27/bored-seeing-php-as-templating-language/"/>
+    <updated>2012-05-27T02:08:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/05/27/bored-seeing-php-as-templating-language</id>
+    <content type="html"><![CDATA[<p>Are you also getting bored of seeing PHP as a templating language ? Why I started to love templating language like django .</p>
+
+<p>The index.html</p>
+
+<p><code>html
+{% extends "layout.html" %} {% block body %} {% for user in userlist %} {{ user.name }} {% elsefor %} **no user found** {% endfor %} {% endblock %} {% block title %}Index{% endblock %}
+</code></p>
+
+<p>The layout.html</p>
+
+<p><code>html
+{% block head %} {% block title %}{% endblock %} - My default title {% endblock %} {% block content %}{% endblock %} {% block footer %} © Copyright 2012 by [example.com](http://example.com/). {% endblock %}
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

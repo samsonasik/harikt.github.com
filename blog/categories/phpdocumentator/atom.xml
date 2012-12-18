@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: phpdocumentator | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/phpdocumentator/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Why apigen matters ?]]></title>
+    <link href="http://harikt.github.com/blog/2012/10/20/node-219/"/>
+    <updated>2012-10-20T22:03:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/10/20/node-219</id>
+    <content type="html"><![CDATA[<p>I have been working with different open-source projects for a while. Most of them utilizes phpdocumentator2 . I liked it for a while. But I have been looking at apigen, swami etc. Recently I started to make use of apigen extensively. What made me comfortable with apigen than phpdocumentator ? Certain times we may want to look into the code also to see the implementation . I am not sure may be there is an option in phpdocumentator that it can show the code when we click on a function / method. The code highlighting and is shown once we click on it. I like this feature the most. If you haven't yet checked how the apigen generated api looks have a look into the one for the <a href="https://github.com/auraphp">aura project</a> which is at <a href="http://harikt.github.com/api">http://harikt.github.com/api</a> More information on a href="http://apigen.org>apigen.org</p>
+]]></content>
+  </entry>
+  
+</feed>

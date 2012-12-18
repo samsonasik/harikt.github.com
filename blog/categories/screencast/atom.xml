@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: screencast | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/screencast/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to install aura framework]]></title>
+    <link href="http://harikt.github.com/blog/2012/08/27/how-to-install-aura-framework/"/>
+    <updated>2012-08-27T04:58:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/08/27/how-to-install-aura-framework</id>
+    <content type="html"><![CDATA[<p>This video is my an attempt to help the people how to install the aura framework as a whole. Note, you can use aura libraries independently also. This is my first screencast on aura and first screencast I have ever done. So feedback is appreciated. I am using record my desktop for recording.  I was having some trouble with vimeo, so have uploaded to youtube. Thanks for watching.</p>
+]]></content>
+  </entry>
+  
+</feed>

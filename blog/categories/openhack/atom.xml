@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: openhack | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/openhack/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Yahoo Open Hack India 2012, on August 11th, 12th at Bangalore]]></title>
+    <link href="http://harikt.github.com/blog/2012/07/30/yahoo-open-hack-india2012/"/>
+    <updated>2012-07-30T23:20:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/07/30/yahoo-open-hack-india2012</id>
+    <content type="html"><![CDATA[<p>I have already tweeted about the Yahoo Open Hack India 2012 which will be held on August 11th and 12th at Yewanthpur Bangalore. You can know more details and register from http://openhackindia2012hackticket.eventbrite.com. See you guys there!.</p>
+]]></content>
+  </entry>
+  
+</feed>

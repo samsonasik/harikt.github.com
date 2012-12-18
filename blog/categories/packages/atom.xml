@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: packages | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/packages/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First stable release for Aura components]]></title>
+    <link href="http://harikt.github.com/blog/2012/11/29/node-225/"/>
+    <updated>2012-11-29T20:46:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/11/29/node-225</id>
+    <content type="html"><![CDATA[<p>So today @Paul M Jones officially declared the first stable release for Aura PHP components. Yes, I am really excited to see this release for it comes with a ton of great improvements for many components, bug fixes and sadly some BC breaks also. The list of packages which became stable are https://github.com/auraphp/Aura.Autoload https://github.com/auraphp/Aura.Cli https://github.com/auraphp/Aura.Di https://github.com/auraphp/Aura.Http https://github.com/auraphp/Aura.Marshal https://github.com/auraphp/Aura.Router : Yes I want to update the post at phpmaster.com for it has some breaks. I will be doing it in coming days. https://github.com/auraphp/Aura.Signal https://github.com/auraphp/Aura.Sql https://github.com/auraphp/Aura.View https://github.com/auraphp/Aura.Web https://github.com/auraphp/Aura.Uri : uri manipulation and there are some packages that are releasing the first Beta. Though these packages have been there for sometime, this is officially declared now only. Yes a bit delay from our part to declare it. https://github.com/auraphp/Aura.Filter Filter is an awesome component for Sanitizing and Validating. You guys should look into the core to learn how it works really. Its an awesome piece of work! . I will in the coming days write something about it. https://github.com/auraphp/Aura.Intl for Internationalization https://github.com/auraphp/Aura.Session : for session handling Thanks to all to make the release happen. You can read the official declaration at http://paul-m-jones.com/archives/2976 . Join our mailing list https://groups.google.com/forum/#!forum/auraphp or #auraphp at irc.freenode.net .</p>
+]]></content>
+  </entry>
+  
+</feed>

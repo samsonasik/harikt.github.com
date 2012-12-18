@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: vfsstream | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/vfsstream/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[vfsStream and file system]]></title>
+    <link href="http://harikt.github.com/blog/2012/11/24/node-223/"/>
+    <updated>2012-11-24T20:42:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/11/24/node-223</id>
+    <content type="html"><![CDATA[<p>Paul M Jones wrote earlier <a href="http://paul-m-jones.com/archives/2487">When Possible, Use File *Resources* Instead Of File *Names*</a> and in comments <a href="http://www.littlehart.net/atthekeyboard">Chris Hartjes</a> was mentioning about <a href="http://vfs.bovigo.org/">vfsStream</a>. So for <a href="https://github.com/auraphp">@auraphp</a> we thought of making to support vfsStream. What the hell it is? vfsStream is a PHP stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest. So without touching the file system and not bothering too much about the operating system, file permissions, disk quota, removing the files created by tests on tear down etc we can make use of vfsstream. Lets start Go and get it via composer.</p>
+
+<p>```php
+{</p>
+
+<pre><code>"require": { 
+    "mikey179/vfsStream": "1.1.0" 
+    } 
+} 
+</code></pre>
+
+<p>```</p>
+
+<p> Run your composer.phar update.</p>
+
+<p><code>php
+require 'vendor/autoload.php';
+use org\\bovigo\\vfs\\vfsStream;
+use org\\bovigo\\vfs\\visitor\\vfsStreamStructureVisitor;
+use org\\bovigo\\vfs\\visitor\\vfsStreamPrintVisitor;
+$structure = array( 'Core' =\&gt; array( 'AbstractFactory' =\&gt; array( 'test.php' =\&gt; 'some text content', 'other.php' =\&gt; 'Some more text content', 'Invalid.csv' =\&gt; 'Something else', ), 'AnEmptyFolder' =\&gt; array(), 'badlocation.php' =\&gt; 'some bad content', ) );
+$root = vfsStream::setup("root", '', $structure);
+</code></p>
+
+<p> So now we have created a complex structured file system. How can we check whether the structure is same?</p>
+
+<p><code>php
+vfsStream::inspect(new vfsStreamPrintVisitor());
+</code></p>
+
+<p> Now you have the structure how can you get the contents of the file you have created?</p>
+
+<p><code>php
+file\_get\_contents(vfsStream::url('root/Core/badlocation.php'));
+</code></p>
+
+<p> Or you can do via</p>
+
+<p><code>php
+$root-&gt;getChild('Core/badlocation.php')-\&gt;getContent();
+</code></p>
+
+<p> The question was raised by myself at https://github.com/mikey179/vfsStream/issues/48 . You can create directory and use vfsStreamPrintVisitor to see how the structure will be</p>
+
+<p><code>php
+mkdir(vfsStream::url('root/Core/AnEmptyFolder/hello')); vfsStream::inspect(new vfsStreamPrintVisitor());
+</code></p>
+
+<p> There is more documentation how you can use in phpunit or have a look into the recent commits on <a href="https://github.com/auraphp/Aura.View/commit/f39e3452116072a3fe7f529584acb862a76fe15e">Aura.View</a> For more documentation have a look into https://github.com/mikey179/vfsStream/wiki</p>
+]]></content>
+  </entry>
+  
+</feed>

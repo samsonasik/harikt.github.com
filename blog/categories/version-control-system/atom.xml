@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: version control system | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/version-control-system/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing git version control system by Linus Torvalds the man behind it]]></title>
+    <link href="http://harikt.github.com/blog/2009/05/21/60-introducing-git-version-control-system-by-linus-torvalds-the-man-behind-it/"/>
+    <updated>2009-05-21T09:42:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/05/21/60-introducing-git-version-control-system-by-linus-torvalds-the-man-behind-it</id>
+    <content type="html"><![CDATA[<p>I was not aware that it was Linus Torvalds was the man behind the git version control system . We may have seen in various places about git-hub . Have you ?  Git hub is the hosting provider . The below video is for you, that I have found from youtube .  There are lots of other version control softwares available. He ( Linus torvals ) giving a brief introduction about all . You can get more details from <a href="http://git-scm.com/" title="Git Version Control System">http://git-scm.com/</a> .</p>
+]]></content>
+  </entry>
+  
+</feed>

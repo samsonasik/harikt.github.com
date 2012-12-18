@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: thumb drive | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/thumb-drive/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Booting gnewsense gnu/linux from USB flash drive]]></title>
+    <link href="http://harikt.github.com/blog/2009/05/02/43-booting-gnewsense-gnulinux-from-usb/"/>
+    <updated>2009-05-02T09:07:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/05/02/43-booting-gnewsense-gnulinux-from-usb</id>
+    <content type="html"><![CDATA[<p>There are various distribution of GNU/Linux available now. I think every disto have a Live CD . So people can try it out and if they love it , can install it . So what I am talking is, it may not be possible to create a Live CD to try each and every distro and their newer versions . If you are a person like me , then you may love to use an alternative to boot from CD, something like a USB flash drive ( popularly called pen drive , thumb )  for its reusable .  Some days before I found the new GNU/ Linux which is entirely free removing all the restricted packages which is supported by the FSF ( Free software foundation) . Gnewsense is an Ubuntu based free software distribution without non-free binary blobs in the kernel. You may think whether Ubuntu is a free one , then why gnewsense . If you have any such doubts you can have a look in the <a href="http://www.gnewsense.org/index.php?n=FAQ.FAQ" title="FAQ of the gnewsense">FAQ of the gnewsense .</a>  <a href="http://www.flickr.com/photos/harikt/3491574392/"><img src="http://farm4.static.flickr.com/3628/3491574392_a807a17c45.jpg?v=0" title="gnewsense desktop" alt="gnewsense desktop" /></a>    <a href="http://www.flickr.com/photos/harikt/3491575834/"><img src="http://farm4.static.flickr.com/3576/3491575834_a0206ca88e.jpg?v=0" title="gnewsense desktop with applications" alt="gnewsense desktop with applications" /></a>       Though I uses Ubuntu , I want to try it out, so thought of downloading the iso and use from USB pen drive . There was a documentation in the gnewsense about <a href="http://wiki.gnewsense.org/Documentation/BootingFromUSB">booting gnewsense gnu/linux from usb</a> . I worked as they have written . Though I am not powerful in those commands I thought of learning the new commands . Fallen to trouble partitioning USB and all . And finally recovered every thing and restarted after finishing all the steps.  When it started I changed to boot from USB flash drive . But got a black screen with just a message error . What to do now . Changed to other usb ports , the same ( error booting gnewsense ) . hm........ Anyway I want to try it, booted to Ubuntu connected net and searched , I don't find an answer for it . Anyway got another software Free USB installer ( Either youu can try http://aligunduz.org/FUSBi/ or usb-creator . usb-creator is a good choice for the aligunduz . Download the usb-creator using synaptic and issue the command usb-creator in terminal . A graphical view will appear . <a href="https://help.ubuntu.com/community/Installation/FromUSBStick">Read more from ubuntu help</a> ) from iso package. Free USB installer can install iso image to usb flash drive . Yes downloaded it, and tried it. Restarted again , now it works . Now its pretty simple booting gnu/linux from usb flash drive . Yes , I would like to express my Thanks to Mr Ali for his wonderful work . Yes it may have saved many people. I guess if users are not powerful in command line too or don't know the basics or some times to people who may have failed like me <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . Anyway failure is not the end, its the begining <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/shades_smile.gif" alt="image" /> .  <a href="http://www.flickr.com/photos/harikt/3491572538/"><img src="http://farm4.static.flickr.com/3582/3491572538_a6cc8b2d3c.jpg?v=0" title="gnewsense iso to usb with fusbi installer" alt="gnewsense iso to usb with fusb installer" /></a> I have taken a screen shot of the gnewsense and also the free usb installer. You can see how it looks . What I feel after working with it is, there is not much difference in menu and all, but a good color for the selection . Improved graphics . You too can try it from usb . Cheers guys , Have a great day .</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: drupal7 | Random thoughts | Hari KT]]></title>
   <link href="http://harikt.github.com/blog/categories/drupal7/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2012-12-18T07:20:46+05:30</updated>
+  <updated>2012-12-18T07:44:16+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -60,7 +60,7 @@ foreach ($rows as $row) {
     $contents = '---' . "\n";
     $contents .= 'layout: post' . "\n";
     $contents .= 'title: ' . $row['title'] . "\n";
-    $contents .= 'tags: [' . $row['tags'] . ']' . "\n";
+    $contents .= 'categories: [' . $row['tags'] . ']' . "\n";
     $contents .= 'published: ' . $bool[$row['status']] . "\n";
     $contents .= 'date: ' . $datetime-&gt;format('Y-m-d H:i') . "\n";
     $contents .= '---' . "\n";

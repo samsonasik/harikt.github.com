@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bangalore | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/bangalore/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Speaking at Barcamp Bangalore August 25th 2012 on Aura PHP]]></title>
+    <link href="http://harikt.github.com/blog/2012/07/30/speaking-at-barcamp-bangalore-on-auraphp/"/>
+    <updated>2012-07-30T23:24:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/07/30/speaking-at-barcamp-bangalore-on-auraphp</id>
+    <content type="html"><![CDATA[<p>If you have never heard or came to know about Aura Project for PHP or love to know something what I know, come join on a healthy conversation at Barcamp Bangalore which will be held on August 25th 2012. I will walk you through some of the components like Router, Web, Http componets which can be used in your next PHP project. If you want to use it as a full stack framework, we have the system. The good thing is its easy to learn and use, and as its not tied to any other components you can create your own next framework with Aura components :-). Find some documentation api and code at https://github.com/auraphp . See you at Barcamp Bangalore! Note : I expect you know about PHP and the new things which are already there in PHP 5.3 and 5.4 . I will not be teaching PHP for its time limited talk. If you want to learn more on PHP and new features, get in touch with me. I will give a talk on it at your place.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Fifth Elephant by HasGeek]]></title>
+    <link href="http://harikt.github.com/blog/2012/07/06/the-fifth-elephant-by-hasgeek/"/>
+    <updated>2012-07-06T09:59:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/07/06/the-fifth-elephant-by-hasgeek</id>
+    <content type="html"><![CDATA[<p>The <a href="http://fifthelephant.in/2012/">Fifth Elephant</a> is going to happen on 27 &amp; 28 July 2012 , Nimhans Convention Centre, Bangalore . The Fifth Elephant is a community-powered conference on the big data ecosystem, covering the technology and its applications in a range of industries. The main event is on July 27-28 . There is also a free workshop on July 26th. A data meetup on July 7, data hacknight on July 14-15. The hacknight has two editions, in Bangalore at the Centre for Internet and Society, and in Pune at AmiWorks. The data workshops are hosted at The Energy &amp; Resources Institute in Bangalore. The Chennai data meetup is at The Startup Centre. Data Meetup : July 7 HackNight : Sat, Jul 14 14:00 PM — Sun, Jul 15 10:00 AM Entry Fee Rs. 500 ( The hacknight is free if you have purchased your ticket to the event. ) Locations : Bangalore ( http://beta.hacknight.in/fifthelephant/bangalore2012 ) Centre for Internet and Society No 194, 2nd C Cross, 4th Main Opp. Domlur Club, Domlur 2nd Stage Bangalore, Karnataka – 560 071, IN Location : Pune ( http://beta.hacknight.in/fifthelephant/pune2012 ) AmiWorks #3b, Ambika Co-Op Housing Society Near Chaturshringi Mandir, Senapati Bapat Road Pune, Maharashtra – 411 016, IN Free Work Shop : July 26 Main Event : July 27, 28 . I missed to know many of the events organised by @HasGeek, so if you don't want to miss signup over http://eepurl.com/duGmH For More Details http://hasgeek.com/ http://fifthelephant.in http://beta.hacknight.in</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Second Symfony Workshop at Bangalore]]></title>
+    <link href="http://harikt.github.com/blog/2010/02/24/second-symfony-workshop-bangalore/"/>
+    <updated>2010-02-24T21:14:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2010/02/24/second-symfony-workshop-bangalore</id>
+    <content type="html"><![CDATA[<p>The first symfony workshop was on 13th ( brought qaeet application ) and the second was conducted on 21st sunday at Techjini office Bangalore . I was one among them in the waiting list in phpmeetup, but as I attended the first meetup I got the permission to be part of the second one . I travelled around 680 Km by train ( 12 hours of journey from Ernakulam to Bangalore and vice versa ) to be part of the symfony workshop in Bangalore . I was really wondering why the guys who have RSVP ed yes didnot looked so seriously to attend it . Sjoerd De Jong also have send mails to all the users in the group about RSVP ing only if they are able to come . If the guys have RSVP ed no some others was able to be part of it. The strength was only 5 ( Elvisds called one of his friend who was interested to be part of the event ) this time ( 12 guys was unable to attend as the other 12 guys RSVP ed yes <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/angry_smile.gif" alt="image" /> ).  Anyway the second workshop was also a wonderful one . Sjoerd's system broke ( lol poor windows ) and he was using my system with Ubuntu 9.10 , Netbeans 6.8 , svn and some other tools . He shows the power of symfony routing with an example , symfony admin-generator , some ajax . As I want to catch my train around 5:00 PM and some others also was leaving, Sjoerd winded up the event . But it was really an awesome one . I know my posts are becoming too late . But the thing is that I am little busy with Book reviews and all .  I have uploaded the application to github . Feel free to look into the code and learn symfony. Though I have named the application as jobeet its not the jobeet tutorial . These are some of the things that we have done on the 2nd meetup . <a href="http://github.com/harikt/jobeet">http://github.com/harikt/jobeet</a> . Sjoerd also recommends you to look Symfony 2 if you are not looking to develop a project with symfony in the short time for its really a new improved code base which will be published completely in the late 2010 . You can look into the site <a href="http://symfony-reloaded.org/">http://symfony-reloaded.org/</a> .  Note : A help to those who are searching or looking for Bus number from Bangalore City Railway station ( Majestic ) to J P Nagar 2nd (second ) phase, 24th Main . You can get the bus from the 11th platform and catch buses numbered 2 ( 2A , 2B etc) . The conductors will help you getting the proper place . ( This is from my past journey dated 21st Feb 2010 . Platform and bus numbers may change as time passes . So feel free to update me if any )</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Symfony Workshop at Bangalore brings qaeet application]]></title>
+    <link href="http://harikt.github.com/blog/2010/02/18/symfony-workshop-bangalore-brings-qaeet-application/"/>
+    <updated>2010-02-18T21:27:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2010/02/18/symfony-workshop-bangalore-brings-qaeet-application</id>
+    <content type="html"><![CDATA[<p>Some of you may be knowing that I was at Bangalore on February 13th to be part of the symfony workshop. I was little late ( late by 10 mins ) so I didnot looked for a hotel to have my break fast . The workshop was conducted by Sjoerd De Jong at Techjini office Bangalore. We developed a qaeet application ( Though I says its we, Sjoerd was the main person who was working on that . So full credits to him ). Though the strength of the people who have RSVP was 15 , some of them didnot attended the event ( May be due to some other personal reasons , but that makes a loss for the others who wished to come #fail ) . Anyway for the 2nd meetup if you guys who have RSVP ed yes and is not able to come or have changed your mind , please make the changes in the meetup site . That will be a great help to others who love to attend the session .  We were a total of 7 guys for the workshop . 3 were from Techjini itself . One the owner itslef Amith Rana and two other employees ( Amal and Amith ) . We have a great time developing the qaeet and discussing some other nice cool applications . Techjini guys was working in symfony for a long time , so they too have helped Sjoerd when some bugs occurs . We winded the session around 5 PM .  The source code of the qaeet application is at <a href="http://github.com/symfony-bangalore/qaeet">http://github.com/symfony-bangalore/qaeet</a> . I have requested Sjoerd to add a read me file which will be a great help to quickly understand . You can also watch the <a href="http://www.symfony-bangalore.org/">http://www.symfony-bangalore.org/</a> group, some times may be having the qaeet in the future .  Updated : If you are a symfony developer you will be defnitely knowing about the release of Symfony 2 which was at Symfony Live Paris event . Now its a developer preview release ( We can see the guys are excited to see what Symfony will give you ) . Symfony 2 will be available in the late 2010 . I was watching twitter and the symfony blog and got lots of information about the Paris event just finished . Symfony 2 will be using some of the components of Zend . The slides are available and is a good resource though we missed the talk given by them . Matthew Weier O'Phinney have given a talk about how to use of Zend components in symfony project . I also loved the presentation of Dustin Whittle of Yahoo . Yahoo uses symfony as a full stack framework ( Delicious , Yahoo answers etc ) . In his slide he has shown what Rasmus think about PHP framework and the bench mark of hello world application . Yes I too agree we don't need a framework to write hello world . Hell with hello world bench mark for PHP frameworks .  I know every one have enjoyed the Symfony Live held in Paris . And lets wait to see the first release of Symfony 2 PHP framework in the late 2010 . Till then we can watch the symfony-reloaded.org.</p>
+]]></content>
+  </entry>
+  
+</feed>

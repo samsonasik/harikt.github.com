@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ide | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/ide/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Netbeans 6.8 comes with support for Symfony framework , Zend framework]]></title>
+    <link href="http://harikt.github.com/blog/2009/12/16/netbeans-68-comes-support-symfony-framework/"/>
+    <updated>2009-12-16T19:53:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/12/16/netbeans-68-comes-support-symfony-framework</id>
+    <content type="html"><![CDATA[<p>I know I don't want any one to introduce about Netbeans . When I started my mini project in Java I was using notepad, vim etc . I was not aware about the IDE's like Eclipse , Netbeans etc . Jose Antony was the person who introduced me wonderful IDE netbeans. Thanks to him .  <a href="http://www.flickr.com/photos/harikt/4190704958/"><img src="http://farm3.static.flickr.com/2558/4190704958_c5cb8a4d2d.jpg" alt="Get Tomorrow Today with Netbeans IDE" /></a>  I started using Netbeans for developing some of my Java applications . Below is an in introductory video of Netbeans 6.8 , feel free to watch it .  When I moved to PHP Netbeans started supporting PHP too . The lastest version of Netbeans 6.8 comes with support for the symfony and zend framework ( Get more information from the <a href="http://blogs.sun.com/netbeansphp/entry/zend_framework_support_added">blog of sun microsystems</a> ) . If you have not used an IDE , you may not know the power of an IDE . But the thing is that you will forget many of the keywords <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . For example a ctrl + space gives lots of methods and members of the particular class . So when some one ask you , you may say aah I don't remember it, I want to look into it . Thats the problem with an IDE . If you are using vim , you will never forget the methods and names, for you don't have enough time to look the class and get the necessary information .  Netbeans supports many dynamic languages like Java , PHP , Ruby , C++ etc . Netbeans is an opensource IDE and its totally free . I started using Netbeans after I got a free CD from netbeans team previously . I don't want to avoid netbeans as I love it . So get your <a href="http://netbeans.org/downloads/">free copy of the popular opensource IDE</a> . The caption for the Netbeans 6.8 is also interesting I loved it "Get Tomorrow Today".</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[IDE's for PHP Development or PHP development softwares]]></title>
+    <link href="http://harikt.github.com/blog/2009/05/20/58-ides-for-php-development-or-php-development-softwares/"/>
+    <updated>2009-05-20T09:22:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/05/20/58-ides-for-php-development-or-php-development-softwares</id>
+    <content type="html"><![CDATA[<p>Integrated Development Environment or IDE in short . I am some what an active user in the php classes group . Recently an editor was the talk . He actually was looking for a debugger , and many people came with different solutions . I have tried Netbeans , Eclipse, Aptana and Zend Studio . Just installed and run some samples that's all what I have an experince with IDE for PHP. These IDE's are used by php developer , download and try. Many PHP IDE's like Netbeans , Eclipse , Aptana etc are free php developer softwares. Some commercial php developer softwares are also available.  But thought of writing some of the editors that I was new.  <a href="http://www.netbeans.org/" title="Netbeans IDE for PHP">Netbeans</a> : A wonderful opensource IDE from Sun Microsystems . Used for developing Java applications mainly. Now supporting PHP development too . It was really useful when I was developing a Java application for the mini project . Jose Antony was the one who introduced Netbeans and Eclipse before us. It helped us a lot to develop the application some what quickly, even though we were new to it .  <a href="http://www.eclipse.org/" title="Eclipse IDE for PHP">Eclipse</a> : Another opensource IDE used for Java application development mainly . Now supporting PHP development with additional plugins . Eclipse may be some what popular than Netbeans . You can download PDT which is a stand alone .  <a href="http://www.aptana.com" title="Aptana IDE for PHP">Aptana</a> : This is really new to me . This is one that I have got from the discussions . I was not aware of Aptana , its an opensource IDE by community and also have a commercial one which is based on Eclipse IDE. You can download Aptana as a plugins for Eclipse. Really a wonderful tool for developers . Some of the features that I have not seen in Netbeans , Eclipse etc is the html view as shown in a browser itself. Thats really a cool feature. Aptana will not run in 64 bit edition for now . It can be used as a  plugin for Eclipse if you are using 64bit in GNU/Linux . Some more configurations are needed for running Aptana in Ubuntu .  <a href="http://zend.com">Zend Studio</a> : The IDE for PHP developed by Zend , the one who supports PHP . All can download Zend Studio, a 30 day trial for free from Zend. Its also an eclipse based IDE . Has many features when you are working on Zend framework an open-source framework for PHP, like symfony-project , cake , code ignitter , yii etc .  You can use simple editors too for PHP development, its your choice to select the one which suits you really.  Nusphere : PHPed or Nusphere is a commercial IDE for PHP development like zend studio. I have not tried but many are recommending this. I don't know the importance of this when zend studio is there . Link : http://www.nusphere.com/  These IDE 's are platform independent as they are developed in Java , so will run on Windows , GNU / Linux or Unix operating system . I am using Ubuntu 9.04 and this runs without any problem. You cannot compare these IDE's with dreamweaver. Dreamweaver is built for designers than for programmers . If you are looking for a Dreamweaver like one for GNU/Linux you can go for Quanta plus or Screem . If you are just a designer then you can go for Kompozer , which is similar to dreamweaver ( Don't think its exactly as dreamweaver ).  The use of a PHP IDE is not just syntax highlighting . When you are using a MVC or just a class the methods and properties can be viewed by just ctrl+ space . This is a really helpful feature when you are coding in MVC architecture .</p>
+]]></content>
+  </entry>
+  
+</feed>

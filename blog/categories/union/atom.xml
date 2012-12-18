@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: union | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/union/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Why you should write test]]></title>
+    <link href="http://harikt.github.com/blog/2012/06/13/why-you-should-write-test/"/>
+    <updated>2012-06-13T09:25:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/06/13/why-you-should-write-test</id>
+    <content type="html"><![CDATA[<p>Recently I was reading <a href="http://sandeep.shetty.in/2012/05/when-to-use-arraymerge-and-union.html">When to use array_merge and union operator (+) in PHP?</a> . Lately working with examples I was also confused how the array_merge and union works. Really, that brings a strong thought why you should write tests. Lets see some examples . {syntaxhighlighter class="php"} 'bar', 3, 4, '123' => 3); echo '$a = '; var_export($a); $b = array('foo' => 'baz', 3, 6, 7, 3); echo PHP_EOL . '$b = '; var_export($b); echo PHP_EOL . 'array_merge( $a, $b) = '; var_export( array_merge($a, $b)); echo PHP_EOL . '$a + $b = '; var_export( $a + $b ); {/syntaxhighlighter} Do you have any thoughts on how the result for array_merge and + comes? {syntaxhighlighter class="php"} $a = array ( 'foo' => 'bar', 0 => 3, 1 => 4, 123 => 3, ) $b = array ( 'foo' => 'baz', 0 => 3, 1 => 6, 2 => 7, 3 => 3, ) array_merge( $a, $b) = array ( 'foo' => 'baz', 0 => 3, 1 => 4, 2 => 3, 3 => 3, 4 => 6, 5 => 7, 6 => 3, ) $a + $b = array ( 'foo' => 'bar', 0 => 3, 1 => 4, 123 => 3, 2 => 7, 3 => 3, ) {/syntaxhighlighter} Hope this makes to convince you also , why you should write tests :-) . A detailed post on the working is at http://unix0.wordpress.com/2012/01/08/php-array_merge-vs-plus-union-operator/</p>
+]]></content>
+  </entry>
+  
+</feed>

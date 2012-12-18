@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sql | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/sql/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Aura.Sql can now make use of existing PDO connection]]></title>
+    <link href="http://harikt.github.com/blog/2012/12/06/node-227/"/>
+    <updated>2012-12-06T19:27:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2012/12/06/node-227</id>
+    <content type="html"><![CDATA[<p>Aura.Sql can now make use of an existing PDO connection with the recent <a href="https://github.com/auraphp/Aura.Sql/commit/79284382ef6351d81719376063076c7e511c28fd">commit here</a> . This all came after a short discussion with Stan Lemon. A big Thanks to him for making a featured request like this.     > @<a href="https://twitter.com/harikt">harikt</a> can I inject an existing Pdo > object? > > — Stan Lemon (@stanlemon) > <a href="https://twitter.com/stanlemon/status/274708971217100800">December 1, 2012</a>     How to make use of an existing PDO?  You want to get a connection object and set the instance of pdo. Note : In this way you are eager loading the PDO. Else Aura.Sql knows when to do the connection. Example of how to make use of it is</p>
+
+<p>```php
+use Aura\Sql\ConnectionFactory;
+$connection_factory = new ConnectionFactory;
+$connection = $connection_factory->newInstance(</p>
+
+<pre><code>// connection name 
+'mysql', 
+// DSN elements for PDO; this can also be 
+// an array of key-value pairs 
+// host=127.0.0.1;dbname=database-name 
+'', 
+// username for the connection 
+'', 
+// password for the connection 
+'' 
+</code></pre>
+
+<p>);
+$connection->setPdo($pdo);
+```</p>
+
+<p>Normally you need to pass the dsn as a string or array. But if you are having the PDO object and you don't love to do, you can pass it as null. Then to the connection object set the pdo instance. Now you can make use of the Aura.Sql insert ,update , delete queries. For a detailed information of how to do check the docs at <a href="https://github.com/auraphp/Aura.Sql">Aura.Sql</a> .  Assuming you have a PDO object created something like the one below</p>
+
+<p>```php
+$params = array(</p>
+
+<pre><code>'driver' =&gt; 'pdo_mysql', 
+'user' =&gt; 'username', 
+'password' =&gt; 'password', 
+'dbname' =&gt; 'database-name' 
+</code></pre>
+
+<p>);
+$dsn = 'mysql:host=localhost;dbname=' . $params['dbname'];
+$pdo = new Pdo(</p>
+
+<pre><code>$dsn, 
+$params['user'], 
+$params['password'], 
+$options = array( PDO::MYSQL_ATTR_INIT_COMMAND =&gt; 'SET NAMES utf8', ) 
+</code></pre>
+
+<p>);
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

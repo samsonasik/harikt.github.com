@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: selenium | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/selenium/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Selenium a good tool for testers to record the action]]></title>
+    <link href="http://harikt.github.com/blog/2009/08/26/selenium-good-tool-testers-record-action/"/>
+    <updated>2009-08-26T21:20:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/08/26/selenium-good-tool-testers-record-action</id>
+    <content type="html"><![CDATA[<p><img src="http://farm4.static.flickr.com/3527/3858966507_9aef76db9d.jpg" alt="image" />Learning Zend framework made me explore many new tools . The selenium IDE which is an add on for Mozilla is a wonderful tool for testers . For eg : we are humans and we may forget the actions done what all things we do . But we can record our clicks and inputs using selenium IDE . So when an error occurs we can show the developer what happens and what was the input entered etc .  I am really excited to see the Selenium IDE . I hope you testers and developers too will love this wonderful addon . Currently Selenium is supported by the browsers given below .  I have taken the list from the site . So if you are interested please do visit the site and get more information .  Browser Selenium IDE Selenium Remote Control Selenium Core Firefox 3 Record and playback tests Start browser, run tests Run tests Firefox 2 Record and playback tests Start browser, run tests Run tests IE 8b1 not supported ? ? IE 7 not supported Start browser, run tests Run tests Safari 3 not supported Start browser, run tests Run tests Safari 2 not supported Start browser, run tests Run tests Opera 9 not supported Start browser, run tests Run tests Opera 8 not supported Start browser, run tests Run tests Others not supported Partial support possible* Run tests**</p>
+]]></content>
+  </entry>
+  
+</feed>

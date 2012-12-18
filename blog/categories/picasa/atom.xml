@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: picasa | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/picasa/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Low disk space , store images and files in database or]]></title>
+    <link href="http://harikt.github.com/blog/2009/04/19/35-low-disk-space-store-images-and-files-in-database-or-/"/>
+    <updated>2009-04-19T09:49:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/04/19/35-low-disk-space-store-images-and-files-in-database-or-</id>
+    <content type="html"><![CDATA[<p>Every one may have fallen in this trouble , when your disk space exceeds . Yes , I was trying to create a folder and upload some images . I noticed a fact , there is no space remaining to upload one . Yes , every one , who have a web hosting space may have thought an alternative way to store images and files . Yes, don't worry I just uploaded to my picasa web albums <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-smile.gif" title="Smile" alt="Smile" /> .  But there is also another alternative if you have a database . Yes , you can store images and files in MySQL . To store images and files use the BLOB format . It can store binary data . What you need to do is  Create a table Image , with pkid of type int(10) as unique id , data of type BLOB , format ( jpeg , png ... ) and description.  Read the binary contents from the image . using file_get_contents() or fread() functions of php .  Insert to database . Now you can retrieve the image using the id . Pass the id to a page which outputs the header of image . Yes, its pretty simple to do this . The below code is a sample . You can try it out . I have not tested , just made for the post now .  &lt;?php /* Create a table something like this CREATE TABLE `Labs`.`Images` ( `pkid` INT( 10 ) NOT NULL , `Content` BLOB NOT NULL , `Description` VARCHAR( 300 ) NOT NULL , `Type` VARCHAR( 5 ) NOT NULL , PRIMARY KEY ( `pkid` ) ) ENGINE = MYISAM */ //insertImage.php $mysqli = new mysqli("localhost", "my_user", "my_password", "database"); /* check connection */ if (mysqli_connect_errno()) { printf("Connect failed: %s\n", mysqli_connect_error()); exit(); } //Read file contents $fp = fopen("image.jpg","rb"); $contents = fread( $fp , filesize("image.jpg") ); fclose( $fp ); if ($result = $mysqli->query("INSERT INTO Images('pkid','Content','Description') VALUES('NULL','".$contents."','test me')")) { echo "Successful insert"; } $mysqli->close(); ?> &lt;?php //getImage.php $mysqli = new mysqli("localhost", "my_user", "my_password", "database"); /* check connection */ if (mysqli_connect_errno()) { printf("Connect failed: %s\n", mysqli_connect_error()); exit(); } //Read image contents if ($result = $mysqli->query("SELECT Content FROM Images WHERE pkid = '".$_GET['pkid']."'")) { $row = $result->fetch_assoc(); } header('Content-Type: image/jpeg'); echo $row['Content']; ?>  <img src="getImage.php?pkid=<?php echo $pkid ?\>" alt="&lt;?php echo $description ?>" title="&lt;?php echo $description ?>" />  This is just a sample. I hope you know some basics of PHP . You can modify the script as needed, and also do care about SQL injections <img src="plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-tongue-out.gif" title="Tongue out" alt="Tongue out" /> . You can encrypt the values that are passed for additional security measures . Have not tested this , just made this in a hurry . So may contains errors. Please do report if you find some . I will be happy to hear it from you .  You can use the sameway to store the word , pdf etc in the MySQL . Its simple to make it work . You can change the content type of header , so as to make it dynamic .</p>
+]]></content>
+  </entry>
+  
+</feed>

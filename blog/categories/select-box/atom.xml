@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: select box | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/select-box/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2012-12-18T07:44:16+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Select box poking out through menu in IE 6]]></title>
+    <link href="http://harikt.github.com/blog/2009/03/20/22-select-box-poking-out-through-menu-in-ie-6/"/>
+    <updated>2009-03-20T08:45:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2009/03/20/22-select-box-poking-out-through-menu-in-ie-6</id>
+    <content type="html"><![CDATA[<p>Internet Explorer is always a pain for developers and web designers. Many of the functions are not recognised by IE . Some people who loves the buggy browser still uses it . There are lots of features and security available in Mozilla. Don't know why some people still stick onto it . Aaah its upto them .  I was looking for a solution for the IE6 bug . The bug was the select box is pocking through the javascript menu . All the other elements excpet the select box will come on the top :( . I want to make it clear. Spend a lot of time to get a solution for it. Finally I was successful .  This was the solution  Need to load the menu above an iframe .Referring the site w3schools I got some helps too . We need to make the z-index of menu 1 more than that of iframe. That is when z-index of iframeis 1, z-index of menu should be 2 or more. The default z-index will be 0 . z-index -1 has lower priority . The z-index property will be availale only when position:absolute is defined for it. When position:absolute is used , there will be some design issues arrising and you need to over come these .  <iframe name="iframeblocker" id="iframeblocker" src="" style="position:absolute; z-index:1; border:0; height:200px; width:50px; top:-1000px; left:-1000px;"\>&lt;/iframe>  So we can make the iframe visible by making the changes to x, y co-ordinates. You need to make the changes through DOM .  $blocker = document.getElementById('iframebblocker');  blocker.style.left = document.getElementById('MenuDiv').offsetLeft; // IE only  blocker.style.top = document.getElementById('MenuDiv').offsetTop; // IE only  blocker.style.width = document.getElementById('MenuDiv').offsetWidth;  blocker.style.height = document.getElementById('MenuDiv').offsetHeight;  The above code should be made available in the javascript menu . You can look the code where its saying to show the menu and hide. On hiding you can set the left , top , width and height to 0px. Else the iframe will be visible blocking other contents . The MenuDiv is the ID of the menu . We need to get the exact width , height , x and y c0-ordinate to show the iframe exactly below the menu . Else the iframe will be wide covering other values of the page.  Some of the features where IE specific. I have referred a lots of site , to fix this problem . Now I can handle this bug. This post is to make me remember how to solve this bug.</p>
+]]></content>
+  </entry>
+  
+</feed>

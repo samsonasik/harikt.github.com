@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: package | Random thoughts | Hari KT]]></title>
+  <link href="http://harikt.github.com/blog/categories/package/atom.xml" rel="self"/>
+  <link href="http://harikt.github.com/"/>
+  <updated>2013-01-04T07:29:12+05:30</updated>
+  <id>http://harikt.github.com/</id>
+  <author>
+    <name><![CDATA[Hari K T]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Thoughts on Package/Component Structure]]></title>
+    <link href="http://harikt.github.com/blog/2013/01/04/thoughts-on-package-or-component/"/>
+    <updated>2013-01-04T06:15:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2013/01/04/thoughts-on-package-or-component</id>
+    <content type="html"><![CDATA[<p>Comparing a software X with Y will not make anything worst, but makes it better. But many of them will think it as a promotional stuff. It is not anyones's problem. Some like to build it that way, some like the other way.</p>
+
+<p>So I am not comparing X with Y here.</p>
+
+<p>Not talking about package like Guzzle:</p>
+
+<p>I am not mentioning building something like Guzzle, which is a framework that includes the tools needed to create a robust web service client.</p>
+
+<p>But I am interested in talking about the packages which can be used to build something like Guzzle when you look into the require of composer.json.</p>
+
+<p>That means something like Aura.Http which can be used to make a request to google and do the search if needed or post etc.</p>
+
+<p>Structure of Package or Component:</p>
+
+<p>1 ) We need to name a package.</p>
+
+<p>Let us go for the <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md">PSR-0</a> naming.</p>
+
+<p>Each namespace must have a top-level namespace ("Vendor Name"), and a Package name. Probably you will end up with Vendor.Package or Vendor_Package .</p>
+
+<p>2 ) <a href="http://getcomposer.org/">Composer</a>/<a href="https://github.com/crodas/Eath">Eath</a>, are great tools which help you to manage the dependency management in your PHP projects. So we need a composer.json or package.yml .</p>
+
+<p>3 ) We are creating a package or component, so obviously it will contain source files and test files. It will be a mess when we keep all tests and source files in a same place. Most of them uses either <code>src</code> folder or <code>lib</code> or <code>library</code> to keep source files and <code>tests</code> to keep test files. Probably you have some documentation, a <code>docs</code> folder may help. May be some executable scripts. You can also add a <code>scripts</code> or <code>bin</code> folder.</p>
+
+<p>Now your structure will be something like</p>
+
+<p>Vendor.Package
+  ├── composer.json
+  ├── package.yml
+  ├── docs
+  ├── src
+  │   └── Vendor
+  │       └── Package
+  └── tests</p>
+
+<pre><code>  └── Vendor
+      └── Package
+</code></pre>
+
+<p>The above structure follows a PSR-0 naming convention for package/component.</p>
+
+<p>NIH : We all create new packages for we don't like some other package invented here, not for its not invented here or probably to make use of newer stuffs like traits, closures etc available in PHP 5.4 than sticking with PHP 5 or sometimes it is not inveneted here.</p>
+
+<p>So add your depenedencies to composer.json or package.yml</p>
+
+<p>Let us assume we are going to create a Validation pacakge. Probably you love annotations or yml format. It is always a better idea to keep the annotations, yaml etc on a bridge than in the Validation package. Remember you have composer, let the bridge package composer.json helps you to download validation package, annotation library. This also helps you to write your integration tests in bridge package than making a dependency on the Validation package.</p>
+
+<p>And also help people to use different annotations library than a single one or you will end up messing with more annotation classes.</p>
+
+<p>I guess this helps people to</p>
+
+<p>1 ) fork and contribute
+2 ) Even if there is no documentation, it helps to look into the source and get the point. Else a lot of classes confuses people.</p>
+
+<p>Nothing is developed to make it bad, everything is made for good. Though at-times it acts badly.</p>
+
+<p>These are some of the principles I learned looking at various projects like Aura, Symfony2, ZF2, Lithium, Fuel2, Illuminate... you name it.</p>
+]]></content>
+  </entry>
+  
+</feed>

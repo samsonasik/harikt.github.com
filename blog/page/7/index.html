@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="So now some of the relationship support has been there in lithium&#8217;s x-relationships branch . I was talking with Howard Lince and Nateabele &hellip;">
+  <meta name="description" content="Hope everyone knows about HTMLPurifier and why its used. Martin Brampton&#8217;s new book PHP 5 CMS Framework Development includes a discussion of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/12/adding-html-purifier-library-lithium/">Adding HTML Purifier Library in Lithium</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-12T08:06:00+05:30" pubdate data-updated="true">Mar 12<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hope everyone knows about <a href="http://htmlpurifier.org/">HTMLPurifier</a> and why its used. Martin Brampton&#8217;s new book <a href="https://www.packtpub.com/php-5-cms-framework-development-second-edition/book">PHP 5 CMS Framework Development</a> includes a discussion of using HTML Purifier in your content managementsystem.  Today I thought of adding HTMLPurifier to Lithium . Its easy but sometimes we may want to look the autoloader and how its implemented. So this is a small contribution from me.  There is also another way. ie go and clone https://github.com/harikt/li3_htmlpurifier. Download all the files to HTMLPurifier . And add Libraries::add(&#8216;li3_htmlpurifier&#8217;);  Hope you liked :-) . Have fun .</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -401,42 +437,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/06/24/playing-ratproxy-passive-web-application-security-assessment-tool/">Playing With Ratproxy - Passive Web Application Security Assessment Tool</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-06-24T23:22:00+05:30" pubdate data-updated="true">Jun 24<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I know many of you may be knowing about this google tool. I am little late to play with this. But just posting if someone still missing to checkout . If you was following me on twitter you may have seen my tweet some days back. Even though I thought of writing a blogpost I was too lazy and some what busy :) .  But today I thought of playing with it . Hope you too will enjoy looking the security issues for your website . This is a great tool to check. Its from Michal Zalewski of Google which has been licenced under the Apache Licence agreement .  What is ratproxy ?  So you may have heard about proxy servers .. But this is not a proxy server to by pass any of the social networking websites :) . This a great tool for webdevelopers , web owners or even clients who want to test their website before payment is made. So let me copy the defnition of what ratproxy is  &#8221;<em>Ratproxy</em> is a semi-automated, largely passive web application security audit tool. It is meant to complement active crawlers and manual proxies more commonly used for this task, and is optimized specifically for an accurate and sensitive detection, and automatic annotation, of potential problems and security-relevant design patterns based on the observation of existing, user-initiated traffic in complex <em>web 2.0</em> environments. The approach taken with <em>ratproxy</em> offers several important advantages over more traditional methods:  -   <strong>No risk of disruptions.</strong>  -   <strong>Low effort, high yield.</strong>  -   <strong>Preserved control flow of human interaction.</strong>   -   <strong>WYSIWYG data on script behavior.</strong>   -   <strong>Easy process integration.</strong> &#8221;  Ratproxy is developed from C , ya was my favourite language at college though I am not so powerful in it :) . I remebered compilling C programs from Linux terminals when I was at college .  You may run with errors when compiling it with make command .  Something like the below .  hari@hari-laptop:/var/www/ratproxy$ make cc ratproxy.c -o ratproxy  -Wall -O3 -Wno-pointer-sign -D_GNU_SOURCE http.c mime.c ssl.c -lcrypto -lssl ratproxy.c:43:25: error: openssl/md5.h: No such file or directory ratproxy.c: In function ‘decode_flash’: ratproxy.c:615: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result  &#8221;  Just install libssl-dev package using synaptic or apt-get . Compile it once again and yes I hope you have done without errors . Download the Quick Proxy addon for the Mozilla firefox , so you can easily switch from proxy to the other . You need to configure the proxy server . Edit - > Preferences -> Advanced-> Network tab -> Settings -> Mannual proxy and add it . Now just close and start your Mozilla Firefox once again .  Run from the terminal  hari@hari-laptop:/var/www/ratproxy$ ./ratproxy -v dumps -w mysite.log -d mysite.com -XClfscm  ratproxy version 1.58-beta by &lt;lcamtuf@google.com> [*] Proxy configured successfully. Have fun, and please do not be evil.     WARNING: Disruptive tests enabled. use with care. [+] Accepting connections on port 8080/tcp (local only)&#8230;  Browse the mysite.com upload , download and do what ever things you love. Don&#8217;t forget to pass javascript , some unwanted test queries etc . Try SQL injections also . You will be getting detailed report . You can see how much your server is vulnerable . It may be more than this :) .  Report can be made by running hari@hari-laptop:/var/www/ratproxy$ ./ratproxy-report.sh mysite.log > report.html  Please don&#8217;t use this tool for EVIL . Do it for good to make a wonderful web tomorrow . I love good techniques and good people . If you are trying to crack I may call you a F*cker . Hope you enjoyed the new tool to fix the issues .  You can get more information from http://code.google.com/p/ratproxy/wiki/RatproxyDoc  This is also a wonderful tutorial http://isisblogs.poly.edu/2008/07/05/ratproxy-151-tutorial/  . Don&#8217;t forget to check it out .  Updated : After playing with ratproxy , I came across other solutions too . Many of them are open-source and the list is  http://w3af.sourceforge.net/  http://cirt.net/nikto2  http://dawes.za.net/rogan/webscarab/  http://www.metasploit.com/</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -454,6 +454,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/01/04/thoughts-on-package-or-component/">Thoughts on Package/Component Structure</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/18/aura-framework-releases-beta4/">Aura Framework releases Beta4</a>
       </li>
     
@@ -467,10 +471,6 @@
     
       <li class="post">
         <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
   </ul>
@@ -532,7 +532,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Hari K T -
+  Copyright &copy; 2013 - Hari K T -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

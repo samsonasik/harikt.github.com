@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="OAuth the future of login? People are bored of registering and remebering user passwords on different websites. So the future of OAuth or using it in &hellip;">
+  <meta name="description" content="Hi guys, have you heard about Neon ? Probably no I guess. Neon is the project by David Grudl (http://davidgrudl.com) which is part of Nette Framework &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/17/neon-simple-yaml-parser-for-php/">Introducing Neon, Simple Yaml Parser for PHP</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-17T22:15:00+05:30" pubdate data-updated="true">May 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi guys, have you heard about Neon ? Probably no I guess.  Neon is the project by David Grudl (http://davidgrudl.com) which is part of Nette Framework (http://nette.org) . I recently found Neon , but it was not in github for people may not have noticed that much. Also David Grudl tweets almost everything in Czech. So I assume he may be having less followers in twitter who speaks English or any language other than Czech. But he is an awesome guy who has some awesome projects. One of it is <a href="http://ne-on.org/">Neon</a> and the other one is Texy . I will cover texy in another post.  You can create the php array from json, yaml etc with Neon . See the example below we are parsing as a json and getting $data as array . And then later we are encoding it and you will get Yaml. You can see the live demo at Neon website : http://ne-on.org/  {syntaxhighlighter class=&#8221;php&#8221;} $data = Neon::decode(&#8217; { &#8220;repo&#8221;: [ { &#8220;name&#8221;: &#8220;resque&#8221; }, { &#8220;name&#8221;: &#8220;hub&#8221; }, { &#8220;name&#8221;: &#8220;rip&#8221; }, ] } &#8216;); print_r($data); echo &#8217;   * * * * *  &#8216;; $neon = Neon::encode($data, Neon::BLOCK); {/syntaxhighlighter} PHP array  {syntaxhighlighter class=&#8221;php&#8221;} Array ( [repo] => Array ( [0] => Array ( [name] => resque ) [1] => Array ( [name] => hub ) [2] => Array ( [name] => rip ) ) ) repo: - name: resque - name: hub - name: rip {/syntaxhighlighter}  You can see the source code at https://github.com/harikt/Neon for David Grudl has not kept in github. You can get more details from Neon Website http://ne-on.org/</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -401,42 +437,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/01/aura-project-moving-to-php54/">Aura Project Aiming to PHP 5.4 + Only</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-01T22:35:00+05:30" pubdate data-updated="true">Jan 1<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>What&#8217;s Aura project ? :  For those who are new to Aura , <a href="http://auraphp.github.com">Aura project</a> was a component based library planned for 5.3+, which is a major rewrite of <a href="http://solarphp.com">Solar framework for PHP</a>. As PHP 5.4 RC4 has already released and within a few weeks we expect 5.4 having a stable release. So today in the eve of New Year, Paul M Jones the lead developer for Aura Project for PHP officially announced Aura will be targetting for PHP 5.4 + and not for 5.3.  The benefits are  - short array syntax  - the &#8220;callable&#8221; typehint  - apply traits if needed  Join the <a href="https://groups.google.com/forum/#!forum/auraphp">Aura Project for PHP google group.</a> or #auraphp channel at irc.freenode.net .  Now you have a reason to Play with PHP 5.4 and also test the RC4 and file bugs before it becomes stable. You can also file bugs to auraphp is you find any .   The planned way is betas like google beta&#8217;s , discussions are going on, be there and voice your opinion :) .  Current Libraries are   <a href="https://github.com/auraphp/Aura.Autoload">Aura.Autoload</a> :  The Aura Autoload package provides a PSR-0 compliant SPL autoloader implementation for PHP.  <a href="https://github.com/auraphp/Aura.Cli">Aura.Cli</a> :  The Aura CLI package provides a system for creating and executing CLI Command objects. It includes facilities for parsing command-line options and handling standard input/output. Read more from <a href="http://auraphp.github.com/Aura.Cli/">http://auraphp.github.com/Aura.Cli/</a>  <a href="https://github.com/auraphp/Aura.Di">Aura.Di</a> :  The Aura DI package provides a dependency injection container system with the following features:  - native support for constructor- and setter-based injection  - lazy-loading of services  - inheritable configuration of setters and constructor params.  Read more from <a href="http://auraphp.github.com/Aura.Di/">http://auraphp.github.com/Aura.Di/</a>  <a href="https://github.com/auraphp/Aura.Http">Aura.Http</a> :  The Aura HTTP package provides objects to build and send HTTP responses from the server to the client. Read more from <a href="http://auraphp.github.com/Aura.Cli/">http://auraphp.github.com/Aura.Cli/</a>  <a href="https://github.com/auraphp/Aura.Marshal">Aura.Marshal</a> : The Aura.Marshal package is a data-object marshalling tool. It takes results from data sources and marshals those result sets into domain model objects of your own design, preserving data relationships along the way. Read about the article at <a href="http://phpadvent.org/2011/a-stitch-in-time-saves-nine-by-paul-jones">phpadvent about N+1 problem</a>. Documentation over <a href="http://auraphp.github.com/Aura.Marshal/">http://auraphp.github.com/Aura.Marshal/</a>  <a href="https://github.com/auraphp/Aura.Router">Aura.Router</a>:  Aura Router is a PHP package that implements web routing. Given a URI path and a copy of $_SERVER, it will extract controller, action, and parameter values for a specific application route. Read more from <a href="http://auraphp.github.com/Aura.Router/">http://auraphp.github.com/Aura.Router/</a>  <a href="https://github.com/auraphp/Aura.Signal">Aura.Signal</a> :  The Aura Signal package is a SignalSlots / EventHandler implementation for PHP 5.3+. With it, we can invoke handlers (“slots” or “hooks”) whenever an object sends a signal (“notification” or “event”) to the signal manager. Read more from <a href="http://auraphp.github.com/Aura.Signal/">http://auraphp.github.com/Aura.Signal/</a>  <a href="https://github.com/auraphp/Aura.Sql">Aura.Sql</a> :  The Aura.Sql package will provide adapters for connecting to these relational database systems. Read more from <a href="http://auraphp.github.com/Aura.Sql/">http://auraphp.github.com/Aura.Sql/</a>  <a href="https://github.com/auraphp/Aura.View">Aura.View</a> :  The Aura View package is an implementation of the TemplateView pattern, with support for helpers and path stacks. It adheres to the &#8220;use PHP for presentation logic&#8221; ideology, and is preceded by systems such as Savant, Zend_View, and Solar_View. Read more from <a href="http://auraphp.github.com/Aura.View/">http://auraphp.github.com/Aura.View/</a>  <a href="https://github.com/auraphp/Aura.Web">Aura.Web</a> :  Read more from <a href="http://auraphp.github.com/Aura.Web/">http://auraphp.github.com/Aura.Web/</a>  Website :  <a href="https://github.com/auraphp">https://github.com/auraphp</a>  Nb : For now the packages are still in 5.3 , but in the next pushes it will be compatible only for 5.4 .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -454,6 +454,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/01/04/thoughts-on-package-or-component/">Thoughts on Package/Component Structure</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/18/aura-framework-releases-beta4/">Aura Framework releases Beta4</a>
       </li>
     
@@ -467,10 +471,6 @@
     
       <li class="post">
         <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/06/node-227/">Aura.Sql can now make use of existing PDO connection</a>
       </li>
     
   </ul>
@@ -532,7 +532,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Hari K T -
+  Copyright &copy; 2013 - Hari K T -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

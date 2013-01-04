@@ -4,7 +4,7 @@
   <title><![CDATA[Category: package | Random thoughts | Hari KT]]></title>
   <link href="http://harikt.github.com/blog/categories/package/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2013-01-04T07:29:12+05:30</updated>
+  <updated>2013-01-04T07:35:49+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -44,7 +44,8 @@
 
 <p>Now your structure will be something like</p>
 
-<p>Vendor.Package
+<p>```bash
+Vendor.Package
   ├── composer.json
   ├── package.yml
   ├── docs
@@ -56,6 +57,8 @@
 <pre><code>  └── Vendor
       └── Package
 </code></pre>
+
+<p>```</p>
 
 <p>The above structure follows a PSR-0 naming convention for package/component.</p>
 

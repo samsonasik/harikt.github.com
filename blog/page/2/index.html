@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="May be the question is so simple for you. But many times I feel it much complicated. Everyone would have started their website with a custom cms and &hellip;">
+  <meta name="description" content="Paul M Jones wrote earlier When Possible, Use File *Resources* Instead Of File *Names* and in comments Chris Hartjes was mentioning about vfsStream. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,114 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/24/node-223/">vfsStream and File System</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-24T20:42:00+05:30" pubdate data-updated="true">Nov 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Paul M Jones wrote earlier <a href="http://paul-m-jones.com/archives/2487">When Possible, Use File *Resources* Instead Of File *Names*</a> and in comments <a href="http://www.littlehart.net/atthekeyboard">Chris Hartjes</a> was mentioning about <a href="http://vfs.bovigo.org/">vfsStream</a>. So for <a href="https://github.com/auraphp">@auraphp</a> we thought of making to support vfsStream. What the hell it is? vfsStream is a PHP stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest. So without touching the file system and not bothering too much about the operating system, file permissions, disk quota, removing the files created by tests on tear down etc we can make use of vfsstream. Lets start Go and get it via composer.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">{ </span>
+</span><span class='line'><span class="x">    &quot;require&quot;: { </span>
+</span><span class='line'><span class="x">        &quot;mikey179/vfsStream&quot;: &quot;1.1.0&quot; </span>
+</span><span class='line'><span class="x">        } </span>
+</span><span class='line'><span class="x">    } </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> Run your composer.phar update.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">require &#39;vendor/autoload.php&#39;; </span>
+</span><span class='line'><span class="x">use org\\bovigo\\vfs\\vfsStream; </span>
+</span><span class='line'><span class="x">use org\\bovigo\\vfs\\visitor\\vfsStreamStructureVisitor; </span>
+</span><span class='line'><span class="x">use org\\bovigo\\vfs\\visitor\\vfsStreamPrintVisitor; </span>
+</span><span class='line'><span class="x">$structure = array( &#39;Core&#39; =\&gt; array( &#39;AbstractFactory&#39; =\&gt; array( &#39;test.php&#39; =\&gt; &#39;some text content&#39;, &#39;other.php&#39; =\&gt; &#39;Some more text content&#39;, &#39;Invalid.csv&#39; =\&gt; &#39;Something else&#39;, ), &#39;AnEmptyFolder&#39; =\&gt; array(), &#39;badlocation.php&#39; =\&gt; &#39;some bad content&#39;, ) ); </span>
+</span><span class='line'><span class="x">$root = vfsStream::setup(&quot;root&quot;, &#39;&#39;, $structure); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> So now we have created a complex structured file system. How can we check whether the structure is same?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">vfsStream::inspect(new vfsStreamPrintVisitor()); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> Now you have the structure how can you get the contents of the file you have created?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">file\_get\_contents(vfsStream::url(&#39;root/Core/badlocation.php&#39;)); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> Or you can do via</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">$root-&gt;getChild(&#39;Core/badlocation.php&#39;)-\&gt;getContent(); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> The question was raised by myself at https://github.com/mikey179/vfsStream/issues/48 . You can create directory and use vfsStreamPrintVisitor to see how the structure will be</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">mkdir(vfsStream::url(&#39;root/Core/AnEmptyFolder/hello&#39;)); vfsStream::inspect(new vfsStreamPrintVisitor()); </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p> There is more documentation how you can use in phpunit or have a look into the recent commits on <a href="https://github.com/auraphp/Aura.View/commit/f39e3452116072a3fe7f529584acb862a76fe15e">Aura.View</a> For more documentation have a look into https://github.com/mikey179/vfsStream/wiki</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -401,42 +509,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/16/yahoo-open-hack-india-2012/">Yahoo Open Hack India 2012</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-16T11:38:00+05:30" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>So I got a chance to be at Bangalore for Open Hack India 2012 conducted by Yahoo.  <a href="http://www.flickr.com/photos/mrowan/7751044880/" title="IMG_5052 by mrowan, on Flickr"><img src="http://farm9.staticflickr.com/8286/7751044880_e0cb1fea0b.jpg" alt="IMG_5052" /></a>  <a href="http://www.flickr.com/photos/mrowan/7751030446/" title="IMG_5065 by mrowan, on Flickr"><img src="http://farm9.staticflickr.com/8296/7751030446_54abd3bc44.jpg" alt="IMG_5065" /></a>  It was really a great time to learn and do some of the experiments on Yahoo developer network (ydn) tools.  So we ended up trying to do some stuff with <a href="http://open.dapper.net/">dapper</a>. Dapper is a tool used for scrapping. It seems interesting from the workshop. But when I started using it, I was not successful. The dapper stopped responding / showing updating preview and stuffs.  What I was trying todo?&lt; /p>  I used to buy books comparing prices from isbn.net.in . It helped me a lot in buying books very cheap in India. But isbn.net.in was not having a feature called search for book title, and isbn details and as it does currently. Yes there were various other services that do the same. But if you think so then you must think why gmail was developed for there were yahoo mail, aol, msn etc were there.  So anyway learning was the idea, but as dapper fails to respond, it seems hard. I tried to contact the developers via the contact form. But I didn&#8217;t got a reply on Hack days to further proceed on it. So I tried various other methods via Yahoo pipes, yql etc.  It was really nice to learn and make my hands dirty with yql. I tried different stuffs. Exploring it I found the url shortner from Yahoo.  So once I reached home I made a url shortner which is currently in github ( http://harikt.github.com/openhackindia/ ) . Its simple with a few lines.  {syntaxhighlighter class=&#8221;html&#8221;} {/syntaxhighlighter} YQL is powerful, try and play. Its awesome guys.  I also came to know about Boomerang from Yahoo.  I was planning to buy a Bean Bag, and yes I got as a present from Yahoo.  Thank you guys for the awesome event. I am really sad for not able to submit a Hack :( . But I will explore more the ydn resoucres in future. Hope to see you next time if everything permits.  References :  YUI for jQuery Developers and vice versa : <a href="http://www.jsrosettastone.com/">http://www.jsrosettastone.com/</a>  Quick start to learn YUI : <a href="http://yuilibrary.com/yui/quick-start/">http://yuilibrary.com/yui/quick-start/</a>  Using YQL with YUI : <a href="http://yuilibrary.com/yui/docs/yql/">http://yuilibrary.com/yui/docs/yql/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -454,6 +526,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/01/09/our-awesome-php-people/">Our awesome php people</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/04/thoughts-on-package-or-component/">Thoughts on Package/Component Structure</a>
       </li>
     
@@ -467,10 +543,6 @@
     
       <li class="post">
         <a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize image keeping aspect ratio in Imagine</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
       </li>
     
   </ul>

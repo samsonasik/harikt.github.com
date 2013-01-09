@@ -9,7 +9,8 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="Hi guys, have you heard about Neon ? Probably no I guess. Neon is the project by David Grudl (http://davidgrudl.com) which is part of Nette Framework &hellip;">
+  <meta name="description" content="Are you also getting bored of seeing PHP as a templating language ? Why I started to love templating language like django . The index.html 1
+{% &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +77,58 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/27/bored-seeing-php-as-templating-language/">Getting Bored of Seeing PHP as a Templating Language</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T02:08:00+05:30" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Are you also getting bored of seeing PHP as a templating language ? Why I started to love templating language like django .</p>
+
+<p>The index.html</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>{% extends &quot;layout.html&quot; %} {% block body %} {% for user in userlist %} {{ user.name }} {% elsefor %} **no user found** {% endfor %} {% endblock %} {% block title %}Index{% endblock %}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The layout.html</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>{% block head %} {% block title %}{% endblock %} - My default title {% endblock %} {% block content %}{% endblock %} {% block footer %} © Copyright 2012 by [example.com](http://example.com/). {% endblock %}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -401,42 +454,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/05/installing-configuring-php54/">Installing and Configuring PHP 5.4</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-05T22:33:00+05:30" pubdate data-updated="true">Jan 5<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>May be you already know Aura Project for PHP recently moved to 5.4. So I want to download PHP 5.4 and compiled. You need to download the development library files if you are seeing any errors. Just do via synaptic or apt-get. I did download apache2 and installed. Its not that much hard .  You can also run the tests, and report the errors to QA, which will help us. But I was facing a problem. Normally the php cli will be in /usr/bin/php . But in our case , it will be in /usr/local/bin/php . I was getting error when trying to execute phpunit and many pear packages. So the way you can do is to symbolic link /usr/bin/php to /usr/local/bin/php .  If you want to run <a href="http://derickrethans.nl/multiple-php-version-setup.html">multiple PHP versions of PHP like PHP 5.3 , 5.4</a> etc consider reading <a href="http://derickrethans.nl/">Derick Rethans</a> post and use the script to do the work. A big Thanks to him for sharing it .</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -454,6 +471,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/01/09/our-awesome-php-people/">Our awesome php people</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/04/thoughts-on-package-or-component/">Thoughts on Package/Component Structure</a>
       </li>
     
@@ -467,10 +488,6 @@
     
       <li class="post">
         <a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize image keeping aspect ratio in Imagine</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
       </li>
     
   </ul>

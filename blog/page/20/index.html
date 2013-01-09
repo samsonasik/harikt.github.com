@@ -9,7 +9,7 @@
   <meta name="author" content="Hari K T">
 
   
-  <meta name="description" content="I want to make my Joomla site work similar to a blog. Though my mind doesn&#8217;t allow me to delete my blog in blogger , I thought of moving &hellip;">
+  <meta name="description" content="Installed the captcha image validation for Joomla. Earlier I have not installed it. But some spam messages forced me to configure the captcha image &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/04/13-captcha-image-for-joomla/">Captcha Image for Joomla</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-04T08:20:00+05:30" pubdate data-updated="true">Mar 4<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Installed the captcha image validation for Joomla. Earlier I have not installed it. But some spam messages forced me to configure the captcha image developed by the waltercedric.com site.It has a wonderful wiki .  http://wiki.waltercedric.com/index.php?title=SecurityImages5.0.X  Though it has one , I have to search google for some help <img src="http://www.harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/embaressed_smile.gif" alt="image" /> . These were the problems  1 ) config file not writeable  May be I am not much familiar to Joomla forced me to search for it , as I dont find a file named config. I was aware that for some file the write permission is not there. There was a trick , but it will cause security issues that I was afriad to do so ( chmod <img src="http://www.harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/tounge_smile.gif" alt="image" /> ). Later I found the file the exact path is administrator/components/com_securityimages/config.securityimages.php . Change the mod to 777 for a while and after saving modify to 644 . Never give 777 as others can read , write and execute it. So do remember to change .  2 ) The next problem comes after it  SecurityImages patches for Joomla! are not active, is it your choice? Did you forget to deploy the patches? if no go to control panel and set &#8220;use securityImages = true&#8221;  I was wondering where to go as I dont see any in the control panel. It was none other than going to Global Configuration , the server tab and Use SecurityImages against spammers to Yes .  If you dont see it, then you may have not patched it. You need to upload the 14 files to the server . If done you can see the captcha in action.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -285,7 +321,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Linus Torvalds was born on December 28 1969 in Helsinki Finland . Linus Torvalds enrolled at the university of Helsinki where he studied computer science . He bought an intel 386 computer and he began using Minix a Unix version developed by Andrew Tannenbaum. He was not able to connect to his university computer from home from the terminal . So he developed one and was successful connecting it . Later he needs more features like send and receive files .He like to name the new one as Freax . But later named it as Linux after his friend suggests it.  This is what he sends to minix news group .      From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)Newsgroups: comp.os.minixSubject: What would you like to see most in minix?Summary: small poll for my new operating systemMessage-ID: <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x31;&#57;&#x39;&#49;&#x41;&#x75;&#103;&#x32;&#53;&#x2e;&#x32;&#x30;&#53;&#55;&#x30;&#56;&#x2e;&#57;&#x35;&#52;&#49;&#64;&#107;&#x6c;&#97;&#x61;&#118;&#97;&#x2e;&#72;&#x65;&#108;&#115;&#105;&#110;&#x6b;&#x69;&#x2e;&#x46;&#73;">&#49;&#57;&#x39;&#x31;&#65;&#117;&#x67;&#x32;&#53;&#46;&#x32;&#x30;&#x35;&#x37;&#48;&#x38;&#46;&#57;&#x35;&#x34;&#x31;&#64;&#x6b;&#x6c;&#97;&#97;&#x76;&#x61;&#x2e;&#72;&#x65;&#x6c;&#115;&#105;&#110;&#107;&#x69;&#x2e;&#x46;&#x49;</a>Date: 25 Aug 91 20:57:08 GMTOrganization: University of HelsinkiHello everybody out there using minix -I&#8217;m doing a (free) operating system (just a hobby, won&#8217;t be big andprofessional like gnu) for 386(486) AT clones.  This has been brewingsince april, and is starting to get ready.  I&#8217;d like any feedback onthings people like/dislike in minix, as my OS resembles it somewhat(same physical layout of the file-system (due to practical reasons)among other things).I&#8217;ve currently ported bash(1.08) and gcc(1.40), and things seem to work.This implies that I&#8217;ll get something practical within a few months, andI&#8217;d like to know what features most people would want.  Any suggestionsare welcome, but I won&#8217;t promise I&#8217;ll implement them :-)               Linus (torvalds@kruuna.helsinki.fi)PS.  Yes - it&#8217;s free of any minix code, and it has a multi-threaded fs.It is NOT protable (uses 386 task switching etc), and it probably neverwill support anything other than AT-harddisks, as that&#8217;s all I have :-(.  He uploaded in september 1991 . Thus new operating system was born . The people around the world loved the code and started adding and modifying codes .  Now there are various distributions of Linux . Some are the debain , ubuntu , fedora , kubuntu , redhatetc . If you are interested to try linux you can use it with out installng the system . You can use a live cd to boot and see linux . There is another one wubi which can be used for installing linux from windows in a single click . Just need to give the password , grab a cup of tea and come . The wubi installer will do the rest. Try wubi if you dont want to burn a live cd . wubi only installs ubuntu distro for now. You can see FAQ of the wubi site for more details .</p>
+  <div class="entry-content"><p>Linus Torvalds was born on December 28 1969 in Helsinki Finland . Linus Torvalds enrolled at the university of Helsinki where he studied computer science . He bought an intel 386 computer and he began using Minix a Unix version developed by Andrew Tannenbaum. He was not able to connect to his university computer from home from the terminal . So he developed one and was successful connecting it . Later he needs more features like send and receive files .He like to name the new one as Freax . But later named it as Linux after his friend suggests it.  This is what he sends to minix news group .      From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)Newsgroups: comp.os.minixSubject: What would you like to see most in minix?Summary: small poll for my new operating systemMessage-ID: <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#49;&#57;&#57;&#49;&#65;&#x75;&#103;&#x32;&#x35;&#46;&#x32;&#48;&#53;&#x37;&#48;&#56;&#x2e;&#x39;&#53;&#x34;&#x31;&#x40;&#x6b;&#x6c;&#x61;&#97;&#118;&#97;&#x2e;&#x48;&#101;&#x6c;&#x73;&#105;&#x6e;&#x6b;&#x69;&#46;&#x46;&#x49;">&#49;&#57;&#x39;&#49;&#x41;&#x75;&#103;&#50;&#53;&#x2e;&#x32;&#x30;&#53;&#55;&#48;&#56;&#46;&#57;&#53;&#x34;&#x31;&#64;&#107;&#108;&#x61;&#97;&#118;&#97;&#46;&#x48;&#x65;&#108;&#x73;&#105;&#110;&#107;&#105;&#x2e;&#70;&#73;</a>Date: 25 Aug 91 20:57:08 GMTOrganization: University of HelsinkiHello everybody out there using minix -I&#8217;m doing a (free) operating system (just a hobby, won&#8217;t be big andprofessional like gnu) for 386(486) AT clones.  This has been brewingsince april, and is starting to get ready.  I&#8217;d like any feedback onthings people like/dislike in minix, as my OS resembles it somewhat(same physical layout of the file-system (due to practical reasons)among other things).I&#8217;ve currently ported bash(1.08) and gcc(1.40), and things seem to work.This implies that I&#8217;ll get something practical within a few months, andI&#8217;d like to know what features most people would want.  Any suggestionsare welcome, but I won&#8217;t promise I&#8217;ll implement them :-)               Linus (torvalds@kruuna.helsinki.fi)PS.  Yes - it&#8217;s free of any minix code, and it has a multi-threaded fs.It is NOT protable (uses 386 task switching etc), and it probably neverwill support anything other than AT-harddisks, as that&#8217;s all I have :-(.  He uploaded in september 1991 . Thus new operating system was born . The people around the world loved the code and started adding and modifying codes .  Now there are various distributions of Linux . Some are the debain , ubuntu , fedora , kubuntu , redhatetc . If you are interested to try linux you can use it with out installng the system . You can use a live cd to boot and see linux . There is another one wubi which can be used for installing linux from windows in a single click . Just need to give the password , grab a cup of tea and come . The wubi installer will do the rest. Try wubi if you dont want to burn a live cd . wubi only installs ubuntu distro for now. You can see FAQ of the wubi site for more details .</p>
 </div>
   
   
@@ -416,6 +452,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/01/09/our-awesome-php-people/">Our awesome php people</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/04/thoughts-on-package-or-component/">Thoughts on Package/Component Structure</a>
       </li>
     
@@ -429,10 +469,6 @@
     
       <li class="post">
         <a href="/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/">Resize image keeping aspect ratio in Imagine</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/16/status-code-304/">Status code 304</a>
       </li>
     
   </ul>

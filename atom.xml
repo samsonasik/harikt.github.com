@@ -4,7 +4,7 @@
   <title><![CDATA[Random thoughts | Hari KT]]></title>
   <link href="http://harikt.github.com/atom.xml" rel="self"/>
   <link href="http://harikt.github.com/"/>
-  <updated>2013-01-04T07:39:01+05:30</updated>
+  <updated>2013-01-09T23:33:41+05:30</updated>
   <id>http://harikt.github.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
@@ -12,6 +12,106 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Our awesome php people]]></title>
+    <link href="http://harikt.github.com/blog/2013/01/09/our-awesome-php-people/"/>
+    <updated>2013-01-09T20:00:00+05:30</updated>
+    <id>http://harikt.github.com/blog/2013/01/09/our-awesome-php-people</id>
+    <content type="html"><![CDATA[<p>Recently github introduces contributions chart. So I peeped into some of the people of our php community. It seems @fabpot is the one who contributes almost every day. Just 21 days without any contribution.</p>
+
+<p><a href="https://github.com/fabpot"><img class="center" src="http://harikt.github.com/assets/images/github/fabpot.png" width="687" height="299" title="Contributions by fabpot" alt="Contributions by fabpot"></a>
+<a href="https://github.com/weierophinney"><img class="center" src="http://harikt.github.com/assets/images/github/weierophinney.png" width="687" height="299" title="Contributions by weierophinney" alt="Contributions by weierophinney"></a>
+<a href="https://github.com/pmjones"><img class="center" src="http://harikt.github.com/assets/images/github/pmjones.png" width="687" height="299" title="Contributions by pmjones" alt="Contributions by pmjones"></a>
+<a href="https://github.com/willdurand"><img class="center" src="http://harikt.github.com/assets/images/github/willdurand.png" width="687" height="299" title="Contributions by willdurand" alt="Contributions by willdurand"></a>
+<a href="https://github.com/Seldaek"><img class="center" src="http://harikt.github.com/assets/images/github/Seldaek.png" width="687" height="299" title="Contributions by Seldaek" alt="Contributions by Seldaek"></a>
+<a href="https://github.com/markstory"><img class="center" src="http://harikt.github.com/assets/images/github/markstory.png" width="687" height="299" title="Contributions by markstory" alt="Contributions by markstory"></a>
+<a href="https://github.com/taylorotwell"><img class="center" src="http://harikt.github.com/assets/images/github/taylorotwell.png" width="687" height="299" title="Contributions by taylorotwell" alt="Contributions by taylorotwell"></a>
+<a href="https://github.com/WanWizard"><img class="center" src="http://harikt.github.com/assets/images/github/WanWizard.png" width="687" height="299" title="Contributions by WanWizard" alt="Contributions by WanWizard"></a>
+<a href="https://github.com/drak"><img class="center" src="http://harikt.github.com/assets/images/github/drak.png" width="687" height="299" title="Contributions by drak" alt="Contributions by drak"></a>
+<a href="https://github.com/nikic"><img class="center" src="http://harikt.github.com/assets/images/github/nikic.png" width="687" height="299" title="Contributions by nikic" alt="Contributions by nikic"></a>
+<a href="https://github.com/avalanche123"><img class="center" src="http://harikt.github.com/assets/images/github/avalanche123.png" width="687" height="299" title="Contributions by avalanche123" alt="Contributions by avalanche123"></a>
+<a href="https://github.com/shama"><img class="center" src="http://harikt.github.com/assets/images/github/shama.png" width="687" height="299" title="Contributions by shama" alt="Contributions by shama"></a>
+<a href="https://github.com/vrana"><img class="center" src="http://harikt.github.com/assets/images/github/vrana.png" width="687" height="299" title="Contributions by vrana" alt="Contributions by vrana"></a>
+<a href="https://github.com/philsturgeon"><img class="center" src="http://harikt.github.com/assets/images/github/philsturgeon.png" width="687" height="299" title="Contributions by philsturgeon" alt="Contributions by philsturgeon"></a>
+<a href="https://github.com/DASPRiD"><img class="center" src="http://harikt.github.com/assets/images/github/DASPRiD.png" width="687" height="299" title="Contributions by DASPRiD" alt="Contributions by DASPRiD"></a>
+<a href="https://github.com/mvriel"><img class="center" src="http://harikt.github.com/assets/images/github/mvriel.png" width="687" height="299" title="Contributions by mvriel" alt="Contributions by mvriel"></a>
+<a href="https://github.com/c9s"><img class="center" src="http://harikt.github.com/assets/images/github/c9s.png" width="687" height="299" title="Contributions by c9s" alt="Contributions by c9s"></a>
+<a href="https://github.com/weaverryan"><img class="center" src="http://harikt.github.com/assets/images/github/weaverryan.png" width="687" height="299" title="Contributions by weaverryan" alt="Contributions by weaverryan"></a>
+<a href="https://github.com/bschussek"><img class="center" src="http://harikt.github.com/assets/images/github/bschussek.png" width="687" height="299" title="Contributions by bschussek" alt="Contributions by bschussek"></a>
+<a href="https://github.com/vicb"><img class="center" src="http://harikt.github.com/assets/images/github/vicb.png" width="687" height="299" title="Contributions by vicb" alt="Contributions by nateabele"></a>
+<a href="https://github.com/garak"><img class="center" src="http://harikt.github.com/assets/images/github/garak.png" width="687" height="299" title="Contributions by garak" alt="Contributions by garak"></a>
+<a href="https://github.com/nateabele"><img class="center" src="http://harikt.github.com/assets/images/github/nateabele.png" width="687" height="299" title="Contributions by nateabele" alt="Contributions by nateabele"></a>
+<a href="https://github.com/kriswallsmith"><img class="center" src="http://harikt.github.com/assets/images/github/kriswallsmith.png" width="687" height="299" title="Contributions by kriswallsmith" alt="Contributions by kriswallsmith"></a>
+<a href="https://github.com/nrk"><img class="center" src="http://harikt.github.com/assets/images/github/nrk.png" width="687" height="299" title="Contributions by nrk" alt="Contributions by nrk"></a>
+<a href="https://github.com/naderman"><img class="center" src="http://harikt.github.com/assets/images/github/naderman.png" width="687" height="299" title="Contributions by naderman" alt="Contributions by naderman"></a>
+<a href="https://github.com/gwoo"><img class="center" src="http://harikt.github.com/assets/images/github/gwoo.png" width="687" height="299" title="Contributions by gwoo" alt="Contributions by gwoo"></a>
+<a href="https://github.com/jwage"><img class="center" src="http://harikt.github.com/assets/images/github/jwage.png" width="687" height="299" title="Contributions by jwage" alt="Contributions by jwage"></a>
+<a href="https://github.com/chartjes"><img class="center" src="http://harikt.github.com/assets/images/github/chartjes.png" width="687" height="299" title="Contributions by chartjes" alt="Contributions by chartjes"></a>
+<a href="https://github.com/Tocacar"><img class="center" src="http://harikt.github.com/assets/images/github/Tocacar.png" width="687" height="299" title="Contributions by Tocacar" alt="Contributions by Tocacar"></a>
+<a href="https://github.com/FrenkyNet"><img class="center" src="http://harikt.github.com/assets/images/github/FrenkyNet.png" width="687" height="299" title="Contributions by FrenkyNet" alt="Contributions by FrenkyNet"></a>
+<a href="https://github.com/till"><img class="center" src="http://harikt.github.com/assets/images/github/till.png" width="687" height="299" title="Contributions by till" alt="Contributions by till"></a>
+<a href="https://github.com/Ocramius"><img class="center" src="http://harikt.github.com/assets/images/github/Ocramius.png" width="687" height="299" title="Contributions by Ocramius" alt="Contributions by Ocramius"></a>
+<a href="https://github.com/odino"><img class="center" src="http://harikt.github.com/assets/images/github/odino.png" width="687" height="299" title="Contributions by odino" alt="Contributions by odino"></a>
+<a href="https://github.com/josegonzalez"><img class="center" src="http://harikt.github.com/assets/images/github/josegonzalez.png" width="687" height="299" title="Contributions by josegonzalez" alt="Contributions by josegonzalez"></a>
+<a href="https://github.com/dereuromark"><img class="center" src="http://harikt.github.com/assets/images/github/dereuromark.png" width="687" height="299" title="Contributions by dereuromark" alt="Contributions by dereuromark"></a>
+<a href="https://github.com/HosipLan"><img class="center" src="http://harikt.github.com/assets/images/github/HosipLan.png" width="687" height="299" title="Contributions by HosipLan" alt="Contributions by HosipLan"></a>
+<a href="https://github.com/alganet"><img class="center" src="http://harikt.github.com/assets/images/github/alganet.png" width="687" height="299" title="Contributions by alganet" alt="Contributions by alganet"></a>
+<a href="https://github.com/ezimuel"><img class="center" src="http://harikt.github.com/assets/images/github/ezimuel.png" width="687" height="299" title="Contributions by ezimuel" alt="Contributions by ezimuel"></a>
+<a href="https://github.com/auroraeosrose"><img class="center" src="http://harikt.github.com/assets/images/github/auroraeosrose.png" width="687" height="299" title="Contributions by auroraeosrose" alt="Contributions by auroraeosrose"></a>
+<a href="https://github.com/enygma"><img class="center" src="http://harikt.github.com/assets/images/github/enygma.png" width="687" height="299" title="Contributions by enygma" alt="Contributions by enygma"></a>
+<a href="https://github.com/ralphschindler"><img class="center" src="http://harikt.github.com/assets/images/github/ralphschindler.png" width="687" height="299" title="Contributions by ralphschindler" alt="Contributions by ralphschindler"></a>
+<a href="https://github.com/AD7six"><img class="center" src="http://harikt.github.com/assets/images/github/AD7six.png" width="687" height="299" title="Contributions by AD7six" alt="Contributions by AD7six"></a>
+<a href="https://github.com/ADmad"><img class="center" src="http://harikt.github.com/assets/images/github/ADmad.png" width="687" height="299" title="Contributions by ADmad" alt="Contributions by ADmad"></a>
+<a href="https://github.com/augustohp"><img class="center" src="http://harikt.github.com/assets/images/github/augustohp.png" width="687" height="299" title="Contributions by augustohp" alt="Contributions by augustohp"></a>
+<a href="https://github.com/beberlei"><img class="center" src="http://harikt.github.com/assets/images/github/beberlei.png" width="687" height="299" title="Contributions by beberlei" alt="Contributions by beberlei"></a>
+<a href="https://github.com/codeguy"><img class="center" src="http://harikt.github.com/assets/images/github/codeguy.png" width="687" height="299" title="Contributions by codeguy" alt="Contributions by codeguy"></a>
+<a href="https://github.com/BlaineSch"><img class="center" src="http://harikt.github.com/assets/images/github/BlaineSch.png" width="687" height="299" title="Contributions by BlaineSch" alt="Contributions by BlaineSch"></a>
+<a href="https://github.com/file.php"><img class="center" src="http://harikt.github.com/assets/images/github/file.php" width="687" height="299" title="Contributions by file.php" alt="Contributions by file.php"></a>
+<a href="https://github.com/lsmith77"><img class="center" src="http://harikt.github.com/assets/images/github/lsmith77.png" width="687" height="299" title="Contributions by lsmith77" alt="Contributions by lsmith77"></a>
+<a href="https://github.com/stof"><img class="center" src="http://harikt.github.com/assets/images/github/stof.png" width="687" height="299" title="Contributions by stof" alt="Contributions by stof"></a>
+<a href="https://github.com/alexbilbie"><img class="center" src="http://harikt.github.com/assets/images/github/alexbilbie.png" width="687" height="299" title="Contributions by alexbilbie" alt="Contributions by alexbilbie"></a>
+<a href="https://github.com/EavnDotPro"><img class="center" src="http://harikt.github.com/assets/images/github/EavnDotPro.png" width="687" height="299" title="Contributions by EavnDotPro" alt="Contributions by EavnDotPro"></a>
+<a href="https://github.com/narfbg"><img class="center" src="http://harikt.github.com/assets/images/github/narfbg.png" width="687" height="299" title="Contributions by narfbg" alt="Contributions by narfbg"></a>
+<a href="https://github.com/dg"><img class="center" src="http://harikt.github.com/assets/images/github/dg.png" width="687" height="299" title="Contributions by dg" alt="Contributions by dg"></a>
+<a href="https://github.com/schmittjoh"><img class="center" src="http://harikt.github.com/assets/images/github/schmittjoh.png" width="687" height="299" title="Contributions by schmittjoh" alt="Contributions by schmittjoh"></a>
+<a href="https://github.com/jschreuder"><img class="center" src="http://harikt.github.com/assets/images/github/jschreuder.png" width="687" height="299" title="Contributions by jschreuder" alt="Contributions by jschreuder"></a>
+<a href="https://github.com/Geczy"><img class="center" src="http://harikt.github.com/assets/images/github/Geczy.png" width="687" height="299" title="Contributions by Geczy" alt="Contributions by Geczy"></a>
+<a href="https://github.com/dzuelke"><img class="center" src="http://harikt.github.com/assets/images/github/dzuelke.png" width="687" height="299" title="Contributions by dzuelke" alt="Contributions by dzuelke"></a>
+<a href="https://github.com/evert"><img class="center" src="http://harikt.github.com/assets/images/github/evert.png" width="687" height="299" title="Contributions by evert" alt="Contributions by evert"></a>
+<a href="https://github.com/akrabat"><img class="center" src="http://harikt.github.com/assets/images/github/akrabat.png" width="687" height="299" title="Contributions by akrabat" alt="Contributions by akrabat"></a>
+<a href="https://github.com/seejohnrun"><img class="center" src="http://harikt.github.com/assets/images/github/seejohnrun.png" width="687" height="299" title="Contributions by seejohnrun" alt="Contributions by seejohnrun"></a>
+<a href="https://github.com/guilhermeblanco"><img class="center" src="http://harikt.github.com/assets/images/github/guilhermeblanco.png" width="687" height="299" title="Contributions by guilhermeblanco" alt="Contributions by guilhermeblanco"></a>
+<a href="https://github.com/Maks3w"><img class="center" src="http://harikt.github.com/assets/images/github/Maks3w.png" width="687" height="299" title="Contributions by Maks3w" alt="Contributions by Maks3w"></a>
+<a href="https://github.com/kore"><img class="center" src="http://harikt.github.com/assets/images/github/kore.png" width="687" height="299" title="Contributions by kore" alt="Contributions by kore"></a>
+<a href="https://github.com/dragoonis"><img class="center" src="http://harikt.github.com/assets/images/github/dragoonis.png" width="687" height="299" title="Contributions by dragoonis" alt="Contributions by dragoonis"></a>
+<a href="https://github.com/daschl"><img class="center" src="http://harikt.github.com/assets/images/github/daschl.png" width="687" height="299" title="Contributions by daschl" alt="Contributions by daschl"></a>
+<a href="https://github.com/wilmoore"><img class="center" src="http://harikt.github.com/assets/images/github/wilmoore.png" width="687" height="299" title="Contributions by wilmoore" alt="Contributions by wilmoore"></a>
+<a href="https://github.com/TheFrozenFire"><img class="center" src="http://harikt.github.com/assets/images/github/TheFrozenFire.png" width="687" height="299" title="Contributions by TheFrozenFire" alt="Contributions by TheFrozenFire"></a>
+<a href="https://github.com/nickl-"><img class="center" src="http://harikt.github.com/assets/images/github/nickl-.png" width="687" height="299" title="Contributions by nickl-" alt="Contributions by nickl-"></a>
+<a href="https://github.com/lorenzo"><img class="center" src="http://harikt.github.com/assets/images/github/lorenzo.png" width="687" height="299" title="Contributions by lorenzo" alt="Contributions by lorenzo"></a>
+<a href="https://github.com/rchavik"><img class="center" src="http://harikt.github.com/assets/images/github/rchavik.png" width="687" height="299" title="Contributions by rchavik" alt="Contributions by rchavik"></a>
+<a href="https://github.com/davidpersson"><img class="center" src="http://harikt.github.com/assets/images/github/davidpersson.png" width="687" height="299" title="Contributions by davidpersson" alt="Contributions by davidpersson"></a>
+<a href="https://github.com/henriquemoody"><img class="center" src="http://harikt.github.com/assets/images/github/henriquemoody.png" width="687" height="299" title="Contributions by henriquemoody" alt="Contributions by henriquemoody"></a>
+<a href="https://github.com/Freeaqingme"><img class="center" src="http://harikt.github.com/assets/images/github/Freeaqingme.png" width="687" height="299" title="Contributions by Freeaqingme" alt="Contributions by Freeaqingme"></a>
+<a href="https://github.com/dbu"><img class="center" src="http://harikt.github.com/assets/images/github/dbu.png" width="687" height="299" title="Contributions by dbu" alt="Contributions by dbu"></a>
+<a href="https://github.com/dshafik"><img class="center" src="http://harikt.github.com/assets/images/github/dshafik.png" width="687" height="299" title="Contributions by dshafik" alt="Contributions by dshafik"></a>
+<a href="https://github.com/Vrtak-CZ"><img class="center" src="http://harikt.github.com/assets/images/github/Vrtak-CZ.png" width="687" height="299" title="Contributions by Vrtak-CZ" alt="Contributions by Vrtak-CZ"></a>
+<a href="https://github.com/padraic"><img class="center" src="http://harikt.github.com/assets/images/github/padraic.png" width="687" height="299" title="Contributions by padraic" alt="Contributions by padraic"></a>
+<a href="https://github.com/saltybeagle"><img class="center" src="http://harikt.github.com/assets/images/github/saltybeagle.png" width="687" height="299" title="Contributions by saltybeagle" alt="Contributions by saltybeagle"></a>
+<a href="https://github.com/Hounddog"><img class="center" src="http://harikt.github.com/assets/images/github/Hounddog.png" width="687" height="299" title="Contributions by Hounddog" alt="Contributions by Hounddog"></a>
+<a href="https://github.com/ceeram"><img class="center" src="http://harikt.github.com/assets/images/github/ceeram.png" width="687" height="299" title="Contributions by ceeram" alt="Contributions by ceeram"></a>
+<a href="https://github.com/jmikola"><img class="center" src="http://harikt.github.com/assets/images/github/jmikola.png" width="687" height="299" title="Contributions by jmikola" alt="Contributions by jmikola"></a>
+<a href="https://github.com/cweiske"><img class="center" src="http://harikt.github.com/assets/images/github/cweiske.png" width="687" height="299" title="Contributions by cweiske" alt="Contributions by cweiske"></a>
+<a href="https://github.com/rdohms"><img class="center" src="http://harikt.github.com/assets/images/github/rdohms.png" width="687" height="299" title="Contributions by rdohms" alt="Contributions by rdohms"></a></p>
+
+<p>and I too did some contributions in 2012 for <a href="https://github.com/auraphp">auraphp</a> and other projects.</p>
+
+<p><a href="https://github.com/harikt"><img class="center" src="http://harikt.github.com/assets/images/github/harikt.png" width="687" height="299" title="Contributions by harikt" alt="Contributions by harikt"></a></p>
+
+<p>The list is not complete, if you feel I missed your name or someone you feel needs to be added just give a tweet to me or fork the repo from github and send a PR.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Thoughts on Package/Component Structure]]></title>
@@ -799,15 +899,6 @@
     <updated>2012-08-27T04:58:00+05:30</updated>
     <id>http://harikt.github.com/blog/2012/08/27/how-to-install-aura-framework</id>
     <content type="html"><![CDATA[<p>This video is my an attempt to help the people how to install the aura framework as a whole. Note, you can use aura libraries independently also. This is my first screencast on aura and first screencast I have ever done. So feedback is appreciated. I am using record my desktop for recording.  I was having some trouble with vimeo, so have uploaded to youtube. Thanks for watching.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Yahoo Open Hack India 2012]]></title>
-    <link href="http://harikt.github.com/blog/2012/08/16/yahoo-open-hack-india-2012/"/>
-    <updated>2012-08-16T11:38:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/08/16/yahoo-open-hack-india-2012</id>
-    <content type="html"><![CDATA[<p>So I got a chance to be at Bangalore for Open Hack India 2012 conducted by Yahoo.  <a href="http://www.flickr.com/photos/mrowan/7751044880/" title="IMG_5052 by mrowan, on Flickr"><img src="http://farm9.staticflickr.com/8286/7751044880_e0cb1fea0b.jpg" alt="IMG_5052" /></a>  <a href="http://www.flickr.com/photos/mrowan/7751030446/" title="IMG_5065 by mrowan, on Flickr"><img src="http://farm9.staticflickr.com/8296/7751030446_54abd3bc44.jpg" alt="IMG_5065" /></a>  It was really a great time to learn and do some of the experiments on Yahoo developer network (ydn) tools.  So we ended up trying to do some stuff with <a href="http://open.dapper.net/">dapper</a>. Dapper is a tool used for scrapping. It seems interesting from the workshop. But when I started using it, I was not successful. The dapper stopped responding / showing updating preview and stuffs.  What I was trying todo?&lt; /p>  I used to buy books comparing prices from isbn.net.in . It helped me a lot in buying books very cheap in India. But isbn.net.in was not having a feature called search for book title, and isbn details and as it does currently. Yes there were various other services that do the same. But if you think so then you must think why gmail was developed for there were yahoo mail, aol, msn etc were there.  So anyway learning was the idea, but as dapper fails to respond, it seems hard. I tried to contact the developers via the contact form. But I didn&#8217;t got a reply on Hack days to further proceed on it. So I tried various other methods via Yahoo pipes, yql etc.  It was really nice to learn and make my hands dirty with yql. I tried different stuffs. Exploring it I found the url shortner from Yahoo.  So once I reached home I made a url shortner which is currently in github ( http://harikt.github.com/openhackindia/ ) . Its simple with a few lines.  {syntaxhighlighter class=&#8221;html&#8221;} {/syntaxhighlighter} YQL is powerful, try and play. Its awesome guys.  I also came to know about Boomerang from Yahoo.  I was planning to buy a Bean Bag, and yes I got as a present from Yahoo.  Thank you guys for the awesome event. I am really sad for not able to submit a Hack :( . But I will explore more the ydn resoucres in future. Hope to see you next time if everything permits.  References :  YUI for jQuery Developers and vice versa : <a href="http://www.jsrosettastone.com/">http://www.jsrosettastone.com/</a>  Quick start to learn YUI : <a href="http://yuilibrary.com/yui/quick-start/">http://yuilibrary.com/yui/quick-start/</a>  Using YQL with YUI : <a href="http://yuilibrary.com/yui/docs/yql/">http://yuilibrary.com/yui/docs/yql/</a></p>
 ]]></content>
   </entry>
   

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: zte | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/zte/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/zte/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Configuring BSNL ZTE EVDO in opensolaris]]></title>
-    <link href="http://harikt.github.com/blog/2009/07/25/configuring-bsnl-zte-evdo-opensolaris/"/>
+    <link href="http://harikt.com/blog/2009/07/25/configuring-bsnl-zte-evdo-opensolaris/"/>
     <updated>2009-07-25T22:21:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/07/25/configuring-bsnl-zte-evdo-opensolaris</id>
+    <id>http://harikt.com/blog/2009/07/25/configuring-bsnl-zte-evdo-opensolaris</id>
     <content type="html"><![CDATA[<p>I was trying to configure my BSNL ZTE EVDO device in Open-solaris . I configured the device too, but there is little trouble now too .  Open-solaris is having a project Wireless Wide Area Network , which is run to configure the wireless networks in solaris . The link to it is <a href="http://opensolaris.org/os/project/wwan/">http://opensolaris.org/os/project/wwan/</a> . I configured the modem using it . You need to be root to do it too . Also some times when running a command you may not be able to read the complete contents , for it exceeds the limit . So after the command add greater than symbol followed by filename ( I hope you know these commands too ) . Eg : prtconf -v > t . You can use gedit or vim or any text editors of your choice . The documentation is so good that I don't need to tell more .  The below is the scripts you may need to run every time .  pppd call evdo cp /etc/ppp/resolv.conf /etc/resolv.conf cp /etc/nsswitch.dns /etc/nsswitch.conf  The problems I am facing still now are  1 ) Speed is slow compared with Ubuntu  2 ) I can search google , but we cannot proceed to a page shown in results .  3 ) You may need to restart each time when the net is stuck . ie no packets is coming to your n/w .  I don't get much time to look more in google for any helps .  What I think is crtscts needs some other option . I want to try it out and will let you guys know more about this .  If anyone has already configured let me know about it . One more thing it doesn't ask any passwords to connect . Its having only phone number . lol .... <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /></p>
 ]]></content>
   </entry>

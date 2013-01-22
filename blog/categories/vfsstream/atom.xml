@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: vfsstream | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/vfsstream/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/vfsstream/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[vfsStream and file system]]></title>
-    <link href="http://harikt.github.com/blog/2012/11/24/node-223/"/>
+    <link href="http://harikt.com/blog/2012/11/24/node-223/"/>
     <updated>2012-11-24T20:42:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/11/24/node-223</id>
+    <id>http://harikt.com/blog/2012/11/24/node-223</id>
     <content type="html"><![CDATA[<p>Paul M Jones wrote earlier <a href="http://paul-m-jones.com/archives/2487">When Possible, Use File *Resources* Instead Of File *Names*</a> and in comments <a href="http://www.littlehart.net/atthekeyboard">Chris Hartjes</a> was mentioning about <a href="http://vfs.bovigo.org/">vfsStream</a>. So for <a href="https://github.com/auraphp">@auraphp</a> we thought of making to support vfsStream. What the hell it is? vfsStream is a PHP stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest. So without touching the file system and not bothering too much about the operating system, file permissions, disk quota, removing the files created by tests on tear down etc we can make use of vfsstream. Lets start Go and get it via composer.</p>
 
 <p>```php

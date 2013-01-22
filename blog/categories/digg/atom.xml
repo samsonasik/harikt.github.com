@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: digg | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/digg/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/digg/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Adding Digg , del.icio.us button in Blogger]]></title>
-    <link href="http://harikt.github.com/blog/2009/03/08/16-adding-digg-delicious-button-in-blogger/"/>
+    <link href="http://harikt.com/blog/2009/03/08/16-adding-digg-delicious-button-in-blogger/"/>
     <updated>2009-03-08T08:47:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/03/08/16-adding-digg-delicious-button-in-blogger</id>
+    <id>http://harikt.com/blog/2009/03/08/16-adding-digg-delicious-button-in-blogger</id>
     <content type="html"><![CDATA[<p>Though I heard about open social networks, I doesn't gave much importance to these sites . But now I learned some facts . So was looking how I can add a digg-it , del.icio.us button in blogger. Though there are many thought of adding these two. Only successful in adding one. Working on the del.icio.us for now .  First login to your blogger account goto Settings->Archiving and look whether enable post pages is set to yes. Else make it yes and save the settings.  Then goto Layout->Edit HTML  You can download a backup. It will be good to keep your settings safe if anything goes wrong . Click Download Full Template and save it in your system.  Now you will be seeing the template in a text area . Tick Expand Widget Templates, that will add additional informations to the currently shown template in text area.  If you are using Mozilla Firefox , can quickly search for "data:post.body" by using ctrl + f .  <div class='post-body entry-content'\> &lt;data:post.body/> <div style='clear: both;'/\> <!-- clear for photos floats --\> &lt;/div>  Add the below code above or below. Hope you have some knowledge of HTML and css .  <div style='float:right; margin-left:10px;'\> <script type='text/javascript'\> digg_url="&lt;data:post.url/>"; &lt;/script> <script src='http://digg.com/tools/diggthis.js' type='text/javascript'/\> &lt;/div>  The complete code after doing so is given below.  <div class='post-body entry-content'\> <div style='float:right; margin-left:10px;'\> <script type='text/javascript'\> digg_url="&lt;data:post.url/>"; &lt;/script> <script src='http://digg.com/tools/diggthis.js' type='text/javascript'/\> &lt;/div> &lt;data:post.body/> <div style='clear: both;'/\> <!-- clear for photos floats --\> &lt;/div>  Save and see the Digg in action .  You can see the Digg in action at <a href="http://ijust4u.blogspot.com" title="Digg in action at ijust 4 u">http://ijust4u.blogspot.com</a>  Working on del.icio.us for now. Will add it soon after success .</p>
 ]]></content>
   </entry>

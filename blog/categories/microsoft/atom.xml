@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: microsoft | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/microsoft/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/microsoft/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Change Thunderbird to Microsoft Outlook 2007 look and feel]]></title>
-    <link href="http://harikt.github.com/blog/2010/05/07/change-thunderbird-microsoft-outlook-2007/"/>
+    <link href="http://harikt.com/blog/2010/05/07/change-thunderbird-microsoft-outlook-2007/"/>
     <updated>2010-05-07T20:59:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2010/05/07/change-thunderbird-microsoft-outlook-2007</id>
+    <id>http://harikt.com/blog/2010/05/07/change-thunderbird-microsoft-outlook-2007</id>
     <content type="html"><![CDATA[<p>By default thunderbird comes in the classic layout. But you can change thunderbird to look something similar to Microsoft outlook 2007 , picture shown below .  <a href="http://www.flickr.com/photos/harikt/4586457417/"><img src="http://farm5.static.flickr.com/4063/4586457417_1d3e48d8cb.jpg" alt="Microsoft Outlook 2007 look for thunderbird" /></a>  Do make like the above go to View -> Layout -> Vertical View . Not satsified with that look <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" />, don't worr,  you can install the <a href="https://addons.mozilla.org/en-US/thunderbird/addon/8076">Office Black 1.5.1 addon</a> which looks something like outlook 2007 black theme .  <a href="http://www.flickr.com/photos/harikt/4587086152/" title="outlook2007-black-look-for-thunderbird by K T Hari, on Flickr"><img src="http://farm5.static.flickr.com/4033/4587086152_f123478de7.jpg" alt="outlook2007-black-look-for-thunderbird" /></a>  You can also try the own 2.4.0 addon by user Gulp21 .  <a href="http://www.flickr.com/photos/harikt/4587084616/" title="own theme for thunderbird to have an outlook look and feel"><img src="http://farm5.static.flickr.com/4065/4587084616_16cc10689e.jpg" alt="own" /></a>  Keeping some of the screenshots of these addons, for you gor from https://addons.mozilla.org/en-US/thunderbird/ . Don't forget to check these addons and enjoy using thunderbird . There are lots of addons for thunderbird and you may want to try those too, and let me know if its your favourite addon.  My friend <a href="http://twitter.com/sanooj007">Sanooj</a> a graphic / web designer , ( w3c css guru , I love to introduce him so ) was exploring thunderbird and he noticed me the look and feel. So love to thank him about this.  You can also try the evolution mail client which comes as the default mail client for Ubuntu 10.04.  <a href="http://www.flickr.com/photos/harikt/4587079888/" title="evolution mail client by K T Hari, on Flickr"><img src="http://farm5.static.flickr.com/4056/4587079888_7436abee44.jpg" alt="evolution" /></a>  Oh yes try Ubuntu 10.04 too , don't forget to see the look and feel of it . Its easy to configure your BSNL EVDO device in Ubuntu 10.04 , just a few clicks . Explore . . .</p>
 ]]></content>
   </entry>

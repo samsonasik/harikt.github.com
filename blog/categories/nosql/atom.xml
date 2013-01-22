@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: nosql | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/nosql/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/nosql/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Install MongoDb via aptitude and not via Synaptic]]></title>
-    <link href="http://harikt.github.com/blog/2010/09/05/install-mongodb-aptitude-and-not-synaptic/"/>
+    <link href="http://harikt.com/blog/2010/09/05/install-mongodb-aptitude-and-not-synaptic/"/>
     <updated>2010-09-05T14:38:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2010/09/05/install-mongodb-aptitude-and-not-synaptic</id>
+    <id>http://harikt.com/blog/2010/09/05/install-mongodb-aptitude-and-not-synaptic</id>
     <content type="html"><![CDATA[<p><a href="http://www.flickr.com/photos/harikt/4959237021/"><img src="%20http://farm5.static.flickr.com/4154/4959237021_38f1029ac5.jpg" alt="Mongo Db" /></a>  I thought of playing with <a href="http://www.mongodb.org">mongodb</a>, one among the No SQL movement. I am using Ubuntu 10.04 . Installed via <strong>synaptic</strong> , installed some GUI admin tools like <a href="http://www.phpmoadmin.com/">phpmoadmin</a> , <a href="http://www.icmfinland.fi/oss/opricot/">opricot</a> (Both these tools are not necessary , just installed those to see how it works on browser ) . Opened my favourite terminal , just typed $<strong>mongod</strong>  mongod: error while loading shared libraries: libmozjs.so: cannot open shared object file: No such file or directory  Wow got some nice errors . I was stuck with it and googled and moved through various blgs and forums . From <a href="http://groups.google.com/group/mongodb-user/browse_thread/thread/7e7fd7fa0313c326?tvc=2&amp;pli=1">one of the group posts</a> I recognised the ubuntu package is broken and you need to install via the <a href="http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages">aptitude after adding the repository</a> . But I have another one which I have not tried , I feel it will work , so you can have a look into <a href="http://dracoater.blogspot.com/2010/08/mongodb-with-c-in-ubuntu.html">JuriTallinn's blog</a> before trying the below one, if you have already installed via synaptic.  So I just edited the <strong>/etc/apt/sources.list</strong> file . You can use either vi or gedit , and add the line      deb http://downloads.mongodb.org/distros/ubuntu 10.4 10gen  Save it and run  $ aptitude update  You may get some error like W: GPG error: http://downloads.mongodb.org 10.4 Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 9ECBEC467F0CEB10 . If you get something like this just run  $ apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10  And once again run  $ aptitude update   Hope everything works fine . Just run aptitude install and install stable , development or what ever version you love. I am installing a stable one .  $ aptitude install mongodb-stable  Now you can run your favorite mongodb from cmd line via  $mongo  And have fun . I also downloaded the <a href="http://www.php.net/manual/en/mongo.installation.php">PECL driver for PHP</a> which is explained below.  You need to download the php5-dev package before you run . You can use aptitude or synaptic. After the php5-dev installation run  $ pecl install mongo  and adding the line in php.ini . You may be having 2 php.ini if you have installed cli interface also . It will be located at /etc/php5/apache2/php.ini , /etc/php5/cli/php.ini . If you are unsure where it is just use locate command.  $ locate php.ini  Add the below line in php.ini      extension=mongo.so  Restart your apache ;) . Done and have fun with Mongo .</p>
 ]]></content>
   </entry>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: documentation | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/documentation/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/documentation/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Documentation with help of Sphinx and readthedocs]]></title>
-    <link href="http://harikt.github.com/blog/2011/08/05/documentation-help-sphinx-and-readthedocs/"/>
+    <link href="http://harikt.com/blog/2011/08/05/documentation-help-sphinx-and-readthedocs/"/>
     <updated>2011-08-05T23:23:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2011/08/05/documentation-help-sphinx-and-readthedocs</id>
+    <id>http://harikt.com/blog/2011/08/05/documentation-help-sphinx-and-readthedocs</id>
     <content type="html"><![CDATA[<p><a href="http://sphinx.pocoo.org/">Sphinx</a> is a tool that makes it easy to create intelligent and beautiful documentation, written by Georg Brandl and licensed under the BSD license.  I was trying to help the Aura Project with some documentation . When it comes to gh-pages branch I find difficult to push, merge upstreams. I just was browsing some of the repos in github. From the <a href="https://github.com/avalanche123/Imagine/">Imagine</a> I came to know about http://readthedocs.org/ which works with the help of sphinx project. We just want to create a doc folder and create the .rst files of the format http://sphinx.pocoo.org/rest.html and place in our repo and point it in http://readthedocs.org/. I feel its so easy to do, for people can just clone the docs repo and make the necessary changes in the .rst files and give a pull request than the gh-pages. Some times the gh-pages waste a huge amount of time with some unexpected errors :( .  So I thought of trying the readthedocs. From the <a href="http://readthedocs.org/docs/read-the-docs/en/latest/getting_started.html">getting started page of readthedocs</a> I went and installed sphinx . It was easy for me to run from synaptic package manager. Installed and run the command $ sphinx-quickstart . It asks a few questions I am keeping the gist over here  Running $ make html , we get the html in the _build/html folder. We can just browse through it , make the necessary changes in the .rst files run and run until we love. No commits , no push and pull and check the errors in gh-pages as we did. As the html is generated we can host either directly in gh-pages branch of github.com or we can just push the .rst files and utilize the http://readthedocs.org/  I have asked my friends at http://auraphp.github.com for their suggestion about this. We are having a search coming , code high lighting etc. Sphinx is not new for me, but I never tried to use it until now. I have been seeing the name over the www.doctrine-project.org and some other. I hope this is one of the best tool to utilize for documentation of any projects . I welcome your thoughts :-)</p>
 ]]></content>
   </entry>

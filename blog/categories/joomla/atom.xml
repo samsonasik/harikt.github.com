@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: joomla | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/joomla/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/joomla/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,45 +15,45 @@
   
   <entry>
     <title type="html"><![CDATA[Benefits of open source frameworks over custom frameworks]]></title>
-    <link href="http://harikt.github.com/blog/2010/01/22/benefits-open-source-frameworks-over-custom-frameworks/"/>
+    <link href="http://harikt.com/blog/2010/01/22/benefits-open-source-frameworks-over-custom-frameworks/"/>
     <updated>2010-01-22T11:25:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2010/01/22/benefits-open-source-frameworks-over-custom-frameworks</id>
+    <id>http://harikt.com/blog/2010/01/22/benefits-open-source-frameworks-over-custom-frameworks</id>
     <content type="html"><![CDATA[<p><a href="http://www.flickr.com/photos/harikt/4294304881/" title="opensource_logo by K T Hari, on Flickr"><img src="http://farm5.static.flickr.com/4049/4294304881_87b173eb57_t.jpg" alt="opensource_logo" /></a>Recently I was arguing with one of my friend over the beneficts of opensource frameworks over custom . I know there may be lots of posts describing the beneficts and drawbacks . But I just thought of writing it as I can say I have written about that in my blog. You can check it out .  I hope every one knows about <a href="http://www.opensource.org/docs/osd">opensource</a> and the <a href="http://www.opensource.org/licenses/alphabetical">licences</a> . I have been using and learning some of the most popular opensource frameworks like zend, lithium , drupal etc . So lets move on to what are the beneficts I feel .  Beneficts of open source :  1 ) Mainly community supported .  2 ) Coding standards will be followed .  3 ) Throughly tested and immediate patches will be available if any thing breaks .  4 ) Can get quick help from the community .  5 ) Flexible for maintaince ( ie not throw away prototyping )  6 ) Many do unit testing using the popular test tools like phpunit , simpletest etc .  Beneficts of custom :  1 ) Custom frameworks may be good for a developer as he knows what he has written . I don't think there is much beneficts for users .  Drawbacks of custom frameworks :  1 ) It will be developed by a single or some group of people.  2 ) May be tested by some group of peoples , but lacks the tests done by community ( mass of people )  3 ) Developing from scratch is not a big deal , but maintainence is the one that's costly than development . When its custom made , you may need to get the exact people for that . Else its like "too many cooks spoil the broothe". Pretty enough community developers, so not a big deal to get one.  4 ) May or may not be flexible . For example lets compare with drupal . When you starts your project , you may have thought just a small blog , then later you thought of having forums , after that you thought you need to sell some goods.  When its drupal like framework , its easy as you just need to maintain the common code base which comes with much of the features and some other contributed and custom modules will make everything fine . But when its custom , you may need to mess with the code , or may need to go extending it , which is not so easy like drupal or any other .  These are what I feel for now . May be more points , but for the time I am not remebering it . If any one feels I missed any , please add your comments I will update it .</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Quick move from Joomla to Drupal]]></title>
-    <link href="http://harikt.github.com/blog/2009/06/01/quick-move-from-joomla-to-drupal/"/>
+    <link href="http://harikt.com/blog/2009/06/01/quick-move-from-joomla-to-drupal/"/>
     <updated>2009-06-01T00:31:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/06/01/quick-move-from-joomla-to-drupal</id>
+    <id>http://harikt.com/blog/2009/06/01/quick-move-from-joomla-to-drupal</id>
     <content type="html"><![CDATA[<p>Some of you may have noticed a change in user interface . Yes I have changed my CMS from Joomla to Drupal. I don't want to miss many of the indexed search results of google and any other search engines . So it takes some time to make this site fully functional. I just removed my old site . Keeping a screen shot of it below .  <img src="http://farm4.static.flickr.com/3129/3594102745_681ca97b86.jpg?v=0" alt="harikt.com in joomla once" />  I have <del>missed</del>to add some of the ads here. Also the google custom search. Also I <del>need to implement</del> the fluid width to the new theme like the one of rs_milky. See you soon in a great new look <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> Cheers .  Yes, now I have changed some of the styles. Not getting much time to spend on my site. In the future you can see some more changes.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Working with Joomla and Drupal]]></title>
-    <link href="http://harikt.github.com/blog/2009/05/11/53-working-with-joomla-and-drupal/"/>
+    <link href="http://harikt.com/blog/2009/05/11/53-working-with-joomla-and-drupal/"/>
     <updated>2009-05-11T09:05:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/05/11/53-working-with-joomla-and-drupal</id>
+    <id>http://harikt.com/blog/2009/05/11/53-working-with-joomla-and-drupal</id>
     <content type="html"><![CDATA[<p>Yes, this may be a controversial post. As I told you before , I was interested in Joomla. But its some what hard to learn , configure some of the plugins, and its not an easy task to find a good plugin. I was trying to learn Drupal , after I came to read and discuss with some of the guys who uses Drupal. Yes, I am switching my site to Drupal . So in a few days you may see a new face for this site. I am trying to configure it in my local system first, so I can learn . After that I will switch this to Drupal.  The reasons behind the switching are its easy to make a blog and add comments feature in drupal . In Joomla its tough , you may need to add additional plugins or extensions .  Recently saw a post about news paper site , which makes me interested to look how to make in Joomla, but was very tough. I googled a lot to get a right solution how it works and all . I was reading a lot of blog posts about the news paper site and finally thought to switch to drupal <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> .  Also have seen creating multiple sites with Drupal is easy than that of Joomla. Configuring a module and all in Joomla is tough . Once you have started working with Joomla you will recognise , what I am telling. May be I don't have learned every corners.  Some of the reasons I thought of working on local are  1 ) My pages are indexed in google , so don't want to make a problem .  2 ) I am getting good amount of visitors now adays .  3 ) I will learn drupal from my local :-) . Why I need to do in the server itslef ? This may be a good decesion I think .</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Captcha Image for Joomla]]></title>
-    <link href="http://harikt.github.com/blog/2009/03/04/13-captcha-image-for-joomla/"/>
+    <link href="http://harikt.com/blog/2009/03/04/13-captcha-image-for-joomla/"/>
     <updated>2009-03-04T08:20:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/03/04/13-captcha-image-for-joomla</id>
+    <id>http://harikt.com/blog/2009/03/04/13-captcha-image-for-joomla</id>
     <content type="html"><![CDATA[<p>Installed the captcha image validation for Joomla. Earlier I have not installed it. But some spam messages forced me to configure the captcha image developed by the waltercedric.com site.It has a wonderful wiki .  http://wiki.waltercedric.com/index.php?title=SecurityImages5.0.X  Though it has one , I have to search google for some help <img src="http://www.harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/embaressed_smile.gif" alt="image" /> . These were the problems  1 ) config file not writeable  May be I am not much familiar to Joomla forced me to search for it , as I dont find a file named config. I was aware that for some file the write permission is not there. There was a trick , but it will cause security issues that I was afriad to do so ( chmod <img src="http://www.harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/tounge_smile.gif" alt="image" /> ). Later I found the file the exact path is administrator/components/com_securityimages/config.securityimages.php . Change the mod to 777 for a while and after saving modify to 644 . Never give 777 as others can read , write and execute it. So do remember to change .  2 ) The next problem comes after it  SecurityImages patches for Joomla! are not active, is it your choice? Did you forget to deploy the patches? if no go to control panel and set "use securityImages = true"  I was wondering where to go as I dont see any in the control panel. It was none other than going to Global Configuration , the server tab and Use SecurityImages against spammers to Yes .  If you dont see it, then you may have not patched it. You need to upload the 14 files to the server . If done you can see the captcha in action.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Comments in Joomla]]></title>
-    <link href="http://harikt.github.com/blog/2009/03/04/14-comments-extension-in-joomla/"/>
+    <link href="http://harikt.com/blog/2009/03/04/14-comments-extension-in-joomla/"/>
     <updated>2009-03-04T08:19:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/03/04/14-comments-extension-in-joomla</id>
+    <id>http://harikt.com/blog/2009/03/04/14-comments-extension-in-joomla</id>
     <content type="html"><![CDATA[<p>I want to make my Joomla site work similar to a blog. Though my mind doesn't allow me to delete my blog in blogger , I thought of moving completely. I will not be deleting my blog , but will <del>not</del> ( Changed my mind still publishing in http://ijust4u.blogspot.com/ ) be publishing any more posts in blogger. I dont see a built in function for comments in Joomla. Comments help you recognise more about your posts and what others think . So installed comments feature.  I will be posting more topics in this site only , for I need to learn Joomla ( Dropped my plan, moved to Drupal <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> ) . Yes if you want to learn something you need to try it out. So comments is a must . I need to spent some time to configure the comments feature. Some times I have even thought of moving to Drupal , for it has some good features like that . <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/wink_smile.gif" alt="image" /> . But I want to learn how to configure comments feature in Joomla , so I will never quit . Yes success comes to my path .  Now the comments feature is here . All can post your comments , need an account here or an open ID . The one I have installed extension for comments is mod_comment , yvcomment plugin and yvcomment module The documentation is available at http://yurivolkov.com/Joomla/yvComment/index_en.html . Its GNU/GPL . Have fun if you too need it .</p>
 ]]></content>
   </entry>

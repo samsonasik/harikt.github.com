@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: php download script | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/php-download-script/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/php-download-script/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Downloading a file]]></title>
-    <link href="http://harikt.github.com/blog/2009/02/01/7-downloading-a-file/"/>
+    <link href="http://harikt.com/blog/2009/02/01/7-downloading-a-file/"/>
     <updated>2009-02-01T08:24:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/02/01/7-downloading-a-file</id>
+    <id>http://harikt.com/blog/2009/02/01/7-downloading-a-file</id>
     <content type="html"><![CDATA[<p>{syntaxhighlighter class="php"} 404 File not found!"); } //Gather relevent info about file $len = filesize($file); $filename = basename($file); $file_extension = strtolower(substr(strrchr($filename, "."), 1)); //This will set the Content-Type to the appropriate setting for the file switch ($file_extension) { case "pdf": $ctype = "application/pdf"; break; case "exe": $ctype = "application/octet-stream"; break; case "zip": $ctype = "application/zip"; break; case "doc": $ctype = "application/msword"; break; case "xls": $ctype = "application/vnd.ms-excel"; break; case "ppt": $ctype = "application/vnd.ms-powerpoint"; break; case "gif": $ctype = "image/gif"; break; case "png": $ctype = "image/png"; break; case "jpeg": case "jpg": $ctype = "image/jpg"; break; case "mp3": $ctype = "audio/mpeg"; break; case "wav": $ctype = "audio/x-wav"; break; case "mpeg": case "mpg": case "mpe": $ctype = "video/mpeg"; break; case "mov": $ctype = "video/quicktime"; break; case "avi": $ctype = "video/x-msvideo"; break; //The following are for extensions that shouldn't be downloaded (sensitive stuff, like php files) case "php": case "htm": case "html": case "txt": die("<strong>Cannot be used for " . $file_extension . " files!</strong>"); break; default: $ctype = "application/force-download"; } //Begin writing headers header("Pragma: public"); header("Expires: 0"); header("Cache-Control: must-revalidate, post-check=0, pre-check=0"); header("Cache-Control: public"); header("Content-Description: File Transfer"); //Use the switch-generated Content-Type header("Content-Type: $ctype"); //Force the download $header = "Content-Disposition: attachment; filename=" . $filename . ";"; header($header); header("Content-Transfer-Encoding: binary"); header("Content-Length: " . $len); @readfile($file); exit; } } {/syntaxhighlighter} Create an object of this class and call the method dl_file. {syntaxhighlighter class="php"} $dwnldObj = new Download(); $dwnldObj->dl_file("full path of the file in server"); {/syntaxhighlighter} Note : Give the complete path of file . Else it may cause errors.</p>
 ]]></content>
   </entry>

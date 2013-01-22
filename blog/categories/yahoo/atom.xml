@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: yahoo | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/yahoo/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/yahoo/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,45 +15,45 @@
   
   <entry>
     <title type="html"><![CDATA[Yahoo Open Hack India 2012]]></title>
-    <link href="http://harikt.github.com/blog/2012/08/16/yahoo-open-hack-india-2012/"/>
+    <link href="http://harikt.com/blog/2012/08/16/yahoo-open-hack-india-2012/"/>
     <updated>2012-08-16T11:38:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/08/16/yahoo-open-hack-india-2012</id>
+    <id>http://harikt.com/blog/2012/08/16/yahoo-open-hack-india-2012</id>
     <content type="html"><![CDATA[<p>So I got a chance to be at Bangalore for Open Hack India 2012 conducted by Yahoo.  <a href="http://www.flickr.com/photos/mrowan/7751044880/" title="IMG_5052 by mrowan, on Flickr"><img src="http://farm9.staticflickr.com/8286/7751044880_e0cb1fea0b.jpg" alt="IMG_5052" /></a>  <a href="http://www.flickr.com/photos/mrowan/7751030446/" title="IMG_5065 by mrowan, on Flickr"><img src="http://farm9.staticflickr.com/8296/7751030446_54abd3bc44.jpg" alt="IMG_5065" /></a>  It was really a great time to learn and do some of the experiments on Yahoo developer network (ydn) tools.  So we ended up trying to do some stuff with <a href="http://open.dapper.net/">dapper</a>. Dapper is a tool used for scrapping. It seems interesting from the workshop. But when I started using it, I was not successful. The dapper stopped responding / showing updating preview and stuffs.  What I was trying todo?&lt; /p>  I used to buy books comparing prices from isbn.net.in . It helped me a lot in buying books very cheap in India. But isbn.net.in was not having a feature called search for book title, and isbn details and as it does currently. Yes there were various other services that do the same. But if you think so then you must think why gmail was developed for there were yahoo mail, aol, msn etc were there.  So anyway learning was the idea, but as dapper fails to respond, it seems hard. I tried to contact the developers via the contact form. But I didn't got a reply on Hack days to further proceed on it. So I tried various other methods via Yahoo pipes, yql etc.  It was really nice to learn and make my hands dirty with yql. I tried different stuffs. Exploring it I found the url shortner from Yahoo.  So once I reached home I made a url shortner which is currently in github ( http://harikt.github.com/openhackindia/ ) . Its simple with a few lines.  {syntaxhighlighter class="html"} {/syntaxhighlighter} YQL is powerful, try and play. Its awesome guys.  I also came to know about Boomerang from Yahoo.  I was planning to buy a Bean Bag, and yes I got as a present from Yahoo.  Thank you guys for the awesome event. I am really sad for not able to submit a Hack :( . But I will explore more the ydn resoucres in future. Hope to see you next time if everything permits.  References :  YUI for jQuery Developers and vice versa : <a href="http://www.jsrosettastone.com/">http://www.jsrosettastone.com/</a>  Quick start to learn YUI : <a href="http://yuilibrary.com/yui/quick-start/">http://yuilibrary.com/yui/quick-start/</a>  Using YQL with YUI : <a href="http://yuilibrary.com/yui/docs/yql/">http://yuilibrary.com/yui/docs/yql/</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Yahoo Open Hack India 2012, on August 11th, 12th at Bangalore]]></title>
-    <link href="http://harikt.github.com/blog/2012/07/30/yahoo-open-hack-india2012/"/>
+    <link href="http://harikt.com/blog/2012/07/30/yahoo-open-hack-india2012/"/>
     <updated>2012-07-30T23:20:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/07/30/yahoo-open-hack-india2012</id>
+    <id>http://harikt.com/blog/2012/07/30/yahoo-open-hack-india2012</id>
     <content type="html"><![CDATA[<p>I have already tweeted about the Yahoo Open Hack India 2012 which will be held on August 11th and 12th at Yewanthpur Bangalore. You can know more details and register from http://openhackindia2012hackticket.eventbrite.com. See you guys there!.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Yahoo with the new redesign]]></title>
-    <link href="http://harikt.github.com/blog/2009/07/28/yahoo-new-redesign/"/>
+    <link href="http://harikt.com/blog/2009/07/28/yahoo-new-redesign/"/>
     <updated>2009-07-28T02:17:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/07/28/yahoo-new-redesign</id>
+    <id>http://harikt.com/blog/2009/07/28/yahoo-new-redesign</id>
     <content type="html"><![CDATA[<p>I recently read some where the design of yahoo is being changing . The new CEO has asked for the new design . Yes today I was really excited to see the new design . Every one loves a change, and I love the design in the first look itself . Its having wonderful features like Gmail , AOL mail preview .  <img src="http://farm3.static.flickr.com/2510/3763740060_d66f08047d.jpg" alt="Yahoo new look" />  <img src="http://farm3.static.flickr.com/2645/3762945469_79148306a6.jpg" alt="Old yahoo home page" />  Just took the screen shot of the old and new look for you . I hope every one will love the new look .</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Zimbra Desktop to manage email , calendars and much more]]></title>
-    <link href="http://harikt.github.com/blog/2009/07/07/zimbra-desktop-manage-email-calendars-and-much-more/"/>
+    <link href="http://harikt.com/blog/2009/07/07/zimbra-desktop-manage-email-calendars-and-much-more/"/>
     <updated>2009-07-07T19:36:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/07/07/zimbra-desktop-manage-email-calendars-and-much-more</id>
+    <id>http://harikt.com/blog/2009/07/07/zimbra-desktop-manage-email-calendars-and-much-more</id>
     <content type="html"><![CDATA[<p>Zimbra is an opensource desktop application software . Its for GNU/Linux and Mac OS from Yahoo . Zimbra is another Yahoo company one like the delicious book mark management <img src="http://harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" />. I was using Mozilla Thunder bird , but when I saw Zimbra with much more features than that , I thought of trying it .  Yes its having nice features, I love the look of it. Its based on the Mozilla . Some of the features are having calendar in it . So we can organise calendars , check emails whether its Yahoo, Gmail , MSN , AOL , Zimbra, Hot mail or any  from it . You can check your flickr images from Zimbra.  There is a slight problem with Zimbra connecting to flickr . Though Zimbra is a yahoo company its having trouble getting pictures from the flickr ( run by yahoo itslef ).  The screen shot is shown here to see how it looks .  <img src="http://farm3.static.flickr.com/2580/3697516753_a82ee6abbe.jpg?v=0" alt="Zimbra running on Ubuntu Desktop of Hari K T" />  When we try to check the flickr pics, it asks for authentication and we can authenticate to our yahoo account . We can upload pictures from the new window , but I don't find a scroll bar to scroll down . We can use the Tab to got to the submit buttons . I don't know whther yahoo have tested this in Ubuntu . Also don't know whether the issue is only for me . Another one is it creates a short cut to start Zimbra desktop . But icon is not appearing and also asks whether we need to run it . The screen shot of trying to upload pictures through Zimbra is below.  <img src="http://farm4.static.flickr.com/3577/3698385622_a9965aab3d.jpg?v=0" alt="Zinbra accessing the flickr" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Track every coin to save your budget, a product from ion labs]]></title>
-    <link href="http://harikt.github.com/blog/2009/05/20/59-track-every-coin-to-save-your-budget-a-product-from-ion-labs/"/>
+    <link href="http://harikt.com/blog/2009/05/20/59-track-every-coin-to-save-your-budget-a-product-from-ion-labs/"/>
     <updated>2009-05-20T09:30:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/05/20/59-track-every-coin-to-save-your-budget-a-product-from-ion-labs</id>
+    <id>http://harikt.com/blog/2009/05/20/59-track-every-coin-to-save-your-budget-a-product-from-ion-labs</id>
     <content type="html"><![CDATA[<p>I am a fan of Swaroop C H, after knowing him . He was in Yahoo, resigned his job and now working for ion labs . He is the author of the book , a byte of python which is released in pdf, online html and printed copy. The pdf and online mannual is free.  Talking about ion labs, Swaroop C H , the dreamer , Vikram Chadaga and Varun Prabhakar are the brain behind ion labs have founded the new hardware and software to keep track of your money or we can say finance calculator from ion labs . Yes , the new product is launching on july 2009 . Lots of offers are there for those who books the product now. I would like to promote it , so thought of writing this article. I don't have enough money for now to help him . But if this article can help him in anyway I am greatful . <a href="http://www.trackeverycoin.com/" title="Track every coin to save your budget">Visit Track a coin for more details</a>.  The previous product was the ion usb charger . After the success of it , they have really thought of running a startup firm and is now with the new product . If you have not heard about ion before , its the smallest usb charger which can be used to charge your ipod or any usb storage devices. Its pretty small in size .  <img src="http://farm3.static.flickr.com/2423/3551926824_0f7ec0dbf3.jpg?v=0" title="ion usb charger" alt="ion usb charger" /> Here comes the picture of the charger taken from the ions site . The cost of it is just 599/- INR and is available free of shipping . I hope its an affordable cost . It satisfies many standards . The iON works anywhere in the world - no more voltage conversions. Its an all in one charger . Now you don't want to carry your mobile charger , ipod charger and all. Just ion charger will do the job . Easy to carry and makes your life easy . If you are interested do get one from the site using direct payment , check or DD . Visit <a href="http://ion.co.in/" title="ion the usb charger">ion</a> for more details .  </p>
 ]]></content>
   </entry>

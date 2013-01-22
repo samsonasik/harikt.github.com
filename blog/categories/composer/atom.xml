@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: composer | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/composer/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/composer/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,27 +15,27 @@
   
   <entry>
     <title type="html"><![CDATA[The making of Hari.Extras]]></title>
-    <link href="http://harikt.github.com/blog/2012/11/24/node-224/"/>
+    <link href="http://harikt.com/blog/2012/11/24/node-224/"/>
     <updated>2012-11-24T21:22:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/11/24/node-224</id>
+    <id>http://harikt.com/blog/2012/11/24/node-224</id>
     <content type="html"><![CDATA[<p>If you have read my earlier posts, you know I started to love templating library like Twig, Mustache etc. So I was interested to in-corporate Twig or PhlyMustache or any sort of templating library to auraphp. <a href="https://github.com/auraphp/Aura.Web/tree/develop">Aura.Web</a> makes it easy to do without much hassle. What you want to do is create the class which extends the Aura\Web\Renderer\AbstractRenderer and have a exec() method. For more details checkout <a href="https://github.com/auraphp/Aura.Web/tree/develop#data-and-rendering">Data and Rendering</a> {syntaxhighlighter class="php"} Twig in <a href="http://github.com/harikt/Hari.Extras">Hari.Extras</a> . I will be adding support for PhlyMustache in the coming days. Hari.Extras comes with unit tests. Running unit tests : To run tests you should first install the dependencies. You can run {syntaxhighlighter class="php"}composer.phar install --dev{/syntaxhighlighter} This will install the dependencies like Aura.Web, Aura.Framework, Twig, vfsstream etc in vendor folder. Now you can run the phpunit from tests folder. A big Thanks to @Paul M Jones and Chris Hartjes and all who have supported one way or the other giving me tips and tricks, motivation to make this happen. The nice thing is with composer for I don't need to keep everything in the tests folder. Thanks to <a href="https://github.com/Seldaek">Seldaek</a> By the way as <a href="https://github.com/auraphp">auraphp</a> is getting closer and closer for the next release I am planning to start a series of posts to get started with using the components. Stay tuned :) .</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Talking at Barcamp on Composer, Eath and Facebook Search]]></title>
-    <link href="http://harikt.github.com/blog/2012/10/28/node-220/"/>
+    <link href="http://harikt.com/blog/2012/10/28/node-220/"/>
     <updated>2012-10-28T11:21:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/10/28/node-220</id>
+    <id>http://harikt.com/blog/2012/10/28/node-220</id>
     <content type="html"><![CDATA[<p>The 13th edition of Barcamp kerala is on November 4th. This time I am going to talk on Dependency Management with Composer. In the 12th Barcamp I talked about Aura , and it was a bit technical , so Kenny was making sure, not to go for intensive code. So the talk will not be limited to composer. I will be giving you an introduction to Eath , and also a small project which I have done for my personal use fbsearch. The tool is used to search your own status messages you have posted some months back. Its still on alpha for I didn't get enough time to move on to make it much more better. It has some issues which I am already aware of. So if you are interested , be there :) . For more information : <a href="http://barcampkerala.org">barcampkerala.org</a> <a href="http://getcomposer.org">composer.org</a> <a href="https://github.com/crodas/Eath">Eath</a> <a href="http://harikt.com/fbsearch">fbsearch</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Thoughts on installing Zend Framework via composer]]></title>
-    <link href="http://harikt.github.com/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/"/>
+    <link href="http://harikt.com/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/"/>
     <updated>2012-09-10T11:04:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer</id>
+    <id>http://harikt.com/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer</id>
     <content type="html"><![CDATA[<p>Note : First I thought of creating an issue, and it was not in github. These are not serious issues, but just my thoughts when installing ZF2 via composer. I am not sure whether its composer related or the way the zf2 is packaged to do it via composer. Normally the composer.json will be something like {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ cat composer.json { "require": { "zendframework/zend-form": "2.0" } } hari@local:/var/www/composer/zf2$ php ../composer.phar install Loading composer repositories with package information Installing dependencies - Installing zendframework/zendframework (2.0.0) Downloading: 25%\<sup>C</sup> hari@local:/var/www/composer/zf2$ \<sup>C</sup> {/syntaxhighlighter} But you can see the composer tries to install the whole zend-framework. The problem is you need to add some more lines for its hosted in packages.framework.com and not in packagist.org . So your composer.json will be as below . {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ cat composer.json { "repositories": [ { "type": "composer", "url": "http://packages.zendframework.com/" } ], "require": { "zendframework/zend-form": "2.0" } } hari@local:/var/www/composer/zf2$ php ../composer.phar install Loading composer repositories with package information Installing dependencies - Installing zendframework/zend-form (2.0.0) Downloading: 100% zendframework/zend-form suggests installing zendframework/zendservice-recaptcha (ZendService\ReCaptcha component) Writing lock file Generating autoload files {/syntaxhighlighter} Great you installed the zf2 form component. Now you can see where the form is installed . {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ ls vendor/ autoload.php composer zendframework hari@local:/var/www/composer/zf2$ ls vendor/zendframework/ zend-form hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/ Zend hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/ Form hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/ Annotation FieldsetInterface.php composer.json Fieldset.php Element FieldsetPrepareAwareInterface.php ElementInterface.php FormFactoryAwareInterface.php Element.php FormInterface.php ElementPrepareAwareInterface.php Form.php Exception TODO.md Factory.php View {/syntaxhighlighter} Assume you have more zf2 packages which you have added. At a later point you think of installing the framework as a whole itself than adding more packages in the composer.json . So your composer.json will be some what like {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ cat composer.json { "repositories": [ { "type": "composer", "url": "http://packages.zendframework.com/" } ], "require": { "zendframework/zendframework": "2.0" } } hari@local:/var/www/composer/zf2$ php ../composer.phar update Loading composer repositories with package information Updating dependencies - Removing zendframework/zend-form (2.0.0) - Installing zendframework/zendframework (2.0.0) Downloading: 100% Writing lock file Generating autoload files {/syntaxhighlighter} The form has been removed and framework is installed. Lets have a look where its installed . {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ ls vendor/ autoload.php composer zendframework hari@local:/var/www/composer/zf2$ ls vendor/zendframework/ zend-form hari@local:/var/www/composer/zf2$ cat composer.json { "repositories": [ { "type": "composer", "url": "http://packages.zendframework.com/" } ], "require": { "zendframework/zendframework": "2.0" } } hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/ Zend hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/ Form hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/ bin INSTALL.md README-DEV.md resources composer.json library README-GIT.md tests demos LICENSE.txt README.md vendor hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/ Zend hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/Zend/ Authentication Di InputFilter Mvc Stdlib Barcode Dom Json Navigation Tag Cache Escaper Ldap Paginator Text Captcha EventManager Loader Permissions Uri Code Feed Log ProgressBar Validator Config File Mail Serializer Version Console Filter Math Server View Crypt Form Memory ServiceManager XmlRpc Db Http Mime Session Debug I18n ModuleManager Soap {/syntaxhighlighter} You can notice its going on the wrong place. vendor/zendframework/zend-form . I am not sure whether every one needs to remove all the installed packages to install the framework . It seems possible with naming zendframework/package . Thus it don't remove the installed packages. May be there are some other issues related to it for the naming of zendframework/zend-form like that.</p>
 ]]></content>
   </entry>

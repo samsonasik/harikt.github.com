@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mercury | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/mercury/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/mercury/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mercury Editor , Fluid Baseline]]></title>
-    <link href="http://harikt.github.com/blog/2011/10/03/mercury-editor-fluid-baseline/"/>
+    <link href="http://harikt.com/blog/2011/10/03/mercury-editor-fluid-baseline/"/>
     <updated>2011-10-03T23:57:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2011/10/03/mercury-editor-fluid-baseline</id>
+    <id>http://harikt.com/blog/2011/10/03/mercury-editor-fluid-baseline</id>
     <content type="html"><![CDATA[<p>Mercury Editor : So going through the Symfony CMF post on <a href="http://liip.ch">Liip Blog</a> I came accross a nice editor Mercury. Mercury is a full featured HTML5 editor like Aloha Editor . You can download or see it in action over : http://jejacks0n.github.com/mercury/ I am impressed on the first look, awesome :) . Fluid Baseline : Another project I was impressed is the <a href="http://fluidbaselinegrid.com/">Fluid Baseline grid</a> . It may be good that you go and look in browser with different sizes. Some properties are Fluid Columns, Baseline Grid, Responsive Design. Go and see dude :) . Impressive .</p>
 ]]></content>
   </entry>

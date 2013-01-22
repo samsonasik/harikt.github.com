@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: video site | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/video-site/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/video-site/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[PHPDirector, have your own free video cms site]]></title>
-    <link href="http://harikt.github.com/blog/2009/02/22/10-phpdirector-have-your-own-free-video-cms-site/"/>
+    <link href="http://harikt.com/blog/2009/02/22/10-phpdirector-have-your-own-free-video-cms-site/"/>
     <updated>2009-02-22T08:18:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/02/22/10-phpdirector-have-your-own-free-video-cms-site</id>
+    <id>http://harikt.com/blog/2009/02/22/10-phpdirector-have-your-own-free-video-cms-site</id>
     <content type="html"><![CDATA[<p>One of my friend was working with PHPMotions. Though I was aware of CMS systems , I have not thought of a Video CMS to create a youtube like clone site. I dont know why I have not thought of it still I use youtube and all ?  Anyway now I thinks about it . Yes something deep . I want to experiment with  some especially the video sections. My search starts when I start knowing about phpmotions. I searched for video cms systems. Some where nice in the demos. But all are paid softwares. Phpmotions is a freeware , but its not registered under the GNU/GPL licence. It has its own licence. But I searched for a GNU/GPL licenced one.  But my search ends when I see PHP Director . Yes we can have our own video site. Its under GPL Licence too . It has lots of features , but missing some , but in the next versions it will cover almost all that you need . I was interested to see and I would like to work on it. I will be busy with the next 2 weeks with my supplementary exams . After that I will be back , to work with the php director . They will be adding me to the developers. So in the next versions you can see some more improved features what we the phpdirector team will be introducing . I am extremely Happy to hear from them that I will be added to the team . Thanks Krissy &amp; Ben  You can see a working section of the phpdirector at <a href="http://phpdirector.harikt.com" title="PHP Director the free video CMS to your site"><strong>http://phpdirector.harikt.com</strong></a>. This is not the official demo of php director , so the contents and look may change from the real one . :) So you can download and try it , that may be better too . PHP director is at <a href="http://www.phpdirector.co.uk" title="Official site of phpdirector">http://www.phpdirector.co.uk</a></p>
 ]]></content>
   </entry>

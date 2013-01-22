@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: bck | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/bck/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/bck/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Talking at Barcamp on Composer, Eath and Facebook Search]]></title>
-    <link href="http://harikt.github.com/blog/2012/10/28/node-220/"/>
+    <link href="http://harikt.com/blog/2012/10/28/node-220/"/>
     <updated>2012-10-28T11:21:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/10/28/node-220</id>
+    <id>http://harikt.com/blog/2012/10/28/node-220</id>
     <content type="html"><![CDATA[<p>The 13th edition of Barcamp kerala is on November 4th. This time I am going to talk on Dependency Management with Composer. In the 12th Barcamp I talked about Aura , and it was a bit technical , so Kenny was making sure, not to go for intensive code. So the talk will not be limited to composer. I will be giving you an introduction to Eath , and also a small project which I have done for my personal use fbsearch. The tool is used to search your own status messages you have posted some months back. Its still on alpha for I didn't get enough time to move on to make it much more better. It has some issues which I am already aware of. So if you are interested , be there :) . For more information : <a href="http://barcampkerala.org">barcampkerala.org</a> <a href="http://getcomposer.org">composer.org</a> <a href="https://github.com/crodas/Eath">Eath</a> <a href="http://harikt.com/fbsearch">fbsearch</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[HTML5 and beyond by Shwetank Dixit]]></title>
-    <link href="http://harikt.github.com/blog/2011/11/12/hTML5-beyond-shwetank-dixit/"/>
+    <link href="http://harikt.com/blog/2011/11/12/hTML5-beyond-shwetank-dixit/"/>
     <updated>2011-11-12T22:06:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2011/11/12/hTML5-beyond-shwetank-dixit</id>
+    <id>http://harikt.com/blog/2011/11/12/hTML5-beyond-shwetank-dixit</id>
     <content type="html"><![CDATA[<p>So a serious one , that you should never miss this Barcamp Kerala 11 th edition ( #BCK ) .  Opera evangelist Shwetank Dixit is with his talk HTML5 and beyond  I still remember his talk in 5th BCK, my first Barcamp, which was one of the reasons I got addicted to Barcamps. Yes there was lots of others too, but talk by evangelist is something different. You will recognize only if you have ever heard. I am really happy to see his talk in the <a href="http://www.barcampkerala.org/blog/sessions/">Barcamp sessions list</a>  Remember the next age is HTML5 , so dive into HTML5. Yes we can start developing HTML5 websites which old IE can also make use of it. Ask your developer to start learning about the modernizer, <a href="http://en.wikipedia.org/wiki/HTML5_Shiv">HTML5 Shiv</a>.</p>
 ]]></content>
   </entry>

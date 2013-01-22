@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: confirmation | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/confirmation/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/confirmation/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Does he opens the mail I send ? Why the images are blocked in mail ?]]></title>
-    <link href="http://harikt.github.com/blog/2010/03/06/does-he-opens-mail-i-send-why-images-are-blocked-mail/"/>
+    <link href="http://harikt.com/blog/2010/03/06/does-he-opens-mail-i-send-why-images-are-blocked-mail/"/>
     <updated>2010-03-06T08:57:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2010/03/06/does-he-opens-mail-i-send-why-images-are-blocked-mail</id>
+    <id>http://harikt.com/blog/2010/03/06/does-he-opens-mail-i-send-why-images-are-blocked-mail</id>
     <content type="html"><![CDATA[<p>Every one will be eager to know whether the mail send by you has been read or not by him/her <img src="http://harikt.com/sites/all/libraries/fckeditor/editor/images/smiley/msn/wink_smile.gif" alt="image" /> ( Especailly love letters , email campaigns , news letters etc ) right ?  <a href="http://www.flickr.com/photos/harikt/4410492336/"><img src="http://farm3.static.flickr.com/2716/4410492336_c7b6ec185c_o.jpg" alt="Did he / she read my mail ?" /></a>  Today I would love to share with you how you can track this . I am not going to write any code. But will go through how you can acheive this . I hope you are a web-developer or know something about programming in PHP .  I am going through some of the functions in PHP . There will be similar functions in .NET too . The <a href="http://harikt.com/content/swiftmailer-powerful-php-mailer-library">swiftmailer</a> already have a function to send whether the mail is opened or not . But it will ask the user the permission before sending it .  I am going through a different one . Every one knows the mail function . Either we can use the php mail or swiftmailer or phpmailer or Zend_Mail any to send mails . Its easy to send mails with Swiftmailer . Now we need to get the confirmation for the mail send right ?  We all know its easy to create dynamic images with the PHP GD library . Every one would have created it for captcha images right ? . So we need to write some PHP code to create a dynamic image . So the link will be something like http://example.com/mygd-image.php which will output an image . If we are sending to a single person we don't need to pass values using GET . ie <a href="http://example.com/mygd-image.php?openedBy=5467">http://example.com/mygd-image.php?openedBy=5467</a> . But when its for email campaigns and all we need a way to track which person has opened the mail . We will be having the names of the users and corresponding key ( I mean primary key or we can create a hash based on the mail or something different according to your logic ) . We just need to pass that to the link which creates the image . Track it using the PHP GET method and update the database . Yes now you know whether the mail is opened or not .  There is also a possibility that the images will be blocked . The reason why the images is blocked is due to these type of things which will be used for bad also . For eg : spammers can check whether the email address is faque or not using just sending these sort of mails . So when you open the mail and the image loads it confirms your email address . So gmail usually blocks these type of images .  The image is taken from the flickr photostream of Davide Restivo <a href="http://www.flickr.com/people/somemixedstuff/">http://www.flickr.com/people/somemixedstuff/</a> ( Thanks and credits for the image to him ) . I hope I have not missed any  . You can look the php gd library for how to create dynamic images . The mail functions and your favourite php library to send mails . Thanks guys . That's all for today . Enjoy .</p>
 ]]></content>
   </entry>

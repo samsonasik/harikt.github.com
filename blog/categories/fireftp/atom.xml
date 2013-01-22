@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: fireftp | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/fireftp/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/fireftp/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[FireFTP , Filezilla a wonderful tool for web developers]]></title>
-    <link href="http://harikt.github.com/blog/2009/03/27/28-fireftp-filezilla-a-wonderful-tool-for-web-developers/"/>
+    <link href="http://harikt.com/blog/2009/03/27/28-fireftp-filezilla-a-wonderful-tool-for-web-developers/"/>
     <updated>2009-03-27T08:44:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/03/27/28-fireftp-filezilla-a-wonderful-tool-for-web-developers</id>
+    <id>http://harikt.com/blog/2009/03/27/28-fireftp-filezilla-a-wonderful-tool-for-web-developers</id>
     <content type="html"><![CDATA[<p>If you are a web developer or a server admin always communicating to download / upload files, then the Fire FTP is a wonderful addon for the Mozilla Firefox. Some times you may not be having enough permission to install the software . Then you may be trying to contact admin or some one to get it. But don't ask any body . Go and get the addon for Mozilla Firefox. Yes, its pretty easy and is a wonderful one . You may love to use it from the browser itself. FTP in one tab and the remaining pages in another . Don't need to switch from one FTP client to browser. Is it easy ?  Another FTP client is the Filezilla. Its also a great tool for web developers. Please do try these and you may love it .</p>
 ]]></content>
   </entry>

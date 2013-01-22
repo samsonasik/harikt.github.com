@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: war | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/war/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/war/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Browser war seems to end but OS war starts]]></title>
-    <link href="http://harikt.github.com/blog/2009/07/31/browser-ware-seems-end-os-war-starts/"/>
+    <link href="http://harikt.com/blog/2009/07/31/browser-ware-seems-end-os-war-starts/"/>
     <updated>2009-07-31T01:51:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/07/31/browser-ware-seems-end-os-war-starts</id>
+    <id>http://harikt.com/blog/2009/07/31/browser-ware-seems-end-os-war-starts</id>
     <content type="html"><![CDATA[<p>It seems the browser war is ending, but the OS ( Operating System ) war begins . Microsoft may be the worst to hit in the market with the introduction of Google Chrome OS which will be running on top of Linux Kernel . Microsoft seems to be working hard for the new OS Windows 7 .  I heard that with the introduction of Google Chrome OS the sale of Microsoft Vista has been effected . Don't know how much fact is there . Some of the GNU/Linux guys even thinks whether there is a new distro needed .  Anyway I am waiting to see the new Google Chrome OS in 2010 . Also hoping many of the products of google will be ported to run on GNU/Linux OS . For eg : gtalk , chrome browser etc .</p>
 ]]></content>
   </entry>

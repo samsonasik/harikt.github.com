@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: facebook | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/facebook/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/facebook/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Speaking at Barcamp Kerala 11th Edition at IIM(K)]]></title>
-    <link href="http://harikt.github.com/blog/2011/11/24/speaking-for-bck11-or-barcamp-kerala-at-iim-kozhikode/"/>
+    <link href="http://harikt.com/blog/2011/11/24/speaking-for-bck11-or-barcamp-kerala-at-iim-kozhikode/"/>
     <updated>2011-11-24T11:31:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2011/11/24/speaking-for-bck11-or-barcamp-kerala-at-iim-kozhikode</id>
+    <id>http://harikt.com/blog/2011/11/24/speaking-for-bck11-or-barcamp-kerala-at-iim-kozhikode</id>
     <content type="html"><![CDATA[<p>The 11th BarCamp Kerala to be conducted on 20th Nov 2011 is IIM( K ) campus at Calicut. I have been thinking to speak on BCK for a long. But this time I thought of going for a try.  The session is on Social media and Business  Not a huge talk , but a small one. Remember I am not a Business man, nor marketing manager and is interested to talk on integrating facebook with PHP on your website, or on PHP 5.3. But this will go more specifically for a PHP Developer and I don't know the level and enthusiasm of the audience.  So this talk is to make you think how you can utilize social media from the eyes of a developer. I loved to make the session to be an interactive one. And I guess the IIM guys, marketing guys, entrepreneurs all can give some input for this talk. If anyone is interested I will show some codes and demonstrate how easy its to integrate Facebook on your website and make you think how to make business out of it.  The slides I prepared to talk on the event is below .  <strong><a href="http://www.slideshare.net/harikt/iim-10274824" title="Speaking at Barcamp Kerala 11th Edition at IIM(K)">Speaking at Barcamp Kerala 11th Edition at IIM(K)</a></strong> View more <a href="http://www.slideshare.net/">presentations</a> from <a href="http://www.slideshare.net/harikt">Hari K T</a> As I reached IIM, I didn't see that much people who are in Managers, but most of them was having a technical background. So switched my topic, how you can integrate Facebook on ypur Website. But the slides of that is not here, for it will be soon available as an article in <a href="http://phpmaster.com">phpmaster.com</a>. When I was writing the article I made a playground with Aura Autoloader , oEmbed, Zend_Http_Client, FB-SDK etc . See it in action at <a href="http://harikt.com/fbgapi">harikt.com/fbgapi</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Search yahoo , google , youtube , flicker , facebook and more from Kosmix]]></title>
-    <link href="http://harikt.github.com/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix/"/>
+    <link href="http://harikt.com/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix/"/>
     <updated>2009-04-22T09:02:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix</id>
+    <id>http://harikt.com/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix</id>
     <content type="html"><![CDATA[<p>Don't know whether all have heard about the site kosmix . Anyway let me tell what are the things that attracted to me .  You can search for a particular keyword , kosmix will search in google , yahoo, flicker , facebook , youtube , twitter and many more . The result is very much useful . I am keeping a screen shot for the search hello world .  <img src="http://farm4.static.flickr.com/3563/3490845375_ec164726a4.jpg?v=0" title="search for hello world in kosmix" alt="search for hello world in kosmix " />    The people behind Kosmix are Venky Harinarayan and his business partner Anand Rajaraman founded in 2005. They are the people who have developed the ecommerce search engine and later sold to amazon for $250 millionin 1998 . The investors of kosmix are former CEO of Motorolla , CEO of Amazon . Have a look below .  * Lightspeed Ventures Partners * Accel Partners * Dag Ventures * Jeffrey P. Bezos, Bezos Expeditions Bezos Expeditions is Jeff Bezos' personal investment company. Mr. Bezos is founder and CEO of Amazon.com. * Bill Miller, Legg Mason Chairman and Chief Investment Officer * Ed Zander Former CEO of Motorola  You can visit the site http://www.kosmix.com/ and know more detailed . Found a good tool , so want to make people aware about this , and spread the world . Got information from the site itself.</p>
 ]]></content>
   </entry>

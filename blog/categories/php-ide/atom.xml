@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: PHP IDE | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/php-ide/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/php-ide/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Running Aptana Studio, PHP IDE on Ubuntu 9.04]]></title>
-    <link href="http://harikt.github.com/blog/2009/07/05/running-aptana-studio-php-ide-ubuntu-904/"/>
+    <link href="http://harikt.com/blog/2009/07/05/running-aptana-studio-php-ide-ubuntu-904/"/>
     <updated>2009-07-05T20:59:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/07/05/running-aptana-studio-php-ide-ubuntu-904</id>
+    <id>http://harikt.com/blog/2009/07/05/running-aptana-studio-php-ide-ubuntu-904</id>
     <content type="html"><![CDATA[<p>Aptana is an opensource PHP Development IDE . I thought of learning an IDE for development . Habeeb one of my collegue have helped to learn more about Aptana . My system was a 64 bit Intel Core 2 Duo Processor .  I downloaded Aptana Studio stand alone app for Ubuntu 9.04 . I tried to run it , and got an error "/home/hari/Aptana Studio/.meta/.log" which describes the error report . I opened the .log file but could not trace it out . I searched google and found Aptana is not supporting 64 bit . First I thought it may be the problem because my OS is 64 bit . I downloaded the Aptana Stand alone for Eclipse . And I was having some more trouble configuring it .  Finally I thought of looking whether the Ubuntu 9.04 installed is 32 bit or 64 bit . I tried uname -a . You can also check the forum <a href="http://ubuntuforums.org/archive/index.php/t-921081.html">http://ubuntuforums.org/archive/index.php/t-921081.html</a>  $uname -a Linux hari-opensource 2.6.27-7-generic #1 SMP Fri Oct 24 06:42:44 UTC 2008 i686 GNU/Linux  Got the above output . I was able to recognise that mine is a 32 bit version installed ( If you are running a 64 bit Ubuntu you will be getting something like x86_64 in the above line ). Hm then why Aptana doesn't run ?  I looked the link once more <a href="http://www.aptana.com/docs/index.php/Installing_Aptana_on_Linux">http://www.aptana.com/docs/index.php/Installing_Aptana_on_Linux</a> . We need to install xulrunner , although xulrunner 1.9 is installed. Add an additional file call it "add" or some thing you like and insert the below 2 lines into it .<em> *  </em>export MOZILLA_FIVE_HOME=/usr/lib/xulrunne *  <em>/usr/local/aptana/AptanaStudio</em>  Make the file executable . ie chmod 777 <filename that you have named\> Eg :   $chmod 777 add  $./add  It will work fine for you . Any doubts just leave a comment. Will reply to you soon .</p>
 ]]></content>
   </entry>

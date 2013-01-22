@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: compiling | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/compiling/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/compiling/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Installing and configuring PHP 5.4]]></title>
-    <link href="http://harikt.github.com/blog/2012/01/05/installing-configuring-php54/"/>
+    <link href="http://harikt.com/blog/2012/01/05/installing-configuring-php54/"/>
     <updated>2012-01-05T22:33:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/01/05/installing-configuring-php54</id>
+    <id>http://harikt.com/blog/2012/01/05/installing-configuring-php54</id>
     <content type="html"><![CDATA[<p>May be you already know Aura Project for PHP recently moved to 5.4. So I want to download PHP 5.4 and compiled. You need to download the development library files if you are seeing any errors. Just do via synaptic or apt-get. I did download apache2 and installed. Its not that much hard .  You can also run the tests, and report the errors to QA, which will help us. But I was facing a problem. Normally the php cli will be in /usr/bin/php . But in our case , it will be in /usr/local/bin/php . I was getting error when trying to execute phpunit and many pear packages. So the way you can do is to symbolic link /usr/bin/php to /usr/local/bin/php .  If you want to run <a href="http://derickrethans.nl/multiple-php-version-setup.html">multiple PHP versions of PHP like PHP 5.3 , 5.4</a> etc consider reading <a href="http://derickrethans.nl/">Derick Rethans</a> post and use the script to do the work. A big Thanks to him for sharing it .</p>
 ]]></content>
   </entry>

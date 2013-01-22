@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: video and voice chat | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/video-and-voice-chat/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/video-and-voice-chat/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Gmail voice and video chat plugin]]></title>
-    <link href="http://harikt.github.com/blog/2009/07/11/gmail-voice-and-video-chat-plugin/"/>
+    <link href="http://harikt.com/blog/2009/07/11/gmail-voice-and-video-chat-plugin/"/>
     <updated>2009-07-11T22:10:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/07/11/gmail-voice-and-video-chat-plugin</id>
+    <id>http://harikt.com/blog/2009/07/11/gmail-voice-and-video-chat-plugin</id>
     <content type="html"><![CDATA[<p>Gmail has introduced the voice and video chat for a while .  But its still not available for GNU/Linux . The screenshot of it when I checked for the plugin is given below .  <img src="http://farm3.static.flickr.com/2620/3709843567_1253d9e49c.jpg?v=0" alt="gmail voice and video chat plugin" />  Google has announced the Google Chrome OS in the 2010 , which will be running on the top of Linux Kernel . I am hoping that the voice and video chat will be available from 2010 for GNU/Linux systems .</p>
 ]]></content>
   </entry>

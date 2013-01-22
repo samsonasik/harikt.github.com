@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: themes | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/themes/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/themes/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Different drupal themes that I love]]></title>
-    <link href="http://harikt.github.com/blog/2009/08/15/6-different-drupal-themes-i-love/"/>
+    <link href="http://harikt.com/blog/2009/08/15/6-different-drupal-themes-i-love/"/>
     <updated>2009-08-15T21:52:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/08/15/6-different-drupal-themes-i-love</id>
+    <id>http://harikt.com/blog/2009/08/15/6-different-drupal-themes-i-love</id>
     <content type="html"><![CDATA[<p>First of all Happy Independence day . As India is celebrating its Independence I thought of writing a post about Drupal theme that I love . This is my personal opinion . So you can explore the drupal themes section for your selection . After learning more and more about drupal , I started updating this . So I may want to say these are not the 6 , but the different themes that I love . Recently I fall in love with fusion .   <strong>Genesis</strong> : The reason I love it are Flexible layout  : Every design is having a similar layout. I don't think there is not much different layouts . The layout seems to be same . The things that changes are color, images and contents ( lol ).  <img src="http://farm4.static.flickr.com/3549/3823907806_cd0487d679.jpg" alt="Genesis drupal theme" />  You may never agree with me that this is a good design if and only if you know how to change the style of this theme , like adding some nice graphics etc .  <strong>Zen</strong> : The next wonderful theme that I love is zen for as I described above .  <img src="http://farm3.static.flickr.com/2675/3823926530_3bc27ee92f.jpg" alt="Zen drupal theme" />  <strong>Acquia Marina</strong> : If you are looking the design with out much changes , then this theme Acquia Marina is the one I love . I have made some changes to make it work as a flexible one rather than sticking on to a particular width . I hope IE users also don't have much problem as I am only using GNU/Linux. And I can gaurantee one thing that Mozilla users will not be having any issues .  <img src="http://farm3.static.flickr.com/2543/3823909300_b7ecbd195b.jpg" alt="Acquia drupal theme" />  <strong>Waffles</strong> : Another flexible theme by the same providers of Acquia Marina .  <img src="http://farm3.static.flickr.com/2486/3823910446_072aed37e5.jpg" alt="Waffle drupal theme" />  <strong>Black Mamba</strong> : Flexible 1, 2, 3 columns like the waffles . May be having some changes to color only .  <img src="http://farm4.static.flickr.com/3553/3823911616_402d0a27d8.jpg" alt="Black Mamba" />  <strong>960 Robots</strong> : From lullabot . Yes they have a video tutorial for building your own themes fr Drupal . They explains the developement of themes from scratch using this theme . The preview is available in youtube . I think buying one will not be a loss of money for any one who is new to Drupal . You can see the podcasts and blog and really will feel it.  <img src="http://farm4.static.flickr.com/3426/3823911904_00e7b5557e.jpg" alt="Nine sixty Robot drupal theme" />     <strong>Fusion</strong> from Top notch themes :  <a href="http://vimeo.com/7670241">Fusion Core Demo</a> from <a href="http://vimeo.com/eternalistic">Jeremy Caldwell</a> on <a href="http://vimeo.com">Vimeo</a>.  More over every themes are free in the website http://drupal.org/project/Themes . So feel free to explore and try it out .</p>
 ]]></content>
   </entry>

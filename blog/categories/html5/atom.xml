@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: html5 | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/html5/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/html5/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[HTML5 and Upcoming Web Technologies]]></title>
-    <link href="http://harikt.github.com/blog/2012/10/17/node-218/"/>
+    <link href="http://harikt.com/blog/2012/10/17/node-218/"/>
     <updated>2012-10-17T19:41:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/10/17/node-218</id>
+    <id>http://harikt.com/blog/2012/10/17/node-218</id>
     <content type="html"><![CDATA[<p>Probably you may have already heard about the full day workshop on HTML5 and Upcoming Web Technologies by <a href="https://twitter.com/shwetank">Shwetank Dixit</a> of Opera at <a href="http://interface-tech.in/">Interface</a> which will be held on 3rd November 2012 . Where ? The Woods Manor, Cochin . Why you should participate? HTML5 is the future of internet. Why not learn from the leader? Who should attend ? Are you a web developer? A person who works on android, iphone or any device ? If you said yes, then its for you. What is the cost? This time we are charging 500 INR. The money is used to give you tea/coffee and snacks plus an awesome lunch during the event and to cover the event expenses. I don't think its a huge amount for I have been spending more than 500 INR to travel from Cochin to Bangalore to participate in such awesome workshops. You are only spending a 500 INR in a year which will be a worth in your career. There is also discounts available for group registration for companies, please contact Sofie Holmberg via sofie.holmberg at interface-tech dot in or 0484 4433638 . There is only limited seats available , so be there and don't loose the best chance attending the workshop and interacting with <a href="https://twitter.com/shwetank">Shwetank Dixit</a>. Register and get your tickets from : http://interface-tech.in/register</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[HTML5 and beyond by Shwetank Dixit]]></title>
-    <link href="http://harikt.github.com/blog/2011/11/12/hTML5-beyond-shwetank-dixit/"/>
+    <link href="http://harikt.com/blog/2011/11/12/hTML5-beyond-shwetank-dixit/"/>
     <updated>2011-11-12T22:06:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2011/11/12/hTML5-beyond-shwetank-dixit</id>
+    <id>http://harikt.com/blog/2011/11/12/hTML5-beyond-shwetank-dixit</id>
     <content type="html"><![CDATA[<p>So a serious one , that you should never miss this Barcamp Kerala 11 th edition ( #BCK ) .  Opera evangelist Shwetank Dixit is with his talk HTML5 and beyond  I still remember his talk in 5th BCK, my first Barcamp, which was one of the reasons I got addicted to Barcamps. Yes there was lots of others too, but talk by evangelist is something different. You will recognize only if you have ever heard. I am really happy to see his talk in the <a href="http://www.barcampkerala.org/blog/sessions/">Barcamp sessions list</a>  Remember the next age is HTML5 , so dive into HTML5. Yes we can start developing HTML5 websites which old IE can also make use of it. Ask your developer to start learning about the modernizer, <a href="http://en.wikipedia.org/wiki/HTML5_Shiv">HTML5 Shiv</a>.</p>
 ]]></content>
   </entry>

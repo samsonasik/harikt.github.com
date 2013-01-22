@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,98 +15,98 @@
   
   <entry>
     <title type="html"><![CDATA[Our awesome php people]]></title>
-    <link href="http://harikt.github.com/blog/2013/01/09/our-awesome-php-people/"/>
+    <link href="http://harikt.com/blog/2013/01/09/our-awesome-php-people/"/>
     <updated>2013-01-09T20:00:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2013/01/09/our-awesome-php-people</id>
+    <id>http://harikt.com/blog/2013/01/09/our-awesome-php-people</id>
     <content type="html"><![CDATA[<p>Recently github introduces contributions chart. So I peeped into some of the people of our php community. It seems <a href="https://github.com/fabpot">@fabpot</a> is the one who contributes almost every day. Just 21 days without any contribution.</p>
 
-<p><a href="https://github.com/fabpot"><img class="center" src="http://harikt.github.com/assets/images/github/fabpot.png" width="687" height="299" title="Contributions by fabpot" alt="Contributions by fabpot"></a>
-<a href="https://github.com/weierophinney"><img class="center" src="http://harikt.github.com/assets/images/github/weierophinney.png" width="687" height="299" title="Contributions by weierophinney" alt="Contributions by weierophinney"></a>
-<a href="https://github.com/pmjones"><img class="center" src="http://harikt.github.com/assets/images/github/pmjones.png" width="687" height="299" title="Contributions by pmjones" alt="Contributions by pmjones"></a>
-<a href="https://github.com/willdurand"><img class="center" src="http://harikt.github.com/assets/images/github/willdurand.png" width="687" height="299" title="Contributions by willdurand" alt="Contributions by willdurand"></a>
-<a href="https://github.com/Seldaek"><img class="center" src="http://harikt.github.com/assets/images/github/Seldaek.png" width="687" height="299" title="Contributions by Seldaek" alt="Contributions by Seldaek"></a>
-<a href="https://github.com/markstory"><img class="center" src="http://harikt.github.com/assets/images/github/markstory.png" width="687" height="299" title="Contributions by markstory" alt="Contributions by markstory"></a>
-<a href="https://github.com/taylorotwell"><img class="center" src="http://harikt.github.com/assets/images/github/taylorotwell.png" width="687" height="299" title="Contributions by taylorotwell" alt="Contributions by taylorotwell"></a>
-<a href="https://github.com/WanWizard"><img class="center" src="http://harikt.github.com/assets/images/github/WanWizard.png" width="687" height="299" title="Contributions by WanWizard" alt="Contributions by WanWizard"></a>
-<a href="https://github.com/drak"><img class="center" src="http://harikt.github.com/assets/images/github/drak.png" width="687" height="299" title="Contributions by drak" alt="Contributions by drak"></a>
-<a href="https://github.com/nikic"><img class="center" src="http://harikt.github.com/assets/images/github/nikic.png" width="687" height="299" title="Contributions by nikic" alt="Contributions by nikic"></a>
-<a href="https://github.com/avalanche123"><img class="center" src="http://harikt.github.com/assets/images/github/avalanche123.png" width="687" height="299" title="Contributions by avalanche123" alt="Contributions by avalanche123"></a>
-<a href="https://github.com/shama"><img class="center" src="http://harikt.github.com/assets/images/github/shama.png" width="687" height="299" title="Contributions by shama" alt="Contributions by shama"></a>
-<a href="https://github.com/vrana"><img class="center" src="http://harikt.github.com/assets/images/github/vrana.png" width="687" height="299" title="Contributions by vrana" alt="Contributions by vrana"></a>
-<a href="https://github.com/philsturgeon"><img class="center" src="http://harikt.github.com/assets/images/github/philsturgeon.png" width="687" height="299" title="Contributions by philsturgeon" alt="Contributions by philsturgeon"></a>
-<a href="https://github.com/DASPRiD"><img class="center" src="http://harikt.github.com/assets/images/github/DASPRiD.png" width="687" height="299" title="Contributions by DASPRiD" alt="Contributions by DASPRiD"></a>
-<a href="https://github.com/mvriel"><img class="center" src="http://harikt.github.com/assets/images/github/mvriel.png" width="687" height="299" title="Contributions by mvriel" alt="Contributions by mvriel"></a>
-<a href="https://github.com/c9s"><img class="center" src="http://harikt.github.com/assets/images/github/c9s.png" width="687" height="299" title="Contributions by c9s" alt="Contributions by c9s"></a>
-<a href="https://github.com/weaverryan"><img class="center" src="http://harikt.github.com/assets/images/github/weaverryan.png" width="687" height="299" title="Contributions by weaverryan" alt="Contributions by weaverryan"></a>
-<a href="https://github.com/bschussek"><img class="center" src="http://harikt.github.com/assets/images/github/bschussek.png" width="687" height="299" title="Contributions by bschussek" alt="Contributions by bschussek"></a>
-<a href="https://github.com/vicb"><img class="center" src="http://harikt.github.com/assets/images/github/vicb.png" width="687" height="299" title="Contributions by vicb" alt="Contributions by nateabele"></a>
-<a href="https://github.com/garak"><img class="center" src="http://harikt.github.com/assets/images/github/garak.png" width="687" height="299" title="Contributions by garak" alt="Contributions by garak"></a>
-<a href="https://github.com/beberlei"><img class="center" src="http://harikt.github.com/assets/images/github/beberlei.png" width="687" height="299" title="Contributions by beberlei" alt="Contributions by beberlei"></a>
-<a href="https://github.com/codeguy"><img class="center" src="http://harikt.github.com/assets/images/github/codeguy.png" width="687" height="299" title="Contributions by codeguy" alt="Contributions by codeguy"></a>
-<a href="https://github.com/lsmith77"><img class="center" src="http://harikt.github.com/assets/images/github/lsmith77.png" width="687" height="299" title="Contributions by lsmith77" alt="Contributions by lsmith77"></a>
-<a href="https://github.com/stof"><img class="center" src="http://harikt.github.com/assets/images/github/stof.png" width="687" height="299" title="Contributions by stof" alt="Contributions by stof"></a>
-<a href="https://github.com/EavnDotPro"><img class="center" src="http://harikt.github.com/assets/images/github/EavnDotPro.png" width="687" height="299" title="Contributions by EavnDotPro" alt="Contributions by EavnDotPro"></a>
-<a href="https://github.com/nateabele"><img class="center" src="http://harikt.github.com/assets/images/github/nateabele.png" width="687" height="299" title="Contributions by nateabele" alt="Contributions by nateabele"></a>
-<a href="https://github.com/kriswallsmith"><img class="center" src="http://harikt.github.com/assets/images/github/kriswallsmith.png" width="687" height="299" title="Contributions by kriswallsmith" alt="Contributions by kriswallsmith"></a>
-<a href="https://github.com/nrk"><img class="center" src="http://harikt.github.com/assets/images/github/nrk.png" width="687" height="299" title="Contributions by nrk" alt="Contributions by nrk"></a>
-<a href="https://github.com/naderman"><img class="center" src="http://harikt.github.com/assets/images/github/naderman.png" width="687" height="299" title="Contributions by naderman" alt="Contributions by naderman"></a>
-<a href="https://github.com/gwoo"><img class="center" src="http://harikt.github.com/assets/images/github/gwoo.png" width="687" height="299" title="Contributions by gwoo" alt="Contributions by gwoo"></a>
-<a href="https://github.com/jwage"><img class="center" src="http://harikt.github.com/assets/images/github/jwage.png" width="687" height="299" title="Contributions by jwage" alt="Contributions by jwage"></a>
-<a href="https://github.com/chartjes"><img class="center" src="http://harikt.github.com/assets/images/github/chartjes.png" width="687" height="299" title="Contributions by chartjes" alt="Contributions by chartjes"></a>
-<a href="https://github.com/Tocacar"><img class="center" src="http://harikt.github.com/assets/images/github/Tocacar.png" width="687" height="299" title="Contributions by Tocacar" alt="Contributions by Tocacar"></a>
-<a href="https://github.com/FrenkyNet"><img class="center" src="http://harikt.github.com/assets/images/github/FrenkyNet.png" width="687" height="299" title="Contributions by FrenkyNet" alt="Contributions by FrenkyNet"></a>
-<a href="https://github.com/till"><img class="center" src="http://harikt.github.com/assets/images/github/till.png" width="687" height="299" title="Contributions by till" alt="Contributions by till"></a>
-<a href="https://github.com/Ocramius"><img class="center" src="http://harikt.github.com/assets/images/github/Ocramius.png" width="687" height="299" title="Contributions by Ocramius" alt="Contributions by Ocramius"></a>
-<a href="https://github.com/odino"><img class="center" src="http://harikt.github.com/assets/images/github/odino.png" width="687" height="299" title="Contributions by odino" alt="Contributions by odino"></a>
-<a href="https://github.com/josegonzalez"><img class="center" src="http://harikt.github.com/assets/images/github/josegonzalez.png" width="687" height="299" title="Contributions by josegonzalez" alt="Contributions by josegonzalez"></a>
-<a href="https://github.com/dereuromark"><img class="center" src="http://harikt.github.com/assets/images/github/dereuromark.png" width="687" height="299" title="Contributions by dereuromark" alt="Contributions by dereuromark"></a>
-<a href="https://github.com/HosipLan"><img class="center" src="http://harikt.github.com/assets/images/github/HosipLan.png" width="687" height="299" title="Contributions by HosipLan" alt="Contributions by HosipLan"></a>
-<a href="https://github.com/alganet"><img class="center" src="http://harikt.github.com/assets/images/github/alganet.png" width="687" height="299" title="Contributions by alganet" alt="Contributions by alganet"></a>
-<a href="https://github.com/ezimuel"><img class="center" src="http://harikt.github.com/assets/images/github/ezimuel.png" width="687" height="299" title="Contributions by ezimuel" alt="Contributions by ezimuel"></a>
-<a href="https://github.com/auroraeosrose"><img class="center" src="http://harikt.github.com/assets/images/github/auroraeosrose.png" width="687" height="299" title="Contributions by auroraeosrose" alt="Contributions by auroraeosrose"></a>
-<a href="https://github.com/enygma"><img class="center" src="http://harikt.github.com/assets/images/github/enygma.png" width="687" height="299" title="Contributions by enygma" alt="Contributions by enygma"></a>
-<a href="https://github.com/ralphschindler"><img class="center" src="http://harikt.github.com/assets/images/github/ralphschindler.png" width="687" height="299" title="Contributions by ralphschindler" alt="Contributions by ralphschindler"></a>
-<a href="https://github.com/AD7six"><img class="center" src="http://harikt.github.com/assets/images/github/AD7six.png" width="687" height="299" title="Contributions by AD7six" alt="Contributions by AD7six"></a>
-<a href="https://github.com/ADmad"><img class="center" src="http://harikt.github.com/assets/images/github/ADmad.png" width="687" height="299" title="Contributions by ADmad" alt="Contributions by ADmad"></a>
-<a href="https://github.com/augustohp"><img class="center" src="http://harikt.github.com/assets/images/github/augustohp.png" width="687" height="299" title="Contributions by augustohp" alt="Contributions by augustohp"></a>
-<a href="https://github.com/BlaineSch"><img class="center" src="http://harikt.github.com/assets/images/github/BlaineSch.png" width="687" height="299" title="Contributions by BlaineSch" alt="Contributions by BlaineSch"></a>
-<a href="https://github.com/alexbilbie"><img class="center" src="http://harikt.github.com/assets/images/github/alexbilbie.png" width="687" height="299" title="Contributions by alexbilbie" alt="Contributions by alexbilbie"></a>
-<a href="https://github.com/narfbg"><img class="center" src="http://harikt.github.com/assets/images/github/narfbg.png" width="687" height="299" title="Contributions by narfbg" alt="Contributions by narfbg"></a>
-<a href="https://github.com/dg"><img class="center" src="http://harikt.github.com/assets/images/github/dg.png" width="687" height="299" title="Contributions by dg" alt="Contributions by dg"></a>
-<a href="https://github.com/schmittjoh"><img class="center" src="http://harikt.github.com/assets/images/github/schmittjoh.png" width="687" height="299" title="Contributions by schmittjoh" alt="Contributions by schmittjoh"></a>
-<a href="https://github.com/jschreuder"><img class="center" src="http://harikt.github.com/assets/images/github/jschreuder.png" width="687" height="299" title="Contributions by jschreuder" alt="Contributions by jschreuder"></a>
-<a href="https://github.com/Geczy"><img class="center" src="http://harikt.github.com/assets/images/github/Geczy.png" width="687" height="299" title="Contributions by Geczy" alt="Contributions by Geczy"></a>
-<a href="https://github.com/dzuelke"><img class="center" src="http://harikt.github.com/assets/images/github/dzuelke.png" width="687" height="299" title="Contributions by dzuelke" alt="Contributions by dzuelke"></a>
-<a href="https://github.com/evert"><img class="center" src="http://harikt.github.com/assets/images/github/evert.png" width="687" height="299" title="Contributions by evert" alt="Contributions by evert"></a>
-<a href="https://github.com/akrabat"><img class="center" src="http://harikt.github.com/assets/images/github/akrabat.png" width="687" height="299" title="Contributions by akrabat" alt="Contributions by akrabat"></a>
-<a href="https://github.com/seejohnrun"><img class="center" src="http://harikt.github.com/assets/images/github/seejohnrun.png" width="687" height="299" title="Contributions by seejohnrun" alt="Contributions by seejohnrun"></a>
-<a href="https://github.com/guilhermeblanco"><img class="center" src="http://harikt.github.com/assets/images/github/guilhermeblanco.png" width="687" height="299" title="Contributions by guilhermeblanco" alt="Contributions by guilhermeblanco"></a>
-<a href="https://github.com/Maks3w"><img class="center" src="http://harikt.github.com/assets/images/github/Maks3w.png" width="687" height="299" title="Contributions by Maks3w" alt="Contributions by Maks3w"></a>
-<a href="https://github.com/kore"><img class="center" src="http://harikt.github.com/assets/images/github/kore.png" width="687" height="299" title="Contributions by kore" alt="Contributions by kore"></a>
-<a href="https://github.com/dragoonis"><img class="center" src="http://harikt.github.com/assets/images/github/dragoonis.png" width="687" height="299" title="Contributions by dragoonis" alt="Contributions by dragoonis"></a>
-<a href="https://github.com/daschl"><img class="center" src="http://harikt.github.com/assets/images/github/daschl.png" width="687" height="299" title="Contributions by daschl" alt="Contributions by daschl"></a>
-<a href="https://github.com/wilmoore"><img class="center" src="http://harikt.github.com/assets/images/github/wilmoore.png" width="687" height="299" title="Contributions by wilmoore" alt="Contributions by wilmoore"></a>
-<a href="https://github.com/TheFrozenFire"><img class="center" src="http://harikt.github.com/assets/images/github/TheFrozenFire.png" width="687" height="299" title="Contributions by TheFrozenFire" alt="Contributions by TheFrozenFire"></a>
-<a href="https://github.com/nickl-"><img class="center" src="http://harikt.github.com/assets/images/github/nickl-.png" width="687" height="299" title="Contributions by nickl-" alt="Contributions by nickl-"></a>
-<a href="https://github.com/lorenzo"><img class="center" src="http://harikt.github.com/assets/images/github/lorenzo.png" width="687" height="299" title="Contributions by lorenzo" alt="Contributions by lorenzo"></a>
-<a href="https://github.com/rchavik"><img class="center" src="http://harikt.github.com/assets/images/github/rchavik.png" width="687" height="299" title="Contributions by rchavik" alt="Contributions by rchavik"></a>
-<a href="https://github.com/davidpersson"><img class="center" src="http://harikt.github.com/assets/images/github/davidpersson.png" width="687" height="299" title="Contributions by davidpersson" alt="Contributions by davidpersson"></a>
-<a href="https://github.com/henriquemoody"><img class="center" src="http://harikt.github.com/assets/images/github/henriquemoody.png" width="687" height="299" title="Contributions by henriquemoody" alt="Contributions by henriquemoody"></a>
-<a href="https://github.com/Freeaqingme"><img class="center" src="http://harikt.github.com/assets/images/github/Freeaqingme.png" width="687" height="299" title="Contributions by Freeaqingme" alt="Contributions by Freeaqingme"></a>
-<a href="https://github.com/dbu"><img class="center" src="http://harikt.github.com/assets/images/github/dbu.png" width="687" height="299" title="Contributions by dbu" alt="Contributions by dbu"></a>
-<a href="https://github.com/dshafik"><img class="center" src="http://harikt.github.com/assets/images/github/dshafik.png" width="687" height="299" title="Contributions by dshafik" alt="Contributions by dshafik"></a>
-<a href="https://github.com/Vrtak-CZ"><img class="center" src="http://harikt.github.com/assets/images/github/Vrtak-CZ.png" width="687" height="299" title="Contributions by Vrtak-CZ" alt="Contributions by Vrtak-CZ"></a>
-<a href="https://github.com/padraic"><img class="center" src="http://harikt.github.com/assets/images/github/padraic.png" width="687" height="299" title="Contributions by padraic" alt="Contributions by padraic"></a>
-<a href="https://github.com/saltybeagle"><img class="center" src="http://harikt.github.com/assets/images/github/saltybeagle.png" width="687" height="299" title="Contributions by saltybeagle" alt="Contributions by saltybeagle"></a>
-<a href="https://github.com/Hounddog"><img class="center" src="http://harikt.github.com/assets/images/github/Hounddog.png" width="687" height="299" title="Contributions by Hounddog" alt="Contributions by Hounddog"></a>
-<a href="https://github.com/ceeram"><img class="center" src="http://harikt.github.com/assets/images/github/ceeram.png" width="687" height="299" title="Contributions by ceeram" alt="Contributions by ceeram"></a>
-<a href="https://github.com/jmikola"><img class="center" src="http://harikt.github.com/assets/images/github/jmikola.png" width="687" height="299" title="Contributions by jmikola" alt="Contributions by jmikola"></a>
-<a href="https://github.com/cweiske"><img class="center" src="http://harikt.github.com/assets/images/github/cweiske.png" width="687" height="299" title="Contributions by cweiske" alt="Contributions by cweiske"></a>
-<a href="https://github.com/rdohms"><img class="center" src="http://harikt.github.com/assets/images/github/rdohms.png" width="687" height="299" title="Contributions by rdohms" alt="Contributions by rdohms"></a></p>
+<p><a href="https://github.com/fabpot"><img class="center" src="http://harikt.com/assets/images/github/fabpot.png" width="687" height="299" title="Contributions by fabpot" alt="Contributions by fabpot"></a>
+<a href="https://github.com/weierophinney"><img class="center" src="http://harikt.com/assets/images/github/weierophinney.png" width="687" height="299" title="Contributions by weierophinney" alt="Contributions by weierophinney"></a>
+<a href="https://github.com/pmjones"><img class="center" src="http://harikt.com/assets/images/github/pmjones.png" width="687" height="299" title="Contributions by pmjones" alt="Contributions by pmjones"></a>
+<a href="https://github.com/willdurand"><img class="center" src="http://harikt.com/assets/images/github/willdurand.png" width="687" height="299" title="Contributions by willdurand" alt="Contributions by willdurand"></a>
+<a href="https://github.com/Seldaek"><img class="center" src="http://harikt.com/assets/images/github/Seldaek.png" width="687" height="299" title="Contributions by Seldaek" alt="Contributions by Seldaek"></a>
+<a href="https://github.com/markstory"><img class="center" src="http://harikt.com/assets/images/github/markstory.png" width="687" height="299" title="Contributions by markstory" alt="Contributions by markstory"></a>
+<a href="https://github.com/taylorotwell"><img class="center" src="http://harikt.com/assets/images/github/taylorotwell.png" width="687" height="299" title="Contributions by taylorotwell" alt="Contributions by taylorotwell"></a>
+<a href="https://github.com/WanWizard"><img class="center" src="http://harikt.com/assets/images/github/WanWizard.png" width="687" height="299" title="Contributions by WanWizard" alt="Contributions by WanWizard"></a>
+<a href="https://github.com/drak"><img class="center" src="http://harikt.com/assets/images/github/drak.png" width="687" height="299" title="Contributions by drak" alt="Contributions by drak"></a>
+<a href="https://github.com/nikic"><img class="center" src="http://harikt.com/assets/images/github/nikic.png" width="687" height="299" title="Contributions by nikic" alt="Contributions by nikic"></a>
+<a href="https://github.com/avalanche123"><img class="center" src="http://harikt.com/assets/images/github/avalanche123.png" width="687" height="299" title="Contributions by avalanche123" alt="Contributions by avalanche123"></a>
+<a href="https://github.com/shama"><img class="center" src="http://harikt.com/assets/images/github/shama.png" width="687" height="299" title="Contributions by shama" alt="Contributions by shama"></a>
+<a href="https://github.com/vrana"><img class="center" src="http://harikt.com/assets/images/github/vrana.png" width="687" height="299" title="Contributions by vrana" alt="Contributions by vrana"></a>
+<a href="https://github.com/philsturgeon"><img class="center" src="http://harikt.com/assets/images/github/philsturgeon.png" width="687" height="299" title="Contributions by philsturgeon" alt="Contributions by philsturgeon"></a>
+<a href="https://github.com/DASPRiD"><img class="center" src="http://harikt.com/assets/images/github/DASPRiD.png" width="687" height="299" title="Contributions by DASPRiD" alt="Contributions by DASPRiD"></a>
+<a href="https://github.com/mvriel"><img class="center" src="http://harikt.com/assets/images/github/mvriel.png" width="687" height="299" title="Contributions by mvriel" alt="Contributions by mvriel"></a>
+<a href="https://github.com/c9s"><img class="center" src="http://harikt.com/assets/images/github/c9s.png" width="687" height="299" title="Contributions by c9s" alt="Contributions by c9s"></a>
+<a href="https://github.com/weaverryan"><img class="center" src="http://harikt.com/assets/images/github/weaverryan.png" width="687" height="299" title="Contributions by weaverryan" alt="Contributions by weaverryan"></a>
+<a href="https://github.com/bschussek"><img class="center" src="http://harikt.com/assets/images/github/bschussek.png" width="687" height="299" title="Contributions by bschussek" alt="Contributions by bschussek"></a>
+<a href="https://github.com/vicb"><img class="center" src="http://harikt.com/assets/images/github/vicb.png" width="687" height="299" title="Contributions by vicb" alt="Contributions by nateabele"></a>
+<a href="https://github.com/garak"><img class="center" src="http://harikt.com/assets/images/github/garak.png" width="687" height="299" title="Contributions by garak" alt="Contributions by garak"></a>
+<a href="https://github.com/beberlei"><img class="center" src="http://harikt.com/assets/images/github/beberlei.png" width="687" height="299" title="Contributions by beberlei" alt="Contributions by beberlei"></a>
+<a href="https://github.com/codeguy"><img class="center" src="http://harikt.com/assets/images/github/codeguy.png" width="687" height="299" title="Contributions by codeguy" alt="Contributions by codeguy"></a>
+<a href="https://github.com/lsmith77"><img class="center" src="http://harikt.com/assets/images/github/lsmith77.png" width="687" height="299" title="Contributions by lsmith77" alt="Contributions by lsmith77"></a>
+<a href="https://github.com/stof"><img class="center" src="http://harikt.com/assets/images/github/stof.png" width="687" height="299" title="Contributions by stof" alt="Contributions by stof"></a>
+<a href="https://github.com/EavnDotPro"><img class="center" src="http://harikt.com/assets/images/github/EavnDotPro.png" width="687" height="299" title="Contributions by EavnDotPro" alt="Contributions by EavnDotPro"></a>
+<a href="https://github.com/nateabele"><img class="center" src="http://harikt.com/assets/images/github/nateabele.png" width="687" height="299" title="Contributions by nateabele" alt="Contributions by nateabele"></a>
+<a href="https://github.com/kriswallsmith"><img class="center" src="http://harikt.com/assets/images/github/kriswallsmith.png" width="687" height="299" title="Contributions by kriswallsmith" alt="Contributions by kriswallsmith"></a>
+<a href="https://github.com/nrk"><img class="center" src="http://harikt.com/assets/images/github/nrk.png" width="687" height="299" title="Contributions by nrk" alt="Contributions by nrk"></a>
+<a href="https://github.com/naderman"><img class="center" src="http://harikt.com/assets/images/github/naderman.png" width="687" height="299" title="Contributions by naderman" alt="Contributions by naderman"></a>
+<a href="https://github.com/gwoo"><img class="center" src="http://harikt.com/assets/images/github/gwoo.png" width="687" height="299" title="Contributions by gwoo" alt="Contributions by gwoo"></a>
+<a href="https://github.com/jwage"><img class="center" src="http://harikt.com/assets/images/github/jwage.png" width="687" height="299" title="Contributions by jwage" alt="Contributions by jwage"></a>
+<a href="https://github.com/chartjes"><img class="center" src="http://harikt.com/assets/images/github/chartjes.png" width="687" height="299" title="Contributions by chartjes" alt="Contributions by chartjes"></a>
+<a href="https://github.com/Tocacar"><img class="center" src="http://harikt.com/assets/images/github/Tocacar.png" width="687" height="299" title="Contributions by Tocacar" alt="Contributions by Tocacar"></a>
+<a href="https://github.com/FrenkyNet"><img class="center" src="http://harikt.com/assets/images/github/FrenkyNet.png" width="687" height="299" title="Contributions by FrenkyNet" alt="Contributions by FrenkyNet"></a>
+<a href="https://github.com/till"><img class="center" src="http://harikt.com/assets/images/github/till.png" width="687" height="299" title="Contributions by till" alt="Contributions by till"></a>
+<a href="https://github.com/Ocramius"><img class="center" src="http://harikt.com/assets/images/github/Ocramius.png" width="687" height="299" title="Contributions by Ocramius" alt="Contributions by Ocramius"></a>
+<a href="https://github.com/odino"><img class="center" src="http://harikt.com/assets/images/github/odino.png" width="687" height="299" title="Contributions by odino" alt="Contributions by odino"></a>
+<a href="https://github.com/josegonzalez"><img class="center" src="http://harikt.com/assets/images/github/josegonzalez.png" width="687" height="299" title="Contributions by josegonzalez" alt="Contributions by josegonzalez"></a>
+<a href="https://github.com/dereuromark"><img class="center" src="http://harikt.com/assets/images/github/dereuromark.png" width="687" height="299" title="Contributions by dereuromark" alt="Contributions by dereuromark"></a>
+<a href="https://github.com/HosipLan"><img class="center" src="http://harikt.com/assets/images/github/HosipLan.png" width="687" height="299" title="Contributions by HosipLan" alt="Contributions by HosipLan"></a>
+<a href="https://github.com/alganet"><img class="center" src="http://harikt.com/assets/images/github/alganet.png" width="687" height="299" title="Contributions by alganet" alt="Contributions by alganet"></a>
+<a href="https://github.com/ezimuel"><img class="center" src="http://harikt.com/assets/images/github/ezimuel.png" width="687" height="299" title="Contributions by ezimuel" alt="Contributions by ezimuel"></a>
+<a href="https://github.com/auroraeosrose"><img class="center" src="http://harikt.com/assets/images/github/auroraeosrose.png" width="687" height="299" title="Contributions by auroraeosrose" alt="Contributions by auroraeosrose"></a>
+<a href="https://github.com/enygma"><img class="center" src="http://harikt.com/assets/images/github/enygma.png" width="687" height="299" title="Contributions by enygma" alt="Contributions by enygma"></a>
+<a href="https://github.com/ralphschindler"><img class="center" src="http://harikt.com/assets/images/github/ralphschindler.png" width="687" height="299" title="Contributions by ralphschindler" alt="Contributions by ralphschindler"></a>
+<a href="https://github.com/AD7six"><img class="center" src="http://harikt.com/assets/images/github/AD7six.png" width="687" height="299" title="Contributions by AD7six" alt="Contributions by AD7six"></a>
+<a href="https://github.com/ADmad"><img class="center" src="http://harikt.com/assets/images/github/ADmad.png" width="687" height="299" title="Contributions by ADmad" alt="Contributions by ADmad"></a>
+<a href="https://github.com/augustohp"><img class="center" src="http://harikt.com/assets/images/github/augustohp.png" width="687" height="299" title="Contributions by augustohp" alt="Contributions by augustohp"></a>
+<a href="https://github.com/BlaineSch"><img class="center" src="http://harikt.com/assets/images/github/BlaineSch.png" width="687" height="299" title="Contributions by BlaineSch" alt="Contributions by BlaineSch"></a>
+<a href="https://github.com/alexbilbie"><img class="center" src="http://harikt.com/assets/images/github/alexbilbie.png" width="687" height="299" title="Contributions by alexbilbie" alt="Contributions by alexbilbie"></a>
+<a href="https://github.com/narfbg"><img class="center" src="http://harikt.com/assets/images/github/narfbg.png" width="687" height="299" title="Contributions by narfbg" alt="Contributions by narfbg"></a>
+<a href="https://github.com/dg"><img class="center" src="http://harikt.com/assets/images/github/dg.png" width="687" height="299" title="Contributions by dg" alt="Contributions by dg"></a>
+<a href="https://github.com/schmittjoh"><img class="center" src="http://harikt.com/assets/images/github/schmittjoh.png" width="687" height="299" title="Contributions by schmittjoh" alt="Contributions by schmittjoh"></a>
+<a href="https://github.com/jschreuder"><img class="center" src="http://harikt.com/assets/images/github/jschreuder.png" width="687" height="299" title="Contributions by jschreuder" alt="Contributions by jschreuder"></a>
+<a href="https://github.com/Geczy"><img class="center" src="http://harikt.com/assets/images/github/Geczy.png" width="687" height="299" title="Contributions by Geczy" alt="Contributions by Geczy"></a>
+<a href="https://github.com/dzuelke"><img class="center" src="http://harikt.com/assets/images/github/dzuelke.png" width="687" height="299" title="Contributions by dzuelke" alt="Contributions by dzuelke"></a>
+<a href="https://github.com/evert"><img class="center" src="http://harikt.com/assets/images/github/evert.png" width="687" height="299" title="Contributions by evert" alt="Contributions by evert"></a>
+<a href="https://github.com/akrabat"><img class="center" src="http://harikt.com/assets/images/github/akrabat.png" width="687" height="299" title="Contributions by akrabat" alt="Contributions by akrabat"></a>
+<a href="https://github.com/seejohnrun"><img class="center" src="http://harikt.com/assets/images/github/seejohnrun.png" width="687" height="299" title="Contributions by seejohnrun" alt="Contributions by seejohnrun"></a>
+<a href="https://github.com/guilhermeblanco"><img class="center" src="http://harikt.com/assets/images/github/guilhermeblanco.png" width="687" height="299" title="Contributions by guilhermeblanco" alt="Contributions by guilhermeblanco"></a>
+<a href="https://github.com/Maks3w"><img class="center" src="http://harikt.com/assets/images/github/Maks3w.png" width="687" height="299" title="Contributions by Maks3w" alt="Contributions by Maks3w"></a>
+<a href="https://github.com/kore"><img class="center" src="http://harikt.com/assets/images/github/kore.png" width="687" height="299" title="Contributions by kore" alt="Contributions by kore"></a>
+<a href="https://github.com/dragoonis"><img class="center" src="http://harikt.com/assets/images/github/dragoonis.png" width="687" height="299" title="Contributions by dragoonis" alt="Contributions by dragoonis"></a>
+<a href="https://github.com/daschl"><img class="center" src="http://harikt.com/assets/images/github/daschl.png" width="687" height="299" title="Contributions by daschl" alt="Contributions by daschl"></a>
+<a href="https://github.com/wilmoore"><img class="center" src="http://harikt.com/assets/images/github/wilmoore.png" width="687" height="299" title="Contributions by wilmoore" alt="Contributions by wilmoore"></a>
+<a href="https://github.com/TheFrozenFire"><img class="center" src="http://harikt.com/assets/images/github/TheFrozenFire.png" width="687" height="299" title="Contributions by TheFrozenFire" alt="Contributions by TheFrozenFire"></a>
+<a href="https://github.com/nickl-"><img class="center" src="http://harikt.com/assets/images/github/nickl-.png" width="687" height="299" title="Contributions by nickl-" alt="Contributions by nickl-"></a>
+<a href="https://github.com/lorenzo"><img class="center" src="http://harikt.com/assets/images/github/lorenzo.png" width="687" height="299" title="Contributions by lorenzo" alt="Contributions by lorenzo"></a>
+<a href="https://github.com/rchavik"><img class="center" src="http://harikt.com/assets/images/github/rchavik.png" width="687" height="299" title="Contributions by rchavik" alt="Contributions by rchavik"></a>
+<a href="https://github.com/davidpersson"><img class="center" src="http://harikt.com/assets/images/github/davidpersson.png" width="687" height="299" title="Contributions by davidpersson" alt="Contributions by davidpersson"></a>
+<a href="https://github.com/henriquemoody"><img class="center" src="http://harikt.com/assets/images/github/henriquemoody.png" width="687" height="299" title="Contributions by henriquemoody" alt="Contributions by henriquemoody"></a>
+<a href="https://github.com/Freeaqingme"><img class="center" src="http://harikt.com/assets/images/github/Freeaqingme.png" width="687" height="299" title="Contributions by Freeaqingme" alt="Contributions by Freeaqingme"></a>
+<a href="https://github.com/dbu"><img class="center" src="http://harikt.com/assets/images/github/dbu.png" width="687" height="299" title="Contributions by dbu" alt="Contributions by dbu"></a>
+<a href="https://github.com/dshafik"><img class="center" src="http://harikt.com/assets/images/github/dshafik.png" width="687" height="299" title="Contributions by dshafik" alt="Contributions by dshafik"></a>
+<a href="https://github.com/Vrtak-CZ"><img class="center" src="http://harikt.com/assets/images/github/Vrtak-CZ.png" width="687" height="299" title="Contributions by Vrtak-CZ" alt="Contributions by Vrtak-CZ"></a>
+<a href="https://github.com/padraic"><img class="center" src="http://harikt.com/assets/images/github/padraic.png" width="687" height="299" title="Contributions by padraic" alt="Contributions by padraic"></a>
+<a href="https://github.com/saltybeagle"><img class="center" src="http://harikt.com/assets/images/github/saltybeagle.png" width="687" height="299" title="Contributions by saltybeagle" alt="Contributions by saltybeagle"></a>
+<a href="https://github.com/Hounddog"><img class="center" src="http://harikt.com/assets/images/github/Hounddog.png" width="687" height="299" title="Contributions by Hounddog" alt="Contributions by Hounddog"></a>
+<a href="https://github.com/ceeram"><img class="center" src="http://harikt.com/assets/images/github/ceeram.png" width="687" height="299" title="Contributions by ceeram" alt="Contributions by ceeram"></a>
+<a href="https://github.com/jmikola"><img class="center" src="http://harikt.com/assets/images/github/jmikola.png" width="687" height="299" title="Contributions by jmikola" alt="Contributions by jmikola"></a>
+<a href="https://github.com/cweiske"><img class="center" src="http://harikt.com/assets/images/github/cweiske.png" width="687" height="299" title="Contributions by cweiske" alt="Contributions by cweiske"></a>
+<a href="https://github.com/rdohms"><img class="center" src="http://harikt.com/assets/images/github/rdohms.png" width="687" height="299" title="Contributions by rdohms" alt="Contributions by rdohms"></a></p>
 
 <p>and I too did some contributions in 2012 for <a href="https://github.com/auraphp">auraphp</a> and other projects.</p>
 
-<p><a href="https://github.com/harikt"><img class="center" src="http://harikt.github.com/assets/images/github/harikt.png" width="687" height="299" title="Contributions by harikt" alt="Contributions by harikt"></a></p>
+<p><a href="https://github.com/harikt"><img class="center" src="http://harikt.com/assets/images/github/harikt.png" width="687" height="299" title="Contributions by harikt" alt="Contributions by harikt"></a></p>
 
 <p>The list is not complete, if you feel I missed your name or someone you feel needs to be added just give a tweet to me or fork the repo from github and send a PR.</p>
 ]]></content>
@@ -114,9 +114,9 @@
   
   <entry>
     <title type="html"><![CDATA[Thoughts on Package/Component Structure]]></title>
-    <link href="http://harikt.github.com/blog/2013/01/04/thoughts-on-package-or-component/"/>
+    <link href="http://harikt.com/blog/2013/01/04/thoughts-on-package-or-component/"/>
     <updated>2013-01-04T06:15:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2013/01/04/thoughts-on-package-or-component</id>
+    <id>http://harikt.com/blog/2013/01/04/thoughts-on-package-or-component</id>
     <content type="html"><![CDATA[<p>Comparing a software X with Y will not make anything worst, but makes it better. But many of them will think it as a promotional stuff. It is not anyones&#8217;s problem. Some like to build it that way, some like the other way.</p>
 
 <p>So I am not comparing X with Y here.</p>
@@ -190,9 +190,9 @@
   
   <entry>
     <title type="html"><![CDATA[Aura Framework releases Beta4]]></title>
-    <link href="http://harikt.github.com/blog/2012/12/18/aura-framework-releases-beta4/"/>
+    <link href="http://harikt.com/blog/2012/12/18/aura-framework-releases-beta4/"/>
     <updated>2012-12-18T23:25:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/12/18/aura-framework-releases-beta4</id>
+    <id>http://harikt.com/blog/2012/12/18/aura-framework-releases-beta4</id>
     <content type="html"><![CDATA[<p>Aura.Framework released Beta4. In this release <a href="http://auraphp.github.com/Aura.Framework">Aura.Framework</a> has extracted the Hello Word package and renamed it as <a href="http://auraphp.github.com/Aura.Demo">Aura.Demo</a>.</p>
 
 <p>You can get the system as a whole from <a href="http://auraphp.github.com/system/downloads/">http://auraphp.github.com/system/downloads/</a></p>
@@ -203,9 +203,9 @@
   
   <entry>
     <title type="html"><![CDATA[The moving from Drupal7 to octopress]]></title>
-    <link href="http://harikt.github.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress/"/>
+    <link href="http://harikt.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress/"/>
     <updated>2012-12-17T23:23:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress</id>
+    <id>http://harikt.com/blog/2012/12/17/the-moving-from-drupal7-to-octopress</id>
     <content type="html"><![CDATA[<p>Recently I ported the blog from <a href="http://drupal.org">Drupal7</a> to <a href="http://octopress.org/">octopress</a> for certain reasons. The php script that helped me to do the porting from drupal to octopress is given below. This is a port of the ruby script with some additional fixes on the SQL. This needs <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> to be installed to convert from Html to Markdown. There is also slight isssue with the syntaxhighlighter, which you may want to manually fix.</p>
 
 <figure class='code'><figcaption><span>drupal7 to octopress</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -353,9 +353,9 @@
   
   <entry>
     <title type="html"><![CDATA[Resize image keeping aspect ratio in Imagine]]></title>
-    <link href="http://harikt.github.com/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/"/>
+    <link href="http://harikt.com/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine/"/>
     <updated>2012-12-17T22:24:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine</id>
+    <id>http://harikt.com/blog/2012/12/17/resize-image-keeping-aspect-ratio-in-imagine</id>
     <content type="html"><![CDATA[<p>I was working with Imagine recently. I want to create a standard width and height for the image that is created. Eg: 500 X 300 .</p>
 
 <p>The user will be uploading different size images and I want to resize the image to X width and Y height. I was using imagine and the code helps to make this happen filling the blank space with white color without loosing aspect ratio.</p>
@@ -415,15 +415,15 @@
 
 <p>A normal image of size 500 X 500</p>
 
-<p><img class="center" src="http://harikt.github.com/assets/images/kitten.jpg" width="500" height="500" title="A cute kitten" alt="a kitten"></p>
+<p><img class="center" src="http://harikt.com/assets/images/kitten.jpg" width="500" height="500" title="A cute kitten" alt="a kitten"></p>
 
 <p>when resized to 300 X 200</p>
 
-<p><img class="center" src="http://harikt.github.com/assets/images/resize-image300x200.jpg" width="300" height="200" title="Image resized to 300X200" alt="resized image"></p>
+<p><img class="center" src="http://harikt.com/assets/images/resize-image300x200.jpg" width="300" height="200" title="Image resized to 300X200" alt="resized image"></p>
 
 <p>and 300 X 400</p>
 
-<p><img class="center" src="http://harikt.github.com/assets/images/resize-image300x400.jpg" width="300" height="400" title="Image resized to 300X400" alt="resized image"></p>
+<p><img class="center" src="http://harikt.com/assets/images/resize-image300x400.jpg" width="300" height="400" title="Image resized to 300X400" alt="resized image"></p>
 
 <p>A huge Thanks to the person who helped me on Symfony2 irc to find the different modes. I am not recalling the irc handle currently. I will update once I remember the same.</p>
 
@@ -433,9 +433,9 @@
   
   <entry>
     <title type="html"><![CDATA[Status code 304]]></title>
-    <link href="http://harikt.github.com/blog/2012/12/16/status-code-304/"/>
+    <link href="http://harikt.com/blog/2012/12/16/status-code-304/"/>
     <updated>2012-12-16T23:03:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/12/16/status-code-304</id>
+    <id>http://harikt.com/blog/2012/12/16/status-code-304</id>
     <content type="html"><![CDATA[<p>Everyone knows Http is the underlying concept of Web. The base concept is a request is initiated by a browser or web-client and you get a response back. Some day&#8217;s back I noticed some interesting slides from Alessandro Nadalin&#8217;s talk <a href="http://odino.org/mixing-the-history-of-http-spdy-and-http-slash-2-dot-0/">Mixing the history of HTTP, SPDY and HTTP/2.0</a></p>
 
 <p>It really inspired me to look more into the Http. I also understood a fact that I was missing many basic stuffs. I thought of playing with it.</p>
@@ -641,9 +641,9 @@
   
   <entry>
     <title type="html"><![CDATA[Aura.Sql can now make use of existing PDO connection]]></title>
-    <link href="http://harikt.github.com/blog/2012/12/06/node-227/"/>
+    <link href="http://harikt.com/blog/2012/12/06/node-227/"/>
     <updated>2012-12-06T19:27:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/12/06/node-227</id>
+    <id>http://harikt.com/blog/2012/12/06/node-227</id>
     <content type="html"><![CDATA[<p>Aura.Sql can now make use of an existing PDO connection with the recent <a href="https://github.com/auraphp/Aura.Sql/commit/79284382ef6351d81719376063076c7e511c28fd">commit here</a> . This all came after a short discussion with Stan Lemon. A big Thanks to him for making a featured request like this.     > @<a href="https://twitter.com/harikt">harikt</a> can I inject an existing Pdo > object? > > — Stan Lemon (@stanlemon) > <a href="https://twitter.com/stanlemon/status/274708971217100800">December 1, 2012</a>     How to make use of an existing PDO?  You want to get a connection object and set the instance of pdo. Note : In this way you are eager loading the PDO. Else Aura.Sql knows when to do the connection. Example of how to make use of it is</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -714,36 +714,36 @@
   
   <entry>
     <title type="html"><![CDATA[Paid to Speak]]></title>
-    <link href="http://harikt.github.com/blog/2012/12/04/node-226/"/>
+    <link href="http://harikt.com/blog/2012/12/04/node-226/"/>
     <updated>2012-12-04T06:03:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/12/04/node-226</id>
+    <id>http://harikt.com/blog/2012/12/04/node-226</id>
     <content type="html"><![CDATA[<p>Before going to speak at osidays, the first thing I did was read the book Paid to Speak. It gave me lots of insights how I can improve. The book was given to me by Jennifer Kumar. I have shared my thoughts on her blog. You can read more from <a href="http://www.authenticjourneys.info/2012/12/9-lessons-on-being-public-speaker.html">9 Lessons on Being a Public Speaker</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[First stable release for Aura components]]></title>
-    <link href="http://harikt.github.com/blog/2012/11/29/node-225/"/>
+    <link href="http://harikt.com/blog/2012/11/29/node-225/"/>
     <updated>2012-11-29T20:46:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/11/29/node-225</id>
+    <id>http://harikt.com/blog/2012/11/29/node-225</id>
     <content type="html"><![CDATA[<p>So today @Paul M Jones officially declared the first stable release for Aura PHP components. Yes, I am really excited to see this release for it comes with a ton of great improvements for many components, bug fixes and sadly some BC breaks also. The list of packages which became stable are https://github.com/auraphp/Aura.Autoload https://github.com/auraphp/Aura.Cli https://github.com/auraphp/Aura.Di https://github.com/auraphp/Aura.Http https://github.com/auraphp/Aura.Marshal https://github.com/auraphp/Aura.Router : Yes I want to update the post at phpmaster.com for it has some breaks. I will be doing it in coming days. https://github.com/auraphp/Aura.Signal https://github.com/auraphp/Aura.Sql https://github.com/auraphp/Aura.View https://github.com/auraphp/Aura.Web https://github.com/auraphp/Aura.Uri : uri manipulation and there are some packages that are releasing the first Beta. Though these packages have been there for sometime, this is officially declared now only. Yes a bit delay from our part to declare it. https://github.com/auraphp/Aura.Filter Filter is an awesome component for Sanitizing and Validating. You guys should look into the core to learn how it works really. Its an awesome piece of work! . I will in the coming days write something about it. https://github.com/auraphp/Aura.Intl for Internationalization https://github.com/auraphp/Aura.Session : for session handling Thanks to all to make the release happen. You can read the official declaration at http://paul-m-jones.com/archives/2976 . Join our mailing list https://groups.google.com/forum/#!forum/auraphp or #auraphp at irc.freenode.net .</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[The making of Hari.Extras]]></title>
-    <link href="http://harikt.github.com/blog/2012/11/24/node-224/"/>
+    <link href="http://harikt.com/blog/2012/11/24/node-224/"/>
     <updated>2012-11-24T21:22:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/11/24/node-224</id>
+    <id>http://harikt.com/blog/2012/11/24/node-224</id>
     <content type="html"><![CDATA[<p>If you have read my earlier posts, you know I started to love templating library like Twig, Mustache etc. So I was interested to in-corporate Twig or PhlyMustache or any sort of templating library to auraphp. <a href="https://github.com/auraphp/Aura.Web/tree/develop">Aura.Web</a> makes it easy to do without much hassle. What you want to do is create the class which extends the Aura\Web\Renderer\AbstractRenderer and have a exec() method. For more details checkout <a href="https://github.com/auraphp/Aura.Web/tree/develop#data-and-rendering">Data and Rendering</a> {syntaxhighlighter class=&#8221;php&#8221;} Twig in <a href="http://github.com/harikt/Hari.Extras">Hari.Extras</a> . I will be adding support for PhlyMustache in the coming days. Hari.Extras comes with unit tests. Running unit tests : To run tests you should first install the dependencies. You can run {syntaxhighlighter class=&#8221;php&#8221;}composer.phar install &#8211;dev{/syntaxhighlighter} This will install the dependencies like Aura.Web, Aura.Framework, Twig, vfsstream etc in vendor folder. Now you can run the phpunit from tests folder. A big Thanks to @Paul M Jones and Chris Hartjes and all who have supported one way or the other giving me tips and tricks, motivation to make this happen. The nice thing is with composer for I don&#8217;t need to keep everything in the tests folder. Thanks to <a href="https://github.com/Seldaek">Seldaek</a> By the way as <a href="https://github.com/auraphp">auraphp</a> is getting closer and closer for the next release I am planning to start a series of posts to get started with using the components. Stay tuned :) .</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[vfsStream and file system]]></title>
-    <link href="http://harikt.github.com/blog/2012/11/24/node-223/"/>
+    <link href="http://harikt.com/blog/2012/11/24/node-223/"/>
     <updated>2012-11-24T20:42:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/11/24/node-223</id>
+    <id>http://harikt.com/blog/2012/11/24/node-223</id>
     <content type="html"><![CDATA[<p>Paul M Jones wrote earlier <a href="http://paul-m-jones.com/archives/2487">When Possible, Use File *Resources* Instead Of File *Names*</a> and in comments <a href="http://www.littlehart.net/atthekeyboard">Chris Hartjes</a> was mentioning about <a href="http://vfs.bovigo.org/">vfsStream</a>. So for <a href="https://github.com/auraphp">@auraphp</a> we thought of making to support vfsStream. What the hell it is? vfsStream is a PHP stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest. So without touching the file system and not bothering too much about the operating system, file permissions, disk quota, removing the files created by tests on tear down etc we can make use of vfsstream. Lets start Go and get it via composer.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -822,81 +822,81 @@
   
   <entry>
     <title type="html"><![CDATA[Design Principles for a Better CMS]]></title>
-    <link href="http://harikt.github.com/blog/2012/11/06/node-221/"/>
+    <link href="http://harikt.com/blog/2012/11/06/node-221/"/>
     <updated>2012-11-06T21:32:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/11/06/node-221</id>
+    <id>http://harikt.com/blog/2012/11/06/node-221</id>
     <content type="html"><![CDATA[<p>May be the question is so simple for you. But many times I feel it much complicated. Everyone would have started their website with a custom cms and later moved to Wordpress, Drupal, Joomla or something similar. I used to look for a better book in any language which has design decisions made for the cms to make it such a way that it can be extended. Some of the books that seems interesting to me are 1 ) <a href="http://www.apress.com/9781430218791">Pro Zend Framework CMS</a> 2 ) <a href="http://www.packtpub.com/php-5-cms-framework-development-2nd-edition/book">PHP 5 CMS Framework Development</a> It will be great to see if you have came across such books or do you recommend any other books. I am not just looking for PHP, but I am interested to read any sort of books, which will help me to build the next blogger. Waiting to hear you suggestions on the same.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Talking at Barcamp on Composer, Eath and Facebook Search]]></title>
-    <link href="http://harikt.github.com/blog/2012/10/28/node-220/"/>
+    <link href="http://harikt.com/blog/2012/10/28/node-220/"/>
     <updated>2012-10-28T11:21:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/10/28/node-220</id>
+    <id>http://harikt.com/blog/2012/10/28/node-220</id>
     <content type="html"><![CDATA[<p>The 13th edition of Barcamp kerala is on November 4th. This time I am going to talk on Dependency Management with Composer. In the 12th Barcamp I talked about Aura , and it was a bit technical , so Kenny was making sure, not to go for intensive code. So the talk will not be limited to composer. I will be giving you an introduction to Eath , and also a small project which I have done for my personal use fbsearch. The tool is used to search your own status messages you have posted some months back. Its still on alpha for I didn&#8217;t get enough time to move on to make it much more better. It has some issues which I am already aware of. So if you are interested , be there :) . For more information : <a href="http://barcampkerala.org">barcampkerala.org</a> <a href="http://getcomposer.org">composer.org</a> <a href="https://github.com/crodas/Eath">Eath</a> <a href="http://harikt.com/fbsearch">fbsearch</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Why apigen matters ?]]></title>
-    <link href="http://harikt.github.com/blog/2012/10/20/node-219/"/>
+    <link href="http://harikt.com/blog/2012/10/20/node-219/"/>
     <updated>2012-10-20T22:03:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/10/20/node-219</id>
+    <id>http://harikt.com/blog/2012/10/20/node-219</id>
     <content type="html"><![CDATA[<p>I have been working with different open-source projects for a while. Most of them utilizes phpdocumentator2 . I liked it for a while. But I have been looking at apigen, swami etc. Recently I started to make use of apigen extensively. What made me comfortable with apigen than phpdocumentator ? Certain times we may want to look into the code also to see the implementation . I am not sure may be there is an option in phpdocumentator that it can show the code when we click on a function / method. The code highlighting and is shown once we click on it. I like this feature the most. If you haven&#8217;t yet checked how the apigen generated api looks have a look into the one for the <a href="https://github.com/auraphp">aura project</a> which is at <a href="http://harikt.github.com/api">http://harikt.github.com/api</a> More information on a href=&#8221;http://apigen.org>apigen.org</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[HTML5 and Upcoming Web Technologies]]></title>
-    <link href="http://harikt.github.com/blog/2012/10/17/node-218/"/>
+    <link href="http://harikt.com/blog/2012/10/17/node-218/"/>
     <updated>2012-10-17T19:41:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/10/17/node-218</id>
+    <id>http://harikt.com/blog/2012/10/17/node-218</id>
     <content type="html"><![CDATA[<p>Probably you may have already heard about the full day workshop on HTML5 and Upcoming Web Technologies by <a href="https://twitter.com/shwetank">Shwetank Dixit</a> of Opera at <a href="http://interface-tech.in/">Interface</a> which will be held on 3rd November 2012 . Where ? The Woods Manor, Cochin . Why you should participate? HTML5 is the future of internet. Why not learn from the leader? Who should attend ? Are you a web developer? A person who works on android, iphone or any device ? If you said yes, then its for you. What is the cost? This time we are charging 500 INR. The money is used to give you tea/coffee and snacks plus an awesome lunch during the event and to cover the event expenses. I don&#8217;t think its a huge amount for I have been spending more than 500 INR to travel from Cochin to Bangalore to participate in such awesome workshops. You are only spending a 500 INR in a year which will be a worth in your career. There is also discounts available for group registration for companies, please contact Sofie Holmberg via sofie.holmberg at interface-tech dot in or 0484 4433638 . There is only limited seats available , so be there and don&#8217;t loose the best chance attending the workshop and interacting with <a href="https://twitter.com/shwetank">Shwetank Dixit</a>. Register and get your tickets from : http://interface-tech.in/register</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Aura T-Shirts]]></title>
-    <link href="http://harikt.github.com/blog/2012/10/04/node-217/"/>
+    <link href="http://harikt.com/blog/2012/10/04/node-217/"/>
     <updated>2012-10-04T10:44:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/10/04/node-217</id>
+    <id>http://harikt.com/blog/2012/10/04/node-217</id>
     <content type="html"><![CDATA[<p>So today I got the custom designed T-Shirts with Aura Logo. Its time to brand :)  <img src="https://pbs.twimg.com/media/A4V654qCAAEudRT.jpg" title="Aura T-Shirt with github url" alt="Aura T-Shirt with github url" />  T-shirts with logo is here &#8230;.. Yey @<a href="https://twitter.com/auraphp">auraphp</a>:) .  <img src="https://pbs.twimg.com/media/A4V7Dv3CUAAIp8U.jpg" title="Aura T-Shirt with logo" alt="Aura T-Shirt with logo" />  A closer look into the logo, made with embroidery  <img src="https://pbs.twimg.com/media/A4V7SHhCYAAt6x-.jpg" title="Closer look at logo" alt="Closer look at logo" />  I have designed thes from ilogo.in .  Status : https://twitter.com/harikt/status/253744088891916288 , https://twitter.com/harikt/status/253744258329235456, https://twitter.com/harikt/status/253744505197584384</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Workshop on Aura Project for PHP at OSI Days]]></title>
-    <link href="http://harikt.github.com/blog/2012/09/23/workshop-on-aura-project-for-php/"/>
+    <link href="http://harikt.com/blog/2012/09/23/workshop-on-aura-project-for-php/"/>
     <updated>2012-09-23T14:37:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/09/23/workshop-on-aura-project-for-php</id>
+    <id>http://harikt.com/blog/2012/09/23/workshop-on-aura-project-for-php</id>
     <content type="html"><![CDATA[<p>I am really excited and at the same time a bit nervous, that I will be giving a workshop on <a href="https://github.com/auraphp">aura project for PHP</a> at <a href="http://www.osidays.com/">osidays</a>, which will be held at NIMHANS convention center Bangalore on 12-14 th of October 2012. I have received only the confirmation call, but not any mail as of now. If you have never heard of osidays, its one of the Asia&#8217;s largest open-source conference held. The workshop will be for around 3 Hours. I will be walking you through different components of aura and finally to show how you can use the individual libraries as a framework. If you have never heard about the aura project, its an independent library which can be dropped at any codebase. You can find the source code and more information of the project at <a href="https://github.com/auraphp">https://github.com/auraphp</a> . I know 3 Hours of continuous speech is a huge challenge. I will try my level best to make the workshop interesting. I will be also discussing with <a href="http://paul-m-jones.com">Paul M Jones</a> how I can make it more informative. In-order to attend the workshop I feel you need to grab the platinum pass. Looking forward meeting you guys at osidays :) .</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How I became a contributor to aura project]]></title>
-    <link href="http://harikt.github.com/blog/2012/09/15/contributor-to-aura-project/"/>
+    <link href="http://harikt.com/blog/2012/09/15/contributor-to-aura-project/"/>
     <updated>2012-09-15T21:16:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/09/15/contributor-to-aura-project</id>
+    <id>http://harikt.com/blog/2012/09/15/contributor-to-aura-project</id>
     <content type="html"><![CDATA[<p>When I started my career with PHP I have been hearing about PEAR and Symfony a lot. <a href="http://joseantony.com/">Jose Antony</a> was the person who introduced the names <a href="http://symfony-project.org">Symfony</a>, <a href="http://doctrine-project.org">Doctrine</a>, <a href="http://propelorm.org">Propel</a> etc. But at work I never got a chance to touch on those. But my thirst to learn and explore moved me from Cochin to Bangalore and different websites. I played with Symfony in my free time ( Jobeet ). symfony-project was having good articles and videos to move with. I was working for a client who was interested in <a href="http://framework.zend.com">Zend Framework</a> and asked me to go for a try. It was a hard time in 2009 for me that, the documentation was poor ( from a point of me ) and there wasn&#8217;t a proper structure for people doing Zend Framework before the introduction of ZF tool in 1.8 ( I guess ) . The way it works and I wasn&#8217;t either familiar with irc or how I can get some help. Yes it was mainly not the Zend Framework or the community issues. It was my problems to understand from where I can get help. There wasn&#8217;t a good source to ask how I can use irc or get more information other than search internet. I really struggled with Zend Framework. Google was the only help which can find blog posts on errors and implementation. Some will work, some will not. I still remember the autoload error thrown which mentioned about this will be deprecated in Zend Framework 2 ( IIRC ). lol I wasn&#8217;t either able to understand looking at those errors. I was having a thought that frameworks cannot be developed by people like me :) . Why I thought so was I was hearing about design patterns a lot and I never properly understood what the hell it was. I failed to find a good mentor. I wrote some blog posts on <a href="http://harikt.com/content/simple-blog-using-zend-framework-19">zend framework</a> to help people who start with it. I wasn&#8217;t either sure whether I was doing the right things. When I published the post, I did submitted a small intro to <a href="http://devzone.zend.com">devzone</a> with a note to verify whether I was doing it right. But the editor was busy that he mentioned its not possible to check. But some how it was published in <a href="http://phpdeveloper.org">phpdeveloper.org</a> . I looked for the person who submitted the article and found it was <a href="http://blog.phpdeveloper.org">Chris Cornutt</a>. I never know about him earlier, but later understood he was the person behind <a href="http://phpdeveloper.org">phpdeveloper.org</a> itself :) . In the mean time I did made some changes to the brief information at <a href="http://devzone.zend.com">devzone</a> and submitted it. The article brought lots of visitors and my 1 GB bandwidth got exceed for the 1st time in my life. My friend <a href="http://prajizworld.com">Prajith</a> who was in charge of the server quickly increased the limit when he got my call. This article brought me some opportunity to work with <a href="http://packtpub.com">Packt publishers</a>. Around 2009 or 2010 I came to know about a project called <a href="http://lithify.me">lithium</a> via a podcast. I was interested to learn how the frameworks are build. It was using the awesome PHP 5.3 , so I thought of looking into it. At osidays <a href="https://twitter.com/davidcoallier">David Coallier</a> gave an awesome talk on PHP 5.3 . I was able to meet <a href="http://fabien.potencier.org">Fabien Potencier</a> and get an autograph signed. I did meet some awesome PHP gurus at osidays. I started to look more closely into lithium which was in development. I wasn&#8217;t able to help for I was not that much strong on the concepts. They were using their own git server hosted at <a href="http://dev.lithify.me">dev.lithify.me</a> . I was not comfortable with <a href="http://git-scm.org">git</a>, but when we search for git related help, it will be from <a href="https://github.com">github.com</a> docs. So I asked about switching the lithium to github for the leaders were having their own reasons to host it there. As I told I was starting with git, I pushed to master in my fork which I wasn&#8217;t either sure how I can send Pull Request . Again not the problem with the leaders. <a href="https://twitter.com/nateabele">Nate</a> , <a href="https://twitter.com/gwoo">Gwoo</a> etc helped me a lot when I got stuck with cloning the repo and errors. I learned some of the git commands, PHP 5.3 etc. I tried to help with testing the mysql stuffs which was done by <a href="https://github.com/Howard3">Howard</a>. Though I tried to contribute stuffs it didn&#8217;t happened for I failed to understand the process completely. I also looked closely <a href="http://symfony.com">Symfony2</a>, but was a bit hard for me. In the early 2011 I got introduced to <a href="https://github.com/auraphp">aura project for php</a> via the blog post of <a href="http://paul-m-jones.com">Paul M Jones</a>. I have earlier looked <a href="http://solarphp.com">SolarPHP</a> , so he was a familiar face. I started to play with it. I also understood the design principles were clearly <a href="http://groups.google.com/forum/#!forum/auraphp">mailed in the group</a>, so I found the real mentor whom I was searching. IIRC I forked the <a href="https://github.com/auraphp/auraphp.github.com">auraphp.github.com</a> and made some changes to the style from that of <a href="http://friendsofsymfony.github.com">friendsofsymfony.github.com</a> , and probably that was my first commit to an opensource project . I started to talk on irc and give some patches and bug reports and slowly I became a member of the organization <a href="https://github.com/auraphp">auraphp</a> . I know my earlier commits were not going on the right way( I mean the git workflow ), but Paul did merged than closing it or gave suggestions what to do and why you should not go that way etc. He do gave credits for the bugs or suggestions we share in group. Yes it was real joy for people when your commits to an open-source is merged and when you get credits for the work you do. I have noticed people who do just close the PR for there was some error the way the PR is given or if its not the way its expected. I encourage leaders to at-least correct the mistakes than closing the PR with another commit which is already waiting for merge. People who come to open-source are interested to share and learn, not just download the code and use what you are building. They loved to hear why you choose the particular design pattern than blindly using with it, at-least me love it. Note : There is no hatred to any of the projects or leaders. Every one has tried to help me learn various stuffs. It was my failures, to understand it. I fear sometimes the way we think to express may not be read between words. That is the main reason I have kept this note. I know I have not covered everyone and many of the stuffs have been missed. But its not intentionally . But I would like to Thank all for the various helps you have provided via irc, twitter, facebook, mails etc. I did had a great time learning new stuffs. Thanks once again, lets share and learn.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Thoughts on installing Zend Framework via composer]]></title>
-    <link href="http://harikt.github.com/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/"/>
+    <link href="http://harikt.com/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer/"/>
     <updated>2012-09-10T11:04:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer</id>
+    <id>http://harikt.com/blog/2012/09/10/thoughts-on-installing-zend-frameowork-via-composer</id>
     <content type="html"><![CDATA[<p>Note : First I thought of creating an issue, and it was not in github. These are not serious issues, but just my thoughts when installing ZF2 via composer. I am not sure whether its composer related or the way the zf2 is packaged to do it via composer. Normally the composer.json will be something like {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ cat composer.json { &#8220;require&#8221;: { &#8220;zendframework/zend-form&#8221;: &#8220;2.0&#8221; } } hari@local:/var/www/composer/zf2$ php ../composer.phar install Loading composer repositories with package information Installing dependencies - Installing zendframework/zendframework (2.0.0) Downloading: 25%\<sup>C</sup> hari@local:/var/www/composer/zf2$ \<sup>C</sup> {/syntaxhighlighter} But you can see the composer tries to install the whole zend-framework. The problem is you need to add some more lines for its hosted in packages.framework.com and not in packagist.org . So your composer.json will be as below . {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ cat composer.json { &#8220;repositories&#8221;: [ { &#8220;type&#8221;: &#8220;composer&#8221;, &#8220;url&#8221;: &#8220;http://packages.zendframework.com/&#8221; } ], &#8220;require&#8221;: { &#8220;zendframework/zend-form&#8221;: &#8220;2.0&#8221; } } hari@local:/var/www/composer/zf2$ php ../composer.phar install Loading composer repositories with package information Installing dependencies - Installing zendframework/zend-form (2.0.0) Downloading: 100% zendframework/zend-form suggests installing zendframework/zendservice-recaptcha (ZendService\ReCaptcha component) Writing lock file Generating autoload files {/syntaxhighlighter} Great you installed the zf2 form component. Now you can see where the form is installed . {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ ls vendor/ autoload.php composer zendframework hari@local:/var/www/composer/zf2$ ls vendor/zendframework/ zend-form hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/ Zend hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/ Form hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/ Annotation FieldsetInterface.php composer.json Fieldset.php Element FieldsetPrepareAwareInterface.php ElementInterface.php FormFactoryAwareInterface.php Element.php FormInterface.php ElementPrepareAwareInterface.php Form.php Exception TODO.md Factory.php View {/syntaxhighlighter} Assume you have more zf2 packages which you have added. At a later point you think of installing the framework as a whole itself than adding more packages in the composer.json . So your composer.json will be some what like {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ cat composer.json { &#8220;repositories&#8221;: [ { &#8220;type&#8221;: &#8220;composer&#8221;, &#8220;url&#8221;: &#8220;http://packages.zendframework.com/&#8221; } ], &#8220;require&#8221;: { &#8220;zendframework/zendframework&#8221;: &#8220;2.0&#8221; } } hari@local:/var/www/composer/zf2$ php ../composer.phar update Loading composer repositories with package information Updating dependencies - Removing zendframework/zend-form (2.0.0) - Installing zendframework/zendframework (2.0.0) Downloading: 100% Writing lock file Generating autoload files {/syntaxhighlighter} The form has been removed and framework is installed. Lets have a look where its installed . {syntaxhighlighter class} hari@local:/var/www/composer/zf2$ ls vendor/ autoload.php composer zendframework hari@local:/var/www/composer/zf2$ ls vendor/zendframework/ zend-form hari@local:/var/www/composer/zf2$ cat composer.json { &#8220;repositories&#8221;: [ { &#8220;type&#8221;: &#8220;composer&#8221;, &#8220;url&#8221;: &#8220;http://packages.zendframework.com/&#8221; } ], &#8220;require&#8221;: { &#8220;zendframework/zendframework&#8221;: &#8220;2.0&#8221; } } hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/ Zend hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/ Form hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/ bin INSTALL.md README-DEV.md resources composer.json library README-GIT.md tests demos LICENSE.txt README.md vendor hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/ Zend hari@local:/var/www/composer/zf2$ ls vendor/zendframework/zend-form/Zend/Form/library/Zend/ Authentication Di InputFilter Mvc Stdlib Barcode Dom Json Navigation Tag Cache Escaper Ldap Paginator Text Captcha EventManager Loader Permissions Uri Code Feed Log ProgressBar Validator Config File Mail Serializer Version Console Filter Math Server View Crypt Form Memory ServiceManager XmlRpc Db Http Mime Session Debug I18n ModuleManager Soap {/syntaxhighlighter} You can notice its going on the wrong place. vendor/zendframework/zend-form . I am not sure whether every one needs to remove all the installed packages to install the framework . It seems possible with naming zendframework/package . Thus it don&#8217;t remove the installed packages. May be there are some other issues related to it for the naming of zendframework/zend-form like that.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How to install aura framework]]></title>
-    <link href="http://harikt.github.com/blog/2012/08/27/how-to-install-aura-framework/"/>
+    <link href="http://harikt.com/blog/2012/08/27/how-to-install-aura-framework/"/>
     <updated>2012-08-27T04:58:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/08/27/how-to-install-aura-framework</id>
+    <id>http://harikt.com/blog/2012/08/27/how-to-install-aura-framework</id>
     <content type="html"><![CDATA[<p>This video is my an attempt to help the people how to install the aura framework as a whole. Note, you can use aura libraries independently also. This is my first screencast on aura and first screencast I have ever done. So feedback is appreciated. I am using record my desktop for recording.  I was having some trouble with vimeo, so have uploaded to youtube. Thanks for watching.</p>
 ]]></content>
   </entry>

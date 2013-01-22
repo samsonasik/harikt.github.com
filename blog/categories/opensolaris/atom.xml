@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: opensolaris | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/opensolaris/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/opensolaris/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Configuring BSNL ZTE EVDO in opensolaris]]></title>
-    <link href="http://harikt.github.com/blog/2009/07/25/configuring-bsnl-zte-evdo-opensolaris/"/>
+    <link href="http://harikt.com/blog/2009/07/25/configuring-bsnl-zte-evdo-opensolaris/"/>
     <updated>2009-07-25T22:21:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/07/25/configuring-bsnl-zte-evdo-opensolaris</id>
+    <id>http://harikt.com/blog/2009/07/25/configuring-bsnl-zte-evdo-opensolaris</id>
     <content type="html"><![CDATA[<p>I was trying to configure my BSNL ZTE EVDO device in Open-solaris . I configured the device too, but there is little trouble now too .  Open-solaris is having a project Wireless Wide Area Network , which is run to configure the wireless networks in solaris . The link to it is <a href="http://opensolaris.org/os/project/wwan/">http://opensolaris.org/os/project/wwan/</a> . I configured the modem using it . You need to be root to do it too . Also some times when running a command you may not be able to read the complete contents , for it exceeds the limit . So after the command add greater than symbol followed by filename ( I hope you know these commands too ) . Eg : prtconf -v > t . You can use gedit or vim or any text editors of your choice . The documentation is so good that I don't need to tell more .  The below is the scripts you may need to run every time .  pppd call evdo cp /etc/ppp/resolv.conf /etc/resolv.conf cp /etc/nsswitch.dns /etc/nsswitch.conf  The problems I am facing still now are  1 ) Speed is slow compared with Ubuntu  2 ) I can search google , but we cannot proceed to a page shown in results .  3 ) You may need to restart each time when the net is stuck . ie no packets is coming to your n/w .  I don't get much time to look more in google for any helps .  What I think is crtscts needs some other option . I want to try it out and will let you guys know more about this .  If anyone has already configured let me know about it . One more thing it doesn't ask any passwords to connect . Its having only phone number . lol .... <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Opensolaris installation on ubuntu and after effects of grub]]></title>
-    <link href="http://harikt.github.com/blog/2009/04/15/33-opensolaris-installation-on-ubuntu-and-after-effects-of-grub/"/>
+    <link href="http://harikt.com/blog/2009/04/15/33-opensolaris-installation-on-ubuntu-and-after-effects-of-grub/"/>
     <updated>2009-04-15T09:11:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/04/15/33-opensolaris-installation-on-ubuntu-and-after-effects-of-grub</id>
+    <id>http://harikt.com/blog/2009/04/15/33-opensolaris-installation-on-ubuntu-and-after-effects-of-grub</id>
     <content type="html"><![CDATA[<p>Writing my post from Open solaris . This is a great experience , so thought to share with you , so may help some of you.  I have once installed the Sun Solaris , not the Open Solaris of sun . And it was really a tedious job . So I was aware of the consequences . But thought of trying the Open Solaris , as I love to use it after trying the Live CD. Though I have got the CD some days before , not able to try it.  Current OS and status  1 ) Installed Ubuntu 8.10 , having lots of additional softwares installed and lots of valuable data's :-) .  2 ) Don't want to miss any , like the previous case.  Started Installation around 12:30 noon . It takes some time to install the OS. I came after my Lunch and by the time it has finished the installation .  Restarted the system. The grub loads ............ OOP's really fucking , the Ubuntu is not there , it has gone . The boot loader has gone . Anyway thought of reinstalling the grub . I have installed from Fedora the boot loader , but not from Ubuntu , so thought of editing the grub file for the sun solaris. But I need to know the real path to the Ubuntu kernel . Booted from Ubuntu Live CD , searched google to find from where I will get the complete path ? Yes, found a solution for it , ( https://sourceforge.net/projects/bootinfoscript/ ). Downloaded and tried , got the result. Saved in gmail :-) . Restarted the system , logged to Open solairs .  Looked to edit grub . Searched a lot , got some information from blog of sun. He is a worker at Sun . ( http://blogs.sun.com/agraj/entry/editing_grub_bootloader ) . But I was not able to find the /etc/grub.conf nor the /boot/grub/menu.lst ( Skipping some of the steps I have tried to edit grub from command prompt ) . And finally I was forced to login to Live CD , and tried to do like the steps in http://ubuntuforums.org/archive/index.php/t-24113.html the post . But what I missed was Open Solaris loader and time and the updated kernel of Ubuntu . What it does was installed the Ubuntu OS again .So never go in these ways , I will shortly tell the other one. Why I told never go in this way is because it will remove some of the files of our updated kernel , though it can backup our files. And finally I edited the /boot/grub/menu.lst of the Ubuntu distro and added the code  title Open Solaris root (hd0,0) makeactive chainloader +1  <strong>The pretty simple way</strong> ( I was not able to try this , but found the menu.lst of Open Solaris ) :  1 ) Install Solaris  2 ) Boot with Live CD , install the boot info script and run it ( https://sourceforge.net/projects/bootinfoscript/ ) . Save the RESULTS.txt may be in you mail or thumb .  3 ) Restart to login to Open Solaris . Edit the menu.lst , ( its not located at /etc/grub.conf nor at /boot/grub/ ) . The menu.lst has moved to /rpool/boot/grub/ folder . So what you need to do is just edit the /rpool/boot/grub/menu.lst . You must be root to edit this file ( Use su or sudo ).  Copy and paste the lines you have got from the RESULTS.txt which is produced by the boot info script . Some thing starting like ## ## End Default Options ## and ending with ### END DEBIAN AUTOMAGIC KERNELS LIST . You can have a search if you are using gedit .  Now restart your system . It will works . Defnitely it will work . Have fun with solaris too . Spend my whole day for this experiment :-( . But learned a lot of new things , so I gained :-)  Thanks guys , let me have some sleep its 1:05 Am . Want to cast my vote and leave to work tomorrow morning . Bye have a great day .</p>
 ]]></content>
   </entry>

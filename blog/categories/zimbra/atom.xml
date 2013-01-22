@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: zimbra | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/zimbra/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/zimbra/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Zimbra Desktop to manage email , calendars and much more]]></title>
-    <link href="http://harikt.github.com/blog/2009/07/07/zimbra-desktop-manage-email-calendars-and-much-more/"/>
+    <link href="http://harikt.com/blog/2009/07/07/zimbra-desktop-manage-email-calendars-and-much-more/"/>
     <updated>2009-07-07T19:36:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/07/07/zimbra-desktop-manage-email-calendars-and-much-more</id>
+    <id>http://harikt.com/blog/2009/07/07/zimbra-desktop-manage-email-calendars-and-much-more</id>
     <content type="html"><![CDATA[<p>Zimbra is an opensource desktop application software . Its for GNU/Linux and Mac OS from Yahoo . Zimbra is another Yahoo company one like the delicious book mark management <img src="http://harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" />. I was using Mozilla Thunder bird , but when I saw Zimbra with much more features than that , I thought of trying it .  Yes its having nice features, I love the look of it. Its based on the Mozilla . Some of the features are having calendar in it . So we can organise calendars , check emails whether its Yahoo, Gmail , MSN , AOL , Zimbra, Hot mail or any  from it . You can check your flickr images from Zimbra.  There is a slight problem with Zimbra connecting to flickr . Though Zimbra is a yahoo company its having trouble getting pictures from the flickr ( run by yahoo itslef ).  The screen shot is shown here to see how it looks .  <img src="http://farm3.static.flickr.com/2580/3697516753_a82ee6abbe.jpg?v=0" alt="Zimbra running on Ubuntu Desktop of Hari K T" />  When we try to check the flickr pics, it asks for authentication and we can authenticate to our yahoo account . We can upload pictures from the new window , but I don't find a scroll bar to scroll down . We can use the Tab to got to the submit buttons . I don't know whther yahoo have tested this in Ubuntu . Also don't know whether the issue is only for me . Another one is it creates a short cut to start Zimbra desktop . But icon is not appearing and also asks whether we need to run it . The screen shot of trying to upload pictures through Zimbra is below.  <img src="http://farm4.static.flickr.com/3577/3698385622_a9965aab3d.jpg?v=0" alt="Zinbra accessing the flickr" /></p>
 ]]></content>
   </entry>

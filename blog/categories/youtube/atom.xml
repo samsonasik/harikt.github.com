@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: youtube | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/youtube/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/youtube/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Search yahoo , google , youtube , flicker , facebook and more from Kosmix]]></title>
-    <link href="http://harikt.github.com/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix/"/>
+    <link href="http://harikt.com/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix/"/>
     <updated>2009-04-22T09:02:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix</id>
+    <id>http://harikt.com/blog/2009/04/22/37-search-yahoo-google-youtube-flicker-facebook-and-more-from-kosmix</id>
     <content type="html"><![CDATA[<p>Don't know whether all have heard about the site kosmix . Anyway let me tell what are the things that attracted to me .  You can search for a particular keyword , kosmix will search in google , yahoo, flicker , facebook , youtube , twitter and many more . The result is very much useful . I am keeping a screen shot for the search hello world .  <img src="http://farm4.static.flickr.com/3563/3490845375_ec164726a4.jpg?v=0" title="search for hello world in kosmix" alt="search for hello world in kosmix " />    The people behind Kosmix are Venky Harinarayan and his business partner Anand Rajaraman founded in 2005. They are the people who have developed the ecommerce search engine and later sold to amazon for $250 millionin 1998 . The investors of kosmix are former CEO of Motorolla , CEO of Amazon . Have a look below .  * Lightspeed Ventures Partners * Accel Partners * Dag Ventures * Jeffrey P. Bezos, Bezos Expeditions Bezos Expeditions is Jeff Bezos' personal investment company. Mr. Bezos is founder and CEO of Amazon.com. * Bill Miller, Legg Mason Chairman and Chief Investment Officer * Ed Zander Former CEO of Motorola  You can visit the site http://www.kosmix.com/ and know more detailed . Found a good tool , so want to make people aware about this , and spread the world . Got information from the site itself.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Downloading youtube videos to your system]]></title>
-    <link href="http://harikt.github.com/blog/2009/03/11/17-downloading-youtube-videos-to-your-system/"/>
+    <link href="http://harikt.com/blog/2009/03/11/17-downloading-youtube-videos-to-your-system/"/>
     <updated>2009-03-11T08:28:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/03/11/17-downloading-youtube-videos-to-your-system</id>
+    <id>http://harikt.com/blog/2009/03/11/17-downloading-youtube-videos-to-your-system</id>
     <content type="html"><![CDATA[<p>If you are using a limited band width Internet then you may have thought of downloading the youtube videos to your system . Else this is not a big deal . I have searched a lot how to download youtube videos in a single click. Some doesn't works at all. But after a lots of search and all , one of my friend , Krissy of the phpdirector development team helped me to host one for you .  Yes, its totally free , in just simple clicks you can download youtube videos . Before that I was using the one addon with the mozilla . But adding more addons some times makes bug to the browser itself. So its not a good one I think . Its my opinion only. You can do what ever you wish .  Some of the reasons that I want to download it is for  1 ) Have a limited band width internet connection  2 ) Can watch the video even there is no internet  3 ) When the speed of internet is slow , you dont want to bother at all .  It has 3 different formats .  1 ) FLV  2 ) MP4  3 ) 3GP  If you are downloading it for mobile use 3GP . If you need a video with high quality go for mp4 .  Here is the link to <a href="http://harikt.com/youtube/" title="Download youtube videos">http://harikt.com/youtube/</a> download the videos.</p>
 ]]></content>
   </entry>

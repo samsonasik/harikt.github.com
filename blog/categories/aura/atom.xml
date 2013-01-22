@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: aura | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/aura/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/aura/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,27 +15,27 @@
   
   <entry>
     <title type="html"><![CDATA[Workshop on Aura Project for PHP at OSI Days]]></title>
-    <link href="http://harikt.github.com/blog/2012/09/23/workshop-on-aura-project-for-php/"/>
+    <link href="http://harikt.com/blog/2012/09/23/workshop-on-aura-project-for-php/"/>
     <updated>2012-09-23T14:37:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/09/23/workshop-on-aura-project-for-php</id>
+    <id>http://harikt.com/blog/2012/09/23/workshop-on-aura-project-for-php</id>
     <content type="html"><![CDATA[<p>I am really excited and at the same time a bit nervous, that I will be giving a workshop on <a href="https://github.com/auraphp">aura project for PHP</a> at <a href="http://www.osidays.com/">osidays</a>, which will be held at NIMHANS convention center Bangalore on 12-14 th of October 2012. I have received only the confirmation call, but not any mail as of now. If you have never heard of osidays, its one of the Asia's largest open-source conference held. The workshop will be for around 3 Hours. I will be walking you through different components of aura and finally to show how you can use the individual libraries as a framework. If you have never heard about the aura project, its an independent library which can be dropped at any codebase. You can find the source code and more information of the project at <a href="https://github.com/auraphp">https://github.com/auraphp</a> . I know 3 Hours of continuous speech is a huge challenge. I will try my level best to make the workshop interesting. I will be also discussing with <a href="http://paul-m-jones.com">Paul M Jones</a> how I can make it more informative. In-order to attend the workshop I feel you need to grab the platinum pass. Looking forward meeting you guys at osidays :) .</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Aura Project for PHP releases Beta 2]]></title>
-    <link href="http://harikt.github.com/blog/2012/02/13/aura-project-releases-beta2/"/>
+    <link href="http://harikt.com/blog/2012/02/13/aura-project-releases-beta2/"/>
     <updated>2012-02-13T22:08:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2012/02/13/aura-project-releases-beta2</id>
+    <id>http://harikt.com/blog/2012/02/13/aura-project-releases-beta2</id>
     <content type="html"><![CDATA[<p>The Aura Project for PHP 5.4 releases Beta2 for the components. Now all the Aura packages are releases via release tool which makes it automated way. Currently Aura Components can be installed via composer and github. We will soon release the pear packages once the new phar file is released by Pyrus which includes the fix for creating packages with dot. See https://github.com/pyrus/Pyrus/issues/75 Don't think this as the official announcement . Official announcement will be posted by <a href="http://paul-m-jones.com">Paul M Jones the lead for Aura PHP</a> Source Code : https://github.com/auraphp Update : So Paul M Jones officially declared the <a href="http://paul-m-jones.com/archives/2277">Release of Aura 1.0.0-beta2</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Get set go ... Yes come, lets start playing with Aura Packages]]></title>
-    <link href="http://harikt.github.com/blog/2011/07/17/get-set-go-yes-come-lets-start-playing-aura-packages/"/>
+    <link href="http://harikt.com/blog/2011/07/17/get-set-go-yes-come-lets-start-playing-aura-packages/"/>
     <updated>2011-07-17T17:47:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2011/07/17/get-set-go-yes-come-lets-start-playing-aura-packages</id>
+    <id>http://harikt.com/blog/2011/07/17/get-set-go-yes-come-lets-start-playing-aura-packages</id>
     <content type="html"><![CDATA[<p>Some of you may be knowing that I have been playing with <a href="https://github.com/auraphp">Aura</a> components for the past few months . The Aura is a PHP 5.3 collection of library . Its the next major release of Solar PHP framework of Paul M Jones. If you want to use it as a framework the <a href="https://github.com/auraphp/system">system</a> makes it possible. Aura uses dependency injection in the core .  I have been trying different things with the aura , testing, fixing some bugs if any and pull to it etc . Currently I have an example repo which will help you to get started .  <a href="https://github.com/harikt/Bridge.Careers">Bridge.Careers</a> contains different branches, the ViewHelper branch will help you to learn how to create your own view helpers . The MInSrc branch is set of Model related files you want to integrate Aura.Sql in the Aura framework . In the branch the models reside in the src folder itself .  You may also see other branches in the coming days.  Play with it and let us know what you have in your mind .  https://github.com/harikt/Bridge.Careers  Code of Aura PHP : <a href="https://github.com/auraphp">https://github.com/auraphp</a>  Aura PHP Website : <a href="http://auraphp.github.com/">http://auraphp.github.com/</a>  Still have some components missing( I mean Porting the Solar components ), but don't worry we will be coming with it in the coming days, or you can even contribute to it. You can join and discuss with us in http://groups.google.com/group/auraphp or in #auraphp irc channel at freenode.net .</p>
 ]]></content>
   </entry>

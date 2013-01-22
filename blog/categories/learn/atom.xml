@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: learn | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/learn/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/learn/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Learn from your failures]]></title>
-    <link href="http://harikt.github.com/blog/2009/06/10/learn-your-failures/"/>
+    <link href="http://harikt.com/blog/2009/06/10/learn-your-failures/"/>
     <updated>2009-06-10T10:34:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/06/10/learn-your-failures</id>
+    <id>http://harikt.com/blog/2009/06/10/learn-your-failures</id>
     <content type="html"><![CDATA[<p>No one wins at the first time <img src="http://www.harikt.com/sites/all/modules/fckeditor/fckeditor/editor/images/smiley/msn/regular_smile.gif" alt="image" /> . Everyone may have faced a failure . A failure is not the end , its just a begining to success . When I was returning from Trivandrum to Ernakulam by train , I met a mother and son. The guy was not feeling good. He was having some sort of stress , strain . Some how I understood he was a +2 student and was afraid of the results and he has lost his sleep and all. So I thought of writing a post about failures. I too have failed at many places . But I will not let the failure rules me .  We should recogise the failure and should learn from it. So a similar failure will not rule you again . When I fails I will not get proper sleep for somedays. I will be thinking about it each day and finally I will get a solution. So guys lost is lost , learn from it , and never fall again into such a situation .</p>
 ]]></content>
   </entry>

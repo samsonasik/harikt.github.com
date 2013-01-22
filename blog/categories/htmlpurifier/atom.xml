@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: htmlpurifier | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/htmlpurifier/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/htmlpurifier/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Adding HTML Purifier Library in Lithium]]></title>
-    <link href="http://harikt.github.com/blog/2011/03/12/adding-html-purifier-library-lithium/"/>
+    <link href="http://harikt.com/blog/2011/03/12/adding-html-purifier-library-lithium/"/>
     <updated>2011-03-12T08:06:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2011/03/12/adding-html-purifier-library-lithium</id>
+    <id>http://harikt.com/blog/2011/03/12/adding-html-purifier-library-lithium</id>
     <content type="html"><![CDATA[<p>Hope everyone knows about <a href="http://htmlpurifier.org/">HTMLPurifier</a> and why its used. Martin Brampton's new book <a href="https://www.packtpub.com/php-5-cms-framework-development-second-edition/book">PHP 5 CMS Framework Development</a> includes a discussion of using HTML Purifier in your content managementsystem.  Today I thought of adding HTMLPurifier to Lithium . Its easy but sometimes we may want to look the autoloader and how its implemented. So this is a small contribution from me.  There is also another way. ie go and clone https://github.com/harikt/li3_htmlpurifier. Download all the files to HTMLPurifier . And add Libraries::add('li3_htmlpurifier');  Hope you liked :-) . Have fun .</p>
 ]]></content>
   </entry>

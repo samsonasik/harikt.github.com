@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: recaptcha | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/recaptcha/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/recaptcha/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Google acquires reCAPTCHA]]></title>
-    <link href="http://harikt.github.com/blog/2009/09/18/google-acquires-recaptcha/"/>
+    <link href="http://harikt.com/blog/2009/09/18/google-acquires-recaptcha/"/>
     <updated>2009-09-18T11:07:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/09/18/google-acquires-recaptcha</id>
+    <id>http://harikt.com/blog/2009/09/18/google-acquires-recaptcha</id>
     <content type="html"><![CDATA[<p><a href="http://www.flickr.com/photos/harikt/3931206160/"><img src="http://farm3.static.flickr.com/2591/3931206160_ce8a948f2e.jpg" alt="reCAPTCHA" /></a>Today I saw a post in Googles official blog about their acquasition of recaptcha . Recaptcha is a wonderful service that stops spam like mollom of Dries Butt . If you have a mail id , then you may know what spam is . Gmail may be the best mail service which can protect spam . Now adays every mail service do like that . But gmail seems to be much better than any .  If you have a website with a contact form , you can notice that it will be the most visited page . As a webdeveloper we should use a captcha service to block spam . Else our domain will be listed in the domain which generates spam . Recaptcha is a free service that can protect your forms from spam . There are many plugins or modules for wordpress , drupal etc .  <a href="http://www.flickr.com/photos/harikt/3931206156/"><img src="http://farm3.static.flickr.com/2507/3931206156_351f973d40.jpg" alt="MolloM" /></a>I am using mollom for protecting my forms as its a project developed by Dries the author of Drupal . Thanks to mollom too . I love mollom because it will not show the captcha unless it thinks its spam . There may be many other wonderful services like Mollom and recaptcha . You can use it, according to your taste .</p>
 ]]></content>
   </entry>

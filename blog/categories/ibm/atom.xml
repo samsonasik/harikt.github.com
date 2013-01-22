@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ibm | Random thoughts | Hari KT]]></title>
-  <link href="http://harikt.github.com/blog/categories/ibm/atom.xml" rel="self"/>
-  <link href="http://harikt.github.com/"/>
-  <updated>2013-01-15T00:56:32+05:30</updated>
-  <id>http://harikt.github.com/</id>
+  <link href="http://harikt.com/blog/categories/ibm/atom.xml" rel="self"/>
+  <link href="http://harikt.com/"/>
+  <updated>2013-01-23T00:15:19+05:30</updated>
+  <id>http://harikt.com/</id>
   <author>
     <name><![CDATA[Hari K T]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New advertisement of Oracle and Sun and message to IBM]]></title>
-    <link href="http://harikt.github.com/blog/2009/09/10/new-advertisement-oracle-and-sun-and-message-ibm/"/>
+    <link href="http://harikt.com/blog/2009/09/10/new-advertisement-oracle-and-sun-and-message-ibm/"/>
     <updated>2009-09-10T20:45:00+05:30</updated>
-    <id>http://harikt.github.com/blog/2009/09/10/new-advertisement-oracle-and-sun-and-message-ibm</id>
+    <id>http://harikt.com/blog/2009/09/10/new-advertisement-oracle-and-sun-and-message-ibm</id>
     <content type="html"><![CDATA[<p>Recently I was viewing Tech crunch site at techcrunch.com .  There was a post claiming about the new advertisement made by Oracle in the European edition of the Wall Street Journal . You may love to see the advertisement . We can call this as a comedy or something serious or like a warning in lighter words .  <a href="http://www.flickr.com/photos/harikt/3906567985/"><img src="http://farm3.static.flickr.com/2491/3906567985_265ae36bdf.jpg" alt="Oracle and sun advertisement a comedy" /></a>  Its such a beautiful quotes . I hope you may have enjoyed this . If you are interested to know more do visit the oracle site http://www.oracle.com/features/suncustomers.html . Don't know how long will it be there .</p>
 ]]></content>
   </entry>
